@@ -4,7 +4,7 @@ Nagios is known for being a tool to help IT folks monitor IT infrastructure, but
 
 This is a simple proof of concept which turns Nagios core into a full blown trading platform that enables it to use a strategy to identify and execute upon trading opportunities.
 
-The strategy is simple mean reversion, coupled with shorts analysis, backtesting, and the chosen financial market is the ASX.
+The example strategy is simple mean reversion, coupled with shorts analysis, backtesting, and the chosen financial market is the ASX.
 
 Back testing and technical indicators are derived from Yahoo Finance.
 
