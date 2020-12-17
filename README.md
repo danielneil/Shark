@@ -20,6 +20,6 @@ I am available for consultation and employment.
 
 4. Change the http credentials in ./site.yml to your liking.
 
-5. Run: ansible-playbook ./build.sh
+5. Run: ./build.sh
 
 6. Navigate to https://atp-server/nagios.
