@@ -1,0 +1,12 @@
+---
+# tasks file for httpd
+- name: Install apache2 
+  apt:
+   name: apache2
+
+- name: Installing php deps
+  apt:
+   name: "{{ item }}"
+  with_items: 
+   - php
+   - libapache2-mod-php

@@ -14,9 +14,9 @@ I am available for consultation and employment.
 
 1. Install ansible on your local machine.
 
-2. Prepare a vanilla Debian server.
+2. Prepare a vanilla Debian server which will host the application
 
-3. Add its IP address to the hosts files under [atp-server]
+3. Add the debian server's IP address to the ./hosts files under [atp-server]
 
 4. Change the http credentials in ./site.yml to your liking.
 

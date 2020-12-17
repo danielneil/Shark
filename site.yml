@@ -1,0 +1,10 @@
+---
+
+- name: Installing ATP Roles
+  hosts: atp-server
+  become: true
+  roles:
+  - server-prep
+  - httpd
+  - nagios-from-source
+ 
