@@ -4,34 +4,35 @@
 - name: Including build essentials
   include: build_essentials.yml
 
-- name: Adding nagios group
-  group:
-    name: nagios
-    state: present
-
-- name: Adding nagios user
-  user:
-    name: nagios
-    group: nagios
-
-- name: Creating nagios directories
-  file:
-    path: /usr/local/nagios
-    owner: nagios
-    group: nagios
-    state: directory
-
-- name: Creating nagios directories
-  file:
-    path: /usr/local/nagios/bin
-    owner: nagios
-    group: nagios
-    state: directory
-
 - name: Unpacking zip file into temp
   unarchive:
    src: nagios-4.4.6.tar.gz
    dest: /tmp
 
 - name: Building nagios from source
-  shell: cd /tmp/nagios-4.4.6 && ./configure && make all && make install && make install-daemoninit && make install-commandmode && make install-config && make install-webconf
+  shell: > 
+                cd /tmp/nagios-4.4.6 && 
+                ./configure --with-httpd-conf=/etc/apache2/sites-enabled && 
+                make all && 
+                make install-groups-users && 
+                usermod -a -G nagios www-data && 
+                make install &&
+                make install-daemoninit && 
+                make install-commandmode && 
+                make install-config && 
+                make install-webconf &&
+                a2enmod rewrite &&
+                a2enmod cgi
+
+- name: Setting credentials for web UI
+  shell: htpasswd -b -c /usr/local/nagios/etc/htpasswd.users {{ http_basic_user }} {{ http_basic_pass }}
+
+- name: Restart apache2
+  service: 
+   name: apache2
+   state: restarted
+
+- name: Restart / Start nagios
+  service:
+   name: nagios
+   state: restarted

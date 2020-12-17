@@ -3,6 +3,9 @@
 - name: Installing ATP Roles
   hosts: atp-server
   become: true
+  vars:
+          http_basic_user: nagios
+          http_basic_pass: nagios
   roles:
   - server-prep
   - httpd

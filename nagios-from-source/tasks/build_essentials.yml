@@ -2,10 +2,5 @@
 # tasks file for nagios-from-source
 - name: Install build essentials
   apt:
-   name: build-essential
+   name: [ 'autoconf', 'gcc', 'libc6', 'make', 'wget', 'unzip', 'apache2', 'apache2-utils', 'php', 'libgd-dev' ]
    state: latest
-
-- name: Install unzip
-  apt:
-    name: unzip
-    state: latest
