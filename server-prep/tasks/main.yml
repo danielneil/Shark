@@ -3,3 +3,7 @@
 - name: Setting timezone to AEST to match the ASX opening hours.
   timezone:
    name: Australia/Sydney
+
+- name: Updating System
+  apt: 
+   update_cache: yes

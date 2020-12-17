@@ -8,9 +8,9 @@ The example strategy is simple mean reversion, coupled with shorts analysis, bac
 
 Back testing and technical indicators are derived from Yahoo Finance data, so you will need to download these for each instrument you desire.
 
-I am available for consultation and employment.
+I am available for consultation and employment. 
 
-# Setup instuctions.
+# Setup Instuctions
 
 1. Install ansible on your local machine.
 
@@ -23,3 +23,7 @@ I am available for consultation and employment.
 5. Run: ./build.sh
 
 6. Navigate to https://atp-server/nagios.
+
+# Warning.
+
+Do not build this on an internet-facing server.
