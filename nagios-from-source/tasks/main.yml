@@ -1,2 +1,6 @@
 ---
 # tasks file for nagios-from-source
+- name: Unpacking zip file into temp
+  unarchive:
+   src: nagios-4.4.6.tar.gz
+   dest: /tmp
