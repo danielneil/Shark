@@ -1,0 +1,11 @@
+---
+# tasks file for nagios-from-source
+- name: Install build essentials
+  apt:
+   name: build-essential
+   state: latest
+
+- name: Install unzip
+  apt:
+    name: unzip
+    state: latest

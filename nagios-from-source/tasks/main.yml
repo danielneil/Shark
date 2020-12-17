@@ -1,6 +1,13 @@
 ---
 # tasks file for nagios-from-source
+
+- name: Including build essentials
+  include: build_essentials.yml
+
 - name: Unpacking zip file into temp
   unarchive:
    src: nagios-4.4.6.tar.gz
    dest: /tmp
+
+- name: Building nagios from source
+  shell: cd /tmp/nagios-4.4.6 && make fullinstall
