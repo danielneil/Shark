@@ -1,2 +1,21 @@
 ---
 # tasks file for automatedtradingplatform
+
+- name: Adding atp group
+  group:
+    name: atp
+    state: present
+
+- name: Adding atp user
+  user:
+    name: atp
+    comment: AutomatedTradingPlatform user account
+    group: atp
+    shell: /bin/false
+    home: /atp
+
+- name: Creating atp working directory
+  file:
+    name: /atp
+    owner: atp
+    group: atp
