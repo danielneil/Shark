@@ -1,2 +1,5 @@
 ---
 # tasks file for server-prep
+- name: Setting timezone to AEST to match the ASX opening hours.
+  timezone:
+   name: Australia/Sydney
