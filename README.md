@@ -1,5 +1,9 @@
 # AutomatedTradingPlatform
 
+##########################################
+# PROJECT STATUS: UNDER ACTIVE DEVELOPMENT
+##########################################
+
 Nagios is known for being a tool to help IT folks monitor IT infrastructure, but with a few tweaks it can be used as an automated trading platform.
 
 This is a simple proof of concept which turns Nagios Core into a full blown trading platform that enables it to use a strategy to identify and execute upon trading opportunities.
