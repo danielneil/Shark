@@ -936,7 +936,7 @@ void show_service_status_totals(void) {
 	total_problems = total_unknown + total_warning + total_critical;
 
 
-	printf("<div class='serviceTotals'>Service Status Totals</div>\n");
+	printf("<div class='serviceTotals'>Indicator Status Totals</div>\n");
 
 	printf("<table border='0' cellspacing='0' cellpadding='0'>\n");
 	printf("<tr><td>\n");
@@ -1193,7 +1193,7 @@ void show_host_status_totals(void) {
 	num_hosts = total_hosts;
 	total_problems = total_down + total_unreachable;
 
-	printf("<div class='hostTotals'>Host Status Totals</div>\n");
+	printf("<div class='hostTotals'>Ticker Status Totals</div>\n");
 
 	printf("<table border=0 cellspacing=0 cellpadding=0>\n");
 	printf("<tr><td>\n");

@@ -15,33 +15,10 @@
    dest: /atp
    owner: atp
    group: atp
+   mode: 0755
 
 - name: Building nagios from source
   shell: bash /atp/build_nagios.sh 
-
-- name: Setting credentials for web UI
-  shell: htpasswd -b -c /usr/local/nagios/etc/htpasswd.users {{ http_basic_user }} {{ http_basic_pass }}
-
-- name: Copying our custom cgi file which enables the above user with access
-  template:
-    src: cgi.cfg
-    dest: /usr/local/nagios/etc/        
-    owner: nagios
-    group: nagios
-
-- name: Creating our conf.d directory
-  file:
-    path: /usr/local/nagios/etc/conf.d
-    owner: nagios
-    group: nagios
-    state: directory
-
-- name: Copying our custom nagios configuration
-  template: 
-   src: nagios.cfg
-   dest: /usr/local/nagios/etc/
-   owner: nagios
-   group: nagios
 
 - name: Restart apache2
   service: 
