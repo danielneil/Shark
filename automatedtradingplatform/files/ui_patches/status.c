@@ -1569,9 +1569,9 @@ void show_service_detail(void) {
 	printf("<table border=0 width=100%% class='status'>\n");
 	printf("<tr>\n");
 
-	printf("<th class='status'>Host&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
+	printf("<th class='status'>Ticker&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
 
-	printf("<th class='status'>Service&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (ascending)' TITLE='Sort by service name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (descending)' TITLE='Sort by service name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_SERVICENAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_SERVICENAME, url_images_path, DOWN_ARROW_ICON);
+	printf("<th class='status'>Indicatore&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (ascending)' TITLE='Sort by service name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (descending)' TITLE='Sort by service name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_SERVICENAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_SERVICENAME, url_images_path, DOWN_ARROW_ICON);
 
 	printf("<th class='status'>Status&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service status (ascending)' TITLE='Sort by service status (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service status (descending)' TITLE='Sort by service status (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_SERVICESTATUS, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_SERVICESTATUS, url_images_path, DOWN_ARROW_ICON);
 
@@ -2202,7 +2202,7 @@ void show_host_detail(void) {
 	printf("<table border=0 class='status' width='100%%'>\n");
 	printf("<tr>\n");
 
-	printf("<th class='status'>Host&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
+	printf("<th class='status'>Ticker&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
 
 	printf("<th class='status'>Status&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host status (ascending)' TITLE='Sort by host status (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host status (descending)' TITLE='Sort by host status (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTSTATUS, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTSTATUS, url_images_path, DOWN_ARROW_ICON);
 
@@ -2395,7 +2395,7 @@ void show_host_detail(void) {
 				printf("%s", processed_string);
 				free(processed_string);
 				printf("' TARGET='%s'>", (notes_url_target == NULL) ? "_blank" : notes_url_target);
-				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, NOTES_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "View Extra Host Notes", "View Extra Host Notes");
+				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, NOTES_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "View Extra Ticker Notes", "View Extra Ticker Notes");
 				printf("</a>");
 				printf("</td>\n");
 				}
@@ -2406,7 +2406,7 @@ void show_host_detail(void) {
 				printf("%s", processed_string);
 				free(processed_string);
 				printf("' TARGET='%s'>", (action_url_target == NULL) ? "_blank" : action_url_target);
-				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, ACTION_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "Perform Extra Host Actions", "Perform Extra Host Actions");
+				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, ACTION_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "Perform Extra Ticker Actions", "Perform Extra Ticker Actions");
 				printf("</a>");
 				printf("</td>\n");
 				}
@@ -2427,7 +2427,7 @@ void show_host_detail(void) {
 				printf("</td>\n");
 				}
 			printf("<td>");
-			printf("<a href='%s?host=%s'><img src='%s%s' border=0 alt='View Service Details For This Host' title='View Service Details For This Host'></a>", STATUS_CGI, url_encode(temp_status->host_name), url_images_path, STATUS_DETAIL_ICON);
+			printf("<a href='%s?host=%s'><img src='%s%s' border=0 alt='View Service Details For This Ticker' title='View Service Details For This Ticker'></a>", STATUS_CGI, url_encode(temp_status->host_name), url_images_path, STATUS_DETAIL_ICON);
 			printf("</td>\n");
 			printf("</tr>\n");
 			printf("</table>\n");
@@ -2753,7 +2753,7 @@ void show_servicegroup_summaries(void) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Service Group</th><th class='status'>Host Status Summary</th><th class='status'>Service Status Summary</th>\n");
+	printf("<th class='status'>Service Group</th><th class='status'>Ticker Status Summary</th><th class='status'>Indicator Status Summary</th>\n");
 	printf("</tr>\n");
 
 	/* display status summary for all servicegroups */
@@ -4006,7 +4006,7 @@ void show_hostgroup_summaries(void) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Host Group</th><th class='status'>Host Status Summary</th><th class='status'>Service Status Summary</th>\n");
+	printf("<th class='status'>Host Group</th><th class='status'>Ticker Status Summary</th><th class='status'>Indicator Status Summary</th>\n");
 	printf("</tr>\n");
 
 	/* display status summary for all hostgroups */
@@ -5312,7 +5312,7 @@ void show_filters(void) {
 		printf("<tr><td class='filter'>\n");
 		printf("<table border=0 cellspacing=2 cellpadding=0>\n");
 		printf("<tr><td colspan=2 valign=top align=left class='filterTitle'>Display Filters:</td></tr>");
-		printf("<tr><td valign=top align=left class='filterName'>Host Status Types:</td>");
+		printf("<tr><td valign=top align=left class='filterName'>Ticker Status Types:</td>");
 		printf("<td valign=top align=left class='filterValue'>");
 		if(host_status_types == all_host_status_types)
 			printf("All");
@@ -5336,7 +5336,7 @@ void show_filters(void) {
 				printf("%s Unreachable", (found == 1) ? " |" : "");
 			}
 		printf("</td></tr>");
-		printf("<tr><td valign=top align=left class='filterName'>Host Properties:</td>");
+		printf("<tr><td valign=top align=left class='filterName'>Ticker Properties:</td>");
 		printf("<td valign=top align=left class='filterValue'>");
 		if(host_properties == 0)
 			printf("Any");
