@@ -35,6 +35,14 @@
   - rebuild-nagios
   - restart-nagios
 
+- name: Copying in custom UI changes - extinfo.c
+  copy:
+   src: ui_patches/extinfo.c
+   dest: /tmp/nagios-4.4.6/cgi
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
 - meta: flush_handlers
 
 - include: nagios_configuration.yml
