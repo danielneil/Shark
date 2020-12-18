@@ -39,6 +39,11 @@
    owner: atp
    group: atp
 
+- name: Copying in custom UI changes - side.php
+  copy:
+   src: ui_patches/side.php
+   dest: /tmp/nagios-4.4.6/html
+
 - name: Copying in custom UI changes - status.c
   copy:
    src: ui_patches/status.c
