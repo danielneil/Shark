@@ -21,5 +21,4 @@ with open ('ASX_Listed_Companies.csv', newline='') as csvfile:
                 address 127.0.0.1
                 register 1
             }
-
         """)
