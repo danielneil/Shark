@@ -19,3 +19,10 @@
     name: /atp
     owner: atp
     group: atp
+
+- name: Copy our ASX TOP 100 ticker list (downloaded from www.asx100list.com)
+  copy:
+    src: ASX_Listed_Companies.csv
+    dest: /atp/
+    owner: atp
+    group: atp

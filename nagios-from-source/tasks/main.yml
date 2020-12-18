@@ -34,6 +34,20 @@
     owner: nagios
     group: nagios
 
+- name: Creating our conf.d directory
+  file:
+    path: /usr/local/nagios/etc/conf.d
+    owner: nagios
+    group: nagios
+    state: directory
+
+- name: Copying our custom nagios configuration
+  template: 
+   src: nagios.cfg
+   dest: /usr/local/nagios/etc/
+   owner: nagios
+   group: nagios
+
 - name: Restart apache2
   service: 
    name: apache2
