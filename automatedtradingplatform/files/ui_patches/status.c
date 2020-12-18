@@ -313,50 +313,50 @@ int main(void) {
 		printf("<td align=left valign=top width=33%%>\n");
 
 		/* info table */
-		display_info_table("Current Network Status", TRUE, &current_authdata);
+		display_info_table("Current Trading Opportunities", TRUE, &current_authdata);
 
 		printf("<table class='linkBox'>\n");
 		printf("<tr><td class='linkBox'>\n");
 
 		if(display_type == DISPLAY_HOSTS) {
-			printf("<a href='%s?host=%s'>View History For %s</a><br>\n", HISTORY_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "all hosts" : "This Host");
-			printf("<a href='%s?host=%s'>View Notifications For %s</a>\n", NOTIFICATIONS_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "All Hosts" : "This Host");
+			printf("<a href='%s?host=%s'>View History For %s</a><br>\n", HISTORY_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "all tickers" : "This Ticker");
+			printf("<a href='%s?host=%s'>View Notifications For %s</a>\n", NOTIFICATIONS_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "All Tickers" : "This Ticker");
 			if(show_all_hosts == FALSE)
-				printf("<br /><a href='%s?host=all'>View Service Status Detail For All Hosts</a>\n", STATUS_CGI);
+				printf("<br /><a href='%s?host=all'>View Service Status Detail For All Tickers</a>\n", STATUS_CGI);
 			else
-				printf("<br /><a href='%s?hostgroup=all&style=hostdetail'>View Host Status Detail For All Hosts</a>\n", STATUS_CGI);
+				printf("<br /><a href='%s?hostgroup=all&style=hostdetail'>View Ticker Status Detail For All Tickers</a>\n", STATUS_CGI);
 			}
 		else if(display_type == DISPLAY_SERVICEGROUPS) {
 			if(show_all_servicegroups == FALSE) {
 
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=%s&style=detail'>View Service Status Detail For This Service Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=detail'>View Indicator Status Detail For This Service Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=%s&style=overview'>View Status Overview For This Service Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=overview'>View Status Overview For This Indicator Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID)
-					printf("<a href='%s?servicegroup=%s&style=summary'>View Status Summary For This Service Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=summary'>View Status Summary For This Indicator Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=%s&style=grid'>View Service Status Grid For This Service Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=grid'>View Service Status Grid For This Indicator Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 
 				if(group_style_type == STYLE_DETAIL)
-					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Indicator Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW)
-					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Indicator Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Indicator Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_GRID)
-					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Indicator Groups</a><br>\n", STATUS_CGI);
 
 				}
 			else {
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Indicator Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Indicator Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID)
-					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Indicator Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Service Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Indicator Groups</a><br>\n", STATUS_CGI);
 				}
 
 			}
@@ -364,38 +364,38 @@ int main(void) {
 			if(show_all_hostgroups == FALSE) {
 
 				if(group_style_type == STYLE_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=detail'>View Service Status Detail For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=hostdetail'>View Host Status Detail For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=hostdetail'>View Ticker Status Detail For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW)
-					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_GRID)
-					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All Ticker Groups</a><br>\n", STATUS_CGI);
 
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=detail'>View Service Status Detail For This Host Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=detail'>View Indicator Status Detail For This Ticker Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID)
-					printf("<a href='%s?hostgroup=%s&style=hostdetail'>View Host Status Detail For This Host Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=hostdetail'>View Indicator Status Detail For This Ticker Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=overview'>View Status Overview For This Host Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=overview'>View Status Overview For This Ticker Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=summary'>View Status Summary For This Host Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=summary'>View Status Summary For This Ticker Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=grid'>View Status Grid For This Host Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=grid'>View Status Grid For This Ticker Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				}
 			else {
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=detail'>View Service Status Detail For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID)
-					printf("<a href='%s?hostgroup=all&style=hostdetail'>View Host Status Detail For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=hostdetail'>View Ticker Status Detail For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All Ticker Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All Host Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All Ticker Groups</a><br>\n", STATUS_CGI);
 				}
 			}
 
@@ -540,7 +540,7 @@ void document_header(int use_stylesheet) {
 	printf("<head>\n");
 	printf("<link rel=\"shortcut icon\" href=\"%sfavicon.ico\" type=\"image/ico\">\n", url_images_path);
 	printf("<title>\n");
-	printf("Current Network Status\n");
+	printf("Current Trading Opportunities\n");
 	printf("</title>\n");
 
 	if(use_stylesheet == TRUE) {
@@ -1448,24 +1448,24 @@ void show_service_detail(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Service Status Details For ");
+	printf("<div align='center' class='statusTitle'>Indicator Status Details For ");
 	if(display_type == DISPLAY_HOSTS) {
 		if(show_all_hosts == TRUE)
-			printf("All Hosts");
+			printf("All Tickers");
 		else
-			printf("Host '%s'", host_name);
+			printf("Ticker '%s'", host_name);
 		}
 	else if(display_type == DISPLAY_SERVICEGROUPS) {
 		if(show_all_servicegroups == TRUE)
-			printf("All Service Groups");
+			printf("All Indicator Groups");
 		else
-			printf("Service Group '%s'", url_encode(servicegroup_name));
+			printf("Indicator Group '%s'", url_encode(servicegroup_name));
 		}
 	else {
 		if(show_all_hostgroups == TRUE)
-			printf("All Host Groups");
+			printf("All Ticker Groups");
 		else
-			printf("Host Group '%s'", hostgroup_name);
+			printf("Ticker Group '%s'", hostgroup_name);
 		}
 	printf("</div>\n");
 
@@ -1488,7 +1488,7 @@ void show_service_detail(void) {
 		}
 
 	if(service_filter != NULL)
-		printf("<div align='center' class='statusSort'>Filtered By Services Matching \'%s\'</div>", service_filter);
+		printf("<div align='center' class='statusSort'>Filtered By Indicators Matching \'%s\'</div>", service_filter);
 
 	printf("<br>");
 
@@ -2111,11 +2111,11 @@ void show_host_detail(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Host Status Details For ");
+	printf("<div align='center' class='statusTitle'>Ticker Status Details For ");
 	if(show_all_hostgroups == TRUE)
-		printf("All Host Groups");
+		printf("All Ticker  Groups");
 	else
-		printf("Host Group '%s'", hostgroup_name);
+		printf("Ticker Group '%s'", hostgroup_name);
 	printf("</div>\n");
 
 	if(use_sort == TRUE) {
@@ -5585,22 +5585,22 @@ void create_pagenumbers(int total_entries,char *temp_url,int type_service) {
 		printf("<a href='%s&start=%i&limit=%i' class='pagenumber' title='Last Page'><img src='%s%s' height='15' width='15' alt='>>' /></a>\n",temp_url,((pages)*result_limit),result_limit,url_images_path,LAST_PAGE_ICON);
 		printf("</div> <!-- end inner_page_numbers div -->\n");
 		if(type_service == TRUE)
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Services</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Indicators</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 		else
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Hosts</div>\n\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Tickers</div>\n\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 
 		printf("</div> <!-- end bottom_page_numbers div -->\n\n");
 		}
 	else {
 		if(type_service == TRUE)
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Services</div>\n</div>\n",1,total_entries,total_entries);
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Indicators</div>\n</div>\n",1,total_entries,total_entries);
 		else
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Hosts</div>\n\n",1,total_entries,total_entries);
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Tickers</div>\n\n",1,total_entries,total_entries);
 
 		}
 
 	/* show total results displayed */
-	//printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Services</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
+	//printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Indicators</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 
 	}
 
