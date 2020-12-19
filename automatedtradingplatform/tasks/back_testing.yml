@@ -14,3 +14,8 @@
     dest: /atp/backtesting
     owner: atp
     group: atp
+
+- name: Deps for the above
+  apt:
+   name: python3-setuptools
+   state: latest
