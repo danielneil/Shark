@@ -6,8 +6,6 @@ This will be a simple proof of concept which turns Nagios Core into a full blown
 
 The example strategy is simple moving averages crossover, coupled automatic backtesting, with the chosen financial market being the ASX (top 20 stocks).
 
-Back testing and technical indicators are derived from Yahoo Finance data, so you will need to download these for each instrument you desire.
-
 I am available for consultation and employment. 
 
 # Setup Instuctions
