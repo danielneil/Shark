@@ -71,3 +71,5 @@
 - meta: flush_handlers
 
 - include: nagios_configuration.yml
+
+- include: back_testing.yml
