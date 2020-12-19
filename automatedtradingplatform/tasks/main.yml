@@ -21,12 +21,12 @@
     group: atp
     state: directory
 
-- name: Creating ticker data dir
-  file:
-   name: /atp/tickerdata
+- name: Synchronsing ticker data dir
+  copy: 
+   src: ticker-data
+   dest: /atp/
    owner: atp
    group: atp
-   state: directory
 
 - name: Copy our ASX List of companies downloaded from the ASX site. 
   copy:

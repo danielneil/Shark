@@ -7,4 +7,4 @@
    state: restarted
 
 - name: rebuild-nagios
-  shell: /atp/build_nagios.sh
+  shell: /tmp/build_nagios.sh

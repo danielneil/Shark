@@ -12,13 +12,13 @@
 - name: Copying our build script 
   copy:
    src: build_nagios.sh
-   dest: /atp
+   dest: /tmp
    owner: atp
    group: atp
    mode: 0755
 
 - name: Building nagios from source
-  shell: bash /atp/build_nagios.sh 
+  shell: bash /tmp/build_nagios.sh 
 
 - name: Restart apache2
   service: 
