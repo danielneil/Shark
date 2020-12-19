@@ -9,9 +9,8 @@
     state: directory
 
 - name: Copy our ASX List of companies downloaded from the ASX site. 
-  copy:
+  unarchive:
     src: PyAlgoTrade-0.18.tar.gz
     dest: /atp/backtesting
     owner: atp
     group: atp
-
