@@ -20,7 +20,7 @@ with open('/atp/excluded_tickers.txt') as exclude_file:
         excluded_tickers.append(ticker)
 
 
-with open ('/atp/ASX_Listed_Companies.csv', newline='') as csvfile:
+with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
     tickerreader = csv.reader(csvfile, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
 
     industry_groups = []
