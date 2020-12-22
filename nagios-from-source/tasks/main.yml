@@ -13,8 +13,6 @@
   copy:
    src: build_nagios.sh
    dest: /tmp
-   owner: atp
-   group: atp
    mode: 0755
 
 - name: Building nagios from source

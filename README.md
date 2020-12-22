@@ -8,7 +8,7 @@ The example strategy is simple moving averages crossover, coupled automatic back
 
 I am available for consultation and employment. 
 
-# Setup Instuctions
+# Setup Instructions
 
 1. Install ansible on your local machine.
 

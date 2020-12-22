@@ -24,7 +24,7 @@
    owner: nagios
    group: nagios
 
-- name: Generating our nagio ticker configuration
+- name: Generating our nagios ticker configuration
   shell: python /atp/process_tickers.py > /usr/local/nagios/etc/conf.d/atp.cfg
 
 - name: Restart apache2
