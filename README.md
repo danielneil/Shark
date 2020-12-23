@@ -12,15 +12,15 @@ I am available for consultation and employment.
 
 1. Install ansible on your local machine.
 
-2. Prepare a vanilla Debian server which will host the application
+2. Prepare a vanilla Debian-ish server.
 
-3. Add the debian server's IP address to the ./hosts files under [atp-server]
+3. Add the Debian server's IP address to the ./hosts files under [atp-server]
 
 4. Change the http credentials in ./site.yml to your liking.
 
 5. Run: ./build.sh
 
-6. Navigate to https://atp-server/nagios.
+6. Navigate to https://atp-server/nagios using the aforementioned credentials.
 
 # Screen Shots
 
@@ -30,16 +30,23 @@ I am available for consultation and employment.
 
 ### Indicator Status Details For All Tickers
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-status.JPG?raw=true)
 
-### Service Overview For All Ticker Groups
+### Indicator Overview For All Ticker Groups
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-overview.JPG?raw=true)
 
 ### Ticker Status Details For All Ticker Groups
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status-for-all-groups.JPG?raw=true)
 
 ### Detection of a Trading Opportunity 
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/trading-strategy-detected.JPG?raw=true)
+
+# Warning
+
+1. Don't install this on an internet-facing server.
+
+2. I am not responsible for any losses or damages you may incur from using this software. 
+
