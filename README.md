@@ -2,7 +2,7 @@
 
 Nagios is known for being a tool to monitor IT infrastructure, but with a few tweaks it can be used to monitor the stock market, and function as an automated trading platform. 
 
-This is a simple proof of concept which turns Nagios Core into a trading platform that enables it to use a strategy to identify and execute upon trading opportunities.
+This is a proof of concept which turns Nagios Core into a trading platform that enables it to use a strategy to identify and execute upon trading opportunities.
 
 The example strategy is simple moving averages crossover with the chosen financial market being the ASX (top 20 stocks).
 
