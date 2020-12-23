@@ -17,10 +17,14 @@ if __name__ == "__main__":
     yesterdayPrice = dataFrame.iloc[-2]
 
     if lastPrice > yesterdayPrice:
-        print(lastPrice)
+        percentageDiff = '{0:.2f}'.format((yesterdayPrice/lastPrice * 100) -100) 
+
+        print(str(lastPrice) + "(" + str(percentageDiff) + "%)")
         sys.exit(0)
     else:
-        print(lastPrice)
+        percentageDiff = '{0:.2f}'.format((lastPrice/yesterdayPrice * 100) -100)
+
+        print(str(lastPrice) + "(" + str(percentageDiff) + "%)")
         sys.exit(2)
 
 
