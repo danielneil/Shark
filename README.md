@@ -28,9 +28,9 @@ I am available for consultation and employment.
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status.JPG?raw=true)
 
-### Technical Indicator Status Details For All Stocks
+### Indicator Status Details For All Stocks
 
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-status.JPG?raw=true)
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-status-all-stocks.JPG?raw=true)
 
 ### Indicator Overview For All Stock Groups
 
