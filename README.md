@@ -26,7 +26,7 @@ I am available for consultation and employment.
 
 ### Ticker Status Details For All Ticker Groups
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status.JPG?raw=true)
 
 ### Indicator Status Details For All Tickers
 
