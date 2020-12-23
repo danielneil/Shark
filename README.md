@@ -24,19 +24,19 @@ I am available for consultation and employment.
 
 # Screen Shots
 
-### Ticker Status Details For All Ticker Groups
+### Stock Status Details For All Stock Groups
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status.JPG?raw=true)
 
-### Indicator Status Details For All Tickers
+### Technical Indicator Status Details For All Stocks
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-status.JPG?raw=true)
 
-### Indicator Overview For All Ticker Groups
+### Indicator Overview For All Stock Groups
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-overview.JPG?raw=true)
 
-### Ticker Status Details For All Ticker Groups
+### Stock Status Details For All Stock Groups
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status-for-all-groups.JPG?raw=true)
 

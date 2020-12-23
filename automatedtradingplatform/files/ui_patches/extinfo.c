@@ -156,7 +156,7 @@ int main(void) {
 		else if(display_type == DISPLAY_PERFORMANCE)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Performance Information");
 		else if(display_type == DISPLAY_HOSTGROUP_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Ticker Group Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Stock Group Information");
 		else if(display_type == DISPLAY_SERVICEGROUP_INFO)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Servicegroup Information");
 		else if(display_type == DISPLAY_DOWNTIME)
@@ -946,11 +946,11 @@ void show_host_info(void) {
 
 	/* make sure host information exists */
 	if(temp_host == NULL) {
-		printf("<P><DIV CLASS='errorMessage'>Error: Ticker Not Found!</DIV></P>>");
+		printf("<P><DIV CLASS='errorMessage'>Error: Stock Not Found!</DIV></P>>");
 		return;
 		}
 	if(temp_hoststatus == NULL) {
-		printf("<P><DIV CLASS='errorMessage'>Error: Ticker Status Information Not Found!</DIV></P");
+		printf("<P><DIV CLASS='errorMessage'>Error: Stock Status Information Not Found!</DIV></P");
 		return;
 		}
 
@@ -961,7 +961,7 @@ void show_host_info(void) {
 
 	printf("<TD ALIGN=CENTER VALIGN=TOP CLASS='stateInfoPanel'>\n");
 
-	printf("<DIV CLASS='dataTitle'>Ticker State Information</DIV>\n");
+	printf("<DIV CLASS='dataTitle'>Stock State Information</DIV>\n");
 
 	if(temp_hoststatus->has_been_checked == FALSE)
 		printf("<P><DIV ALIGN=CENTER>This ticker has not yet been checked, so status information is not available.</DIV></P>\n");
@@ -1010,7 +1010,7 @@ void show_host_info(void) {
 			bg_class = "hostUNREACHABLE";
 			}
 
-		printf("<TR><TD CLASS='dataVar'>Ticker Status:</td><td CLASS='dataVal'><DIV CLASS='%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;%s</td></tr>\n", bg_class, state_string, state_duration, (temp_hoststatus->problem_has_been_acknowledged == TRUE) ? "&nbsp;&nbsp;(Has been acknowledged)" : "");
+		printf("<TR><TD CLASS='dataVar'>Stock Status:</td><td CLASS='dataVal'><DIV CLASS='%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;%s</td></tr>\n", bg_class, state_string, state_duration, (temp_hoststatus->problem_has_been_acknowledged == TRUE) ? "&nbsp;&nbsp;(Has been acknowledged)" : "");
 
 		printf("<TR><TD CLASS='dataVar' VALIGN='top'>Status Information:</td><td CLASS='dataVal'>%s", (temp_hoststatus->plugin_output == NULL) ? "" : html_encode(temp_hoststatus->plugin_output, TRUE));
 		if(enable_splunk_integration == TRUE) {
@@ -1092,7 +1092,7 @@ void show_host_info(void) {
 
 	printf("<TD ALIGN=CENTER VALIGN=TOP CLASS='commandPanel'>\n");
 
-	printf("<DIV CLASS='commandTitle'>Ticker Commands</DIV>\n");
+	printf("<DIV CLASS='commandTitle'>Stock Commands</DIV>\n");
 
 	printf("<TABLE BORDER='1' CELLPADDING=0 CELLSPACING=0><TR><TD>\n");
 
@@ -1100,10 +1100,10 @@ void show_host_info(void) {
 
 		printf("<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 CLASS='command'>\n");
 #ifdef USE_STATUSMAP
-		printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Locate Ticker On Map' TITLE='Locate Ticker On Map'></td><td CLASS='command'><a href='%s?host=%s&root=%s'>Locate ticker on map</a></td></tr>\n", url_images_path, STATUSMAP_ICON, STATUSMAP_CGI, url_encode(host_name), url_encode(host_name));
+		printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Locate Stock On Map' TITLE='Locate Stock On Map'></td><td CLASS='command'><a href='%s?host=%s&root=%s'>Locate ticker on map</a></td></tr>\n", url_images_path, STATUSMAP_ICON, STATUSMAP_CGI, url_encode(host_name), url_encode(host_name));
 #endif
 		if(temp_hoststatus->checks_enabled == TRUE) {
-			printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Disable Active Checks Of This Ticker' TITLE='Disable Active Checks Of This Ticker'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Disable active checks of this host</a></td></tr>\n", url_images_path, DISABLED_ICON, COMMAND_CGI, CMD_DISABLE_HOST_CHECK, url_encode(host_name));
+			printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Disable Active Checks Of This Stock' TITLE='Disable Active Checks Of This Stock'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Disable active checks of this host</a></td></tr>\n", url_images_path, DISABLED_ICON, COMMAND_CGI, CMD_DISABLE_HOST_CHECK, url_encode(host_name));
 			}
 		else
 			printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Enable Active Checks Of This Host' TITLE='Enable Active Checks Of This Host'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Enable active checks of this host</a></td></tr>\n", url_images_path, ENABLED_ICON, COMMAND_CGI, CMD_ENABLE_HOST_CHECK, url_encode(host_name));
@@ -1123,7 +1123,7 @@ void show_host_info(void) {
 
 		if(temp_hoststatus->status == SD_HOST_DOWN || temp_hoststatus->status == SD_HOST_UNREACHABLE) {
 			if(temp_hoststatus->problem_has_been_acknowledged == FALSE)
-				printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Acknowledge This Ticker Problem' TITLE='Acknowledge This Ticker Problem'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Acknowledge this ticker problem</a></td></tr>\n", url_images_path, ACKNOWLEDGEMENT_ICON, COMMAND_CGI, CMD_ACKNOWLEDGE_HOST_PROBLEM, url_encode(host_name));
+				printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Acknowledge This Stock Problem' TITLE='Acknowledge This Stock Problem'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Acknowledge this ticker problem</a></td></tr>\n", url_images_path, ACKNOWLEDGEMENT_ICON, COMMAND_CGI, CMD_ACKNOWLEDGE_HOST_PROBLEM, url_encode(host_name));
 			else
 				printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Remove Problem Acknowledgement' TITLE='Remove Problem Acknowledgement'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Remove problem acknowledgement</a></td></tr>\n", url_images_path, REMOVE_ACKNOWLEDGEMENT_ICON, COMMAND_CGI, CMD_REMOVE_HOST_ACKNOWLEDGEMENT, url_encode(host_name));
 			}
@@ -1726,7 +1726,7 @@ void show_all_comments(void) {
 	char expire_time[MAX_DATETIME_LENGTH];
 
 	printf("<BR />\n");
-	printf("<DIV CLASS='commentNav'>[&nbsp;<A HREF='#HOSTCOMMENTS' CLASS='commentNav'>Ticker Comments</A>&nbsp;|&nbsp;<A HREF='#SERVICECOMMENTS' CLASS='commentNav'>Service Comments</A>&nbsp;]</DIV>\n");
+	printf("<DIV CLASS='commentNav'>[&nbsp;<A HREF='#HOSTCOMMENTS' CLASS='commentNav'>Stock Comments</A>&nbsp;|&nbsp;<A HREF='#SERVICECOMMENTS' CLASS='commentNav'>Service Comments</A>&nbsp;]</DIV>\n");
 	printf("<BR />\n");
 
 	printf("<A NAME=HOSTCOMMENTS></A>\n");
