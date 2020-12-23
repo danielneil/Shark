@@ -44,5 +44,5 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 1. Don't install this on an internet-facing server.
 
-2. [Read the disclaimer](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/DISCLAIMER)
+2. [Read the disclaimer](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/DISCLAIMER).
 
