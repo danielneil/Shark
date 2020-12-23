@@ -36,10 +36,6 @@ I am available for consultation and employment.
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-overview.JPG?raw=true)
 
-### Stock Status Details For All Stock Groups
-
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status-for-all-groups.JPG?raw=true)
-
 ### Detection of a Trading Opportunity 
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/trading-strategy-detected.JPG?raw=true)
