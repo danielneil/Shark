@@ -2200,7 +2200,7 @@ void show_host_detail(void) {
 
 	printf("<th class='status'>Status&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host status (ascending)' TITLE='Sort by host status (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host status (descending)' TITLE='Sort by host status (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTSTATUS, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTSTATUS, url_images_path, DOWN_ARROW_ICON);
 
-	printf("<th class='status'>Indicator Information</th>\n");
+	printf("<th class='status'>Last Price</th>\n");
 	printf("</tr>\n");
 
 

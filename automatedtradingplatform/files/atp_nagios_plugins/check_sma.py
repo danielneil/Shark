@@ -15,3 +15,5 @@ if __name__ == "__main__":
     dataFrame = data['Adj Close']
 
     print (dataFrame.rolling(smaPeriod).mean().iloc[-1])
+
+    sys.exit(0)
