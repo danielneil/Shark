@@ -2646,7 +2646,7 @@ void show_servicegroup_overview(servicegroup *temp_servicegroup) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Host</th><th class='status'>Status</th><th class='status'>Services</th><th class='status'>Actions</th>\n");
+	printf("<th class='status'>Stock</th><th class='status'>Status</th><th class='status'>Indicators</th><th class='status'>Actions</th>\n");
 	printf("</tr>\n");
 
 	/* find all hosts that have services that are members of the servicegroup */
