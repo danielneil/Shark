@@ -8,8 +8,6 @@ The example strategy is simple moving averages crossover with the chosen financi
 
 Though it focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy, too.  
 
-I am available for consultation and employment. 
-
 # Setup Instructions
 
 1. Install ansible on your local machine.
