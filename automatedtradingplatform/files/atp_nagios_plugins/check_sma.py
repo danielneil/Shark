@@ -2,6 +2,7 @@
 
 import pandas as pd
 import datetime
+import numpy as np
 
 import sys
 
@@ -14,6 +15,8 @@ if __name__ == "__main__":
 
     dataFrame = data['Adj Close']
 
-    print (dataFrame.rolling(smaPeriod).mean().iloc[-1])
+    smaResult = np.round(dataFrame.rolling(smaPeriod).mean().iloc[-1], 2)
+
+    print (smaResult)
 
     sys.exit(0)
