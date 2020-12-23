@@ -24,8 +24,28 @@
    owner: nagios
    group: nagios
 
+- name: Creating our custom nagios_plugins directory
+  file:
+   path: /atp/nagios_plugins
+   owner: nagios
+   group: nagios
+   state: directory
+
 - name: Generating our nagios ticker configuration
   shell: python /atp/process_tickers.py > /usr/local/nagios/etc/conf.d/atp.cfg
+
+- name: Install pandas which is a prereq for the above
+  apt:
+   name: python-pandas
+   state: latest
+
+- name: Install the nagios plugin for checking smoothing averages
+  copy: 
+   src: atp_nagios_plugins/check_sma.py
+   dest: /atp/nagios_plugins
+   mode: 0755
+   owner: nagios
+   group: nagios 
 
 - name: Restart apache2
   service: 
