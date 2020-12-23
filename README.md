@@ -8,15 +8,13 @@ The example strategy is simple moving averages crossover with the chosen financi
 
 Though it focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy, too.  
 
-I am available for consultation and employment. 
-
 # Setup Instructions
 
 1. Install ansible on your local machine.
 
 2. Prepare a vanilla Debian-ish server.
 
-3. Add the Debian server's IP address to the ./hosts files under [atp-server]
+3. Add its IP address to the ./hosts files under [atp-server]
 
 4. Change the http credentials in ./site.yml to your liking.
 
@@ -46,5 +44,5 @@ I am available for consultation and employment.
 
 1. Don't install this on an internet-facing server.
 
-2. [Read the disclaimer](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/DISCLAIMER)
+2. [Read the disclaimer](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/DISCLAIMER).
 
