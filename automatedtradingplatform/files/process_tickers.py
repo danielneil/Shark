@@ -53,7 +53,7 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
             define service {
                 host_name """+ticker+"""
                 service_description Moving Average 5 Day
-                check_command check_sma!ticker!5
+                check_command check_sma!5
                 max_check_attempts 5
                 check_interval 5
                 retry_interval 3
@@ -67,7 +67,21 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
             define service {
                 host_name """+ticker+"""
                 service_description Moving Average 50 Day
-                check_command check_sma!ticker!50
+                check_command check_sma!50
+                max_check_attempts 5
+                check_interval 5
+                retry_interval 3
+                check_period 24x7
+                notification_interval 30
+                notification_period 24x7
+                notification_options w,c,r
+                contact_groups admins
+            }
+
+            define service {
+                host_name """+ticker+"""
+                service_description Strategy Detection
+                check_command check_strategy
                 max_check_attempts 5
                 check_interval 5
                 retry_interval 3
