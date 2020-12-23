@@ -34,7 +34,7 @@
 - name: Generating our nagios ticker configuration
   shell: python /atp/process_tickers.py > /usr/local/nagios/etc/conf.d/atp.cfg
 
-- name: Install pandas which is a prereq for the above
+- name: Install pandas which is a prereq for the below
   apt:
    name: python-pandas
    state: latest
@@ -46,6 +46,21 @@
    mode: 0755
    owner: nagios
    group: nagios 
+ 
+- name: Install the nagios plugin for checking the price of the stock from the dataset
+  copy:
+   src: atp_nagios_plugins/check_price.py
+   dest: /atp/nagios_plugins
+   mode: 0755
+   owner: nagios
+   group: nagios
+
+- name: Adding our custom nagios commands file
+  copy:
+   src: atp_nagios_plugins/commands.cfg
+   dest: /usr/local/nagios/etc/conf.d/
+   owner: nagios
+   group: nagios
 
 - name: Restart apache2
   service: 

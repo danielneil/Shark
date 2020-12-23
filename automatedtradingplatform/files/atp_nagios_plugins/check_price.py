@@ -13,4 +13,14 @@ if __name__ == "__main__":
 
     dataFrame = data['Adj Close']
 
-    print (dataFrame.iloc[-1])
+    lastPrice = dataFrame.iloc[-1]
+    yesterdayPrice = dataFrame.iloc[-2]
+
+    if lastPrice > yesterdayPrice:
+        print(lastPrice)
+        sys.exit(0)
+    else:
+        print(lastPrice)
+        sys.exit(2)
+
+

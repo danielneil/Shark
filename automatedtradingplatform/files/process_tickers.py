@@ -43,7 +43,7 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
 
         print( """
             define host {
-                use linux-server
+                use stock
                 host_name """+ticker+"""
                 hostgroups """ +cleaned_industry_group_str+"""
                 address 127.0.0.1
