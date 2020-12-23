@@ -3,7 +3,7 @@
 import pandas as pd
 import datetime
 import sys
-import os
+import subprocess
 
 # Our straegy is simple - buy when the first moving average, crosses above the second moving average
 
@@ -11,12 +11,12 @@ if __name__ == "__main__":
 
     ticker = sys.argv[1]
 
-    firstSMAPeriod = os.system('/atp/nagios_plugins/check_sma.py ' + ticker + " 10")
-    secondSMAPeriod = os.system('/atp/nagios_plugins/check_sma.py ' + ticker + " 50")
+    firstSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, '10'])
+    secondSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, '50'])
 
     if firstSMAPeriod > secondSMAPeriod:
 
-            print("Buy Opportunity - Moving Average Crossover Detected")
+            print("Buy Opportunity Detected")
             sys.exit(2)
     else:
             print("No Opportunity Detected")
