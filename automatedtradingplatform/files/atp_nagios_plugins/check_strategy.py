@@ -14,9 +14,6 @@ if __name__ == "__main__":
     firstSMAPeriod = os.system('/atp/nagios_plugins/check_sma.py' + ticker + "10")
     secondSMAPeriod = os.system('/atp/nagios_plguins/check_sma.py' + ticker + "50")
 
-    print(firstSMAPeriod)
-    print(secondSMAPeriod)
-
     if firstSMAPeriod > secondSMAPeriod:
 
             print("Buy Opportunity - Moving Average Crossover Detected")
