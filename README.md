@@ -32,7 +32,7 @@ I am available for consultation and employment.
 
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
-### Service Overview For All Host Groups
+### Service Overview For All Ticker Groups
 
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
@@ -43,7 +43,3 @@ I am available for consultation and employment.
 ### Detection of a Trading Opportunity 
 
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
-
-# Warning.
-
-Do not build this on an internet-facing server.
