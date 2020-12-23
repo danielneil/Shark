@@ -36,6 +36,10 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-overview.JPG?raw=true)
 
+### Indicator Overview For All Indicator Groups
+
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-groups-overview.JPG?raw=true)
+
 ### Detection of a Trading Opportunity 
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/trading-strategy-detected.JPG?raw=true)
