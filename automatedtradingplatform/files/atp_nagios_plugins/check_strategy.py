@@ -11,8 +11,8 @@ if __name__ == "__main__":
 
     ticker = sys.argv[1]
 
-    firstSMAPeriod = os.system('/atp/nagios_plugins/check_sma.py' + ticker + "10")
-    secondSMAPeriod = os.system('/atp/nagios_plguins/check_sma.py' + ticker + "50")
+    firstSMAPeriod = os.system('/atp/nagios_plugins/check_sma.py ' + ticker + " 10")
+    secondSMAPeriod = os.system('/atp/nagios_plguins/check_sma.py ' + ticker + " 50")
 
     if firstSMAPeriod > secondSMAPeriod:
 
