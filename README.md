@@ -4,7 +4,7 @@ Nagios is known for being a tool to help IT folks monitor IT infrastructure, but
 
 This will be a simple proof of concept which turns Nagios Core into a trading platform that enables it to use a strategy to identify and execute upon trading opportunities.
 
-The example strategy is simple moving averages crossover, coupled automatic backtesting, with the chosen financial market being the ASX (top 20 stocks).
+The example strategy is simple moving averages crossover with the chosen financial market being the ASX (top 20 stocks).
 
 I am available for consultation and employment. 
 
