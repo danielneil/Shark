@@ -148,15 +148,15 @@ int main(void) {
 		printf("<td align=left valign=top width=33%%>\n");
 
 		if(display_type == DISPLAY_HOST_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Host Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Stock Information");
 		else if(display_type == DISPLAY_SERVICE_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Service Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Indicators Information");
 		else if(display_type == DISPLAY_COMMENTS)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "All Host and Service Comments");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "All Stock and Indicators Comments");
 		else if(display_type == DISPLAY_PERFORMANCE)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Performance Information");
 		else if(display_type == DISPLAY_HOSTGROUP_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Hostgroup Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Ticker Group Information");
 		else if(display_type == DISPLAY_SERVICEGROUP_INFO)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Servicegroup Information");
 		else if(display_type == DISPLAY_DOWNTIME)
@@ -1010,7 +1010,7 @@ void show_host_info(void) {
 			bg_class = "hostUNREACHABLE";
 			}
 
-		printf("<TR><TD CLASS='dataVar'>Ticker Status:</td><td CLASS='dataVal'><DIV CLASS='%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;(for %s)%s</td></tr>\n", bg_class, state_string, state_duration, (temp_hoststatus->problem_has_been_acknowledged == TRUE) ? "&nbsp;&nbsp;(Has been acknowledged)" : "");
+		printf("<TR><TD CLASS='dataVar'>Ticker Status:</td><td CLASS='dataVal'><DIV CLASS='%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;%s</td></tr>\n", bg_class, state_string, state_duration, (temp_hoststatus->problem_has_been_acknowledged == TRUE) ? "&nbsp;&nbsp;(Has been acknowledged)" : "");
 
 		printf("<TR><TD CLASS='dataVar' VALIGN='top'>Status Information:</td><td CLASS='dataVal'>%s", (temp_hoststatus->plugin_output == NULL) ? "" : html_encode(temp_hoststatus->plugin_output, TRUE));
 		if(enable_splunk_integration == TRUE) {
@@ -1023,23 +1023,8 @@ void show_host_info(void) {
 			printf("<BR>%s", html_encode(temp_hoststatus->long_plugin_output, TRUE));
 		printf("</TD></TR>\n");
 
-		printf("<TR><TD CLASS='dataVar' VALIGN='top'>Performance Data:</td><td CLASS='dataVal'>%s</td></tr>\n", (temp_hoststatus->perf_data == NULL) ? "" : html_encode(temp_hoststatus->perf_data, TRUE));
-
-		printf("<TR><TD CLASS='dataVar'>Current Attempt:</TD><TD CLASS='dataVal'>%d/%d", temp_hoststatus->current_attempt, temp_hoststatus->max_attempts);
-		printf("&nbsp;&nbsp;(%s state)</TD></TR>\n", (temp_hoststatus->state_type == HARD_STATE) ? "HARD" : "SOFT");
-
 		get_time_string(&temp_hoststatus->last_check, date_time, (int)sizeof(date_time), SHORT_DATE_TIME);
 		printf("<TR><TD CLASS='dataVar'>Last Check Time:</td><td CLASS='dataVal'>%s</td></tr>\n", date_time);
-
-		printf("<TR><TD CLASS='dataVar'>Check Type:</TD><TD CLASS='dataVal'>%s</TD></TR>\n", (temp_hoststatus->check_type == CHECK_TYPE_ACTIVE) ? "ACTIVE" : "PASSIVE");
-
-		printf("<TR><TD CLASS='dataVar' NOWRAP>Check Latency / Duration:</TD><TD CLASS='dataVal'>");
-		if(temp_hoststatus->check_type == CHECK_TYPE_ACTIVE)
-			printf("%.3f", temp_hoststatus->latency);
-		else
-			printf("N/A");
-		printf("&nbsp;/&nbsp;%.3f seconds", temp_hoststatus->execution_time);
-		printf("</TD></TR>\n");
 
 		get_time_string(&temp_hoststatus->next_check, date_time, (int)sizeof(date_time), SHORT_DATE_TIME);
 		printf("<TR><TD CLASS='dataVar'>Next Scheduled Active Check:&nbsp;&nbsp;</TD><TD CLASS='dataVal'>%s</TD></TR>\n", (temp_hoststatus->checks_enabled && temp_hoststatus->next_check != (time_t)0 && temp_hoststatus->should_be_scheduled == TRUE) ? date_time : "N/A");
@@ -1049,15 +1034,6 @@ void show_host_info(void) {
 
 		get_time_string(&temp_hoststatus->last_notification, date_time, (int)sizeof(date_time), SHORT_DATE_TIME);
 		printf("<TR><TD CLASS='dataVar'>Last Notification:</td><td CLASS='dataVal'>%s&nbsp;(notification %d)</td></tr>\n", (temp_hoststatus->last_notification == (time_t)0) ? "N/A" : date_time, temp_hoststatus->current_notification_number);
-
-		printf("<TR><TD CLASS='dataVar'>Is This Ticker Flapping?</td><td CLASS='dataVal'>");
-		if(temp_hoststatus->flap_detection_enabled == FALSE || enable_flap_detection == FALSE)
-			printf("N/A");
-		else
-			printf("<DIV CLASS='%sflapping'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;(%3.2f%% state change)", (temp_hoststatus->is_flapping == TRUE) ? "" : "not", (temp_hoststatus->is_flapping == TRUE) ? "YES" : "NO", temp_hoststatus->percent_state_change);
-		printf("</td></tr>\n");
-
-		printf("<TR><TD CLASS='dataVar'>In Scheduled Downtime?</td><td CLASS='dataVal'><DIV CLASS='downtime%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV></td></tr>\n", (temp_hoststatus->scheduled_downtime_depth > 0) ? "ACTIVE" : "INACTIVE", (temp_hoststatus->scheduled_downtime_depth > 0) ? "YES" : "NO");
 
 		t = 0;
 		duration_error = FALSE;
@@ -1338,13 +1314,8 @@ void show_service_info(void) {
 
 		printf("<TR><TD CLASS='dataVar' VALIGN='top'>Performance Data:</td><td CLASS='dataVal'>%s</td></tr>\n", (temp_svcstatus->perf_data == NULL) ? "" : html_encode(temp_svcstatus->perf_data, TRUE));
 
-		printf("<TR><TD CLASS='dataVar'>Current Attempt:</TD><TD CLASS='dataVal'>%d/%d", temp_svcstatus->current_attempt, temp_svcstatus->max_attempts);
-		printf("&nbsp;&nbsp;(%s state)</TD></TR>\n", (temp_svcstatus->state_type == HARD_STATE) ? "HARD" : "SOFT");
-
 		get_time_string(&temp_svcstatus->last_check, date_time, (int)sizeof(date_time), SHORT_DATE_TIME);
 		printf("<TR><TD CLASS='dataVar'>Last Check Time:</TD><TD CLASS='dataVal'>%s</TD></TR>\n", date_time);
-
-		printf("<TR><TD CLASS='dataVar'>Check Type:</TD><TD CLASS='dataVal'>%s</TD></TR>\n", (temp_svcstatus->check_type == CHECK_TYPE_ACTIVE) ? "ACTIVE" : "PASSIVE");
 
 		printf("<TR><TD CLASS='dataVar' NOWRAP>Check Latency / Duration:</TD><TD CLASS='dataVal'>");
 		if(temp_svcstatus->check_type == CHECK_TYPE_ACTIVE)
@@ -1354,23 +1325,11 @@ void show_service_info(void) {
 		printf("&nbsp;/&nbsp;%.3f seconds", temp_svcstatus->execution_time);
 		printf("</TD></TR>\n");
 
-		get_time_string(&temp_svcstatus->next_check, date_time, (int)sizeof(date_time), SHORT_DATE_TIME);
-		printf("<TR><TD CLASS='dataVar'>Next Scheduled Check:&nbsp;&nbsp;</TD><TD CLASS='dataVal'>%s</TD></TR>\n", (temp_svcstatus->checks_enabled && temp_svcstatus->next_check != (time_t)0 && temp_svcstatus->should_be_scheduled == TRUE) ? date_time : "N/A");
-
 		get_time_string(&temp_svcstatus->last_state_change, date_time, (int)sizeof(date_time), SHORT_DATE_TIME);
 		printf("<TR><TD CLASS='dataVar'>Last State Change:</TD><TD CLASS='dataVal'>%s</TD></TR>\n", (temp_svcstatus->last_state_change == (time_t)0) ? "N/A" : date_time);
 
 		get_time_string(&temp_svcstatus->last_notification, date_time, (int)sizeof(date_time), SHORT_DATE_TIME);
 		printf("<TR><TD CLASS='dataVar'>Last Notification:</TD><TD CLASS='dataVal'>%s&nbsp;(notification %d)</TD></TR>\n", (temp_svcstatus->last_notification == (time_t)0) ? "N/A" : date_time, temp_svcstatus->current_notification_number);
-
-		printf("<TR><TD CLASS='dataVar'>Is This Service Flapping?</TD><TD CLASS='dataVal'>");
-		if(temp_svcstatus->flap_detection_enabled == FALSE || enable_flap_detection == FALSE)
-			printf("N/A");
-		else
-			printf("<DIV CLASS='%sflapping'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;(%3.2f%% state change)", (temp_svcstatus->is_flapping == TRUE) ? "" : "not", (temp_svcstatus->is_flapping == TRUE) ? "YES" : "NO", temp_svcstatus->percent_state_change);
-		printf("</TD></TR>\n");
-
-		printf("<TR><TD CLASS='dataVar'>In Scheduled Downtime?</TD><TD CLASS='dataVal'><DIV CLASS='downtime%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV></TD></TR>\n", (temp_svcstatus->scheduled_downtime_depth > 0) ? "ACTIVE" : "INACTIVE", (temp_svcstatus->scheduled_downtime_depth > 0) ? "YES" : "NO");
 
 		t = 0;
 		duration_error = FALSE;
@@ -1771,7 +1730,7 @@ void show_all_comments(void) {
 	printf("<BR />\n");
 
 	printf("<A NAME=HOSTCOMMENTS></A>\n");
-	printf("<DIV CLASS='commentTitle'>Host Comments</DIV>\n");
+	printf("<DIV CLASS='commentTitle'>Stock Comments</DIV>\n");
 
 	if(is_authorized_for_read_only(&current_authdata)==FALSE) {
 		printf("<div CLASS='comment'><img src='%s%s' border=0>&nbsp;", url_images_path, COMMENT_ICON);
