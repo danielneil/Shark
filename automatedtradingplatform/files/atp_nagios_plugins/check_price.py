@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import pandas as pd
+import numpy as np
 import datetime
 
 import sys
@@ -13,18 +14,18 @@ if __name__ == "__main__":
 
     dataFrame = data['Adj Close']
 
-    lastPrice = dataFrame.iloc[-1]
-    yesterdayPrice = dataFrame.iloc[-2]
+    lastPrice = np.round(dataFrame.iloc[-1], 2)
+    yesterdayPrice = np.round(dataFrame.iloc[-2], 2)
 
     if lastPrice > yesterdayPrice:
-        percentageDiff = '{0:.2f}'.format((yesterdayPrice/lastPrice * 100) -100) 
+        percentageDiff = '{0:.2f}'.format(abs((yesterdayPrice/lastPrice * 100) -100)) 
 
-        print(str(lastPrice) + "(" + str(percentageDiff) + "%)")
+        print(str(lastPrice) + " (" + str(percentageDiff) + "%)")
         sys.exit(0)
     else:
         percentageDiff = '{0:.2f}'.format((lastPrice/yesterdayPrice * 100) -100)
 
-        print(str(lastPrice) + "(" + str(percentageDiff) + "%)")
+        print(str(lastPrice) + " (" + str(percentageDiff) + "%)")
         sys.exit(2)
 
 
