@@ -313,7 +313,7 @@ int main(void) {
 		printf("<td align=left valign=top width=33%%>\n");
 
 		/* info table */
-		display_info_table("Current Trading Opportunities", TRUE, &current_authdata);
+		display_info_table("Automated Trading Platform", TRUE, &current_authdata);
 
 		printf("<table class='linkBox'>\n");
 		printf("<tr><td class='linkBox'>\n");
@@ -3973,9 +3973,9 @@ void show_hostgroup_summaries(void) {
 
 	printf("<div align='center' class='statusTitle'>Status Summary For ");
 	if(show_all_hostgroups == TRUE)
-		printf("All Host Groups");
+		printf("All Industry Groups");
 	else
-		printf("Host Group '%s'", hostgroup_name);
+		printf("Industry Group '%s'", hostgroup_name);
 	printf("</div>\n");
 
 	printf("<br>");
@@ -3994,7 +3994,7 @@ void show_hostgroup_summaries(void) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Host Group</th><th class='status'>Stock Status Summary</th><th class='status'>Indicator Status Summary</th>\n");
+	printf("<th class='status'>Industry Group</th><th class='status'>Stock Status Summary</th><th class='status'>Indicator Status Summary</th>\n");
 	printf("</tr>\n");
 
 	/* display status summary for all hostgroups */
