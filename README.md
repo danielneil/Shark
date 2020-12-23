@@ -1,6 +1,6 @@
 # Automated Trading Platform
 
-Nagios is known for being a tool to help IT folks monitor IT infrastructure, but with a few tweaks it can be used as an automated trading platform.
+Nagios is known for being a tool to help IT folks monitor IT infrastructure, but with a few tweaks it can be used to monitor the stock market, and function as an automated trading platform. 
 
 This is a simple proof of concept which turns Nagios Core into a trading platform that enables it to use a strategy to identify and execute upon trading opportunities.
 
