@@ -22,6 +22,24 @@ I am available for consultation and employment.
 
 6. Navigate to https://atp-server/nagios.
 
+# Screen Shots
+
+## Ticker Status Details For All Ticker Groups
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+## Indicator Status Details For All Tickers
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+## Service Overview For All Host Groups
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+## Ticker Status Details For All Ticker Groups
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
 # Warning.
 
 Do not build this on an internet-facing server.
