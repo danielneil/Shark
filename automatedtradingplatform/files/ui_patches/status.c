@@ -2513,11 +2513,11 @@ void show_servicegroup_overviews(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Service Overview For ");
+	printf("<div align='center' class='statusTitle'>Indicator Overview For ");
 	if(show_all_servicegroups == TRUE)
-		printf("All Service Groups");
+		printf("All Indicator Groups");
 	else
-		printf("Service Group '%s'", servicegroup_name);
+		printf("Indicator Group '%s'", servicegroup_name);
 	printf("</div>\n");
 
 	printf("<br>");
@@ -3587,11 +3587,11 @@ void show_hostgroup_overviews(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Service Overview For ");
+	printf("<div align='center' class='statusTitle'>Indicator Overview For ");
 	if(show_all_hostgroups == TRUE)
-		printf("All Host Groups");
+		printf("All Indicator Groups");
 	else
-		printf("Host Group '%s'", hostgroup_name);
+		printf("Indicator Group '%s'", hostgroup_name);
 	printf("</div>\n");
 
 	printf("<br>");
