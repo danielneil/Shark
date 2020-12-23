@@ -53,6 +53,7 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
             define service {
                 host_name """+ticker+"""
                 service_description Moving Average 5 Day
+                servicegroups check_sma5
                 check_command check_sma!5
                 max_check_attempts 5
                 check_interval 5
@@ -67,6 +68,7 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
             define service {
                 host_name """+ticker+"""
                 service_description Moving Average 50 Day
+                servicegroups check_sma50
                 check_command check_sma!50
                 max_check_attempts 5
                 check_interval 5
@@ -81,6 +83,7 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
             define service {
                 host_name """+ticker+"""
                 service_description Strategy Detection
+                servicegroups strategyDetection
                 check_command check_strategy
                 max_check_attempts 5
                 check_interval 5
@@ -109,3 +112,21 @@ for industry_group in industry_groups:
         }
     """)
 
+# Write out the service groups
+
+print ("""
+            define servicegroup {
+                servicegroup_name   strategyDetection
+                alias               Strategy Detection
+            }
+
+            define servicegroup {
+                servicegroup_name   check_sma5
+                alias               Moving Average - 5 Day
+            }
+
+            define servicegroup {
+                servicegroup_name   check_sma50
+                alias               Moving Average - 50 Day
+            }
+      """)
