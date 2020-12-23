@@ -213,47 +213,47 @@ int main(void) {
 			printf("<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 CLASS='linkBox'>\n");
 			printf("<TR><TD CLASS='linkBox'>\n");
 			if(display_type == DISPLAY_SERVICE_INFO)
-				printf("<A HREF='%s?type=%d&host=%s'>View Information For This Host</A><br>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(host_name));
+				printf("<A HREF='%s?type=%d&host=%s'>View Information For This Stock</A><br>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(host_name));
 			if(display_type == DISPLAY_SERVICE_INFO || display_type == DISPLAY_HOST_INFO)
-				printf("<A HREF='%s?host=%s'>View Status Detail For This Host</A><BR>\n", STATUS_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Status Detail For This Stock</A><BR>\n", STATUS_CGI, url_encode(host_name));
 			if(display_type == DISPLAY_HOST_INFO) {
-				printf("<A HREF='%s?host=%s'>View Alert History For This Host</A><BR>\n", HISTORY_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Alert History For This Stock</A><BR>\n", HISTORY_CGI, url_encode(host_name));
 #ifdef USE_TRENDS
-				printf("<A HREF='%s?host=%s'>View Trends For This Host</A><BR>\n", TRENDS_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Trends For This Stock</A><BR>\n", TRENDS_CGI, url_encode(host_name));
 #endif
 #ifdef USE_HISTOGRAM
-				printf("<A HREF='%s?host=%s'>View Alert Histogram For This Host</A><BR>\n", HISTOGRAM_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Alert Histogram For This Stock</A><BR>\n", HISTOGRAM_CGI, url_encode(host_name));
 #endif
-				printf("<A HREF='%s?host=%s&show_log_entries'>View Availability Report For This Host</A><BR>\n", AVAIL_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s&show_log_entries'>View Availability Report For This Stock</A><BR>\n", AVAIL_CGI, url_encode(host_name));
 				printf("<A HREF='%s?host=%s'>View Notifications For This Host</A>\n", NOTIFICATIONS_CGI, url_encode(host_name));
 				}
 			else if(display_type == DISPLAY_SERVICE_INFO) {
 				printf("<A HREF='%s?host=%s&", HISTORY_CGI, url_encode(host_name));
-				printf("service=%s'>View Alert History For This Service</A><BR>\n", url_encode(service_desc));
+				printf("service=%s'>View Alert History For This Indicator</A><BR>\n", url_encode(service_desc));
 #ifdef USE_TRENDS
 				printf("<A HREF='%s?host=%s&", TRENDS_CGI, url_encode(host_name));
-				printf("service=%s'>View Trends For This Service</A><BR>\n", url_encode(service_desc));
+				printf("service=%s'>View Trends For This Indicator</A><BR>\n", url_encode(service_desc));
 #endif
 #ifdef USE_HISTOGRAM
 				printf("<A HREF='%s?host=%s&", HISTOGRAM_CGI, url_encode(host_name));
-				printf("service=%s'>View Alert Histogram For This Service</A><BR>\n", url_encode(service_desc));
+				printf("service=%s'>View Alert Histogram For This Indicator</A><BR>\n", url_encode(service_desc));
 #endif
 				printf("<A HREF='%s?host=%s&", AVAIL_CGI, url_encode(host_name));
-				printf("service=%s&show_log_entries'>View Availability Report For This Service</A><BR>\n", url_encode(service_desc));
+				printf("service=%s&show_log_entries'>View Availability Report For This Indicator</A><BR>\n", url_encode(service_desc));
 				printf("<A HREF='%s?host=%s&", NOTIFICATIONS_CGI, url_encode(host_name));
 				printf("service=%s'>View Notifications For This Service</A>\n", url_encode(service_desc));
 				}
 			else if(display_type == DISPLAY_HOSTGROUP_INFO) {
-				printf("<A HREF='%s?hostgroup=%s&style=detail'>View Status Detail For This Hostgroup</A><BR>\n", STATUS_CGI, url_encode(hostgroup_name));
-				printf("<A HREF='%s?hostgroup=%s&style=overview'>View Status Overview For This Hostgroup</A><BR>\n", STATUS_CGI, url_encode(hostgroup_name));
-				printf("<A HREF='%s?hostgroup=%s&style=grid'>View Status Grid For This Hostgroup</A><BR>\n", STATUS_CGI, url_encode(hostgroup_name));
-				printf("<A HREF='%s?hostgroup=%s'>View Availability For This Hostgroup</A><BR>\n", AVAIL_CGI, url_encode(hostgroup_name));
+				printf("<A HREF='%s?hostgroup=%s&style=detail'>View Status Detail For This Industry Group</A><BR>\n", STATUS_CGI, url_encode(hostgroup_name));
+				printf("<A HREF='%s?hostgroup=%s&style=overview'>View Status Overview For This Indunstry Group</A><BR>\n", STATUS_CGI, url_encode(hostgroup_name));
+				printf("<A HREF='%s?hostgroup=%s&style=grid'>View Status Grid For This Industry Group</A><BR>\n", STATUS_CGI, url_encode(hostgroup_name));
+				printf("<A HREF='%s?hostgroup=%s'>View Availability For This Industry Group</A><BR>\n", AVAIL_CGI, url_encode(hostgroup_name));
 				}
 			else if(display_type == DISPLAY_SERVICEGROUP_INFO) {
-				printf("<A HREF='%s?servicegroup=%s&style=detail'>View Status Detail For This Servicegroup</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
-				printf("<A HREF='%s?servicegroup=%s&style=overview'>View Status Overview For This Servicegroup</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
-				printf("<A HREF='%s?servicegroup=%s&style=grid'>View Status Grid For This Servicegroup</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
-				printf("<A HREF='%s?servicegroup=%s'>View Availability For This Servicegroup</A><BR>\n", AVAIL_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s&style=detail'>View Status Detail For This Indicator Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s&style=overview'>View Status Overview For This Indicator Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s&style=grid'>View Status Grid For This Indicator Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s'>View Availability For This Indicatorroup</A><BR>\n", AVAIL_CGI, url_encode(servicegroup_name));
 				}
 			printf("</TD></TR>\n");
 			printf("</TABLE>\n");
@@ -267,7 +267,7 @@ int main(void) {
 		if((display_type == DISPLAY_HOST_INFO && temp_host != NULL) || (display_type == DISPLAY_SERVICE_INFO && temp_host != NULL && temp_service != NULL) || (display_type == DISPLAY_HOSTGROUP_INFO && temp_hostgroup != NULL) || (display_type == DISPLAY_SERVICEGROUP_INFO && temp_servicegroup != NULL)) {
 
 			if(display_type == DISPLAY_HOST_INFO) {
-				printf("<DIV CLASS='data'>Host</DIV>\n");
+				printf("<DIV CLASS='data'>Stock</DIV>\n");
 				printf("<DIV CLASS='dataTitle'>%s</DIV>\n", temp_host->alias);
 				printf("<DIV CLASS='dataTitle'>(%s)</DIV><BR>\n", temp_host->name);
 
@@ -290,12 +290,12 @@ int main(void) {
 					}
 
 				if(found == FALSE)
-					printf("No hostgroups");
+					printf("No Industry Groups");
 				printf("</DIV><BR>\n");
 				printf("<DIV CLASS='data'>%s</DIV>\n", temp_host->address);
 				}
 			if(display_type == DISPLAY_SERVICE_INFO) {
-				printf("<DIV CLASS='data'>Service</DIV><DIV CLASS='dataTitle'>%s</DIV><DIV CLASS='data'>On Host</DIV>\n", service_desc);
+				printf("<DIV CLASS='data'>Service</DIV><DIV CLASS='dataTitle'>%s</DIV><DIV CLASS='data'>On Stock</DIV>\n", service_desc);
 				printf("<DIV CLASS='dataTitle'>%s</DIV>\n", temp_host->alias);
 				printf("<DIV CLASS='dataTitle'>(<A HREF='%s?type=%d&host=%s'>%s</a>)</DIV><BR>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(temp_host->name), temp_host->name);
 				printf("<DIV CLASS='data'>Member of</DIV><DIV CLASS='dataTitle'>");
