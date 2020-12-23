@@ -44,5 +44,5 @@ I am available for consultation and employment.
 
 1. Don't install this on an internet-facing server.
 
-2. I am not responsible for any losses or damages you may incur from using this software. 
+2. [Read the disclaimer](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/DISCLAIMER)
 
