@@ -56,7 +56,7 @@ $link_target = 'main';
 	<div class="navbarsearch">
 		<form method="get" action="<?php echo $cfg["cgi_base_url"];?>/status.cgi" target="<?php echo $link_target;?>">
 			<fieldset>
-				<legend> Search:</legend>
+				<legend>Ticker Search:</legend>
 				<input type='hidden' name='navbarsearch' value='1'>
 				<input type='text' name='host' size='15' class="NavBarSearchItem">
 			</fieldset>
