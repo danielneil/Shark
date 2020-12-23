@@ -1,4 +1,4 @@
-# AutomatedTradingPlatform
+# Automated Trading Platform
 
 Nagios is known for being a tool to help IT folks monitor IT infrastructure, but with a few tweaks it can be used as an automated trading platform.
 
