@@ -20,12 +20,12 @@ if __name__ == "__main__":
     if lastPrice > yesterdayPrice:
         percentageDiff = '{0:.2f}'.format(abs((yesterdayPrice/lastPrice * 100) -100)) 
 
-        print(str(lastPrice) + " (" + str(percentageDiff) + "%)")
+        print("$" + str(lastPrice) + " (" + str(percentageDiff) + "%)")
         sys.exit(0)
     else:
         percentageDiff = '{0:.2f}'.format((lastPrice/yesterdayPrice * 100) -100)
 
-        print(str(lastPrice) + " (" + str(percentageDiff) + "%)")
+        print("$" + str(lastPrice) + " (" + str(percentageDiff) + "%)")
         sys.exit(2)
 
 
