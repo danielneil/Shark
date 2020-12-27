@@ -1,21 +1,17 @@
 ---
 # tasks file for automatedtradingplatform
 
-- name: Creating back testing working directory
-  file:
-    name: /atp/backtesting
-    owner: atp
-    group: atp
-    state: directory
-
-- name: Copy our ASX List of companies downloaded from the ASX site. 
-  unarchive:
-    src: PyAlgoTrade-0.18.tar.gz
-    dest: /atp/backtesting
-    owner: atp
-    group: atp
-
-- name: Deps for the above
+- name: Install pip
   apt:
-   name: python3-setuptools
+   name: python3-pip
    state: latest
+
+- name: Copying PyAlgo to the tmp directory
+  copy:
+   src: PyAlgoTrade-0.18.tar.gz
+   dest: /tmp
+
+- name: Install pyalgotrade for historical backtesting
+  pip:
+   name: PyAlgoTrade-0.18.tar.gz
+   executable: pip3
