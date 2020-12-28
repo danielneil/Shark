@@ -1,0 +1,12 @@
+---
+# tasks file for automatedtradingplatform
+
+- name: Install pip
+  apt:
+   name: python3-pip
+   state: latest
+
+- name: Install Python Requests
+  apt:
+   name: python3-requests
+   state: latest

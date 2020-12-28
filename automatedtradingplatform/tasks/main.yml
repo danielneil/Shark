@@ -21,6 +21,20 @@
     group: atp
     state: directory
 
+- name: Creating tmp cache directory
+  file:
+   name: /tmp/.atp
+   group: atp
+   owner: atp
+   state: directory
+
+- name: Creating websites cache directory
+  file:
+   name: /tmp/.atp/websites
+   group: atp
+   owner: atp
+   state: directory
+
 - name: Synchronsing ticker data dir
   copy: 
    src: ticker-data
@@ -73,3 +87,5 @@
 - include: nagios_configuration.yml
 
 - include: back_testing.yml
+
+- include: website_check.yml
