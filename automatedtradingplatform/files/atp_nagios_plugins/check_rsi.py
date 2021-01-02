@@ -34,6 +34,8 @@ if __name__ == "__main__":
 
     ticker = sys.argv[1]
     rsiPeriod = sys.argv[2]
+    minAlert = sys.argv[3]
+    maxAlert = sys.argv[4]
 
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 
@@ -43,4 +45,14 @@ if __name__ == "__main__":
     
     rsiValue =  np.round(df.iloc[-1],2)
     
+    if rsiValue > maxAlert:
+        print("CRITICAL - RSI("+rsiValue+") is above " + maxAlert )
+        sys.exit(2)
+    else if rsiValue < minAlert:
+        print("CRITICAL - RSI("+rsiValue+") is below " + minAlert )
+        sys.exit(2)
+     else:
+        print("OK - RSI("+rsiValue+")")
+        sys.exit(0)
+
     print(rsiValue)
