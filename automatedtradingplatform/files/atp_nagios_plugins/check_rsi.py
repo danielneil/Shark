@@ -44,15 +44,16 @@ if __name__ == "__main__":
     df = data['RSI']
     
     rsiValue =  np.round(df.iloc[-1],2)
+    rsiValueStr = str(rsiValue)
     
     if rsiValue > maxAlert:
-        print("CRITICAL - RSI("+rsiValue+") is above " + maxAlert )
+        print("CRITICAL - RSI("+rsiValueStr+") is above " + maxAlert )
         sys.exit(2)
     elif rsiValue < minAlert:
-        print("CRITICAL - RSI("+rsiValue+") is below " + minAlert )
+        print("CRITICAL - RSI("+rsiValueStr+") is below " + minAlert )
         sys.exit(2)
     else:
-        print("OK - RSI("+rsiValue+")")
+        print("OK - RSI("+rsiValueStr+")")
         sys.exit(0)
 
     print(rsiValue)
