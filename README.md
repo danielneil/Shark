@@ -48,6 +48,10 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/website-changes.JPG)
 
+### RSI Indicator 
+
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/rsi-status.JPG)
+
 # Warning
 
 1. Don't install this on an internet-facing server.
