@@ -39,4 +39,4 @@ if __name__ == "__main__":
 
     data['RSI'] = computeRSI(data['Adj Close'], int(rsiPeriod))
     
-    print(dataFrame.tail())
+    print(data.tail())
