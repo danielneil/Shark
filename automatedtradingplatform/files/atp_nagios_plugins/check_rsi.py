@@ -41,6 +41,6 @@ if __name__ == "__main__":
     
     df = data['RSI']
     
-    rsiValue =  np.round(df.iloc[-1],2))
+    rsiValue =  np.round(df.iloc[-1],2)
     
     print(rsiValue)
