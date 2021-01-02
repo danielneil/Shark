@@ -16,10 +16,10 @@ if __name__ == "__main__":
 
     if firstSMAPeriod > secondSMAPeriod:
 
-            print("Long Opportunity Detected")
+            print("Buy Opportunity Detected")
             sys.exit(2)
     else:
-            print("Short Opportunity Detected")
+            print("No Opportunity Detected")
             sys.exit(0)
 
     sys.exit(0)
