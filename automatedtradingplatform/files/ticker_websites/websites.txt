@@ -1,1 +1,4 @@
-CBA, "Investors Centre", https://www.commbank.com.au/about-us/investors/asx-announcements.html
+CBA, "Investors Centre Website", https://www.commbank.com.au/about-us/investors/asx-announcements.html
+TLS, "Investors Centre Website", https://www.telstra.com.au/aboutus/investors
+BHP, "World Coal News - Australia", https://www.worldcoal.com/tag/australia-coal-news
+
