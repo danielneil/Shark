@@ -19,12 +19,6 @@ if __name__ == "__main__":
 
     hashFile = "/atp/websites.hash"
 
-    # if we can't find the hash file, create it. 
-
-    if not os.path.isfile(hashFile):
-        f = open(hashFile, "w+")
-        f.close()
-
     # Get the hash of the page on the other end of the URL
 
     page = requests.get(url, verify=False)

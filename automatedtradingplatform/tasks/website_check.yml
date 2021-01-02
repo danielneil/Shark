@@ -10,3 +10,37 @@
   apt:
    name: python3-requests
    state: latest
+
+- name: Copying nagios plugin website check script
+  copy:
+    src: atp_nagios_plugins/check_website.py
+    dest: /atp/nagios_plugins
+    mode: 0755
+
+- name: Touch hash file if it doesn't exist
+  copy:
+    content: ""
+    dest: /atp/websites.hash
+    force: no
+    group: atp
+    owner: atp
+    mode: 0666
+
+- name: Adding websites to monitor
+  template: 
+    src: website-check-template.cfg
+    dest: /usr/local/nagios/etc/conf.d/{{ item.filename }}
+  with_items:  
+    - { 
+        filename: cba.cfg,
+        ticker: CBA, 
+        desc: "Investors Centre Website", 
+        url: "https://www.commbank.com.au/about-us/investors/asx-announcements.html" 
+      }
+    - { 
+        filename: tls.cfg,
+        ticker: TLS, 
+        desc: "Investors Centre Website", 
+        url: "https://www.telstra.com.au/aboutus/investors"
+      }
+  notify: restart-nagios
