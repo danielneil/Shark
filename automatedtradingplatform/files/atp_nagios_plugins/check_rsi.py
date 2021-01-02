@@ -41,4 +41,4 @@ if __name__ == "__main__":
     
     df = data['RSI']
     
-    print(df.tail())
+    print(df.iloc[-1])
