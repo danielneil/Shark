@@ -37,6 +37,6 @@ if __name__ == "__main__":
 
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 
-    dataFrame['RSI'] = computeRSI(data['Adj Close'], rsiPeriod)
+    dataFrame['RSI'] = computeRSI(data['Adj Close'], int(rsiPeriod))
     
     print(df.tail())
