@@ -48,7 +48,7 @@ if __name__ == "__main__":
     if rsiValue > maxAlert:
         print("CRITICAL - RSI("+rsiValue+") is above " + maxAlert )
         sys.exit(2)
-    else if rsiValue < minAlert:
+    elif rsiValue < minAlert:
         print("CRITICAL - RSI("+rsiValue+") is below " + minAlert )
         sys.exit(2)
      else:
