@@ -55,5 +55,3 @@ if __name__ == "__main__":
     else:
         print("OK - RSI("+rsiValueStr+")")
         sys.exit(0)
-
-    print(rsiValue)
