@@ -1,0 +1,16 @@
+---
+# tasks file for automatedtradingplatform
+
+- name: Copying nagios plugin rsi check script
+  copy:
+    src: atp_nagios_plugins/check_rsi.py
+    dest: /atp/nagios_plugins
+    mode: 0755
+
+- name: Adding TICKERS on which to report on RSI 
+  template: 
+    src: rsi-check-template.cfg
+    dest: /usr/local/nagios/etc/conf.d/{{ item.filename }}
+  with_items:  
+    - { filename: rsi-cba.cfg, ticker: CBA, rsi: 14, min: 10, max: 90 }
+  notify: restart-nagios
