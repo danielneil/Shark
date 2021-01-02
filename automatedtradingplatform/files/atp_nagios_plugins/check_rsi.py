@@ -51,7 +51,7 @@ if __name__ == "__main__":
     elif rsiValue < minAlert:
         print("CRITICAL - RSI("+rsiValue+") is below " + minAlert )
         sys.exit(2)
-     else:
+    else:
         print("OK - RSI("+rsiValue+")")
         sys.exit(0)
 
