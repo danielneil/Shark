@@ -44,6 +44,10 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/trading-strategy-detected.JPG?raw=true)
 
+### Monitor a website of interest for changes
+
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/website-changes.JPG)
+
 # Warning
 
 1. Don't install this on an internet-facing server.
