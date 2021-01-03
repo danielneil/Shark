@@ -82,9 +82,9 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
 
             define service {
                 host_name """+ticker+"""
-                service_description Strategy Detection
+                service_description Strategy
                 servicegroups strategyDetection
-                check_command check_strategy
+                check_command check_strategy!50!10
                 max_check_attempts 5
                 check_interval 5
                 retry_interval 3

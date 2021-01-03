@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     
-    parser.add_argument("-t", "--ticker", help="ticker code of the stock")
+    parser.add_argument("-t", "--ticker", help="Ticker code of the stock")
     parser.add_argument("-f", "--firstMA", help="First moving average (the shorter, e.g. 10 days)")
     parser.add_argument("-s", "--secondMA", help="Second moving average (the longer, e.g. 50 days)")
     
@@ -37,8 +37,8 @@ if __name__ == "__main__":
         sys.exit(UNKNOWN)
   
     ticker = args.ticker 
-    firstMA = int(args.firstMA)
-    secondMA = int(args.secondMA)
+    firstMA = args.firstMA
+    secondMA = args.secondMA
 
     firstSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, firstMA])
     secondSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, secondMA])

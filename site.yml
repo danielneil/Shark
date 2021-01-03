@@ -7,7 +7,6 @@
           webui_auth_user: nagios
           webui_auth_pass: nagios
 
-          
   roles:
   - server-prep
   - httpd
