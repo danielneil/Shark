@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="ticker code of the stock")
-    parser.add_argument("-w", "--website", help="URL of the website of interest")
+    parser.add_argument("-u", "--url", help="URL of the website of interest")
 
     args = parser.parse_args()
 
@@ -30,12 +30,12 @@ if __name__ == "__main__":
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
 
-    if not args.website:
+    if not args.url:
         print("UNKNOWN - URL Missing")
         sys.exit(UNKNOWN)
 
     ticker = args.ticker
-    url = args.website
+    url = args.url
 
     hashFile = "/atp/websites.hash"
 
