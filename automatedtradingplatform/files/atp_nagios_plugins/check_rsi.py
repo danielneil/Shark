@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="ticker code of the stock")
-    parser.add_argument("-r", "--rsiperiod", help="URL of the website of interest")
+    parser.add_argument("-r", "--rsiPeriod", help="URL of the website of interest")
     parser.add_argument("-min", "--maxRSI", help="Alarm if the RSI is greater")
     parser.add_argument("-max", "--minRSI", help="Alarm if the RSI is smaller")
 
@@ -52,18 +52,18 @@ if __name__ == "__main__":
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
 
-    if not args.rsiperiod:
+    if not args.rsiPeriod:
         print ("UNKNOWN - No rsi period found")
         sys.exit(UNKNOWN)
 
     ticker = args.ticker
-    rsiPeriod = args.rsiperiod
+    rsiPeriod = args.rsiPeriod
 
     if args.maxRSI:
-        maxAlert = args.maxRSI
+        maxAlert = int(args.maxRSI)
 
     if args.minRSI:
-        minAlert = args.minRSI
+        minAlert = int(args.minRSI)
     
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 

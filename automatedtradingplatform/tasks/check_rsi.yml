@@ -12,5 +12,5 @@
     src: rsi-check-template.cfg
     dest: /usr/local/nagios/etc/conf.d/{{ item.filename }}
   with_items:  
-    - { filename: rsi-cba.cfg, ticker: CBA, rsi: 14, min: 10, max: 90 }
+    - { filename: rsi-cba.cfg, ticker: 'CBA', rsi: '14', min: '10', max: '90' }
   notify: restart-nagios
