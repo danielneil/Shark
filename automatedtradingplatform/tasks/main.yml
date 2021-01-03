@@ -91,3 +91,6 @@
 - include: website_check.yml
 
 - include: check_rsi.yml
+
+- name: Running nagios self santize to detect errors
+  shell: /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
