@@ -96,4 +96,5 @@
   shell: /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
   register: shell_result
 
-- debug: var: shell_result.stdout_lines
+- debug: 
+        var: shell_result.stdout_lines
