@@ -5,6 +5,14 @@ import numpy as np
 import datetime
 
 import sys
+import argparse
+
+OK           = 0
+WARNING      = 1
+CRITICAL     = 2
+UNKNOWN      = 3
+
+cmd_arg_help = "This plugin computes the relative strength index (RSI) for a stock."
 
 def computeRSI (data, time_window):
     diff = data.diff(1).dropna()        # diff in one field(one day)
@@ -32,11 +40,32 @@ def computeRSI (data, time_window):
 
 if __name__ == "__main__":
 
-    ticker = sys.argv[1]
-    rsiPeriod = sys.argv[2]
-    minAlert = int(sys.argv[3])
-    maxAlert = int(sys.argv[4])
+    parser = argparse.ArgumentParser(description=cmd_arg_help)
+    parser.add_argument("-t", "--ticker", help="ticker code of the stock")
+    parser.add_argument("-r", "--rsiperiod", help="URL of the website of interest")
+    parser.add_argument("-max", "--max", help="Alarm if the RSI is greater")
+    parser.add_argument("-min", "--max", help="Alarm if the RSI is smaller")
 
+
+    args = parser.parse_args()
+
+    if not args.ticker:
+        print ("UNKNOWN - No ticker found")
+        sys.exit(UNKNOWN)
+
+    if not args.rsi:
+        print ("UNKNOWN - No rsi period found")
+        sys.exit(UNKNOWN)
+
+    ticker = args.ticker
+    rsiPeriod = args.rsi
+
+    if args.max:
+        maxAlert = args.max
+
+    if args.min:
+        minAlert = args.min
+    
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 
     data['RSI'] = computeRSI(data['Adj Close'], int(rsiPeriod))
@@ -45,13 +74,18 @@ if __name__ == "__main__":
     
     rsiValue =  np.round(df.iloc[-1],2)
     rsiValueStr = str(rsiValue)
+
+    # If the min or max arn't suppled, just report the RSI and exit.
+    if args.max and args.min:
+        print(rsiValueStr)
+        sys.exit(OK)        
     
     if rsiValue > maxAlert:
         print("CRITICAL - RSI(" + rsiValueStr + ") is above " + str(maxAlert))
-        sys.exit(2)
+        sys.exit(CRITICAL)
     elif rsiValue < minAlert:
         print("CRITICAL - RSI(" + rsiValueStr + ") is below " + str(minAlert))
-        sys.exit(2)
+        sys.exit(CRITICAL)
     else:
         print("OK - RSI(" + rsiValueStr + ")")
-        sys.exit(0)
+        sys.exit(OK)
