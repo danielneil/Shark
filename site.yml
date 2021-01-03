@@ -14,3 +14,6 @@
   - nagios-from-source
   - automatedtradingplatform
  
+- name: Running nagios self santize to detect errors
+  become: true
+  shell: /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
