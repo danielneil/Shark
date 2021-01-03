@@ -43,9 +43,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="ticker code of the stock")
     parser.add_argument("-r", "--rsiperiod", help="URL of the website of interest")
-    parser.add_argument("-max", "--max", help="Alarm if the RSI is greater")
-    parser.add_argument("-min", "--max", help="Alarm if the RSI is smaller")
-
+    parser.add_argument("-min", "--maxRSI", help="Alarm if the RSI is greater")
+    parser.add_argument("-max", "--minRSI", help="Alarm if the RSI is smaller")
 
     args = parser.parse_args()
 
@@ -53,18 +52,18 @@ if __name__ == "__main__":
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
 
-    if not args.rsi:
+    if not args.rsiperiod:
         print ("UNKNOWN - No rsi period found")
         sys.exit(UNKNOWN)
 
     ticker = args.ticker
-    rsiPeriod = args.rsi
+    rsiPeriod = args.rsiperiod
 
-    if args.max:
-        maxAlert = args.max
+    if args.maxRSI:
+        maxAlert = args.maxRSI
 
-    if args.min:
-        minAlert = args.min
+    if args.minRSI:
+        minAlert = args.minRSI
     
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 
@@ -76,7 +75,7 @@ if __name__ == "__main__":
     rsiValueStr = str(rsiValue)
 
     # If the min or max arn't suppled, just report the RSI and exit.
-    if args.max and args.min:
+    if not args.maxRSI and not args.minRSI:
         print(rsiValueStr)
         sys.exit(OK)        
     
