@@ -18,7 +18,6 @@ UNKNOWN      = 3
 
 cmd_arg_help = "This plugin monitors a website for changes. E.g.  the Investor Information section of a publicly listed company, or a page displaying news for a specific derivative."
 
-
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
