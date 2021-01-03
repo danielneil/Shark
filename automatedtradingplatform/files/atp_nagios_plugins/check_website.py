@@ -8,14 +8,35 @@ import sys
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Checks for changes in the website of interest using checksums, 
-# and informs if changes have been detected. 
-# Websites of interest are associated with a specific ticker.
+import sys
+import argparse
+
+OK           = 0
+WARNING      = 1
+CRITICAL     = 2
+UNKNOWN      = 3
+
+cmd_arg_help = "This plugin monitors a website for changes. E.g.  the Investor Information section of a publicly listed company, or a page displaying news for a specific derivative."
+
 
 if __name__ == "__main__":
 
-    ticker = sys.argv[1] 
-    url = sys.argv[2]
+    parser = argparse.ArgumentParser(description=cmd_arg_help)
+    parser.add_argument("-t", "--ticker", help="ticker code of the stock")
+    parser.add_argument("-w", "--website", help="URL of the website of interest")
+
+    args = parser.parse_args()
+
+    if not args.ticker:
+        print ("UNKNOWN - No ticker found")
+        sys.exit(UNKNOWN)
+
+    if not args.website:
+        print("UNKNOWN - URL Missing")
+        sys.exit(UNKNOWN)
+
+    ticker = args.ticker
+    url = args.website
 
     hashFile = "/atp/websites.hash"
 
@@ -30,7 +51,7 @@ if __name__ == "__main__":
         if websiteHash in f.read():
 
             print("Website - No changes detected")
-            sys.exit(0)
+            sys.exit(OK)
 
         else:
 
@@ -39,10 +60,10 @@ if __name__ == "__main__":
             if url in f.read():
 
                 print("Website - Changes Detected!")
-                sys.exit(2)
+                sys.exit(WARNING)
 
             else:
 
                 print("Website - Added")
                 f.write('"' + url + '",' + websiteHash + "\n")
-                sys.exit(0)
+                sys.exit(OK)
