@@ -49,6 +49,6 @@ if __name__ == "__main__":
             sys.exit(WARNING)
     else:
             print("Short Opportunity")
-            sys.exit(OK)
+            sys.exit(WARNING)
 
     sys.exit(0)
