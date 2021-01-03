@@ -1,11 +1,13 @@
 ---
 
-- name: Installing ATP Roles
+- name: Automated Platform Trading Role
   hosts: atp-server
   become: true
   vars:
-          http_basic_user: nagios
-          http_basic_pass: nagios
+          webui_auth_user: nagios
+          webui_auth_pass: nagios
+
+          
   roles:
   - server-prep
   - httpd
