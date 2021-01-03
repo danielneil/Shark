@@ -41,6 +41,7 @@ def computeRSI (data, time_window):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
+    
     parser.add_argument("-t", "--ticker", help="ticker code of the stock")
     parser.add_argument("-r", "--rsiPeriod", help="URL of the website of interest")
     parser.add_argument("-min", "--maxRSI", help="Alarm if the RSI is greater")
