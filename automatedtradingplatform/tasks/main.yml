@@ -96,4 +96,4 @@
   shell: /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
   register: ps
 
-- debug: var=ps.stdout_line
+- debug: msg={{ ps.stdout_line }}
