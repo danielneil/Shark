@@ -29,7 +29,6 @@ if __name__ == "__main__":
         print ("CRITICAL - No ticker found")
         sys.exit(CRITICAL)
 
-
 print ("Something went wrong")
 sys.exit(UNKNOWN)
 
