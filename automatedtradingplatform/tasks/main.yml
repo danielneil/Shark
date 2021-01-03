@@ -94,6 +94,6 @@
 
 - name: Running nagios self santize to detect errors
   shell: /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
-  register: ps
+  register: shell_result
 
-- debug: msg={{ ps.stdout_line }}
+- debug: var: shell_result.stdout_lines
