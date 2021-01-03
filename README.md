@@ -44,7 +44,7 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/trading-strategy-detected.JPG?raw=true)
 
-### Monitoring of a Website of Interest for changes
+### Monitoring Websites of Interest (reports when a change is detected)
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/website-changes.JPG)
 
