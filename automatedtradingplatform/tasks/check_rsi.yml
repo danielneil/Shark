@@ -13,4 +13,9 @@
     dest: /usr/local/nagios/etc/conf.d/{{ item.filename }}
   with_items:  
     - { filename: rsi-cba.cfg, ticker: 'CBA', rsi: '14', min: '10', max: '90' }
+    - { filename: rsi-amc.cfg, ticker: 'AMC', rsi: '14', min: '10', max: '90' }
+    - { filename: rsi-bhp.cfg, ticker: 'BHP', rsi: '14', min: '10', max: '90' }
+    - { filename: rsi-gmg.cfg, ticker: 'GMG', rsi: '14', min: '10', max: '90' }
+    - { filename: rsi-scg.cfg, ticker: 'SCG', rsi: '14', min: '10', max: '90' }
+    - { filename: rsi-wes.cfg, ticker: 'WES', rsi: '14', min: '10', max: '90' }
   notify: restart-nagios
