@@ -43,9 +43,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     
     parser.add_argument("-t", "--ticker", help="ticker code of the stock")
-    parser.add_argument("-r", "--rsiPeriod", help="URL of the website of interest")
-    parser.add_argument("-min", "--maxRSI", help="Alarm if the RSI is greater")
-    parser.add_argument("-max", "--minRSI", help="Alarm if the RSI is smaller")
+    parser.add_argument("-r", "--rsiPeriod", help="RSI period of which to base the calculation upon.")
+    parser.add_argument("-max", "--maxRSI", help="Warn if the RSI is greater than this threshold.")
+    parser.add_argument("-min", "--minRSI", help="Warn if the RSI is less than this threshold.")
 
     args = parser.parse_args()
 
@@ -59,6 +59,9 @@ if __name__ == "__main__":
 
     ticker = args.ticker
     rsiPeriod = args.rsiPeriod
+
+    maxRSI = False
+    minRSI = False
 
     if args.maxRSI:
         maxAlert = int(args.maxRSI)
@@ -81,12 +84,12 @@ if __name__ == "__main__":
         sys.exit(OK)        
     
     if maxAlert and rsiValue > maxAlert:
-        print("CRITICAL - RSI(" + rsiValueStr + ") is above " + str(maxAlert))
-        sys.exit(CRITICAL)
+        print("WARNING - RSI(" + rsiValueStr + ") is above " + str(maxAlert))
+        sys.exit(WARNING)
     
     if minAlert and rsiValue < minAlert:
-        print("CRITICAL - RSI(" + rsiValueStr + ") is below " + str(minAlert))
-        sys.exit(CRITICAL)
+        print("WARNING - RSI(" + rsiValueStr + ") is below " + str(minAlert))
+        sys.exit(WARNING)
     
     print("OK - RSI(" + rsiValueStr + ")")
     sys.exit(OK)
