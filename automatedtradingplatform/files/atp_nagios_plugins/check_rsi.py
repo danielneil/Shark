@@ -83,11 +83,11 @@ if __name__ == "__main__":
         print(rsiValueStr)
         sys.exit(OK)        
     
-    if maxAlert and rsiValue > maxAlert:
+    if maxRSI and rsiValue > maxRSI:
         print("WARNING - RSI(" + rsiValueStr + ") is above " + str(maxAlert))
         sys.exit(WARNING)
     
-    if minAlert and rsiValue < minAlert:
+    if minRSI and rsiValue < minRSI:
         print("WARNING - RSI(" + rsiValueStr + ") is below " + str(minAlert))
         sys.exit(WARNING)
     
