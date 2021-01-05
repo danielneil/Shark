@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 import datetime
-
+import os
 import sys
 import argparse
 
@@ -52,6 +52,10 @@ if __name__ == "__main__":
     if not args.ticker:
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
+    else:
+        if not os.path.isfile('/atp/ticker-data/'+args.ticker+'.AX.txt'):
+            print ("UNKNOWN - ticker data file not found")
+            sys.exit(UNKNOWN)
 
     if not args.rsiPeriod:
         print ("UNKNOWN - No rsi period found")
