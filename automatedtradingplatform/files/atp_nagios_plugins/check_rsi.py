@@ -64,10 +64,10 @@ if __name__ == "__main__":
     minRSI = False
 
     if args.maxRSI:
-        maxAlert = int(args.maxRSI)
+        maxRSI = int(args.maxRSI)
 
     if args.minRSI:
-        minAlert = int(args.minRSI)
+        minRSI = int(args.minRSI)
     
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 
@@ -84,11 +84,11 @@ if __name__ == "__main__":
         sys.exit(OK)        
     
     if maxRSI and rsiValue > maxRSI:
-        print("WARNING - RSI(" + rsiValueStr + ") is above " + str(maxAlert))
+        print("WARNING - RSI(" + rsiValueStr + ") is above " + str(maxRSI))
         sys.exit(WARNING)
     
     if minRSI and rsiValue < minRSI:
-        print("WARNING - RSI(" + rsiValueStr + ") is below " + str(minAlert))
+        print("WARNING - RSI(" + rsiValueStr + ") is below " + str(minRSI))
         sys.exit(WARNING)
     
     print("OK - RSI(" + rsiValueStr + ")")
