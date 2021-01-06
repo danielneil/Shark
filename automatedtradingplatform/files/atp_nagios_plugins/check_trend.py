@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This analyses the trend of a stock based upon multiple moving averages."
+cmd_arg_help = "This analyses the trend of a stock based upon multiple moving averages. It takes three numbers/moving averages and determines if the stock is in an uptrend, and also returns a range calculation to determine the 'distance' between the moving averages"
 
 if __name__ == "__main__":
 
@@ -49,11 +49,17 @@ if __name__ == "__main__":
     secondMA = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, secondMAarg])
     thirdMA = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, thirdMAarg])
 
+    numbers = [ float(firstMA), float(secondMA), float(thirdMA) ]
+    
+    rangeValue = max(numbers) - min(numbers)
+
+    mas = str(firstMA).strip() + "," + str(secondMA).strip() + "," + str(thirdMA).strip() + " [range: " + str(rangeValue).strip() + "]"
+
     if firstMA > secondMA and secondMA > thirdMA:
-        print ("Uptrend Detected")
+        print ("Uptrend Detected (" + mas + ")")
         sys.exit(OK)
     else:
-        print ("Downtrend Detected")
+        print ("Downtrend Detected (" + mas + ")")
         sys.exit(CRITICAL)
 
     sys.exit(0)
