@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This strategy is simple moving averages, buy when the first moving average, crosses above the second. Opposite for shorts."
+cmd_arg_help = "This analyses the trend of a stock based upon multiple moving averages."
 
 if __name__ == "__main__":
 
