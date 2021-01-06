@@ -57,9 +57,11 @@ if __name__ == "__main__":
 
     if firstMA > secondMA and secondMA > thirdMA:
         print ("Uptrend Detected (" + mas + ")")
-        sys.exit(OK)
-    else:
+        sys.exit(WARNING)
+
+    if thirdMA < secondMA and firstMA < thirdMA:
         print ("Downtrend Detected (" + mas + ")")
         sys.exit(CRITICAL)
 
-    sys.exit(0)
+    print ("Trend appears to be neutral ("+ mas + ")")
+    sys.exit(OK)
