@@ -9,7 +9,7 @@ OK= 0
 ########################
 # Check RSI Plugin
 
-rsiCheck = float(subprocess.check_output(['/atp/nagios_plugins/check_rsi.py', '--ticker CBA', '--rsiPeriod 14']))
+rsiCheck = float(subprocess.check_output(["/atp/nagios_plugins/check_rsi.py", "--ticker", "CBA", "--rsiPeriod", "14"]))
 
 if rsiCheck == 62.95:
 	print("RSI Calculation correct")
