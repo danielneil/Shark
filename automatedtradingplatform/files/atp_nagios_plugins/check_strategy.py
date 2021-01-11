@@ -17,7 +17,6 @@ cmd_arg_help = "This script calls the strategy the strategy defined in the nagio
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
-    
     parser.add_argument("-t", "--ticker", help="Ticker code of the stock in question")
     parser.add_argument("-s", "--strategy", help="The file name of the custom strategy")
     args = parser.parse_args()
@@ -32,5 +31,9 @@ if __name__ == "__main__":
 
     ticker = args.ticker 
     strategyFile = args.strategy
+
+    if not os.path.isfile('/atp/strategies/' + strategyFile):
+        print ("UNKNOWN - Strategy file not found...")
+        sys.exit(UNKNOWN)
 
     subprocess.check_output(['/atp/strategies/' + strategyFile + ' --ticker', ticker])
