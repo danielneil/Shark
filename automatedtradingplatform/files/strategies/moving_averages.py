@@ -13,7 +13,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Example strategy: buy when the first simple moving average, crosses above the second simple moving average
+cmd_arg_help = "Example strategy: buy when the first simple moving average, crosses above the second simple moving average"
 
 strategy_name = "Moving Averages"
 
