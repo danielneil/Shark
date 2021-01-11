@@ -54,11 +54,18 @@
    owner: nagios
    group: nagios
 
-- name: Install the stragegy plugin 
+- name: Install the strategy plugin 
   copy:
    src: atp_nagios_plugins/check_strategy.py
    dest: /atp/nagios_plugins
    mode: 0755
+   owner: nagios
+   group: nagios
+  
+- name: Adding our custom strategy nagios commands file
+  template:
+   src: atp_nagios_plugins/nagios_command_strategy.cfg
+   dest: /usr/local/nagios/etc/conf.d/
    owner: nagios
    group: nagios
 
