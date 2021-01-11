@@ -7,6 +7,9 @@
           webui_auth_user: nagios
           webui_auth_pass: nagios
 
+          # Our example strategy
+          strategy: "moving_averages"
+
   roles:
   - server-prep
   - httpd
