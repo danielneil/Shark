@@ -4,22 +4,42 @@ import pandas as pd
 import datetime
 import sys
 import subprocess
+import argparse
 
-# Our straegy is simple - buy when the first moving average, crosses above the second moving average
+# Nagios constants. 
+
+OK           = 0
+WARNING      = 1
+CRITICAL     = 2
+UNKNOWN      = 3
+
+# Our example straegy is simple - buy when the first simple moving average, crosses above the second simple moving average
+
+strategy_name = "Moving Averages"
+
+first_ma_days = 50
+second_ma_days = 10
 
 if __name__ == "__main__":
 
-    ticker = sys.argv[1]
+    parser = argparse.ArgumentParser(description=cmd_arg_help)
+    parser.add_argument("-t", "--ticker", help="Ticker code of the stock in question")
+    args = parser.parse_args()
 
-    firstSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, '10'])
-    secondSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, '50'])
+    if not args.ticker:
+        print ("UNKNOWN - No ticker specified")
+        sys.exit(UNKNOWN)
+
+    ticker = args.ticker 
+
+    firstSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, second_ma_days])
+    secondSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, first_ma_days])
 
     if firstSMAPeriod > secondSMAPeriod:
 
-            print("Buy Opportunity Detected")
-            sys.exit(2)
-    else:
-            print("No Opportunity Detected")
-            sys.exit(0)
+            print("Buy Opportunity!")
+            sys.exit(CRITICAL)
 
-    sys.exit(0)
+    print("No Opportunity Detected")
+    
+    sys.exit(OK)
