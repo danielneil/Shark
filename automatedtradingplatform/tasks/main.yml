@@ -92,6 +92,8 @@
 
 - include: check_rsi.yml
 
+- include: check_short.yml
+
 - name: Running nagios self santize to detect errors
   shell: /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
   register: shell_result

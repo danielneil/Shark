@@ -9,7 +9,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Get the short interest of a specific ASX ticker."
+cmd_arg_help = "Alarms on the short interest of a specific ASX ticker."
 short_sell_file = "/atp/ticker-data/shortsell.txt"
 
 if __name__ == "__main__":
