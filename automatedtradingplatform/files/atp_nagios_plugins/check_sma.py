@@ -5,6 +5,7 @@ import datetime
 import numpy as np
 import sys
 import argparse
+import os
 
 OK           = 0
 WARNING      = 1
@@ -24,8 +25,8 @@ if __name__ == "__main__":
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
     else:
-        if not os.path.isfile('/atp/ticker-data/'+ticker+'.AX.txt'):
-            print ("UNKNOWN - Data file not found")
+        if not os.path.isfile('/atp/ticker-data/'+args.ticker+'.AX.txt'):
+            print ("UNKNOWN - Ticker data file not found, exit...")
             sys.exit(UNKNOWN)
 
     if not args.days:
@@ -33,7 +34,7 @@ if __name__ == "__main__":
         sys.exit(UNKNOWN)
 
     ticker = args.ticker
-    smaPeriod = args.days
+    smaPeriod = int(args.days)
 
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 

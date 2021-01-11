@@ -64,21 +64,21 @@
   
 - name: Adding our custom strategy nagios commands file
   template:
-   src: atp_nagios_plugins/nagios_command_strategy.cfg
+   src: nagios_command_strategy.cfg
    dest: /usr/local/nagios/etc/conf.d/
    owner: nagios
    group: nagios
 
 - name: Adding our custom nagios commands file
   copy:
-   src: atp_nagios_plugins/commands.cfg
+   src: commands.cfg
    dest: /usr/local/nagios/etc/conf.d/
    owner: nagios
    group: nagios
 
 - name: Adding out custom service groups file
   copy:
-   src: atp_nagios_plugins/servicegroups.cfg
+   src: servicegroups.cfg
    dest: /usr/local/nagios/etc/conf.d
    owner: nagios
    group: nagios
