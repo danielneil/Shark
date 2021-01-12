@@ -1,7 +1,7 @@
 # Documentation for Plugins
 ## check_rsi.py
 
-usage: check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAXRSI]
+**Usage:** check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAXRSI]
                     [-min MINRSI]
 
 This plugin computes the relative strength index (RSI) for a stock.
@@ -18,7 +18,7 @@ optional arguments:
                         Warn if the RSI is less than this threshold.
 ## check_template.py
 
-usage: check_template.py [-h] [-t TICKER]
+**Usage:** check_template.py [-h] [-t TICKER]
 
 This is a template for a python check for the trading platform, make it as
 descriptive as possible as it will be used to generate documentation
@@ -29,7 +29,7 @@ optional arguments:
                         ticker code of the stock
 ## check_strategy.py
 
-usage: check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
+**Usage:** check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
 This script calls the strategy the strategy defined in the nagios
 configuration. Do not make changes here. See the template strategy for an
@@ -43,7 +43,7 @@ optional arguments:
                         The file name of the custom strategy
 ## check_price.py
 
-usage: check_price.py [-h] [-t TICKER] [-r [RAW]]
+**Usage:** check_price.py [-h] [-t TICKER] [-r [RAW]]
 
 Get the latest price of a stock.
 
@@ -56,7 +56,7 @@ optional arguments:
                         OK(0)
 ## check_website.py
 
-usage: check_website.py [-h] [-t TICKER] [-u URL]
+**Usage:** check_website.py [-h] [-t TICKER] [-u URL]
 
 This plugin monitors a website for changes. E.g. the Investor Information
 section of a publicly listed company, or a page displaying news for a specific
@@ -69,7 +69,7 @@ optional arguments:
   -u URL, --url URL     URL of the website of interest
 ## check_sma.py
 
-usage: check_sma.py [-h] [-t TICKER] [-d DAYS] [-r [RAW]]
+**Usage:** check_sma.py [-h] [-t TICKER] [-d DAYS] [-r [RAW]]
 
 Computes a simple moving average of a specific ASX ticker against a specific
 number of days.
@@ -87,7 +87,7 @@ optional arguments:
 13.9
 ## check_trend.py
 
-usage: check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
+**Usage:** check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
                       [-3rd THIRDMA]
 
 This analyses the trend of a stock based upon multiple moving averages. It
@@ -107,7 +107,7 @@ optional arguments:
                         Third moving average (the longest. e.g. 100 days)
 ## check_short_interest.py
 
-usage: check_short_interest.py [-h] [-t TICKER]
+**Usage:** check_short_interest.py [-h] [-t TICKER]
 
 Alarms on the short interest of a specific ASX ticker.
 
