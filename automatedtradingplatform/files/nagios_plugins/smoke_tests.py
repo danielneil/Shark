@@ -118,9 +118,7 @@ except subprocess.CalledProcessError as e:
 		print(e.output)
 		sys.exit(ERROR)
 
-# Check pretty price is correct. 
-
-# No ticker entered.
+# Check pretty price is matches result. 
 
 try:
 
