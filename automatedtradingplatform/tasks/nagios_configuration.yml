@@ -23,12 +23,13 @@
    owner: nagios
    group: nagios
 
-- name: Creating our custom nagios_plugins directory
-  file:
-   path: /atp/nagios_plugins
+- name: Copying our custom nagios_plugins 
+  copy:
+   src: atp_nagios_plugins
+   dest: /atp/
    owner: nagios
    group: nagios
-   state: directory
+   mode: 0755
 
 - name: Generating our nagios ticker configuration
   shell: python /atp/process_tickers.py > /usr/local/nagios/etc/conf.d/atp.cfg
@@ -38,30 +39,6 @@
    name: python-pandas
    state: latest
 
-- name: Install the nagios plugin for checking smoothing averages
-  copy: 
-   src: atp_nagios_plugins/check_sma.py
-   dest: /atp/nagios_plugins
-   mode: 0755
-   owner: nagios
-   group: nagios 
- 
-- name: Install the nagios plugin for checking the price of the stock from the dataset
-  copy:
-   src: atp_nagios_plugins/check_price.py
-   dest: /atp/nagios_plugins
-   mode: 0755
-   owner: nagios
-   group: nagios
-
-- name: Install the strategy plugin 
-  copy:
-   src: atp_nagios_plugins/check_strategy.py
-   dest: /atp/nagios_plugins
-   mode: 0755
-   owner: nagios
-   group: nagios
-  
 - name: Adding our custom strategy nagios commands file
   template:
    src: nagios_command_strategy.cfg
