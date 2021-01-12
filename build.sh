@@ -9,8 +9,8 @@ DOC_FILE=README.PLUGINS.md
 echo "# Plugins Documentation" > ${DOC_FILE}
 
 echo "" >> ${DOC_FILE}
-echo "This is plugins documentation." >> ${DOC_FILE}
-echo "The plugins are structured the same as the traditional nagios plugins." >> ${DOC_FILE}
+echo "This is the plugins documentation." >> ${DOC_FILE}
+echo "Plugins are structured the same as traditional nagios plugins." >> ${DOC_FILE}
 echo "" >> ${DOC_FILE}
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`

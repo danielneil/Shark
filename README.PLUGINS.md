@@ -1,7 +1,7 @@
 # Plugins Documentation
 
-This is plugins documentation.
-The plugins are structured the same as the traditional nagios plugins.
+This is the plugins documentation.
+Plugins are structured the same as traditional nagios plugins.
 
 ## check_rsi.py
 
