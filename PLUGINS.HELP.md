@@ -6,7 +6,7 @@
 
 This plugin computes the relative strength index (RSI) for a stock.
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         ticker code of the stock
@@ -23,7 +23,7 @@ optional arguments:
 This is a template for a python check for the trading platform, make it as
 descriptive as possible as it will be used to generate documentation
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         ticker code of the stock
@@ -35,7 +35,7 @@ This script calls the strategy the strategy defined in the nagios
 configuration. Do not make changes here. See the template strategy for an
 example
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock in question
@@ -47,7 +47,7 @@ optional arguments:
 
 Get the latest price of a stock.
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock
@@ -62,7 +62,7 @@ This plugin monitors a website for changes. E.g. the Investor Information
 section of a publicly listed company, or a page displaying news for a specific
 derivative.
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         ticker code of the stock
@@ -74,7 +74,7 @@ optional arguments:
 Computes a simple moving average of a specific ASX ticker against a specific
 number of days.
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock.
@@ -95,7 +95,7 @@ takes three numbers/moving averages and determines if the stock is in an
 uptrend, and also returns a range calculation to determine the 'distance'
 between the moving averages
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock
@@ -111,7 +111,7 @@ optional arguments:
 
 Alarms on the short interest of a specific ASX ticker.
 
-optional arguments:
+**Optional Arguments**::
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock
