@@ -20,7 +20,15 @@ done
 echo "" >> ${DOC_FILE}
 echo "This documentation is automatically generated." >> ${DOC_FILE}
 
+# Make some pretties
+
+sed 's/usage:/**Usage:**/g' -i ${DOC_FILE}
+sed 's/optional arguments/**Optional Arguments**/g' -i ${DOC_FILE}
+sed 's/\r/  /g' -i ${DOC_FILE}
+
 cd $CURR_DIR;
+
+exit 0;
 
 # Now run the playbook.
 ansible-playbook ./site.yml -i hosts
