@@ -32,8 +32,8 @@ if __name__ == "__main__":
 
     ticker = args.ticker 
 
-    firstSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, str(second_ma_days)])
-    secondSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', ticker, str(first_ma_days)])
+    firstSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', '--ticker', ticker, str(second_ma_days), '--raw'])
+    secondSMAPeriod = subprocess.check_output(['/atp/nagios_plugins/check_sma.py', '--ticker', ticker, str(first_ma_days), '--raw'])
 
     if firstSMAPeriod > secondSMAPeriod:
        print("Buy Opportunity!")

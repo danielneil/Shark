@@ -129,3 +129,30 @@ except subprocess.CalledProcessError as e:
 		print("ERROR - Pretty price did not match expected result (" + "$83.16 (-1.84%)" + " ) and something went wrong, exiting...")
 		print(e.output)
 		sys.exit(ERROR)
+
+
+########################################################################
+# Check SMA 
+
+TICKER="CBA"
+EXPECTED_SMA=float(82.99)
+PRETTY_PRICE=str("$82.99")
+PLUGIN_NAME="check_sma.py"
+
+print("########################################################################")
+print("# Check SMA Plugin")
+print("########################################################################")
+
+# Check SMA raw price is correct. 
+
+smaCheck = float(subprocess.check_output(["/atp/nagios_plugins/check_sma.py", "--ticker", TICKER, "--days", "10", "--raw"]))
+
+if smaCheck == EXPECTED_SMA:
+	print("OK - SMA check of " + str(EXPECTED_SMA) + " correct for ticker " + TICKER)
+else:
+	print("ERROR - SMA check of " + str(EXPECTED_SMA) + " incorrect for ticker " + TICKER + ", should be (" + str(smaCheck) + "), exiting...")
+	sys.exit(ERROR)
+
+# No ticker entered.
+
+check_ticker_arg(PLUGIN_NAME)

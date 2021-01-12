@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker code of the stock")
-    parser.add_argument("-r", "--raw", nargs='?', const=1, type=int, help="Just print the latest price, not determing if different from yesterday's price, and return OK(0)")
+    parser.add_argument("-r", "--raw", nargs='?', const=1, type=int, help="Just print the price minus pretty output and return OK(0)")
 
     args = parser.parse_args()
 
@@ -26,10 +26,9 @@ if __name__ == "__main__":
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
 
-    else:
-        if not os.path.isfile('/atp/ticker-data/'+args.ticker+'.AX.txt'):
-            print ("UNKNOWN - ticker data file not found")
-            sys.exit(UNKNOWN)
+    if not os.path.isfile('/atp/ticker-data/'+args.ticker+'.AX.txt'):
+        print ("UNKNOWN - ticker data file not found")
+        sys.exit(UNKNOWN)
 
     ticker = args.ticker
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')

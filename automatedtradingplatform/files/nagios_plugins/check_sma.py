@@ -19,15 +19,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker code of the stock.")
     parser.add_argument("-d", "--days", help="Number of days for which to compute the SMA against.")
+    parser.add_argument("-r", "--raw", nargs='?', const=1, type=int, help="Just print the price minus pretty output and return OK(0)")
     args = parser.parse_args()
 
     if not args.ticker:
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
-    else:
-        if not os.path.isfile('/atp/ticker-data/'+args.ticker+'.AX.txt'):
-            print ("UNKNOWN - Ticker data file not found, exit...")
-            sys.exit(UNKNOWN)
+
+    if not os.path.isfile('/atp/ticker-data/'+args.ticker+'.AX.txt'):
+        print ("UNKNOWN - Ticker data file not found, exit...")
+        sys.exit(UNKNOWN)
 
     if not args.days:
         print ("UNKNOWN - Days not supplied")
@@ -42,6 +43,10 @@ if __name__ == "__main__":
 
     smaResult = np.round(dataFrame.rolling(smaPeriod).mean().iloc[-1], 2)
 
-    print (smaResult)
+    if args.raw:
+        print(str(smaResult))
+        sys.exit(OK)
+
+    print ("$" + str(smaResult))
 
     sys.exit(OK)
