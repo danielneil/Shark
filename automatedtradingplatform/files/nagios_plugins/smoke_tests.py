@@ -7,14 +7,34 @@ ERROR= 1
 OK= 0
 
 ########################################################################
-# Check RSI Plugin
+# Ticker Arg check
+def check_ticker_arg(check_plugin):
+	try:
 
-TICKER="CBA"
-EXPECTED_RSI=62.95
+		rsiCheck = float(subprocess.check_output(["/atp/nagios_plugins/" + check_plugin]))
+		print("Error, a ticker was not supplied, and therefore should have thrown an error, exiting...")	
+		sys.exit(ERROR)
+
+	except subprocess.CalledProcessError as e:
+
+		if "UNKNOWN - No ticker found" == e.output.rstrip():
+			print("OK - a ticker was not supplied and threw an error.")
+		else:
+
+			print("ERROR - a ticker was not supplied and something went wrong, exiting...")
+			print(e.output)
+			sys.exit(ERROR)
+
+########################################################################
+# Check RSI 
 
 print("########################################################################")
 print("# Check RSI")
 print("########################################################################")
+
+TICKER="CBA"
+EXPECTED_RSI=62.95
+PLUGIN_NAME="check_rsi.py"
 
 # Check computed RSI period is correct. 
 
@@ -28,21 +48,7 @@ else:
 
 # No ticker entered.
 
-try:
-
-	rsiCheck = float(subprocess.check_output(["/atp/nagios_plugins/check_rsi.py"]))
-	print("Error, a ticker was not supplied, and therefore should have thrown an error, exiting...")
-	sys.exit(ERROR)
-
-except subprocess.CalledProcessError as e:
-
-	if "UNKNOWN - No ticker found" == e.output.rstrip():
-		print("OK - a ticker was not supplied and threw an error.")
-	else:
-
-		print("ERROR - a ticker was not supplied and something went wrong, exiting...")
-		print(e.output)
-		sys.exit(ERROR)
+check_ticker_arg(PLUGIN_NAME)
 
 # Max RSI period.
 
@@ -85,6 +91,7 @@ except subprocess.CalledProcessError as e:
 TICKER="CBA"
 EXPECTED_PRICE=83.16
 PRETTY_PRICE="$83.16 (-1.84%)"
+PLUGIN_NAME="check_price.py"
 
 print("########################################################################")
 print("# Check Price Plugin")
@@ -100,23 +107,10 @@ else:
 	print("ERROR - price check of " + str(EXPECTED_PRICE) + " incorrect for ticker " + TICKER + ", exiting...")
 	sys.exit(ERROR)
 
+
 # No ticker entered.
 
-try:
-
-	subprocess.check_output(["/atp/nagios_plugins/check_price.py"])
-	print("Error, a ticker was not supplied, and therefore should have thrown an error, exiting...")
-	sys.exit(ERROR)
-
-except subprocess.CalledProcessError as e:
-
-	if "UNKNOWN - No ticker found" == e.output.rstrip():
-		print("OK - a ticker was not supplied and threw an error.")
-	else:
-
-		print("ERROR - a ticker was not supplied and something went wrong, exiting...")
-		print(e.output)
-		sys.exit(ERROR)
+check_ticker_arg(PLUGIN_NAME)
 
 # Check pretty price is matches result. 
 
