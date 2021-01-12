@@ -10,12 +10,15 @@ echo "# Documentation for Plugins" > ${DOC_FILE}
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
-	echo "## $CHECK_cmd" >> ${DOC_FILE}
+	echo "## $(basename $CHECK_cmd)" >> ${DOC_FILE}
 	echo "" >> ${DOC_FILE}
 
-	echo "`$CHECK_cmd --help`" >> ${DOC_FILE}
+	printf "`$CHECK_cmd --help`" >> ${DOC_FILE}
 	echo "" >> ${DOC_FILE}
 done
+
+echo "" >> ${DOC_FILE}
+echo "This documentation is automatically generated." >> ${DOC_FILE}
 
 cd $CURR_DIR;
 

@@ -1,5 +1,5 @@
 # Documentation for Plugins
-## automatedtradingplatform/files/nagios_plugins/check_rsi.py
+## check_rsi.py
 
 usage: check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAXRSI]
                     [-min MINRSI]
@@ -16,8 +16,7 @@ optional arguments:
                         Warn if the RSI is greater than this threshold.
   -min MINRSI, --minRSI MINRSI
                         Warn if the RSI is less than this threshold.
-
-## automatedtradingplatform/files/nagios_plugins/check_template.py
+## check_template.py
 
 usage: check_template.py [-h] [-t TICKER]
 
@@ -28,8 +27,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         ticker code of the stock
-
-## automatedtradingplatform/files/nagios_plugins/check_strategy.py
+## check_strategy.py
 
 usage: check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
@@ -43,8 +41,7 @@ optional arguments:
                         Ticker code of the stock in question
   -s STRATEGY, --strategy STRATEGY
                         The file name of the custom strategy
-
-## automatedtradingplatform/files/nagios_plugins/check_price.py
+## check_price.py
 
 usage: check_price.py [-h] [-t TICKER] [-r [RAW]]
 
@@ -57,8 +54,7 @@ optional arguments:
   -r [RAW], --raw [RAW]
                         Just print the price minus pretty output and return
                         OK(0)
-
-## automatedtradingplatform/files/nagios_plugins/check_website.py
+## check_website.py
 
 usage: check_website.py [-h] [-t TICKER] [-u URL]
 
@@ -71,8 +67,7 @@ optional arguments:
   -t TICKER, --ticker TICKER
                         ticker code of the stock
   -u URL, --url URL     URL of the website of interest
-
-## automatedtradingplatform/files/nagios_plugins/check_sma.py
+## check_sma.py
 
 usage: check_sma.py [-h] [-t TICKER] [-d DAYS] [-r [RAW]]
 
@@ -87,12 +82,10 @@ optional arguments:
   -r [RAW], --raw [RAW]
                         Just print the price minus pretty output and return
                         OK(0)
-
-## automatedtradingplatform/files/nagios_plugins/check_vix.py
+## check_vix.py
 
 13.9
-
-## automatedtradingplatform/files/nagios_plugins/check_trend.py
+## check_trend.py
 
 usage: check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
                       [-3rd THIRDMA]
@@ -112,8 +105,7 @@ optional arguments:
                         Second moving average (the longer, e.g. 50 days)
   -3rd THIRDMA, --thirdMA THIRDMA
                         Third moving average (the longest. e.g. 100 days)
-
-## automatedtradingplatform/files/nagios_plugins/check_short_interest.py
+## check_short_interest.py
 
 usage: check_short_interest.py [-h] [-t TICKER]
 
@@ -124,3 +116,4 @@ optional arguments:
   -t TICKER, --ticker TICKER
                         Ticker code of the stock
 
+This documentation is automatically generated.
