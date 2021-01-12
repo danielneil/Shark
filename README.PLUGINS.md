@@ -1,7 +1,7 @@
 # Plugins Documentation
 
-This is plugins documentation of the trading platform.
-They are structured the same as the traditional nagios platforms.
+This is plugins documentation.
+The plugins are structured the same as the traditional nagios plugins.
 
 ## check_rsi.py
 
