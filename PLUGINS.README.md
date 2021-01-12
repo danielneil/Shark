@@ -1,4 +1,7 @@
-# Documentation for Plugins
+# Plugins Documentation
+
+This is documentation for the plugins.
+
 ## check_rsi.py
 
 **Usage:** check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAXRSI]
@@ -116,4 +119,4 @@ Alarms on the short interest of a specific ASX ticker.
   -t TICKER, --ticker TICKER
                         Ticker code of the stock
 
-This documentation is automatically generated.
+This documentation is automatically generated, so editing this file is pointless, instead amend the --help text in the plugin's source code.
