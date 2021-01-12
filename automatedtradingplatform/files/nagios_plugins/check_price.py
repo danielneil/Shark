@@ -19,7 +19,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker code of the stock")
     parser.add_argument("-r", "--raw", nargs='?', const=1, type=int, help="Just print the latest price, not determing if different from yesterday's price, and return OK(0)")
-    parser.add_argument("-p", "--percentage", help="Alarm if price variation is greater than the supplied percentage")
 
     args = parser.parse_args()
 
