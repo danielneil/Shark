@@ -1,6 +1,6 @@
 # Plugins Documentation
 
-This is documentation for the plugins.
+This is documentation for the plugins for the trading platforms.
 
 ## check_rsi.py
 
@@ -123,5 +123,6 @@ Alarms on the short interest of a specific ASX ticker.
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock
+
 
 This documentation is automatically generated, so editing this file is pointless, instead amend the --help text in the plugin's source code.
