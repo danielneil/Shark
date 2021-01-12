@@ -11,12 +11,6 @@
    name: python3-requests
    state: latest
 
-- name: Copying nagios plugin website check script
-  copy:
-    src: atp_nagios_plugins/check_website.py
-    dest: /atp/nagios_plugins
-    mode: 0755
-
 - name: Touch hash file if it doesn't exist
   copy:
     content: ""

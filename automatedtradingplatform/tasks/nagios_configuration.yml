@@ -25,7 +25,7 @@
 
 - name: Copying our custom nagios_plugins 
   copy:
-   src: atp_nagios_plugins
+   src: nagios_plugins
    dest: /atp/
    owner: nagios
    group: nagios
