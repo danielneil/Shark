@@ -4,7 +4,7 @@
 # Generate the documentation for the plugins
 CURR_DIR=`pwd`
 CHECKS_PATH=automatedtradingplatform/files/nagios_plugins
-DOC_FILE=PLUGINS.HELP
+DOC_FILE=PLUGINS.HELP.md
 
 echo "# Documentation for Plugins" > ${DOC_FILE}
 
