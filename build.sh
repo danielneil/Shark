@@ -4,12 +4,13 @@
 
 CURR_DIR=`pwd`
 CHECKS_PATH=automatedtradingplatform/files/nagios_plugins
-DOC_FILE=PLUGINS.README.md
+DOC_FILE=README.PLUGINS.md
 
 echo "# Plugins Documentation" > ${DOC_FILE}
 
 echo "" >> ${DOC_FILE}
-echo "This is documentation for the plugins for the trading platforms." >> ${DOC_FILE}
+echo "This is plugins documentation of the trading platform." >> ${DOC_FILE}
+echo "They are structured the same as the traditional nagios platforms." >> ${DOC_FILE}
 echo "" >> ${DOC_FILE}
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
