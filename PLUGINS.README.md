@@ -87,7 +87,12 @@ number of days.
                         OK(0)
 ## check_vix.py
 
-13.9
+**Usage:** check_vix.py [-h]
+
+Get the VIX (Volatility Index).
+
+**Optional Arguments**:
+  -h, --help  show this help message and exit
 ## check_trend.py
 
 **Usage:** check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
