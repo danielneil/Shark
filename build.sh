@@ -1,7 +1,6 @@
 #/usr/bin/bash
 
 # Generate the documentation for the plugins
-
 CURR_DIR=`pwd`
 CHECKS_PATH=automatedtradingplatform/files/nagios_plugins
 DOC_FILE=README.PLUGINS.md
@@ -15,7 +14,7 @@ echo "" >> ${DOC_FILE}
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
-	echo "## $(basename $CHECK_cmd)" >> ${DOC_FILE}
+	echo "## $(basename $CHECK_cmd | sed 's/.py//g')" >> ${DOC_FILE}
 	echo "" >> ${DOC_FILE}
 
 	printf "`$CHECK_cmd --help`" >> ${DOC_FILE}

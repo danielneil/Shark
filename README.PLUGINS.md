@@ -3,7 +3,7 @@
 This is the plugins documentation.
 Plugins are structured the same as traditional nagios plugins.
 
-## check_rsi.py
+## check_rsi
 
 **Usage:** check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAX] [-min MIN]
 
@@ -17,7 +17,7 @@ This plugin computes the relative strength index (RSI) for a stock.
                         RSI period of which to base the calculation upon.
   -max MAX, --max MAX   Warn if the RSI is greater than this threshold.
   -min MIN, --min MIN   Warn if the RSI is less than this threshold.
-## check_template.py
+## check_template
 
 **Usage:** check_template.py [-h] [-t TICKER]
 
@@ -28,7 +28,7 @@ descriptive as possible as it will be used to generate documentation
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         ticker code of the stock
-## check_strategy.py
+## check_strategy
 
 **Usage:** check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
@@ -42,7 +42,7 @@ example
                         Ticker code of the stock in question
   -s STRATEGY, --strategy STRATEGY
                         The file name of the custom strategy
-## check_price.py
+## check_price
 
 **Usage:** check_price.py [-h] [-t TICKER] [-r [RAW]]
 
@@ -55,7 +55,7 @@ Get the latest price of a stock.
   -r [RAW], --raw [RAW]
                         Just print the price minus pretty output and return
                         OK(0)
-## check_website.py
+## check_website
 
 **Usage:** check_website.py [-h] [-t TICKER] [-u URL]
 
@@ -68,7 +68,7 @@ derivative.
   -t TICKER, --ticker TICKER
                         ticker code of the stock
   -u URL, --url URL     URL of the website of interest
-## check_sma.py
+## check_sma
 
 **Usage:** check_sma.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
                     [-min MIN]
@@ -87,7 +87,7 @@ trading periods.
                         Just print the price minus pretty output.
   -max MAX, --max MAX   Warn if the result is greater than this threshold.
   -min MIN, --min MIN   Warn if the result is less than this threshold.
-## check_vix.py
+## check_vix
 
 **Usage:** check_vix.py [-h]
 
@@ -95,7 +95,7 @@ Get the VIX (Volatility Index).
 
 **Optional Arguments**:
   -h, --help  show this help message and exit
-## check_trend.py
+## check_trend
 
 **Usage:** check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
                       [-3rd THIRDMA]
@@ -115,7 +115,7 @@ between the moving averages
                         Second moving average (the longer, e.g. 50 days)
   -3rd THIRDMA, --thirdMA THIRDMA
                         Third moving average (the longest. e.g. 100 days)
-## check_short_interest.py
+## check_short_interest
 
 **Usage:** check_short_interest.py [-h] [-t TICKER]
 
