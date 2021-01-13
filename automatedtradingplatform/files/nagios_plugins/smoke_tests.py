@@ -11,7 +11,7 @@ OK= 0
 def check_ticker_arg(check_plugin):
 	try:
 
-		rsiCheck = float(subprocess.check_output(["/atp/nagios_plugins/" + check_plugin]))
+		rsiCheck = float(subprocess.check_output([check_plugin]))
 		print("Error, a ticker was not supplied, and therefore should have thrown an error, exiting...")	
 		sys.exit(ERROR)
 
@@ -34,11 +34,11 @@ print("########################################################################"
 
 TICKER="CBA"
 EXPECTED_RSI=62.95
-PLUGIN_NAME="check_rsi.py"
+PLUGIN_NAME="./check_rsi.py"
 
 # Check computed RSI period is correct. 
 
-rsiCheck = float(subprocess.check_output(["/atp/nagios_plugins/check_rsi.py", "--ticker", TICKER, "--rsiPeriod", "14"]))
+rsiCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--rsiPeriod", "14"]))
 
 if rsiCheck == EXPECTED_RSI:
 	print("OK - RSI Calculation of " + str(EXPECTED_RSI) + " correct for ticker " + TICKER)
@@ -54,7 +54,7 @@ check_ticker_arg(PLUGIN_NAME)
 
 try:
 
-	rsiMaxCheck = subprocess.check_output(["/atp/nagios_plugins/check_rsi.py", "--ticker", TICKER, "--rsiPeriod", "14", "--max", "50"])
+	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--rsiPeriod", "14", "--max", "50"])
 	print("Error, RSI is greater than max, and therefore should have thrown an error, exiting...")
 	sys.exit(ERROR)
 
@@ -72,7 +72,7 @@ except subprocess.CalledProcessError as e:
 
 try:
 
-	rsiMaxCheck = subprocess.check_output(["/atp/nagios_plugins/check_rsi.py", "--ticker", TICKER, "--rsiPeriod", "14", "--min", "70"])
+	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--rsiPeriod", "14", "--min", "70"])
 	print("Error, RSI is less than min, and therefore should have thrown an error, exiting...")
 	sys.exit(ERROR)
 
@@ -91,7 +91,7 @@ except subprocess.CalledProcessError as e:
 TICKER="CBA"
 EXPECTED_PRICE=83.16
 PRETTY_PRICE="$83.16 (-1.84%)"
-PLUGIN_NAME="check_price.py"
+PLUGIN_NAME="./check_price.py"
 
 print("########################################################################")
 print("# Check Price Plugin")
@@ -99,7 +99,7 @@ print("########################################################################"
 
 # Check raw price is correct. 
 
-priceCheck = float(subprocess.check_output(["/atp/nagios_plugins/check_price.py", "--ticker", TICKER, "--raw"]))
+priceCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--raw"]))
 
 if priceCheck == EXPECTED_PRICE:
 	print("OK - Price check of " + str(EXPECTED_PRICE) + " correct for ticker " + TICKER)
@@ -116,7 +116,7 @@ check_ticker_arg(PLUGIN_NAME)
 
 try:
 
-	subprocess.check_output(["/atp/nagios_plugins/check_price.py", "--ticker", "CBA"])
+	subprocess.check_output([PLUGIN_NAME, "--ticker", "CBA"])
 	print("Pretty price did not match expected result, and therefore should have thrown an error, exiting...")
 	sys.exit(ERROR)
 
@@ -137,7 +137,7 @@ except subprocess.CalledProcessError as e:
 TICKER="CBA"
 EXPECTED_SMA=float(82.99)
 PRETTY_PRICE=str("$82.99")
-PLUGIN_NAME="check_sma.py"
+PLUGIN_NAME="./check_sma.py"
 
 print("########################################################################")
 print("# Check SMA Plugin")
@@ -145,7 +145,7 @@ print("########################################################################"
 
 # Check SMA raw price is correct. 
 
-smaCheck = float(subprocess.check_output(["/atp/nagios_plugins/check_sma.py", "--ticker", TICKER, "--days", "10", "--raw"]))
+smaCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--periods", "10", "--raw"]))
 
 if smaCheck == EXPECTED_SMA:
 	print("OK - SMA check of " + str(EXPECTED_SMA) + " correct for ticker " + TICKER)
@@ -156,3 +156,39 @@ else:
 # No ticker entered.
 
 check_ticker_arg(PLUGIN_NAME)
+
+# Max SMA.
+
+try:
+
+	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--periods", "10", "--max", "80"])
+	print("Error, Computed SMA result is greater than the threshold, and therefore should have thrown an error, exiting...")
+	sys.exit(ERROR)
+
+except subprocess.CalledProcessError as e:
+
+	if "WARNING - SMA($82.99) is above threshold 80" == e.output.rstrip():
+		print("OK - SMA max was triggered and threw an error.")
+	else:
+
+		print("ERROR - SMA max was not triggered and did not throw an error, exiting...")
+		print(e.output)
+		sys.exit(ERROR)
+
+# Min SMA.
+
+try:
+
+	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--periods", "10", "--min", "90"])
+	print("Error, Computed SMA result is below than the threshold, and therefore should have thrown an error, exiting...")
+	sys.exit(ERROR)
+
+except subprocess.CalledProcessError as e:
+
+	if "WARNING - SMA($82.99) is below threshold 90" == e.output.rstrip():
+		print("OK - SMA min was triggered and threw an error.")
+	else:
+
+		print("ERROR - SMA min was not triggered and did not throw an error, exiting...")
+		print(e.output)
+		sys.exit(ERROR)

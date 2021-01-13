@@ -5,8 +5,7 @@ Plugins are structured the same as traditional nagios plugins.
 
 ## check_rsi.py
 
-**Usage:** check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAXRSI]
-                    [-min MINRSI]
+**Usage:** check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAX] [-min MIN]
 
 This plugin computes the relative strength index (RSI) for a stock.
 
@@ -16,10 +15,8 @@ This plugin computes the relative strength index (RSI) for a stock.
                         ticker code of the stock
   -r RSIPERIOD, --rsiPeriod RSIPERIOD
                         RSI period of which to base the calculation upon.
-  -max MAXRSI, --maxRSI MAXRSI
-                        Warn if the RSI is greater than this threshold.
-  -min MINRSI, --minRSI MINRSI
-                        Warn if the RSI is less than this threshold.
+  -max MAX, --max MAX   Warn if the RSI is greater than this threshold.
+  -min MIN, --min MIN   Warn if the RSI is less than this threshold.
 ## check_template.py
 
 **Usage:** check_template.py [-h] [-t TICKER]
@@ -73,19 +70,23 @@ derivative.
   -u URL, --url URL     URL of the website of interest
 ## check_sma.py
 
-**Usage:** check_sma.py [-h] [-t TICKER] [-d DAYS] [-r [RAW]]
+**Usage:** check_sma.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
+                    [-min MIN]
 
-Computes a simple moving average of a specific ASX ticker against a specific
-number of days.
+Computes a simple moving average of a ticker against a specific number of
+trading periods.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock.
-  -d DAYS, --days DAYS  Number of days for which to compute the SMA against.
+  -p PERIODS, --periods PERIODS
+                        Number of trading periods for which to compute
+                        against.
   -r [RAW], --raw [RAW]
-                        Just print the price minus pretty output and return
-                        OK(0)
+                        Just print the price minus pretty output.
+  -max MAX, --max MAX   Warn if the result is greater than this threshold.
+  -min MIN, --min MIN   Warn if the result is less than this threshold.
 ## check_vix.py
 
 **Usage:** check_vix.py [-h]

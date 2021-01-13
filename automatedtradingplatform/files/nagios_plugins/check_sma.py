@@ -12,14 +12,16 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Computes a simple moving average of a specific ASX ticker against a specific number of days."
+cmd_arg_help = "Computes a simple moving average of a ticker against a specific number of trading periods."
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker code of the stock.")
-    parser.add_argument("-d", "--days", help="Number of days for which to compute the SMA against.")
-    parser.add_argument("-r", "--raw", nargs='?', const=1, type=int, help="Just print the price minus pretty output and return OK(0)")
+    parser.add_argument("-p", "--periods", help="Number of trading periods for which to compute against.")
+    parser.add_argument("-r", "--raw", nargs='?', const=1, type=int, help="Just print the price minus pretty output.")
+    parser.add_argument("-max", "--max", help="Warn if the result is greater than this threshold.")
+    parser.add_argument("-min", "--min", help="Warn if the result is less than this threshold.")
     args = parser.parse_args()
 
     if not args.ticker:
@@ -30,23 +32,29 @@ if __name__ == "__main__":
         print ("UNKNOWN - Ticker data file not found, exit...")
         sys.exit(UNKNOWN)
 
-    if not args.days:
-        print ("UNKNOWN - Days not supplied")
+    if not args.periods:
+        print ("UNKNOWN - Periods not supplied")
         sys.exit(UNKNOWN)
 
     ticker = args.ticker
-    smaPeriod = int(args.days)
+    smaPeriod = int(args.periods)
 
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
-
     dataFrame = data['Adj Close']
+    sma = np.round(dataFrame.rolling(smaPeriod).mean().iloc[-1], 2)
 
-    smaResult = np.round(dataFrame.rolling(smaPeriod).mean().iloc[-1], 2)
+    returnCode = OK
 
     if args.raw:
-        print(str(smaResult))
-        sys.exit(OK)
+        print(str(sma))
+    else:
+        if args.max and int(args.max) <  sma:
+            print("WARNING - SMA($" + str(sma) + ") is above threshold " + str(args.max))
+            returnCode = WARNING
+        elif args.min and int(args.min) >  sma:
+            print("WARNING - SMA($" + str(sma) + ") is below threshold " + str(args.min))
+            returnCode = WARNING
+        else:
+            print("OK - $" + str(sma))
 
-    print ("$" + str(smaResult))
-
-    sys.exit(OK)
+    sys.exit(returnCode)

@@ -44,8 +44,8 @@ if __name__ == "__main__":
     
     parser.add_argument("-t", "--ticker", help="ticker code of the stock")
     parser.add_argument("-r", "--rsiPeriod", help="RSI period of which to base the calculation upon.")
-    parser.add_argument("-max", "--maxRSI", help="Warn if the RSI is greater than this threshold.")
-    parser.add_argument("-min", "--minRSI", help="Warn if the RSI is less than this threshold.")
+    parser.add_argument("-max", "--max", help="Warn if the RSI is greater than this threshold.")
+    parser.add_argument("-min", "--min", help="Warn if the RSI is less than this threshold.")
 
     args = parser.parse_args()
 
@@ -67,11 +67,11 @@ if __name__ == "__main__":
     maxRSI = False
     minRSI = False
 
-    if args.maxRSI:
-        maxRSI = int(args.maxRSI)
+    if args.max:
+        maxRSI = int(args.max)
 
-    if args.minRSI:
-        minRSI = int(args.minRSI)
+    if args.min:
+        minRSI = int(args.min)
     
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     rsiValueStr = str(rsiValue)
 
     # If the min or max arn't suppled, just report the RSI and exit.
-    if not args.maxRSI and not args.minRSI:
+    if not args.max and not args.min:
         print(rsiValueStr)
         sys.exit(OK)        
     
