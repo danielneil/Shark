@@ -78,12 +78,12 @@ if __name__ == "__main__":
         print(str(rsi))
     else:
         if args.max and int(args.max) <  rsi:
-            print("WARNING - RSI($" + str(rsi) + ") is above threshold " + str(args.max))
+            print("WARNING - RSI(" + str(rsi) + ") is above threshold " + str(args.max))
             returnCode = WARNING
         elif args.min and int(args.min) >  rsi:
-            print("WARNING - RSI($" + str(rsi) + ") is below threshold " + str(args.min))
+            print("WARNING - RSI(" + str(rsi) + ") is below threshold " + str(args.min))
             returnCode = WARNING
         else:
-            print("OK - $" + str(rsi))
+            print("OK - " + str(rsi))
 
     sys.exit(returnCode)

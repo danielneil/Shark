@@ -60,7 +60,7 @@ try:
 
 except subprocess.CalledProcessError as e:
 
-	if "WARNING - RSI($62.95) is above threshold 50" == e.output.rstrip():
+	if "WARNING - RSI(62.95) is above threshold 50" == e.output.rstrip():
 		print("OK - RSI max was triggered and threw an error.")
 	else:
 
@@ -78,7 +78,7 @@ try:
 
 except subprocess.CalledProcessError as e:
 
-	if "WARNING - RSI($62.95) is below threshold 70" == e.output.rstrip():
+	if "WARNING - RSI(62.95) is below threshold 70" == e.output.rstrip():
 		print("OK - RSI min was triggered and threw an error.")
 	else:
 		print("ERROR - RSI min was not triggered and did not throw an error, exiting...")

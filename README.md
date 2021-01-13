@@ -12,7 +12,7 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 1. Install ansible on your local machine.
 
-2. Prepare a vanilla Debian-ish server.
+2. Prepare a vanilla Debian server.
 
 3. Add its IP address to the ./hosts files under [atp-server]
 
@@ -22,35 +22,9 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 6. Navigate to https://atp-server/nagios using the aforementioned credentials.
 
-# Screen Shots
-
-### Stock Status Details For All Stock Groups
+# Screen Shot
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status.JPG?raw=true)
-
-### Indicator Status Details For All Stocks
-
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-status-all-stocks.JPG?raw=true)
-
-### Indicator Overview For All Stock Groups
-
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-overview.JPG?raw=true)
-
-### Indicator Overview For All Indicator Groups
-
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/indicator-groups-overview.JPG?raw=true)
-
-### Detection of a Trading Opportunity 
-
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/trading-strategy-detected.JPG?raw=true)
-
-### Monitoring Websites of Interest (reports when a change is detected)
-
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/website-changes.JPG)
-
-### RSI Indicator 
-
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/rsi-status.JPG)
 
 # Warning
 

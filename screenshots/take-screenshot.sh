@@ -1,1 +1,1 @@
-firefox --screenshot "ticker-status.JPG" http://192.168.43.21/nagios/
+firefox --screenshot "screenshot.JPG" 'http://nagios:nagios@127.0.0.1/nagios/'

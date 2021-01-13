@@ -35,11 +35,12 @@ if __name__ == "__main__":
     dataFrame = data['Adj Close']
 
     lastPrice = np.round(dataFrame.iloc[-1], 2)
-    yesterdayPrice = np.round(dataFrame.iloc[-2], 2)
 
     if args.raw:
         print(lastPrice)
         sys.exit(OK)
+
+    yesterdayPrice = np.round(dataFrame.iloc[-2], 2)
 
     if lastPrice > yesterdayPrice:
         percentageDiff = '{0:.2f}'.format(abs((yesterdayPrice/lastPrice * 100) -100)) 
