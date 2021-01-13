@@ -24,7 +24,7 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 # Screen Shot
 
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/ticker-status.JPG?raw=true)
+![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/screenshot.JPG?raw=true)
 
 # Warning
 
