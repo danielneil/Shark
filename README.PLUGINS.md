@@ -5,7 +5,8 @@ Plugins are structured the same as traditional nagios plugins.
 
 ## check_rsi
 
-**Usage:** check_rsi.py [-h] [-t TICKER] [-r RSIPERIOD] [-max MAX] [-min MIN]
+**Usage:** check_rsi.py [-h] [-t TICKER] [-p PERIODS] [-max MAX] [-min MIN]
+                    [-r [RAW]]
 
 This plugin computes the relative strength index (RSI) for a stock.
 
@@ -13,10 +14,13 @@ This plugin computes the relative strength index (RSI) for a stock.
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         ticker code of the stock
-  -r RSIPERIOD, --rsiPeriod RSIPERIOD
-                        RSI period of which to base the calculation upon.
+  -p PERIODS, --periods PERIODS
+                        Number of trading periods for which to compute
+                        against.
   -max MAX, --max MAX   Warn if the RSI is greater than this threshold.
   -min MIN, --min MIN   Warn if the RSI is less than this threshold.
+  -r [RAW], --raw [RAW]
+                        Just print the price minus pretty output.
 ## check_template
 
 **Usage:** check_template.py [-h] [-t TICKER]

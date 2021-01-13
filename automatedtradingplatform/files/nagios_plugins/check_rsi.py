@@ -43,9 +43,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     
     parser.add_argument("-t", "--ticker", help="ticker code of the stock")
-    parser.add_argument("-r", "--rsiPeriod", help="RSI period of which to base the calculation upon.")
+    parser.add_argument("-p", "--periods", help="Number of trading periods for which to compute against.")
     parser.add_argument("-max", "--max", help="Warn if the RSI is greater than this threshold.")
     parser.add_argument("-min", "--min", help="Warn if the RSI is less than this threshold.")
+    parser.add_argument("-r", "--raw", nargs='?', const=1, type=int, help="Just print the price minus pretty output.")
 
     args = parser.parse_args()
 
@@ -57,43 +58,32 @@ if __name__ == "__main__":
             print ("UNKNOWN - ticker data file not found")
             sys.exit(UNKNOWN)
 
-    if not args.rsiPeriod:
+    if not args.periods:
         print ("UNKNOWN - No rsi period found")
         sys.exit(UNKNOWN)
 
     ticker = args.ticker
-    rsiPeriod = args.rsiPeriod
+    rsiPeriod = args.periods
 
-    maxRSI = False
-    minRSI = False
-
-    if args.max:
-        maxRSI = int(args.max)
-
-    if args.min:
-        minRSI = int(args.min)
-    
     data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
 
     data['RSI'] = computeRSI(data['Adj Close'], int(rsiPeriod))
-    
     df = data['RSI']
     
-    rsiValue =  np.round(df.iloc[-1],2)
-    rsiValueStr = str(rsiValue)
+    rsi =  np.round(df.iloc[-1],2)
 
-    # If the min or max arn't suppled, just report the RSI and exit.
-    if not args.max and not args.min:
-        print(rsiValueStr)
-        sys.exit(OK)        
-    
-    if maxRSI and rsiValue > maxRSI:
-        print("WARNING - RSI(" + rsiValueStr + ") is above " + str(maxRSI))
-        sys.exit(WARNING)
-    
-    if minRSI and rsiValue < minRSI:
-        print("WARNING - RSI(" + rsiValueStr + ") is below " + str(minRSI))
-        sys.exit(WARNING)
-    
-    print("OK - RSI(" + rsiValueStr + ")")
-    sys.exit(OK)
+    returnCode = OK
+
+    if args.raw:
+        print(str(rsi))
+    else:
+        if args.max and int(args.max) <  rsi:
+            print("WARNING - RSI($" + str(rsi) + ") is above threshold " + str(args.max))
+            returnCode = WARNING
+        elif args.min and int(args.min) >  rsi:
+            print("WARNING - RSI($" + str(rsi) + ") is below threshold " + str(args.min))
+            returnCode = WARNING
+        else:
+            print("OK - $" + str(rsi))
+
+    sys.exit(returnCode)

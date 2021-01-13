@@ -38,7 +38,7 @@ PLUGIN_NAME="./check_rsi.py"
 
 # Check computed RSI period is correct. 
 
-rsiCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--rsiPeriod", "14"]))
+rsiCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--periods", "14", "--raw"]))
 
 if rsiCheck == EXPECTED_RSI:
 	print("OK - RSI Calculation of " + str(EXPECTED_RSI) + " correct for ticker " + TICKER)
@@ -54,13 +54,13 @@ check_ticker_arg(PLUGIN_NAME)
 
 try:
 
-	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--rsiPeriod", "14", "--max", "50"])
+	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--periods", "14", "--max", "50"])
 	print("Error, RSI is greater than max, and therefore should have thrown an error, exiting...")
 	sys.exit(ERROR)
 
 except subprocess.CalledProcessError as e:
 
-	if "WARNING - RSI(62.95) is above 50" == e.output.rstrip():
+	if "WARNING - RSI($62.95) is above threshold 50" == e.output.rstrip():
 		print("OK - RSI max was triggered and threw an error.")
 	else:
 
@@ -72,13 +72,13 @@ except subprocess.CalledProcessError as e:
 
 try:
 
-	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--rsiPeriod", "14", "--min", "70"])
+	rsiMaxCheck = subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--periods", "14", "--min", "70"])
 	print("Error, RSI is less than min, and therefore should have thrown an error, exiting...")
 	sys.exit(ERROR)
 
 except subprocess.CalledProcessError as e:
 
-	if "WARNING - RSI(62.95) is below 70" == e.output.rstrip():
+	if "WARNING - RSI($62.95) is below threshold 70" == e.output.rstrip():
 		print("OK - RSI min was triggered and threw an error.")
 	else:
 		print("ERROR - RSI min was not triggered and did not throw an error, exiting...")
@@ -191,4 +191,9 @@ except subprocess.CalledProcessError as e:
 
 		print("ERROR - SMA min was not triggered and did not throw an error, exiting...")
 		print(e.output)
-		sys.exit(ERROR)
+		sys.exit(ERROR)	
+
+print("########################################################################")
+print("# Smoke tests completed...")
+print("########################################################################")
+sys.exit(OK)
