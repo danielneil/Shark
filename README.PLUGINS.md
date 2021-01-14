@@ -1,3 +1,8 @@
+# Plugins Documentation
+
+This is the plugins documentation.
+The plugins enable the platform to monitor just about anything of interest.
+
 # Table of Contents
 * [check_rsi])(#check_rsi)
 * [check_template])(#check_template)

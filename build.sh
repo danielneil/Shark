@@ -16,7 +16,7 @@ echo "" >> ${DOC_FILE}
 
 # Generate the table of contents.
 
-echo "# Table of Contents" > ${DOC_FILE}
+echo "# Table of Contents" >> ${DOC_FILE}
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
