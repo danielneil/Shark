@@ -1,8 +1,6 @@
 # Plugins Documentation
 
-This is the plugins documentation.
-
-The plugins enable the platform to monitor and alert on just about **anything** of interest; if its online, it can be monitored.
+The plugins enable the platform to monitor and alert on just about **anything** of interest.
 
 # Contents
 * [check_rsi](#check_rsi)
