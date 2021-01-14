@@ -8,8 +8,8 @@ The plugins enable the platform to monitor and alert on just about **anything** 
 * [check_rsi](#check_rsi)
 * [check_strategy](#check_strategy)
 * [check_price](#check_price)
-* [check_website](#check_website)
 * [check_sma](#check_sma)
+* [check_website_for_changes](#check_website_for_changes)
 * [check_vix](#check_vix)
 * [check_trend](#check_trend)
 * [check_short_interest](#check_short_interest)
@@ -68,19 +68,6 @@ Get the latest price of a stock.
   -r [RAW], --raw [RAW]
                         Just print the price minus pretty output and return
                         OK(0)
-## <a name="check_website"/>check_website
-
-**Usage:** check_website.py [-h] [-t TICKER] [-u URL]
-
-This plugin monitors a website for changes. E.g. the Investor Information
-section of a publicly listed company, or a page displaying news for a specific
-derivative.
-
-**Optional Arguments**:
-  -h, --help            show this help message and exit
-  -t TICKER, --ticker TICKER
-                        ticker code of the stock
-  -u URL, --url URL     URL of the website of interest
 ## <a name="check_sma"/>check_sma
 
 **Usage:** check_sma.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
@@ -100,6 +87,19 @@ trading periods.
                         Just print the price minus pretty output.
   -max MAX, --max MAX   Warn if the result is greater than this threshold.
   -min MIN, --min MIN   Warn if the result is less than this threshold.
+## <a name="check_website_for_changes"/>check_website_for_changes
+
+**Usage:** check_website_for_changes.py [-h] [-t TICKER] [-u URL]
+
+This plugin monitors a website for changes. E.g. the Investor Information
+section of a publicly listed company, or a page displaying news for a specific
+derivative.
+
+**Optional Arguments**:
+  -h, --help            show this help message and exit
+  -t TICKER, --ticker TICKER
+                        ticker code of the stock
+  -u URL, --url URL     URL of the website of interest
 ## <a name="check_vix"/>check_vix
 
 **Usage:** check_vix.py [-h]
