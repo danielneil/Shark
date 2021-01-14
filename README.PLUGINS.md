@@ -45,9 +45,8 @@ descriptive as possible as it will be used to generate documentation
 
 **Usage:** check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
-This script calls the strategy the strategy defined in the nagios
-configuration. Do not make changes here. See the [template
-strategy](../strategies/moving_averages.py) for an example
+This script calls the current strategy. Do not make changes here. See the
+[template strategy](../strategies/moving_averages.py) for an example
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
