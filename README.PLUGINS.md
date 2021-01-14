@@ -1,8 +1,13 @@
-# Plugins Documentation
-
-This is the plugins documentation.
-The plugins enable the platform to monitor just about anything of interest.
-
+# Table of Contents
+* [check_rsi])(#check_rsi)
+* [check_template])(#check_template)
+* [check_strategy])(#check_strategy)
+* [check_price])(#check_price)
+* [check_website])(#check_website)
+* [check_sma])(#check_sma)
+* [check_vix])(#check_vix)
+* [check_trend])(#check_trend)
+* [check_short_interest])(#check_short_interest)
 ## check_rsi
 
 **Usage:** check_rsi.py [-h] [-t TICKER] [-p PERIODS] [-max MAX] [-min MIN]

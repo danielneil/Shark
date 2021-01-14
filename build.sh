@@ -14,6 +14,19 @@ echo "This is the plugins documentation." >> ${DOC_FILE}
 echo "The plugins enable the platform to monitor just about anything of interest." >> ${DOC_FILE}
 echo "" >> ${DOC_FILE}
 
+# Generate the table of contents.
+
+echo "# Table of Contents" > ${DOC_FILE}
+
+for CHECK_cmd in `find $CHECKS_PATH | grep check_`
+do
+    plugin_name=$(basename $CHECK_cmd | sed 's/.py//g')
+
+	echo "* [$plugin_name])(#$plugin_name)" >> ${DOC_FILE}
+done
+
+# Generate the body.
+
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
 	echo "## $(basename $CHECK_cmd | sed 's/.py//g')" >> ${DOC_FILE}
