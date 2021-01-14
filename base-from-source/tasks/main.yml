@@ -1,5 +1,5 @@
 ---
-# tasks file for nagios-from-source
+# tasks file for base-from-source
 
 - name: Including build essentials
   include: build_essentials.yml

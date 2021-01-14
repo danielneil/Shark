@@ -13,5 +13,5 @@
   roles:
   - server-prep
   - httpd
-  - nagios-from-source
+  - base-from-source
   - automatedtradingplatform
