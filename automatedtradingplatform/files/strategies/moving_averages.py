@@ -32,11 +32,12 @@ if __name__ == "__main__":
 
     ticker = args.ticker 
 
-    short_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, str(shorter_sma_periods), '--raw'])
-    long_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, str(longer_sma_periods), '--raw'])
+    short_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, '--periods', str(shorter_sma_periods), '--raw'])
+    long_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, '--periods', str(longer_sma_periods), '--raw'])
 
     if short_sma > long_sma:
-       print("Buy Opportunity!")
+       buy_str = "Buy Opportunity! - " + str(shorter_sma_periods) + " day SMA($" + str(short_sma).rstrip() + ") is above " + str(shorter_sma_periods) + " day SMA ($" + str(long_sma).rstrip() + ")"
+       print(buy_str)
        sys.exit(CRITICAL)
 
     print("No Opportunity Detected")
