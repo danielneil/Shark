@@ -1,7 +1,7 @@
 # Plugins Documentation
 
-This is the plugins documentation,
-The plugins enable the platform to monitor and alert on just about anything of interest.
+This is the plugins documentation.
+The plugins are mostly python scripts that enable the platform to monitor and alert on just about anything of interest.
 
 # Contents
 * [check_rsi](#check_rsi)

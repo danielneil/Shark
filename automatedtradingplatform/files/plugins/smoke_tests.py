@@ -193,6 +193,25 @@ except subprocess.CalledProcessError as e:
 		print(e.output)
 		sys.exit(ERROR)	
 
+########################################################################
+# Check Website 
+
+TICKER="CBA"
+TEST_URL="http://localhost/cba/changing-website.php"
+PLUGIN_NAME="./check_website.py"
+
+print("########################################################################")
+print("# Check Website Plugin")
+print("########################################################################")
+
+# Checks for changes in website of interest.
+
+smaCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--url", TEST_URL]))
+
+# No ticker entered.
+
+check_ticker_arg(PLUGIN_NAME)
+
 print("########################################################################")
 print("# Smoke tests completed...")
 print("########################################################################")

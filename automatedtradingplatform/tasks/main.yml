@@ -117,7 +117,7 @@
 - include: check_short.yml
 
 - name: Running plugin smoke tests
-  shell: cd /atp/nagios_plugins/ && ./smoke_tests.py
+  shell: cd /atp/plugins/ && ./smoke_tests.py
   register: tests_results
 
 - debug: 
