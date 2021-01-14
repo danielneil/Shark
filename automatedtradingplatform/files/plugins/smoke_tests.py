@@ -206,7 +206,7 @@ print("########################################################################"
 
 # Checks for changes in website of interest.
 
-smaCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--url", TEST_URL]))
+#smaCheck = float(subprocess.check_output([PLUGIN_NAME, "--ticker", TICKER, "--url", TEST_URL]))
 
 # No ticker entered.
 

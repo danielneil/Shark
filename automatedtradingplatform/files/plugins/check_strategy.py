@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = 'This runs the platform strategy. For a simple strategy, see the [template strategy](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/automatedtradingplatform/files/strategies/moving_averages.py) for an example'
+cmd_arg_help = 'This runs the platform strategy. For a simple strategy, see the template strategy for an example'
 
 if __name__ == "__main__":
 
