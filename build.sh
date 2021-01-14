@@ -16,20 +16,22 @@ echo "" >> ${DOC_FILE}
 
 # Generate the table of contents.
 
-echo "# Table of Contents" >> ${DOC_FILE}
+echo "# Contents" >> ${DOC_FILE}
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
-    plugin_name=$(basename $CHECK_cmd | sed 's/.py//g')
-
-	echo "* [$plugin_name])(#$plugin_name)" >> ${DOC_FILE}
+    	plugin_name=$(basename $CHECK_cmd | sed 's/.py//g')
+	echo "* [$plugin_name](#$plugin_name)" >> ${DOC_FILE}
 done
 
 # Generate the body.
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
-	echo "## $(basename $CHECK_cmd | sed 's/.py//g')" >> ${DOC_FILE}
+	
+    	plugin_name=$(basename $CHECK_cmd | sed 's/.py//g')
+
+	echo "## <a name=\"$plugin_name\"/>$plugin_name" >> ${DOC_FILE}
 	echo "" >> ${DOC_FILE}
 
 	printf "`$CHECK_cmd --help`" >> ${DOC_FILE}

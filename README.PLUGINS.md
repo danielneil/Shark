@@ -3,17 +3,17 @@
 This is the plugins documentation.
 The plugins enable the platform to monitor just about anything of interest.
 
-# Table of Contents
-* [check_rsi])(#check_rsi)
-* [check_template])(#check_template)
-* [check_strategy])(#check_strategy)
-* [check_price])(#check_price)
-* [check_website])(#check_website)
-* [check_sma])(#check_sma)
-* [check_vix])(#check_vix)
-* [check_trend])(#check_trend)
-* [check_short_interest])(#check_short_interest)
-## check_rsi
+# Contents
+* [check_rsi](#check_rsi)
+* [check_template](#check_template)
+* [check_strategy](#check_strategy)
+* [check_price](#check_price)
+* [check_website](#check_website)
+* [check_sma](#check_sma)
+* [check_vix](#check_vix)
+* [check_trend](#check_trend)
+* [check_short_interest](#check_short_interest)
+## <a name="check_rsi"/>check_rsi
 
 **Usage:** check_rsi.py [-h] [-t TICKER] [-p PERIODS] [-max MAX] [-min MIN]
                     [-r [RAW]]
@@ -31,7 +31,7 @@ This plugin computes the relative strength index (RSI) for a stock.
   -min MIN, --min MIN   Warn if the RSI is less than this threshold.
   -r [RAW], --raw [RAW]
                         Just print the price minus pretty output.
-## check_template
+## <a name="check_template"/>check_template
 
 **Usage:** check_template.py [-h] [-t TICKER]
 
@@ -42,7 +42,7 @@ descriptive as possible as it will be used to generate documentation
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         ticker code of the stock
-## check_strategy
+## <a name="check_strategy"/>check_strategy
 
 **Usage:** check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
@@ -56,7 +56,7 @@ example
                         Ticker code of the stock in question
   -s STRATEGY, --strategy STRATEGY
                         The file name of the custom strategy
-## check_price
+## <a name="check_price"/>check_price
 
 **Usage:** check_price.py [-h] [-t TICKER] [-r [RAW]]
 
@@ -69,7 +69,7 @@ Get the latest price of a stock.
   -r [RAW], --raw [RAW]
                         Just print the price minus pretty output and return
                         OK(0)
-## check_website
+## <a name="check_website"/>check_website
 
 **Usage:** check_website.py [-h] [-t TICKER] [-u URL]
 
@@ -82,7 +82,7 @@ derivative.
   -t TICKER, --ticker TICKER
                         ticker code of the stock
   -u URL, --url URL     URL of the website of interest
-## check_sma
+## <a name="check_sma"/>check_sma
 
 **Usage:** check_sma.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
                     [-min MIN]
@@ -101,7 +101,7 @@ trading periods.
                         Just print the price minus pretty output.
   -max MAX, --max MAX   Warn if the result is greater than this threshold.
   -min MIN, --min MIN   Warn if the result is less than this threshold.
-## check_vix
+## <a name="check_vix"/>check_vix
 
 **Usage:** check_vix.py [-h]
 
@@ -109,7 +109,7 @@ Get the VIX (Volatility Index).
 
 **Optional Arguments**:
   -h, --help  show this help message and exit
-## check_trend
+## <a name="check_trend"/>check_trend
 
 **Usage:** check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
                       [-3rd THIRDMA]
@@ -129,7 +129,7 @@ between the moving averages
                         Second moving average (the longer, e.g. 50 days)
   -3rd THIRDMA, --thirdMA THIRDMA
                         Third moving average (the longest. e.g. 100 days)
-## check_short_interest
+## <a name="check_short_interest"/>check_short_interest
 
 **Usage:** check_short_interest.py [-h] [-t TICKER]
 
