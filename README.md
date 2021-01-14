@@ -10,6 +10,8 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 See the [plugins](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
+See the example [strategy](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/automatedtradingplatform/files/strategies/moving_averages.py)
+
 # Setup Instructions
 
 1. Install ansible on your local machine.
