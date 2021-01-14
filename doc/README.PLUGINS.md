@@ -1,6 +1,8 @@
 # Plugins Documentation
 
-The plugins enable the platform to monitor and alert on just about **anything** of interest.
+This is the plugins documentation.
+
+The plugins enable the platform to monitor and alert on just about **anything** of interest; if its online, it can be monitored.
 
 # Contents
 * [check_rsi](#check_rsi)
@@ -9,6 +11,7 @@ The plugins enable the platform to monitor and alert on just about **anything** 
 * [check_sma](#check_sma)
 * [check_website_for_changes](#check_website_for_changes)
 * [check_vix](#check_vix)
+* [check_ema](#check_ema)
 * [check_trend](#check_trend)
 * [check_short_interest](#check_short_interest)
 ## <a name="check_rsi"/>check_rsi
@@ -106,6 +109,25 @@ Get the VIX (Volatility Index).
 
 **Optional Arguments**:
   -h, --help  show this help message and exit
+## <a name="check_ema"/>check_ema
+
+**Usage:** check_ema.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
+                    [-min MIN]
+
+Computes a exponential moving average of a ticker against a specific number of
+trading periods.
+
+**Optional Arguments**:
+  -h, --help            show this help message and exit
+  -t TICKER, --ticker TICKER
+                        Ticker code of the stock.
+  -p PERIODS, --periods PERIODS
+                        Number of trading periods for which to compute
+                        against.
+  -r [RAW], --raw [RAW]
+                        Just print the price minus pretty output.
+  -max MAX, --max MAX   Warn if the result is greater than this threshold.
+  -min MIN, --min MIN   Warn if the result is less than this threshold.
 ## <a name="check_trend"/>check_trend
 
 **Usage:** check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
