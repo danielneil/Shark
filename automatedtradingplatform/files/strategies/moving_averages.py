@@ -13,12 +13,12 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Example strategy: buy when the first simple moving average, crosses above the second simple moving average"
+cmd_arg_help = "Example strategy: trigger a buy when the shorter simple moving average, crosses above the longer simple moving average"
 
 strategy_name = "Moving Averages"
 
-first_ma_days = 50
-second_ma_days = 10
+longer_sma_periods = 50
+shorter_sma_periods = 10
 
 if __name__ == "__main__":
 
@@ -32,10 +32,10 @@ if __name__ == "__main__":
 
     ticker = args.ticker 
 
-    firstSMAPeriod = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, str(second_ma_days), '--raw'])
-    secondSMAPeriod = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, str(first_ma_days), '--raw'])
+    short_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, str(shorter_sma_periods), '--raw'])
+    long_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, str(longer_sma_periods), '--raw'])
 
-    if firstSMAPeriod > secondSMAPeriod:
+    if short_sma > long_sma:
        print("Buy Opportunity!")
        sys.exit(CRITICAL)
 
