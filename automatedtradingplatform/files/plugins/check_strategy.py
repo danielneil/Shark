@@ -11,8 +11,7 @@ OK           = 0
 WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
-
-cmd_arg_help = "This script calls the strategy the strategy defined in the nagios configuration. Do not make changes here. See the template strategy for an example"
+cmd_arg_help = "This script calls the strategy the strategy defined in the nagios configuration. Do not make changes here. See the [template strategy](../strategies/moving_averages.py) for an example"
 
 if __name__ == "__main__":
 
