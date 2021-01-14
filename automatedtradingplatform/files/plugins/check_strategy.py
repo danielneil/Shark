@@ -3,7 +3,7 @@
 import pandas as pd
 import datetime
 import subprocess
-
+import os
 import sys
 import argparse
 
@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = 'This runs the platform strategy. For a simple strategy, see the template strategy for an example'
+cmd_arg_help = 'This executes the strategy code. For a simple strategy, see the template for an example'
 
 if __name__ == "__main__":
 
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     strategyFile = args.strategy
 
     if not os.path.isfile('/atp/strategies/' + strategyFile):
-        print ("UNKNOWN - Strategy file not found...")
+        print ("UNKNOWN - Strategy file (" + strategyFile  + ") not found...")
         sys.exit(UNKNOWN)
 
-    subprocess.check_output(['/atp/strategies/' + strategyFile + ' --ticker', ticker])
+    subprocess.check_output(['/atp/strategies/' + strategyFile, ' --ticker', ticker])

@@ -36,7 +36,7 @@ if __name__ == "__main__":
     long_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, '--periods', str(longer_sma_periods), '--raw'])
 
     if short_sma > long_sma:
-       buy_str = "Buy Opportunity! - " + str(shorter_sma_periods) + " day SMA($" + str(short_sma).rstrip() + ") is above " + str(shorter_sma_periods) + " day SMA ($" + str(long_sma).rstrip() + ")"
+       buy_str = "Buy Opportunity! - " + str(shorter_sma_periods) + " day SMA($" + str(short_sma).rstrip() + ") is above " + str(longer_sma_periods) + " day SMA ($" + str(long_sma).rstrip() + ")"
        print(buy_str)
        sys.exit(CRITICAL)
 

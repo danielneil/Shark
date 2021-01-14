@@ -47,8 +47,8 @@ descriptive as possible as it will be used to generate documentation
 
 **Usage:** check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
-This runs the platform strategy. For a simple strategy, see the template
-strategy for an example
+This executes the strategy code. For a simple strategy, see the template for
+an example
 
 **Optional Arguments**:
   -h, --help            show this help message and exit

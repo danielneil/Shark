@@ -7,7 +7,7 @@
           webui_auth_user: nagios
           webui_auth_pass: nagios
 
-          set_strategy: "moving_averages"
+          set_strategy: "moving_averages.py"
   roles:
   - server-prep
   - httpd

@@ -55,6 +55,7 @@
     dest: /atp/
     owner: atp
     group: atp
+    mode: 0755
 
 - name: Copy our ASX List of companies downloaded from the ASX site. 
   copy:
