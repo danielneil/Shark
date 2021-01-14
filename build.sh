@@ -10,8 +10,8 @@ DOC_FILE=README.PLUGINS.md
 echo "# Plugins Documentation" > ${DOC_FILE}
 
 echo "" >> ${DOC_FILE}
-echo "This is the plugins documentation." >> ${DOC_FILE}
-echo "The plugins enable the platform to monitor just about anything of interest." >> ${DOC_FILE}
+echo "This is the plugins documentation," >> ${DOC_FILE}
+echo "The plugins enable the platform to monitor and alert on just about anything of interest." >> ${DOC_FILE}
 echo "" >> ${DOC_FILE}
 
 # Generate the table of contents.
@@ -21,6 +21,13 @@ echo "# Contents" >> ${DOC_FILE}
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
     	plugin_name=$(basename $CHECK_cmd | sed 's/.py//g')
+
+	# If this is the check_template, skip.
+	if [ $plugin_name == "check_template" ];
+	then
+		continue;
+	fi
+
 	echo "* [$plugin_name](#$plugin_name)" >> ${DOC_FILE}
 done
 
@@ -28,8 +35,13 @@ done
 
 for CHECK_cmd in `find $CHECKS_PATH | grep check_`
 do
-	
     	plugin_name=$(basename $CHECK_cmd | sed 's/.py//g')
+
+	# If this is the check_template, skip.
+	if [ $plugin_name == "check_temlate" ];
+	then
+		continue;
+	fi
 
 	echo "## <a name=\"$plugin_name\"/>$plugin_name" >> ${DOC_FILE}
 	echo "" >> ${DOC_FILE}

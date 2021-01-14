@@ -1,11 +1,10 @@
 # Plugins Documentation
 
-This is the plugins documentation.
-The plugins enable the platform to monitor just about anything of interest.
+This is the plugins documentation,
+The plugins enable the platform to monitor and alert on just about anything of interest.
 
 # Contents
 * [check_rsi](#check_rsi)
-* [check_template](#check_template)
 * [check_strategy](#check_strategy)
 * [check_price](#check_price)
 * [check_website](#check_website)
