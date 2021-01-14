@@ -5,7 +5,7 @@
 
 CURR_DIR=`pwd`
 CHECKS_PATH=automatedtradingplatform/files/plugins
-DOC_FILE=README.PLUGINS.md
+DOC_FILE=doc/README.PLUGINS.md
 
 echo "# Plugins Documentation" > ${DOC_FILE}
 

@@ -10,7 +10,7 @@ $link_target = 'main';
 
 <head>
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-<title>Nagios Core</title>
+<title>Automated Trading Platform</title>
 <link href="stylesheets/common.css?<?php echo $this_version; ?>" type="text/css" rel="stylesheet">
 </head>
 
@@ -26,7 +26,7 @@ $link_target = 'main';
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="main.php" target="<?php echo $link_target;?>">Home</a></li>
-			<li><a href="https://go.nagios.com/nagioscore/docs" target="_blank">Documentation</a></li>
+			<li><a href="https://github.com/danielneil/AutomatedTradingPlatform/tree/main/doc" target="_blank">Documentation</a></li>
 		</ul>
 	</div>
 </div>
