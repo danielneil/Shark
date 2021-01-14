@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Get the VIX (Volatility Index)."
+cmd_arg_help = "This plugin checks the VIX (Volatility Index) for a stock. Based on the output, you can decide to set certain warning and critical threshold levels."
 
 if __name__ == "__main__":
 

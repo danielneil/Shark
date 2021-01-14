@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Get the latest price of a stock."
+cmd_arg_help = "This plugin checks the price for a stock. Based on the output, you can decide to set certain warning and critical threshold levels."
 
 if __name__ == "__main__":
 

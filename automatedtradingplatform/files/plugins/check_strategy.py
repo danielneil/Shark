@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = 'This executes the strategy code. For a simple strategy, see the template for an example'
+cmd_arg_help = 'This executes the defined strategy. For a simple strategy, see the template for an example'
 
 if __name__ == "__main__":
 

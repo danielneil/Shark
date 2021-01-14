@@ -19,7 +19,8 @@ The plugins enable the platform to monitor and alert on just about **anything** 
 **Usage:** check_rsi.py [-h] [-t TICKER] [-p PERIODS] [-max MAX] [-min MIN]
                     [-r [RAW]]
 
-This plugin computes the relative strength index (RSI) for a stock.
+This plugin checks the relative strength index (RSI) for a stock. Based on the
+output, you can decide to set certain warning and critical threshold levels.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -32,23 +33,12 @@ This plugin computes the relative strength index (RSI) for a stock.
   -min MIN, --min MIN   Warn if the RSI is less than this threshold.
   -r [RAW], --raw [RAW]
                         Just print the price minus pretty output.
-## <a name="check_template"/>check_template
-
-**Usage:** check_template.py [-h] [-t TICKER]
-
-This is a template for a python check for the trading platform, make it as
-descriptive as possible as it will be used to generate documentation
-
-**Optional Arguments**:
-  -h, --help            show this help message and exit
-  -t TICKER, --ticker TICKER
-                        ticker code of the stock
 ## <a name="check_strategy"/>check_strategy
 
 **Usage:** check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
-This executes the strategy code. For a simple strategy, see the template for
-an example
+This executes the defined strategy. For a simple strategy, see the template
+for an example
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -60,7 +50,8 @@ an example
 
 **Usage:** check_price.py [-h] [-t TICKER] [-r [RAW]]
 
-Get the latest price of a stock.
+This plugin checks the price for a stock. Based on the output, you can decide
+to set certain warning and critical threshold levels.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -74,8 +65,8 @@ Get the latest price of a stock.
 **Usage:** check_sma.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
                     [-min MIN]
 
-Computes a simple moving average of a ticker against a specific number of
-trading periods.
+This plugin checks the simple moving average (SMA) for a stock. Based on the
+output, you can decide to set certain warning and critical threshold levels.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -92,9 +83,8 @@ trading periods.
 
 **Usage:** check_website_for_changes.py [-h] [-t TICKER] [-u URL]
 
-This plugin monitors a website for changes. E.g. the Investor Information
-section of a publicly listed company, or a page displaying news for a specific
-derivative.
+This plugin monitors a website of interest for changes. E.g. the investors
+section of a publicly listed company's website
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -105,7 +95,8 @@ derivative.
 
 **Usage:** check_vix.py [-h]
 
-Get the VIX (Volatility Index).
+This plugin checks the VIX (Volatility Index) for a stock. Based on the
+output, you can decide to set certain warning and critical threshold levels.
 
 **Optional Arguments**:
   -h, --help  show this help message and exit
@@ -114,8 +105,9 @@ Get the VIX (Volatility Index).
 **Usage:** check_ema.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
                     [-min MIN]
 
-Computes a exponential moving average of a ticker against a specific number of
-trading periods.
+This plugin checks the exponential moving average (EMA) for a stock. Based on
+the output, you can decide to set certain warning and critical threshold
+levels.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -133,10 +125,8 @@ trading periods.
 **Usage:** check_trend.py [-h] [-t TICKER] [-1st FIRSTMA] [-2nd SECONDMA]
                       [-3rd THIRDMA]
 
-This analyses the trend of a stock based upon multiple moving averages. It
-takes three numbers/moving averages and determines if the stock is in an
-uptrend, and also returns a range calculation to determine the 'distance'
-between the moving averages
+This plugin checks the trend for a stock. Based on the output, you can decide
+to set certain warning and critical threshold levels.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -152,7 +142,8 @@ between the moving averages
 
 **Usage:** check_short_interest.py [-h] [-t TICKER]
 
-Alarms on the short interest of a specific ASX ticker.
+This plugin checks the short interest for a stock. Based on the output, you
+can decide to set certain warning and critical threshold levels.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit

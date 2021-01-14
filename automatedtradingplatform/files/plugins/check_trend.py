@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This analyses the trend of a stock based upon multiple moving averages. It takes three numbers/moving averages and determines if the stock is in an uptrend, and also returns a range calculation to determine the 'distance' between the moving averages"
+cmd_arg_help = "This plugin checks the trend for a stock. Based on the output, you can decide to set certain warning and critical threshold levels."
 
 if __name__ == "__main__":
 

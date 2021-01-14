@@ -16,7 +16,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This plugin monitors a website for changes. E.g.  the Investor Information section of a publicly listed company, or a page displaying news for a specific derivative."
+cmd_arg_help = "This plugin monitors a website of interest for changes. E.g. the investors section of a publicly listed company's website"
 
 if __name__ == "__main__":
 

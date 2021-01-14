@@ -39,7 +39,7 @@ do
     	plugin_name=$(basename $CHECK_cmd | sed 's/.py//g')
 
 	# If this is the check_template, skip.
-	if [ $plugin_name == "check_temlate" ];
+	if [ $plugin_name == "check_template" ];
 	then
 		continue;
 	fi

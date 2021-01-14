@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This plugin computes the relative strength index (RSI) for a stock."
+cmd_arg_help = "This plugin checks the relative strength index (RSI) for a stock. Based on the output, you can decide to set certain warning and critical threshold levels."
 
 def computeRSI (data, time_window):
     diff = data.diff(1).dropna()        # diff in one field(one day)

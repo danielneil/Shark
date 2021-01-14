@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Computes a exponential moving average of a ticker against a specific number of trading periods."
+cmd_arg_help = "This plugin checks the exponential moving average (EMA) for a stock. Based on the output, you can decide to set certain warning and critical threshold levels."
 
 if __name__ == "__main__":
 
