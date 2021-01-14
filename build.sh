@@ -11,7 +11,8 @@ echo "# Plugins Documentation" > ${DOC_FILE}
 
 echo "" >> ${DOC_FILE}
 echo "This is the plugins documentation." >> ${DOC_FILE}
-echo "The plugins are mostly python scripts that enable the platform to monitor and alert on just about anything of interest." >> ${DOC_FILE}
+echo "" >> ${DOC_FILE}
+echo "The plugins enable the platform to monitor and alert on just about **anything** of interest; if its online, it can be monitored." >> ${DOC_FILE}
 echo "" >> ${DOC_FILE}
 
 # Generate the table of contents.
