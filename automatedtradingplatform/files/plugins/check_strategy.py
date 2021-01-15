@@ -12,7 +12,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = 'This executes the defined strategy. For a simple strategy, see the template for an example'
+cmd_arg_help = 'This executes the strategy code. For a simple strategy, see the template for an example'
 
 if __name__ == "__main__":
 
@@ -36,4 +36,11 @@ if __name__ == "__main__":
         print ("UNKNOWN - Strategy file (" + strategyFile  + ") not found...")
         sys.exit(UNKNOWN)
 
-    subprocess.check_output(['/atp/strategies/' + strategyFile, ' --ticker', ticker])
+    process = subprocess.Popen(['/atp/strategies/' + strategyFile, '--ticker', ticker], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+
+    stdout, stderr = process.communicate()
+    exitcode = process.wait()
+
+    print(stdout)
+
+    sys.exit(exitcode)

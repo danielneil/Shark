@@ -37,8 +37,8 @@ output, you can decide to set certain warning and critical threshold levels.
 
 **Usage:** check_strategy.py [-h] [-t TICKER] [-s STRATEGY]
 
-This executes the defined strategy. For a simple strategy, see the template
-for an example
+This executes the strategy code. For a simple strategy, see the template for
+an example
 
 **Optional Arguments**:
   -h, --help            show this help message and exit

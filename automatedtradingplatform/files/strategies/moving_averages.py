@@ -23,7 +23,7 @@ shorter_sma_periods = 10
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
-    parser.add_argument("-t", "--ticker", help="Ticker code of the stock in question")
+    parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the strategy against.")
     args = parser.parse_args()
 
     if not args.ticker:

@@ -84,7 +84,7 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
                 host_name """+ticker+"""
                 service_description Strategy
                 servicegroups strategyDetection
-                check_command check_strategy!50!10
+                check_command check_strategy!"""+ticker+"""
                 max_check_attempts 5
                 check_interval 5
                 retry_interval 3
