@@ -39,6 +39,7 @@ if __name__ == "__main__":
     process = subprocess.Popen(['/atp/strategies/' + strategyFile, '--ticker', ticker], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
 
     stdout, stderr = process.communicate()
+
     exitcode = process.wait()
 
     print(stdout)
