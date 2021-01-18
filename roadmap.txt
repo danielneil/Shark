@@ -1,3 +1,7 @@
 # Model Coverage 
 Binomial Option Price Model 
 Black Scholes Model
+
+# Strategy Coverage
+mean reversion
+cross over 
