@@ -81,16 +81,24 @@ output, you can decide to set certain warning and critical threshold levels.
   -min MIN, --min MIN   Warn if the result is less than this threshold.
 ## <a name="check_website_for_changes"/>check_website_for_changes
 
-**Usage:** check_website_for_changes.py [-h] [-t TICKER] [-u URL]
+**Usage:** check_website_for_changes.py [-h] [-u URL] [-c CHECKSUM]
+                                    [-l IGNORELINE] [-g [GENERATE]]
 
 This plugin monitors a website of interest for changes. E.g. the investors
-section of a publicly listed company's website
+section of a publicly listed company's website. It performs a SHA256 of the
+website's source code. It can ignore specific lines to overcome a website
+which may generate dynamic content per load.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
-  -t TICKER, --ticker TICKER
-                        ticker code of the stock
-  -u URL, --url URL     URL of the website of interest
+  -u URL, --url URL     URL of the website of interest.
+  -c CHECKSUM, --checksum CHECKSUM
+                        The expected checksum, alarms if mismatch.
+  -l IGNORELINE, --ignoreLine IGNORELINE
+                        Ignore a specific line of the returned source code
+  -g [GENERATE], --generate [GENERATE]
+                        Get the checksum for a specific website. Used to
+                        create/refresh checksums
 ## <a name="check_vix"/>check_vix
 
 **Usage:** check_vix.py [-h]
