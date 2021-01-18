@@ -35,13 +35,6 @@
    owner: atp
    state: directory
 
-- name: Creating websites cache directory
-  file:
-   name: /tmp/.atp/websites
-   group: atp
-   owner: atp
-   state: directory
-
 - name: Synchronsing ticker data dir
   copy: 
    src: ticker-data
