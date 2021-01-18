@@ -11,15 +11,6 @@
    name: python3-requests
    state: latest
 
-- name: Touch hash file if it doesn't exist
-  copy:
-    content: ""
-    dest: /atp/websites.hash
-    force: no
-    group: atp
-    owner: atp
-    mode: 0666
-
 - name: Adding websites to monitor
   template: 
     src: website-check-template.cfg
@@ -29,12 +20,14 @@
         filename: cba.cfg,
         ticker: CBA, 
         desc: "Investors Centre Website", 
-        url: "https://www.commbank.com.au/about-us/investors/asx-announcements.html" 
+        url: "https://www.commbank.com.au/about-us/investors/asx-announcements.html",
+        checksum: ""
       }
     - { 
         filename: tls.cfg,
         ticker: TLS, 
         desc: "Investors Centre Website", 
-        url: "https://www.telstra.com.au/aboutus/investors"
+        url: "https://www.telstra.com.au/aboutus/investors",
+        checksum: ""
       }
   notify: restart-nagios

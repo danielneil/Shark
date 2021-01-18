@@ -16,28 +16,23 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This plugin monitors a website of interest for changes. E.g. the investors section of a publicly listed company's website"
+cmd_arg_help = "This plugin monitors a website of interest for changes. E.g. the investors section of a publicly listed company's website. It performs a SHA256 of the website's source code. It can ignore specific lines to overcome a website which may generate dynamic content per load."
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
-    parser.add_argument("-t", "--ticker", help="ticker code of the stock")
-    parser.add_argument("-u", "--url", help="URL of the website of interest")
+    parser.add_argument("-u", "--url", help="URL of the website of interest.")
+    parser.add_argument("-c", "--checksum", help="The expected checksum, alarms if mismatch.")
+    parser.add_argument("-l", "--ignoreLine", help="Ignore a specific line of the returned source code")
+    parser.add_argument("-g", "--generate", nargs='?', const=1, type=int, help="Get the checksum for a specific website. Used to create/refresh checksums")
 
     args = parser.parse_args()
-
-    if not args.ticker:
-        print ("UNKNOWN - No ticker found")
-        sys.exit(UNKNOWN)
 
     if not args.url:
         print("UNKNOWN - URL Missing")
         sys.exit(UNKNOWN)
 
-    ticker = args.ticker
     url = args.url
-
-    hashFile = "/atp/websites.hash"
 
     # Get the hash of the page on the other end of the URL
 
@@ -45,24 +40,18 @@ if __name__ == "__main__":
 
     websiteHash = hashlib.sha256(page.text.encode('utf-8')).hexdigest()
 
-    with open(hashFile, "r+") as f:
+    if args.generate:
+        print(websiteHash)
+        sys.exit(OK)
 
-        if websiteHash in f.read():
+    if not args.checksum:
+        print("UNKNOWN - No checksum found")
+        sys.exit(UNKNOWN)
 
-            print("Website - No changes detected")
-            sys.exit(OK)
+    if args.checksum == websiteHash:
+        print("OK - No changes detected")
+        sys.exit(OK)
+    else:
+        print("CRITICAL - Changes Detected")
+        sys.exit(CRITICAL)
 
-        else:
-
-            f.seek(0)
-
-            if url in f.read():
-
-                print("Website - Changes Detected!")
-                sys.exit(WARNING)
-
-            else:
-
-                print("Website - Added")
-                f.write('"' + url + '",' + websiteHash + "\n")
-                sys.exit(OK)
