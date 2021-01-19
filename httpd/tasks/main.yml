@@ -11,6 +11,13 @@
    - php
    - libapache2-mod-php
 
+- name: Removing default landing page
+  file:
+    path: /var/www/html/index.html
+    state: absent
+  notify: restart-apache2
+
+
 - name: Starting apache
   service:
    name: apache2 
