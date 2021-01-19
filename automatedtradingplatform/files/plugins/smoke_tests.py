@@ -200,7 +200,7 @@ TICKER="CBA"
 UNCHANGING_TEST_URL="http://localhost/unchanging-page.php"
 UNCHANGING_TEST_URL_CS="331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c"
 
-PLUGIN_NAME="./check_website.py"
+PLUGIN_NAME="./check_website_for_changes.py"
 
 
 print("########################################################################")
@@ -211,10 +211,12 @@ print("########################################################################"
 # $./check_website_for_changes.py --url http://192.168.1.179/unchanging-page.php -g
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
 
-checksum = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-g"])
+checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-g"])
+
+checksum = checksumRes.rstrip()
 
 if not checksum == UNCHANGING_TEST_URL_CS:
-	print("Error, Computed checksum result is different than what's expected, exiting...")
+	print("Error, Computed checksum ("+UNCHANGING_TEST_URL_CS+") result is different than what's expectedi("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
 	print("OK - Computed checksum result matches what's expected...")
