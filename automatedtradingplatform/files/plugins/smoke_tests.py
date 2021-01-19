@@ -218,7 +218,7 @@ if not checksum == UNCHANGING_TEST_URL_CS:
 	print("Error, Generated checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
-	print("OK - Computed checksum result matches what's expected...")
+	print("OK - Computed checksum result matches expected...")
 	
 # Get the checksum of a known (non-dynamic) web-page to check the generator.
 # $./check_website_for_changes.py --url http://192.168.1.179/unchanging-page.php -g
