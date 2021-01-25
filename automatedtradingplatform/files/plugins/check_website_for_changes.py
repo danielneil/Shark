@@ -40,8 +40,11 @@ if __name__ == "__main__":
 
     if not args.screenshot:
 
-        page = requests.get(url, verify=False)
-        websiteHash = hashlib.sha256(page.text.encode('utf-8')).hexdigest()
+        page = subprocess.check_output(["curl", "-s", url])
+
+        sha256_hash = hashlib.sha256()
+        sha256_hash.update(page)
+        websiteHash = sha256_hash.hexdigest()
 
     else:
        
