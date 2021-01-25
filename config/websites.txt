@@ -1,3 +1,3 @@
-# ticker, description, url, checksum
-CBA,"Investors Centre Website", https://www.commbank.com.au/about-us/investors/asx-announcements.html, asdfasfasdfasdfasdf12341234
-TLS, desc: "Investors Centre Website", https://www.telstra.com.au/aboutus/investors, asfsdfasdfasdfsadf12341234
+# ticker, description, url, check_type, checksum
+CBA,"Investors Centre Website", https://www.commbank.com.au/about-us/investors/asx-announcements.html, check_source, asdfasfasdfasdfasdf12341234
+TLS, desc: "Investors Centre Website", https://www.telstra.com.au/aboutus/investors, check_image, asfsdfasdfasdfsadf12341234

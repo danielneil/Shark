@@ -74,6 +74,14 @@
    src: ui_patches/side.php
    dest: /tmp/nagios-4.4.6/html
 
+- name: Copying custom logo
+  copy:
+   src: ui_patches/sblogo.png
+   dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/sblogo.png
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
 - name: Copying in custom UI changes - status.c
   copy:
    src: ui_patches/status.c
