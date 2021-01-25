@@ -1,7 +1,7 @@
 <?php
 
 	function printDate() {
-		echo  date("l jS \of F Y h:i:s A");
+		return date("l jS \of F Y h:i:s A");
 	}
 
 	echo "<h1> This webpage has multiple lines it in that dynamically change, so they should be ignored by the plugin, but the checksum should remain the same.</h1>";
