@@ -82,6 +82,14 @@
   - rebuild-nagios
   - restart-nagios
 
+- name: Copying main logo
+  copy:
+   src: ui_patches/logofullsize.png
+   dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
 - name: Copying in custom UI changes - status.c
   copy:
    src: ui_patches/status.c

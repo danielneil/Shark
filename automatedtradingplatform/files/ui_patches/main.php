@@ -137,7 +137,7 @@ $this_year = '2020';
 
 
 <div id="mainbrandsplash">
-	<div id="mainlogo"><a href="https://www.nagios.org/" target="_blank"><img src="images/logofullsize.png" border="0" alt="Nagios" title="Nagios"></a></div>
+	<div id="mainlogo"><a href="https://www.github.com/danielneil/Shark/" target="_blank"><img src="images/logofullsize.png" border="0" alt="Shark" title="Shark"></a></div>
 	<div><span id="core-status"></span></div>
 </div>
 
