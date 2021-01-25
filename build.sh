@@ -67,6 +67,8 @@ cd $CURR_DIR;
 
 #cd config && ./build.py
 
+#cd $CURR_DIR
+
 ##################################################
 # Now run the playbook.
 

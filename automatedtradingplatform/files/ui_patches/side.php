@@ -36,7 +36,7 @@ $link_target = 'main';
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">Stocks</a></li>
-			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?host=all" target="<?php echo $link_target;?>">Technical Indicators</a></li>
+			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?host=all" target="<?php echo $link_target;?>">Indicators</a></li>
 			<li>
 				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">Industry Groups</a>
 				<ul>
