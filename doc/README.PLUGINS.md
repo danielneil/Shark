@@ -83,11 +83,13 @@ output, you can decide to set certain warning and critical threshold levels.
 
 **Usage:** check_website_for_changes.py [-h] [-u URL] [-c CHECKSUM]
                                     [-l IGNORELINE] [-g [GENERATE]]
+                                    [-s [SCREENSHOT]]
 
 This plugin monitors a website of interest for changes. E.g. the investors
-section of a publicly listed company's website. It performs a SHA256 of the
-website's source code. It can ignore specific lines to overcome a website
-which may generate dynamic content per load.
+section of a publicly listed company's website. By default, it performs a
+SHA256 of the website's source code. It can ignore specific lines to overcome
+a website which may generate dynamic content upon each load. For more complex
+websites, the plugin can compare checksums of screenshots for webpages.
 
 **Optional Arguments**:
   -h, --help            show this help message and exit
@@ -95,10 +97,13 @@ which may generate dynamic content per load.
   -c CHECKSUM, --checksum CHECKSUM
                         The expected checksum, alarms if mismatch.
   -l IGNORELINE, --ignoreLine IGNORELINE
-                        Ignore a specific line of the returned source code
+                        Ignore a specific line of the returned source code (
   -g [GENERATE], --generate [GENERATE]
                         Get the checksum for a specific website. Used to
                         create/refresh checksums
+  -s [SCREENSHOT], --screenshot [SCREENSHOT]
+                        Instead of diffing the source code of a webpage
+                        (default), use a checksum of a screenshot instead
 ## <a name="check_vix"/>check_vix
 
 **Usage:** check_vix.py [-h]

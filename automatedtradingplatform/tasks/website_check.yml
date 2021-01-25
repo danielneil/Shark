@@ -11,6 +11,11 @@
    name: python3-requests
    state: latest
 
+- name: Installing wkhtmltoimage in order to be able to screenshot images
+  apt:
+   name: wkhtmltopdf
+   state: latest
+
 - name: Install httpd (should be already installed but just to show its a dep) for testing the check_website plugins
   apt:
    name: apache2
@@ -21,7 +26,7 @@
    name: apache2
    state: started
 
-- name: Web file multiple changing lines
+- name: Test web file multiple changing lines
   copy:
    src: web_tests/changing-page-multiple-lines.php
    dest: /var/www/html
@@ -29,7 +34,7 @@
    owner: root
    group: root
 
-- name: Web file unchanging
+- name: Test web file unchanging
   copy:
    src: web_tests/unchanging-page.php
    dest: /var/www/html
@@ -37,7 +42,7 @@
    owner: root
    group: root
 
-- name: Web file single line changing
+- name: Test web file single line changing
   copy:
    src: web_tests/changing-page-single-line.php
    dest: /var/www/html
