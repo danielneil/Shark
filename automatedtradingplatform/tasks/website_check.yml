@@ -16,6 +16,11 @@
    name: wkhtmltopdf
    state: latest
 
+- name: Installing curl 
+  apt:
+   name: curl
+   state: latest
+
 - name: Install httpd (should be already installed but just to show its a dep) for testing the check_website plugins
   apt:
    name: apache2
