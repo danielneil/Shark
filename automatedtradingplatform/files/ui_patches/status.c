@@ -313,7 +313,7 @@ int main(void) {
 		printf("<td align=left valign=top width=33%%>\n");
 
 		/* info table */
-		display_info_table("Automated Trading Platform", TRUE, &current_authdata);
+		display_info_table("Shark - Automated Trading Platform", TRUE, &current_authdata);
 
 		printf("<table class='linkBox'>\n");
 		printf("<tr><td class='linkBox'>\n");

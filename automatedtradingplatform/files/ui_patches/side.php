@@ -18,7 +18,7 @@ $link_target = 'main';
 <body class='navbar'>
 
 <div class="navbarlogo">
-	<a href="https://www.nagios.org" target="_blank"><img src="images/sblogo.png" height="39" width="140" border="0" alt="Nagios" /></a>
+	<a href="https://www.github.com/danielneil/Shark" target="_blank"><img src="images/sblogo.png" height="39" width="140" border="0" alt="Be a shark" /></a>
 </div>
 
 <div class="navsection">
