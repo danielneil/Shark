@@ -1,8 +1,8 @@
-# Automated Trading Platform
+# Shark - An Automated Trading Platform
 
-Nagios is known for being a tool to monitor IT infrastructure, but with a few tweaks it can be used to monitor the stock market, and function as an automated trading platform. 
+Shark is an open source automated trading platform derived from tools that monitor IT infrastructure.
 
-This is a proof of concept which turns Nagios Core into a trading platform that enables it to use a strategy to identify and execute upon trading opportunities.
+It enables the use of programmable strategies to identify and execute upon trading opportunities.
 
 The example strategy is simple moving averages crossover with the chosen financial market being the Australian Stock Exchange (Top 20). 
 
