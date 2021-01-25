@@ -4,10 +4,9 @@ import requests
 import hashlib 
 import os.path
 import subprocess
-
+import re
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 import sys
 import argparse
 
@@ -46,8 +45,7 @@ if __name__ == "__main__":
 
     else:
        
-        tmp_store = "/tmp/" + url + ".png"
-
+        tmp_store = "/tmp/" + re.sub(r'\W+', '', url) + ".png"
         subprocess.check_output(["/usr/bin/wkhtmltoimage", "-q",  url, tmp_store])
 
         with open(tmp_store, "rb") as screen_shot_file:
@@ -72,4 +70,3 @@ if __name__ == "__main__":
     else:
         print("CRITICAL - Changes Detected")
         sys.exit(CRITICAL)
-
