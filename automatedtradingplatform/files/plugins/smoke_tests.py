@@ -206,6 +206,8 @@ UNCHANGING_TEST_URL_CS="331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b8
 
 PLUGIN_NAME="./check_website_for_changes.py"
 
+# ------------ HTML SOURCE CODE
+
 # Get the checksum of a known (non-dynamic) web-page (SOURCE CODE) to check the generator.
 # $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
@@ -218,7 +220,9 @@ if not checksum == UNCHANGING_TEST_URL_CS:
 	sys.exit(ERROR)
 else:
 	print("OK - Computed checksum result matches expected...")
-	
+		
+# ------------ HTML SOURCE CODE
+
 # Get the checksum of a known (non-dynamic) web-page (SOURCE CODE) to check the generator.
 # $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
@@ -232,9 +236,11 @@ if not checksum == "OK - No changes detected":
 else:
 	print("OK - Returned checksum result matches expected...")
 	
-	
+
+# ------------ SCREENSHOT 
+
 # Get the checksum of a known (non-dynamic) web-page (SCREENSHOT) to check the generator.
-# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
+# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g --screenshot
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
 
 checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-g", "--screenshot"])
@@ -245,9 +251,11 @@ if not checksum == UNCHANGING_TEST_URL_CS:
 	sys.exit(ERROR)
 else:
 	print("OK - Computed checksum result matches expected...")
+
+# ------------ SCREENSHOT 	
 	
 # Get the checksum of a known (non-dynamic) web-page (SCREENSHOT) to check the generator.
-# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
+# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g --screenshot
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
 
 checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-c", UNCHANGING_TEST_URL_CS, "--screenshot"])
