@@ -196,19 +196,18 @@ except subprocess.CalledProcessError as e:
 ########################################################################
 # Check Website 
 
+print("########################################################################")
+print("# Check Website Plugin")
+print("########################################################################")
+
 TICKER="CBA"
 UNCHANGING_TEST_URL="http://localhost/unchanging-page.php"
 UNCHANGING_TEST_URL_CS="331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c"
 
 PLUGIN_NAME="./check_website_for_changes.py"
 
-
-print("########################################################################")
-print("# Check Website Plugin")
-print("########################################################################")
-
-# Get the checksum of a known (non-dynamic) web-page to check the generator.
-# $./check_website_for_changes.py --url http://192.168.1.179/unchanging-page.php -g
+# Get the checksum of a known (non-dynamic) web-page (SOURCE CODE) to check the generator.
+# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
 
 checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-g"])
@@ -220,8 +219,8 @@ if not checksum == UNCHANGING_TEST_URL_CS:
 else:
 	print("OK - Computed checksum result matches expected...")
 	
-# Get the checksum of a known (non-dynamic) web-page to check the generator.
-# $./check_website_for_changes.py --url http://192.168.1.179/unchanging-page.php -g
+# Get the checksum of a known (non-dynamic) web-page (SOURCE CODE) to check the generator.
+# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
 
 checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-c", UNCHANGING_TEST_URL_CS])
@@ -232,6 +231,34 @@ if not checksum == "OK - No changes detected":
 	sys.exit(ERROR)
 else:
 	print("OK - Returned checksum result matches expected...")
+	
+	
+# Get the checksum of a known (non-dynamic) web-page (SCREENSHOT) to check the generator.
+# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
+# 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
+
+checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-g", "--screenshot"])
+checksum = checksumRes.rstrip()
+
+if not checksum == UNCHANGING_TEST_URL_CS:
+	print("Error, Generated checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
+	sys.exit(ERROR)
+else:
+	print("OK - Computed checksum result matches expected...")
+	
+# Get the checksum of a known (non-dynamic) web-page (SCREENSHOT) to check the generator.
+# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
+# 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
+
+checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-c", UNCHANGING_TEST_URL_CS, "--screenshot"])
+checksum = checksumRes.rstrip()
+
+if not checksum == "OK - No changes detected":
+	print("Error, returned checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
+	sys.exit(ERROR)
+else:
+	print("OK - Returned checksum result matches expected...")
+
 
 print("########################################################################")
 print("# Smoke tests completed...")
