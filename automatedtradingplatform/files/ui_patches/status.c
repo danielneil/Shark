@@ -2639,7 +2639,7 @@ void show_servicegroup_overview(servicegroup *temp_servicegroup) {
 
 	printf("<div class='status'>\n");
 	printf("<a href='%s?servicegroup=%s&style=detail'>%s</a>", STATUS_CGI, url_encode(temp_servicegroup->group_name), temp_servicegroup->alias);
-	printf(" (<a href='%s?type=%d&servicegroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_SERVICEGROUP_INFO, url_encode(temp_servicegroup->group_name), temp_servicegroup->group_name);
+	//printf(" (<a href='%s?type=%d&servicegroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_SERVICEGROUP_INFO, url_encode(temp_servicegroup->group_name), temp_servicegroup->group_name);
 	printf("</div>\n");
 
 	printf("<div class='status'>\n");
@@ -2821,7 +2821,7 @@ void show_servicegroup_summary(servicegroup *temp_servicegroup, int odd) {
 
 	printf("<tr class='status%s'><td class='status%s'>\n", status_bg_class, status_bg_class);
 	printf("<a href='%s?servicegroup=%s&style=overview'>%s</a> ", STATUS_CGI, url_encode(temp_servicegroup->group_name), temp_servicegroup->alias);
-	printf("(<a href='%s?type=%d&servicegroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_SERVICEGROUP_INFO, url_encode(temp_servicegroup->group_name), temp_servicegroup->group_name);
+	//printf("(<a href='%s?type=%d&servicegroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_SERVICEGROUP_INFO, url_encode(temp_servicegroup->group_name), temp_servicegroup->group_name);
 	printf("</td>");
 
 	printf("<td class='status%s' align='center' Valign='center'>", status_bg_class);
@@ -3399,7 +3399,7 @@ void show_servicegroup_grid(servicegroup *temp_servicegroup) {
 	printf("<div align='center'>\n");
 
 	printf("<div class='status'><a href='%s?servicegroup=%s&style=detail'>%s</a>", STATUS_CGI, url_encode(temp_servicegroup->group_name), temp_servicegroup->alias);
-	printf(" (<a href='%s?type=%d&servicegroup=%s'>%s</a>)</div>", EXTINFO_CGI, DISPLAY_SERVICEGROUP_INFO, url_encode(temp_servicegroup->group_name), temp_servicegroup->group_name);
+	//printf(" (<a href='%s?type=%d&servicegroup=%s'>%s</a>)</div>", EXTINFO_CGI, DISPLAY_SERVICEGROUP_INFO, url_encode(temp_servicegroup->group_name), temp_servicegroup->group_name);
 
 	printf("<table class='status' align='center'>\n");
 	printf("<tr><th class='status'>Host</th><th class='status'>Services</a></th><th class='status'>Actions</th></tr>\n");
@@ -3715,7 +3715,7 @@ void show_hostgroup_overview(hostgroup *hstgrp) {
 
 	printf("<div class='status'>\n");
 	printf("<a href='%s?hostgroup=%s&style=detail'>%s</a>", STATUS_CGI, url_encode(hstgrp->group_name), hstgrp->alias);
-	printf(" (<a href='%s?type=%d&hostgroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_HOSTGROUP_INFO, url_encode(hstgrp->group_name), hstgrp->group_name);
+	//printf(" (<a href='%s?type=%d&hostgroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_HOSTGROUP_INFO, url_encode(hstgrp->group_name), hstgrp->group_name);
 	printf("</div>\n");
 
 	printf("<div class='status'>\n");
@@ -4075,7 +4075,7 @@ void show_hostgroup_summary(hostgroup *temp_hostgroup, int odd) {
 
 	printf("<tr class='status%s'><td class='status%s'>\n", status_bg_class, status_bg_class);
 	printf("<a href='%s?hostgroup=%s&style=overview'>%s</a> ", STATUS_CGI, url_encode(temp_hostgroup->group_name), temp_hostgroup->alias);
-	printf("(<a href='%s?type=%d&hostgroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_HOSTGROUP_INFO, url_encode(temp_hostgroup->group_name), temp_hostgroup->group_name);
+	//printf("(<a href='%s?type=%d&hostgroup=%s'>%s</a>)", EXTINFO_CGI, DISPLAY_HOSTGROUP_INFO, url_encode(temp_hostgroup->group_name), temp_hostgroup->group_name);
 	printf("</td>");
 
 	printf("<td class='status%s' align='center' Valign='center'>", status_bg_class);
@@ -4641,7 +4641,7 @@ void show_hostgroup_grid(hostgroup *temp_hostgroup) {
 	printf("<div align='center'>\n");
 
 	printf("<div class='status'><a href='%s?hostgroup=%s&style=detail'>%s</a>", STATUS_CGI, url_encode(temp_hostgroup->group_name), temp_hostgroup->alias);
-	printf(" (<a href='%s?type=%d&hostgroup=%s'>%s</a>)</div>", EXTINFO_CGI, DISPLAY_HOSTGROUP_INFO, url_encode(temp_hostgroup->group_name), temp_hostgroup->group_name);
+	//printf(" (<a href='%s?type=%d&hostgroup=%s'>%s</a>)</div>", EXTINFO_CGI, DISPLAY_HOSTGROUP_INFO, url_encode(temp_hostgroup->group_name), temp_hostgroup->group_name);
 
 	printf("<table class='status' align='center'>\n");
 	printf("<tr><th class='status'>Host</th><th class='status'>Services</a></th><th class='status'>Actions</th></tr>\n");
