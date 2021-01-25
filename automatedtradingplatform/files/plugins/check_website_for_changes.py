@@ -17,6 +17,13 @@ UNKNOWN      = 3
 
 cmd_arg_help = "This plugin monitors a website of interest for changes. E.g. the investors section of a publicly listed company's website. By default, it performs a SHA256 of the website's source code. It can ignore specific lines to overcome a website which may generate dynamic content upon each load. For more complex websites, the plugin can compare checksums of screenshots for webpages."
 
+def get_checksum(content):
+
+    sha256_hash = hashlib.sha256()
+    sha256_hash.update(content)
+
+    return sha256_hash.hexdigest()
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
@@ -41,10 +48,7 @@ if __name__ == "__main__":
     if not args.screenshot:
 
         page = subprocess.check_output(["curl", "-s", url])
-
-        sha256_hash = hashlib.sha256()
-        sha256_hash.update(page)
-        websiteHash = sha256_hash.hexdigest()
+        websiteHash = get_checksum( page )
 
     else:
        
@@ -53,11 +57,7 @@ if __name__ == "__main__":
 
         with open(tmp_store, "rb") as screen_shot_file:
 
-            content = screen_shot_file.read()
-            
-            sha256_hash = hashlib.sha256()
-            sha256_hash.update(content)
-            websiteHash = sha256_hash.hexdigest()
+            websiteHash = get_checksum( screen_shot_file.read() )
 
     if args.generate:
         print(websiteHash)
