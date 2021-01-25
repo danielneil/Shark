@@ -203,6 +203,7 @@ print("########################################################################"
 TICKER="CBA"
 UNCHANGING_TEST_URL="http://localhost/unchanging-page.php"
 UNCHANGING_TEST_URL_CS="331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c"
+UNCHANGING_TEST_URL_SCREENSHOT_CS="6bb7e82c56a2832e7788046f9fb5639c1c88139db29c5f7277037875bddaba7e"
 
 PLUGIN_NAME="./check_website_for_changes.py"
 
@@ -223,8 +224,8 @@ else:
 		
 # ------------ HTML SOURCE CODE
 
-# Get the checksum of a known (non-dynamic) web-page (SOURCE CODE) to check the generator.
-# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g
+# Get the checksum of a known (non-dynamic) web-page (SOURCE CODE).
+# $./check_website_for_changes.py --url http://localhost/unchanging-page.php -c 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
 # 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
 
 checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-c", UNCHANGING_TEST_URL_CS])
@@ -241,13 +242,13 @@ else:
 
 # Get the checksum of a known (non-dynamic) web-page (SCREENSHOT) to check the generator.
 # $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g --screenshot
-# 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
+# 6bb7e82c56a2832e7788046f9fb5639c1c88139db29c5f7277037875bddaba7e
 
 checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-g", "--screenshot"])
 checksum = checksumRes.rstrip()
 
-if not checksum == UNCHANGING_TEST_URL_CS:
-	print("Error, Generated checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
+if not checksum == UNCHANGING_TEST_URL_SCREENSHOT_CS:
+	print("Error, Generated screenshot checksum ("+UNCHANGING_TEST_URL_SCREENSHOT_CS+") result doesnt match expected ("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
 	print("OK - Computed checksum (SCREENSHOT) result matches expected...")
@@ -256,13 +257,13 @@ else:
 	
 # Get the checksum of a known (non-dynamic) web-page (SCREENSHOT) to check the generator.
 # $./check_website_for_changes.py --url http://localhost/unchanging-page.php -g --screenshot
-# 331c2302417570388a988025460ada352dce2bb3f0ae13a9942538b815e59d2c
+# 6bb7e82c56a2832e7788046f9fb5639c1c88139db29c5f7277037875bddaba7e
 
-checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-c", UNCHANGING_TEST_URL_CS, "--screenshot"])
+checksumRes = subprocess.check_output([PLUGIN_NAME, "--url", UNCHANGING_TEST_URL, "-c", UNCHANGING_TEST_URL_SCREENSHOT_CS, "--screenshot"])
 checksum = checksumRes.rstrip()
 
 if not checksum == "OK - No changes detected":
-	print("Error, returned checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
+	print("Error, returned screenshot checksum ("+UNCHANGING_TEST_URL_SCREENSHOT_CS+") result doesnt match expected ("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
 	print("OK - Returned checksum (SCREENSHOT) result matches expected...")
@@ -271,4 +272,5 @@ else:
 print("########################################################################")
 print("# Smoke tests completed...")
 print("########################################################################")
+
 sys.exit(OK)
