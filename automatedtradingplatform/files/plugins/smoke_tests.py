@@ -219,7 +219,7 @@ if not checksum == UNCHANGING_TEST_URL_CS:
 	print("Error, Generated checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
-	print("OK - Computed checksum result matches expected...")
+	print("OK - Computed checksum (HTML SOURCE) result matches expected...")
 		
 # ------------ HTML SOURCE CODE
 
@@ -234,7 +234,7 @@ if not checksum == "OK - No changes detected":
 	print("Error, returned checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
-	print("OK - Returned checksum result matches expected...")
+	print("OK - Returned checksum (HTML SOURCE) result matches expected...")
 	
 
 # ------------ SCREENSHOT 
@@ -250,7 +250,7 @@ if not checksum == UNCHANGING_TEST_URL_CS:
 	print("Error, Generated checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
-	print("OK - Computed checksum result matches expected...")
+	print("OK - Computed checksum (SCREENSHOT) result matches expected...")
 
 # ------------ SCREENSHOT 	
 	
@@ -265,7 +265,7 @@ if not checksum == "OK - No changes detected":
 	print("Error, returned checksum ("+UNCHANGING_TEST_URL_CS+") result doesnt match expected ("+checksum+"), exiting...")
 	sys.exit(ERROR)
 else:
-	print("OK - Returned checksum result matches expected...")
+	print("OK - Returned checksum (SCREENSHOT) result matches expected...")
 
 
 print("########################################################################")
