@@ -6,12 +6,7 @@
    name: python3-pip
    state: latest
 
-- name: Copying PyAlgo to the tmp directory
-  copy:
-   src: PyAlgoTrade-0.18.tar.gz
-   dest: /tmp
-
 - name: Install pyalgotrade for historical backtesting
   pip:
-   name: PyAlgoTrade-0.18.tar.gz
+   name: pyalgotrade
    executable: pip3
