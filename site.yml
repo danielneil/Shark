@@ -10,8 +10,6 @@
 
           # ---- Strategiy variables
           set_strategy: "moving_averages.py"
-          long_moving_average: 50
-          short_moving_average: 10
 
           # ---- System variables
 

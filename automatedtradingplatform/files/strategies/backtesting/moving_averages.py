@@ -56,8 +56,7 @@ class MovingAverages(strategy.BacktestingStrategy):
                 shares = int(self.getBroker().getCash() * 0.9 / bars[self.__instrument].getPrice())
                 self.__position = self.enterLong(self.__instrument, shares, True)
 
-
-        # Check if we have to exit the position.
+                # Check if we have to exit the position.
         elif  self.__shortSma[-1] < self.__longSma[-1] and not self.__position.exitActive():
             self.__position.exitMarket()
 
@@ -68,25 +67,16 @@ if __name__=="__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the strategy against")
-    parser.add_argument("-l", "--longSma", help="The longer moving average")
-    parser.add_argument("-s", "--shortSma", help="The shorter moving average") 
+
     args = parser.parse_args()
 
     if not args.ticker:
         print("UNKNOWN - No ticker specified")
         sys.exit(UNKNOWN)
 
-    if not args.longSma:
-        print("UNKNOWN - No long moving average specified")
-        sys.exit(UNKNOWN)
-
-    if not args.shortSma:
-        print("UNKNOWN - No short moving average specified")
-        sys.exit(UNKNOWN)
-
     instrument = args.ticker
-    shortSmaPeriod = int(args.shortSma)
-    longSmaPeriod = int(args.longSma)
+    shortSmaPeriod = 10
+    longSmaPeriod = 50
 
     # Load the bars. This file was manually downloaded from Yahoo Finance.
     feed = yahoofeed.Feed()
