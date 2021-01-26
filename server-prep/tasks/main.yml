@@ -1,8 +1,8 @@
 ---
 # tasks file for server-prep
-- name: Setting timezone to AEST to match the ASX opening hours.
+- name: Setting system timezone.
   timezone:
-   name: Australia/Sydney
+   name: "{{ timezone }}"
 
 - name: Updating System
   apt: 

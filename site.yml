@@ -4,10 +4,19 @@
   hosts: atp-server
   become: true
   vars:
-          webui_auth_user: nagios
-          webui_auth_pass: nagios
+          # ---- Web UI credentials
+          webui_auth_user: shark
+          webui_auth_pass: yourswimmingwithsharks
 
+          # ---- Strategiy variables
           set_strategy: "moving_averages.py"
+          long_moving_average: 50
+          short_moving_average: 10
+
+          # ---- System variables
+
+          # We're interested in the timezone of the ASX.
+          timezone: "Australia/Sydney"
   roles:
   - server-prep
   - httpd
