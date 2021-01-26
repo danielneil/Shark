@@ -1,32 +1,77 @@
 from __future__ import print_function
 
-import sma_crossover
-from pyalgotrade import plotter
-from pyalgotrade.tools import quandl
+from pyalgotrade.barfeed import yahoofeed
+from pyalgotrade.stratanalyzer import returns
 from pyalgotrade.stratanalyzer import sharpe
+from pyalgotrade.stratanalyzer import drawdown
+from pyalgotrade.stratanalyzer import trades
 
+from . import sma_crossover
 
-def main(plot):
-    instrument = "AAPL"
-    smaPeriod = 163
+# Load the bars. This file was manually downloaded from Yahoo Finance.
+feed = yahoofeed.Feed()
+feed.addBarsFromCSV("orcl", "orcl-2000-yahoofinance.csv")
 
-    # Download the bars.
-    feed = quandl.build_feed("WIKI", [instrument], 2011, 2012, ".")
+# Evaluate the strategy with the feed's bars.
+myStrategy = sma_crossover.SMACrossOver(feed, "orcl", 20)
 
-    strat = sma_crossover.SMACrossOver(feed, instrument, smaPeriod)
-    sharpeRatioAnalyzer = sharpe.SharpeRatio()
-    strat.attachAnalyzer(sharpeRatioAnalyzer)
+# Attach different analyzers to a strategy before executing it.
+retAnalyzer = returns.Returns()
+myStrategy.attachAnalyzer(retAnalyzer)
+sharpeRatioAnalyzer = sharpe.SharpeRatio()
+myStrategy.attachAnalyzer(sharpeRatioAnalyzer)
+drawDownAnalyzer = drawdown.DrawDown()
+myStrategy.attachAnalyzer(drawDownAnalyzer)
+tradesAnalyzer = trades.Trades()
+myStrategy.attachAnalyzer(tradesAnalyzer)
 
-    if plot:
-        plt = plotter.StrategyPlotter(strat, True, False, True)
-        plt.getInstrumentSubplot(instrument).addDataSeries("sma", strat.getSMA())
+# Run the strategy.
+myStrategy.run()
 
-    strat.run()
-    print("Sharpe ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+print("Final portfolio value: $%.2f" % myStrategy.getResult())
+print("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
+print("Sharpe ratio: %.2f" % (sharpeRatioAnalyzer.getSharpeRatio(0.05)))
+print("Max. drawdown: %.2f %%" % (drawDownAnalyzer.getMaxDrawDown() * 100))
+print("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))
 
-    if plot:
-        plt.plot()
+print("")
+print("Total trades: %d" % (tradesAnalyzer.getCount()))
+if tradesAnalyzer.getCount() > 0:
+    profits = tradesAnalyzer.getAll()
+    print("Avg. profit: $%2.f" % (profits.mean()))
+    print("Profits std. dev.: $%2.f" % (profits.std()))
+    print("Max. profit: $%2.f" % (profits.max()))
+    print("Min. profit: $%2.f" % (profits.min()))
+    returns = tradesAnalyzer.getAllReturns()
+    print("Avg. return: %2.f %%" % (returns.mean() * 100))
+    print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+    print("Max. return: %2.f %%" % (returns.max() * 100))
+    print("Min. return: %2.f %%" % (returns.min() * 100))
 
+print("")
+print("Profitable trades: %d" % (tradesAnalyzer.getProfitableCount()))
+if tradesAnalyzer.getProfitableCount() > 0:
+    profits = tradesAnalyzer.getProfits()
+    print("Avg. profit: $%2.f" % (profits.mean()))
+    print("Profits std. dev.: $%2.f" % (profits.std()))
+    print("Max. profit: $%2.f" % (profits.max()))
+    print("Min. profit: $%2.f" % (profits.min()))
+    returns = tradesAnalyzer.getPositiveReturns()
+    print("Avg. return: %2.f %%" % (returns.mean() * 100))
+    print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+    print("Max. return: %2.f %%" % (returns.max() * 100))
+    print("Min. return: %2.f %%" % (returns.min() * 100))
 
-if __name__ == "__main__":
-    main(True)
+print("")
+print("Unprofitable trades: %d" % (tradesAnalyzer.getUnprofitableCount()))
+if tradesAnalyzer.getUnprofitableCount() > 0:
+    losses = tradesAnalyzer.getLosses()
+    print("Avg. loss: $%2.f" % (losses.mean()))
+    print("Losses std. dev.: $%2.f" % (losses.std()))
+    print("Max. loss: $%2.f" % (losses.min()))
+    print("Min. loss: $%2.f" % (losses.max()))
+    returns = tradesAnalyzer.getNegativeReturns()
+    print("Avg. return: %2.f %%" % (returns.mean() * 100))
+    print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+    print("Max. return: %2.f %%" % (returns.max() * 100))
+    print("Min. return: %2.f %%" % (returns.min() * 100))
