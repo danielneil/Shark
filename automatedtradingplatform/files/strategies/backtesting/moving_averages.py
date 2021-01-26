@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from __future__ import print_function
 from pyalgotrade import strategy
 from pyalgotrade.technical import ma
@@ -7,16 +9,25 @@ from pyalgotrade.stratanalyzer import returns
 from pyalgotrade.stratanalyzer import sharpe
 from pyalgotrade.stratanalyzer import drawdown
 from pyalgotrade.stratanalyzer import trades
+import argparse
+import sys
+
+# Nagios constants
+OK          = 0
+WARNING     = 1
+CRITICAL    = 2
+UNKNOWN     = 3
 
 class MovingAverages(strategy.BacktestingStrategy):
-    def __init__(self, feed, instrument, smaPeriod):
+    def __init__(self, feed, instrument, shortSmaPeriod, longSmaPeriod):
         super(MovingAverages, self).__init__(feed)
         self.__instrument = instrument
         self.__position = None
         # We'll use adjusted close values instead of regular close values.
         self.setUseAdjustedValues(True)
         self.__prices = feed[instrument].getPriceDataSeries()
-        self.__sma = ma.SMA(self.__prices, smaPeriod)
+        self.__shortSma = ma.SMA(self.__prices, shortSmaPeriod)
+        self.__longSma = ma.SMA(self.__prices, longSmaPeriod)
 
     def getSMA(self):
         return self.__sma
@@ -33,27 +44,55 @@ class MovingAverages(strategy.BacktestingStrategy):
 
     def onBars(self, bars):  
         # Wait for enough bars to be available to calculate a SMA.
-        if self.__sma[-1] is None:
+        if self.__shortSma[-1] is None and self.__longSma is None:
             return
 
         bar = bars[self.__instrument]
+
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
-            if bar.getPrice() > self.__sma[-1]:
-                # Enter a buy market order for 10 shares. The order is good till canceled.
-                self.__position = self.enterLong(self.__instrument, 10, True)
+            if self.__shortSma[-1] > self.__longSma[-1]:
+
+                shares = int(self.getBroker().getCash() * 0.9 / bars[self.__instrument].getPrice())
+                self.__position = self.enterLong(self.__instrument, shares, True)
+
+
         # Check if we have to exit the position.
-        elif bar.getPrice() < self.__sma[-1] and not self.__position.exitActive():
+        elif  self.__shortSma[-1] < self.__longSma[-1] and not self.__position.exitActive():
             self.__position.exitMarket()
+
+
+cmd_arg_help = "Backtest to accompany the moving averages strategy"
 
 if __name__=="__main__":
 
+    parser = argparse.ArgumentParser(description=cmd_arg_help)
+    parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the strategy against")
+    parser.add_argument("-l", "--longSma", help="The longer moving average")
+    parser.add_argument("-s", "--shortSma", help="The shorter moving average") 
+    args = parser.parse_args()
+
+    if not args.ticker:
+        print("UNKNOWN - No ticker specified")
+        sys.exit(UNKNOWN)
+
+    if not args.longSma:
+        print("UNKNOWN - No long moving average specified")
+        sys.exit(UNKNOWN)
+
+    if not args.shortSma:
+        print("UNKNOWN - No short moving average specified")
+        sys.exit(UNKNOWN)
+
+    instrument = args.ticker
+    shortSmaPeriod = int(args.shortSma)
+    longSmaPeriod = int(args.longSma)
+
     # Load the bars. This file was manually downloaded from Yahoo Finance.
     feed = yahoofeed.Feed()
-    feed.addBarsFromCSV("CBA", "/atp/ticker-data/CBA.AX.txt")
+    feed.addBarsFromCSV(instrument, "/atp/ticker-data/"+instrument+".AX.txt")
 
-    # Evaluate the strategy with the feed's bars.
-    myStrategy = MovingAverages(feed, "CBA", 10)
+    myStrategy = MovingAverages(feed, instrument, shortSmaPeriod, longSmaPeriod)
 
     # Attach different analyzers to a strategy before executing it.
     retAnalyzer = returns.Returns()

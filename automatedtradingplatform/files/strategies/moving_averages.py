@@ -43,4 +43,6 @@ if __name__ == "__main__":
 
     print("No Opportunity")
     
+    # Run the backtest on the data set, and pump it into the web dir so it can be viewed via a browser.
+
     sys.exit(OK)
