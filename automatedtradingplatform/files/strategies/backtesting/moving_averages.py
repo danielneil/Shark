@@ -31,21 +31,19 @@ class MovingAverages(strategy.BacktestingStrategy):
         # If the exit was canceled, re-submit it.
         self.__position.exitMarket()
 
-    def onBars(self, bars):
-
-        # Wait till we have enough bars to calculate sma.
+    def onBars(self, bars):  
+        # Wait for enough bars to be available to calculate a SMA.
         if self.__sma[-1] is None:
             return
 
-        bar  = bars[self, __instrument]
-
+        bar = bars[self.__instrument]
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
-
-            if bar.getPrice
-
+            if bar.getPrice() > self.__sma[-1]:
+                # Enter a buy market order for 10 shares. The order is good till canceled.
+                self.__position = self.enterLong(self.__instrument, 10, True)
         # Check if we have to exit the position.
-        elif not self.__position.exitActive() and cross.cross_below(self.__prices, self.__sma) > 0:
+        elif bar.getPrice() < self.__sma[-1] and not self.__position.exitActive():
             self.__position.exitMarket()
 
 if __name__=="__main__":
