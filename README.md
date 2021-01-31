@@ -6,7 +6,7 @@ It enables the use of programmable strategies to identify and execute upon tradi
 
 The example strategy is simple moving averages crossover with the chosen financial market being the Australian Stock Exchange (Top 20). 
 
-Though it focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy, too.  
+Though it focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy.  
 
 See the [plugins](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
