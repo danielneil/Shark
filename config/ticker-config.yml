@@ -15,21 +15,304 @@ AMC:
   name: moving_averages
 
 ANZ:
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+  
 BHP:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
 BXB:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
 CBA:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
 CSL:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
 GMG:
-IAG
-MQG
-NAB
-NCM
-RIO
-SCG
-SUN
-TLS
-TCL
-WES
-WBC
-WPL
-WOW
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+IAG:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+MQG:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+NAB:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+NCM:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+RIO:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+SCG:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+SUN:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+TLS:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+TCL:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+WES:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+WBC:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+WPL:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+WOW:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
