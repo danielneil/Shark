@@ -69,6 +69,11 @@
    owner: atp
    group: atp
 
+- name: Installing pyyaml for the above
+  pip:
+   name: pyyaml
+   executable: pip3
+
 - name: Copying in custom UI changes - side.php
   copy:
    src: ui_patches/side.php

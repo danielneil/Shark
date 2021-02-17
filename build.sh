@@ -66,6 +66,9 @@ generate_documentation() {
 
 }
 
+# Copy our list of designed companies in
+cp -p config/tickers.csv automatedtradingplatform/files/ASX_Listed_Companies.csv
+
 ##################################################
 # Now run the playbook.
 

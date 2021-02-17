@@ -1,3 +1,5 @@
+# This is how you apply each check to each ticker.
+
 AMC:
 
  check_rsi: 
