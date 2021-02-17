@@ -17,6 +17,7 @@ AMC:
   name: moving_averages
 
 ANZ:
+
  check_rsi: 
   period: 14
   min: 10

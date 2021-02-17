@@ -66,8 +66,9 @@ generate_documentation() {
 
 }
 
-# Copy our list of designed companies in
+# Copy in our coustom configurations
 cp -p config/tickers.csv automatedtradingplatform/files/ASX_Listed_Companies.csv
+cp -p config/ticker-config.yml automatedtradingplatform/files/
 
 ##################################################
 # Now run the playbook.

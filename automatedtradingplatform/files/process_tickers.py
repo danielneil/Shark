@@ -1,9 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Builds the nagios configuration based on the ticker data.
 
 import csv
 import re
+import yaml
 
 # Open up our excludes file so we know which tickers to skip.
 
@@ -24,7 +25,7 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
     tickerreader = csv.reader(csvfile, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
 
     # skip the first row.
-    tickerreader.next()
+    next(tickerreader)
 
     industry_groups = []
     tickers = []
@@ -49,51 +50,6 @@ with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
                 address 127.0.0.1
                 register 1
             }
-    
-            define service {
-                host_name """+ticker+"""
-                service_description Moving Average 5 Day
-                servicegroups check_sma5
-                check_command check_sma!5
-                max_check_attempts 5
-                check_interval 5
-                retry_interval 3
-                check_period 24x7
-                notification_interval 30
-                notification_period 24x7
-                notification_options w,c,r
-                contact_groups admins
-            }
-
-            define service {
-                host_name """+ticker+"""
-                service_description Moving Average 50 Day
-                servicegroups check_sma50
-                check_command check_sma!50
-                max_check_attempts 5
-                check_interval 5
-                retry_interval 3
-                check_period 24x7
-                notification_interval 30
-                notification_period 24x7
-                notification_options w,c,r
-                contact_groups admins
-            }
-
-            define service {
-                host_name """+ticker+"""
-                service_description Strategy
-                servicegroups strategyDetection
-                check_command check_strategy!"""+ticker+"""
-                max_check_attempts 5
-                check_interval 5
-                retry_interval 3
-                check_period 24x7
-                notification_interval 30
-                notification_period 24x7
-                notification_options w,c,r
-                contact_groups admins
-            }
         """)
 
         industry_groups.append(industry_group)
@@ -112,21 +68,45 @@ for industry_group in industry_groups:
         }
     """)
 
-# Write out the service groups
 
-print ("""
-            define servicegroup {
-                servicegroup_name   strategyDetection
-                alias               Strategy Detection
-            }
+# Process configuration file.
+def process_ticker_config(a_dict):
+    
+    for key, value in a_dict.items():
 
-            define servicegroup {
-                servicegroup_name   check_sma5
-                alias               Moving Average - 5 Day
-            }
+        ticker = key
 
-            define servicegroup {
-                servicegroup_name   check_sma50
-                alias               Moving Average - 50 Day
-            }
-      """)
+        if isinstance(value, dict):
+
+            process_service_key(value, ticker)
+
+            continue
+
+def process_service_key(a_dict,ticker):
+
+    for key,value in a_dict.items():
+
+        print("host_name " + ticker)
+
+        service = key
+
+        print("Service: " + service)
+
+        if isinstance(value, dict):
+
+            process_service_value(a_dict, service)
+
+        #print('Check {!r}'.format(key))
+
+def process_service_value(a_dict, service):
+
+    for key,value in a_dict.items():
+
+        print('Value {!r}'.format(value))
+
+
+with open ("ticker-config.yml", "r") as file:
+
+    docs = yaml.safe_load(file)
+
+    process_ticker_config(docs)
