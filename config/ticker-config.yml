@@ -3,318 +3,395 @@
 AMC:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 ANZ:
+
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
   
 BHP:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 BXB:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 CBA:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
-
 CSL:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 GMG:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
-
 IAG:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
-
 MQG:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 NAB:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 NCM:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 RIO:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 SCG:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 SUN:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 TLS:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 TCL:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 WES:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 WBC:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
 
 WPL:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
-
 WOW:
 
  check_rsi: 
+  description: "RSI 14 Day, Warn if either side of 10 or 90"
   period: 14
   min: 10
   max: 90
 
  check_sma:
+  description: "Moving Average 50 Day"
   period: 50
 
  check_sma:
+  description: "Moving Average 5 Day"
   period: 5
 
  strategy: 
+  Description: "Moving Averages Strategy v.01"
   name: moving_averages
