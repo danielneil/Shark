@@ -12,7 +12,7 @@ See the [plugins](https://github.com/danielneil/AutomatedTradingPlatform/blob/ma
 
 See the example [strategy](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/automatedtradingplatform/files/strategies/moving_averages.py).
 
-The ticker data supplied is only an example (it won't update). To see how it could be done, see my other project using [Nifi](https://github.com/danielneil/Using-NiFi-on-Yahoo-Finance).
+The ticker data supplied doesn't refresh. If you need it to refresh, see my other project that uses [Nifi](https://github.com/danielneil/Using-NiFi-on-Yahoo-Finance).
 
 # Setup Instructions
 
