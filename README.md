@@ -20,13 +20,13 @@ See the example [strategy](https://github.com/danielneil/AutomatedTradingPlatfor
 
 2. Prepare a vanilla Debian server.
 
-3. Add its IP address to the ./hosts files under [atp-server]
+3. Add its IP address to the ./hosts files under [shark-server]
 
 4. Change the http credentials in ./site.yml to your liking.
 
 5. Run: ./build.sh
 
-6. Navigate to https://atp-server/nagios using the aforementioned credentials.
+6. Navigate to https://shark-server/nagios using the aforementioned credentials.
 
 # Screen Shot
 

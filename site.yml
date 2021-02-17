@@ -1,7 +1,7 @@
 ---
 
 - name: Automated Platform Trading Role
-  hosts: atp-server
+  hosts: shark-server
   become: true
   vars:
           # ---- Web UI credentials

@@ -1,0 +1,35 @@
+AMC:
+
+ check_rsi: 
+  period: 14
+  min: 10
+  max: 90
+
+ check_sma:
+  period: 50
+
+ check_sma:
+  period: 5
+
+ strategy: 
+  name: moving_averages
+
+ANZ:
+BHP:
+BXB:
+CBA:
+CSL:
+GMG:
+IAG
+MQG
+NAB
+NCM
+RIO
+SCG
+SUN
+TLS
+TCL
+WES
+WBC
+WPL
+WOW
