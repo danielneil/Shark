@@ -8,11 +8,11 @@ The example strategy is simple moving averages crossover with the chosen financi
 
 Though it focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy.  
 
+The ticker data supplied doesn't refresh. If you need it to refresh, see my other project that uses [Nifi](https://github.com/danielneil/Using-NiFi-on-Yahoo-Finance).
+
 See the [plugins](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
 See the example [strategy](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/automatedtradingplatform/files/strategies/moving_averages.py).
-
-The ticker data supplied doesn't refresh. If you need it to refresh, see my other project that uses [Nifi](https://github.com/danielneil/Using-NiFi-on-Yahoo-Finance).
 
 # Setup Instructions
 
