@@ -70,9 +70,16 @@
    group: atp
 
 - name: Installing pyyaml for the above
-  pip:
-   name: pyyaml
-   executable: pip3
+  apt:
+   name: python-yaml
+   state: latest
+
+- name: Copying out ticker-config.yml file
+  copy:
+   src: ticker-config.yml
+   dest: /atp
+   group: atp
+   owner: atp
 
 - name: Copying in custom UI changes - side.php
   copy:
