@@ -69,7 +69,7 @@ generate_documentation() {
 # Copy in our coustom configurations
 cp -p config/tickers.csv automatedtradingplatform/files/ASX_Listed_Companies.csv
 cp -p config/ticker-config.yml automatedtradingplatform/files/
-cp -p config/ticker-data automatedplatforms/files/
+cp -pr config/ticker-data automatedtradingplatform/files/
 
 ##################################################
 # Now run the playbook.

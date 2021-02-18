@@ -16,6 +16,7 @@ AMC:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: AMC
   period: 14
   min: 10
   max: 90
@@ -40,6 +41,7 @@ ANZ:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: ANZ
   period: 14
   min: 10
   max: 90
@@ -64,6 +66,7 @@ BHP:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: BHP
   period: 14
   min: 10
   max: 90
@@ -88,6 +91,7 @@ BXB:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: BXB
   period: 14
   min: 10
   max: 90
@@ -112,6 +116,7 @@ CBA:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: CBA
   period: 14
   min: 10
   max: 90
@@ -136,6 +141,7 @@ CSL:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: CSL
   period: 14
   min: 10
   max: 90
@@ -160,6 +166,7 @@ GMG:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: GMG
   period: 14
   min: 10
   max: 90
@@ -184,6 +191,7 @@ IAG:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: IAG
   period: 14
   min: 10
   max: 90
@@ -208,6 +216,7 @@ MQG:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: MQG
   period: 14
   min: 10
   max: 90
@@ -232,6 +241,7 @@ NAB:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: NAB
   period: 14
   min: 10
   max: 90
@@ -256,6 +266,7 @@ NCM:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: NCM
   period: 14
   min: 10
   max: 90
@@ -280,6 +291,7 @@ RIO:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: RIO
   period: 14
   min: 10
   max: 90
@@ -304,6 +316,7 @@ SCG:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: SCG
   period: 14
   min: 10
   max: 90
@@ -328,6 +341,7 @@ SUN:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: SUN
   period: 14
   min: 10
   max: 90
@@ -352,6 +366,7 @@ TLS:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: TLS
   period: 14
   min: 10
   max: 90
@@ -376,6 +391,7 @@ TCL:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: TCL
   period: 14
   min: 10
   max: 90
@@ -400,6 +416,7 @@ WES:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: WES
   period: 14
   min: 10
   max: 90
@@ -424,6 +441,7 @@ WBC:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: WBC
   period: 14
   min: 10
   max: 90
@@ -448,6 +466,7 @@ WPL:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: WPL
   period: 14
   min: 10
   max: 90
@@ -472,6 +491,7 @@ WOW:
  check_rsi2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
+  ticker: WOW
   period: 14
   min: 10
   max: 90
