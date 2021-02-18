@@ -13,7 +13,7 @@
 
 AMC:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: AMC
@@ -21,24 +21,24 @@ AMC:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 ANZ:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: ANZ
@@ -46,24 +46,24 @@ ANZ:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
   
 BHP:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: BHP
@@ -71,24 +71,24 @@ BHP:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 BXB:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: BXB
@@ -96,24 +96,24 @@ BXB:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 CBA:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: CBA
@@ -121,24 +121,24 @@ CBA:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 CSL:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: CSL
@@ -146,24 +146,24 @@ CSL:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 GMG:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: GMG
@@ -171,24 +171,24 @@ GMG:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
    
 IAG:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: IAG
@@ -196,24 +196,24 @@ IAG:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
  
 MQG:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: MQG
@@ -221,24 +221,24 @@ MQG:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 NAB:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: NAB
@@ -246,24 +246,24 @@ NAB:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
    
 NCM:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: NCM
@@ -271,24 +271,24 @@ NCM:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 RIO:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: RIO
@@ -296,24 +296,24 @@ RIO:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
   
 SCG:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: SCG
@@ -321,24 +321,24 @@ SCG:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 SUN:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: SUN
@@ -346,24 +346,24 @@ SUN:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 TLS:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: TLS
@@ -371,24 +371,24 @@ TLS:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 TCL:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: TCL
@@ -396,24 +396,24 @@ TCL:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
    
 WES:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: WES
@@ -421,24 +421,24 @@ WES:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
 
 WBC:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: WBC
@@ -446,24 +446,24 @@ WBC:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
   
 WPL:
 
- check_rsi2: 
+ Check RSI2: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: WPL
@@ -471,24 +471,24 @@ WPL:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
   
 WOW:
 
- check_rsi2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: WOW
@@ -496,17 +496,17 @@ WOW:
   min: 10
   max: 90
 
- check_sma50:
+ Simple Moving Average - 10 Days:
   description: "Moving Average 50 Day"
   check_command: check_sma 
   period: 50
 
- check_sma5:
+ Simple Moving Average - 5 Days:
   description: "Moving Average 5 Day"
   check_command: check_sma 
   period: 5
 
- strategy: 
+ Strategy: 
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy 
   name: moving_averages
