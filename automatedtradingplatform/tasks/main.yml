@@ -137,6 +137,8 @@
 
 - meta: flush_handlers
 
+- include: website_check.yml
+
 - include: nagios_configuration.yml
 
 - include: back_testing.yml
