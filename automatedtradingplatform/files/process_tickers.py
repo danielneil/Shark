@@ -74,17 +74,17 @@ def process_ticker_config(a_dict):
     
     for key, value in a_dict.items():
         ticker = key
-        #if isinstance(value, dict):
-         #   process_service_config(value, ticker)
+        if isinstance(value, dict):
+            process_service_config(value, ticker)
 
-    #sg_list = list ( dict.fromkeys(service_group_defs) )
+    sg_list = list ( dict.fromkeys(service_group_defs) )
 
-    #for sg in sg_list:
+    for sg in sg_list:
 
-    #    print("define servicegroup {")
-    #    print("\tservicegroup_name " + sg)
-    #    print("\talias " + sg)
-    #    print("}")
+        print("define servicegroup {")
+        print("\tservicegroup_name " + sg)
+        print("\talias " + sg)
+        print("}")
 
 def process_service_config(a_dict,ticker):
 
@@ -95,26 +95,25 @@ def process_service_config(a_dict,ticker):
         print("\thost_name " + ticker)
         print("\tservice_groups " + str(key))
 
-    #    service_group_defs.append(str(key))
+        service_group_defs.append(str(key))
 
-        #command_str = ""
-       # for k,v in value.items():
+        command_str = ""
+        for k,v in value.items():
 
             # the descript will always be the first element.
-        #    if str(k) == "description":
+            if str(k) == "description":
 
-         #       print("\tservice_description " + str(v))
-    #        else:
+                print("\tservice_description " + str(v))
+            else:
             
-     #           if str(k) == "check_command":
-      #              command_str = "check_command " + str(v)
-       #         else:
+                if str(k) == "check_command":
+                    command_str = "check_command " + str(v)
+                else:
                 
                     # print the command arguments
+                    command_str += "!" + str(v)
 
-        #            command_str += "!" + str(v)
-
-       # print("\t" + command_str)
+        print("\t" + command_str)
         print("\tmax_check_attempts 5")
         print("\tcheck_interval 5")
         print("\tretry_interval 3")
