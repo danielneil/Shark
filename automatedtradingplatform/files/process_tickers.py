@@ -69,44 +69,45 @@ for industry_group in industry_groups:
     """)
 
 
-# Process configuration file.
+# Process configuration file - if someone can help me rewrite this POS that'd be greatttttt.
 def process_ticker_config(a_dict):
     
     for key, value in a_dict.items():
-
         ticker = key
-
         if isinstance(value, dict):
+            process_service_config(value, ticker)
 
-            process_service_key(value, ticker)
+def process_service_config(a_dict,ticker):
 
-            continue
+    for key, value in a_dict.items():
 
-def process_service_key(a_dict,ticker):
+        print("\ndefine service {")
+        print("\thost_name " + ticker)
 
-    for key,value in a_dict.items():
+        command_str = ""
 
-        print("host_name " + ticker)
+        for k,v in value.items():
 
-        service = key
+            # the descript will always be the first element.
+            if str(k) == "description":
 
-        print("Service: " + service)
+                print("\tservice_description " + str(v))
+            else:
+            
+                if str(k) == "check_command":
+                    command_str = "check_command " + str(v)
+                else:
+                
+                    # print the command arguments
 
-        if isinstance(value, dict):
+                    command_str += "!" + str(v)
 
-            process_service_value(a_dict, service)
+        print("\t" + command_str)
 
-        #print('Check {!r}'.format(key))
-
-def process_service_value(a_dict, service):
-
-    for key,value in a_dict.items():
-
-        print('Value {!r}'.format(value))
+    print("}\n")
 
 
 with open ("ticker-config.yml", "r") as file:
 
     docs = yaml.safe_load(file)
-
     process_ticker_config(docs)
