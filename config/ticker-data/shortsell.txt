@@ -1,0 +1,692 @@
+Daily Gross Short Sales reported for 08-Jan-2021, ASX Limited (ASX) & Chi-X Australia (CHI-X)
+
+No responsibility is accepted for any inaccuracies contained in the matter published.
+Securities that have had no short sales actively reported for the date shown are excluded from this report.
+
+ASX     Company Name                      Product/      Reported Gross         Issued              % of issued capital
+Code                                      Class         Short Sales (a)        Capital (b)         reported as short
+                                                        ASX + CHI-X                                sold  (a)/(b)
+360     LIFE360 INC.                      CDI FORUS              9,850         150,083,424         .00
+3DP     POINTERRA LIMITED                 FPO                   32,559         670,733,112         .00
+3PL     3P LEARNING LIMITED..             FPO                    2,184         139,484,170         .00
+4DS     4DS MEMORY LIMITED                FPO                   25,600       1,316,780,441         .00
+4DX     4DMEDICAL LIMITED                 FPO                    2,531         177,411,686         .00
+5GN     5G NETWORKS LIMITED               FPO                    1,300         113,789,181         .00
+8CO     8COMMON LIMITED                   FPO                    7,362         200,409,756         .00
+A2B     A2B AUSTRALIA LIMITED             FPO                      318         120,430,683         .00
+A2M     THE A2 MILK COMPANY LIMITED       FPO NZ               635,023         742,606,937         .08
+AAA     BETASHARES AUSTRALIAN HIGH INTERE ETF UNITS             16,457          44,049,211         .03
+AAC     AUSTRALIAN AGRICULTURAL COMPANY L FPO                   48,598         602,766,747         .00
+ABA     AUSWIDE BANK LTD                  FPO                    2,276          42,716,729         .00
+ABC     ADBRI LIMITED                     FPO                   80,980         652,266,367         .01
+ABP     ABACUS PROPERTY GROUP             STAPLED              123,935         804,397,934         .01
+ABY     ADORE BEAUTY GROUP LIMITED        FPO                   25,008          94,124,497         .02
+AC8     AUSCANN GROUP HOLDINGS LTD        FPO                   20,491         317,047,357         .00
+ACB     A-CAP ENERGY LIMITED              FPO                   37,418         871,884,866         .00
+ACDC    ETFS BATTERY TECH & LITHIUM ETF   ETF UNITS             17,253             580,796        2.97
+AD8     AUDINATE GROUP LIMITED            FPO                    2,717          76,253,619         .00
+ADH     ADAIRS LIMITED                    FPO                   41,233         169,077,075         .02
+ADI     APN INDUSTRIA REIT                STAPLED               10,175         209,763,282         .00
+ADN     ANDROMEDA METALS LIMITED          FPO                   83,656       2,152,727,827         .00
+ADT     ADRIATIC METALS PLC               CDI 1:1               34,654         180,760,288         .01
+AEF     AUSTRALIAN ETHICAL INVESTMENT LIM FPO                   13,208         112,387,138         .01
+AFG     AUSTRALIAN FINANCE GROUP LTD      FPO                    3,575         268,382,396         .00
+AFI     AUSTRALIAN FOUNDATION INVESTMENT  FPO                    3,226       1,216,722,397         .00
+AGE     ALLIGATOR ENERGY LIMITED          FPO                  286,661       2,353,992,960         .01
+AGH     ALTHEA GROUP HOLDINGS LIMITED     FPO                   22,111         253,780,439         .00
+AGI     AINSWORTH GAME TECHNOLOGY LIMITED FPO                   17,738         336,793,929         .00
+AGL     AGL ENERGY LIMITED.               FPO                  449,171         623,033,791         .07
+AGY     ARGOSY MINERALS LIMITED           FPO                   55,113       1,019,502,141         .00
+AHX     APIAM ANIMAL HEALTH LIMITED       FPO                    4,845         120,742,028         .00
+AHY     ASALEO CARE LIMITED               FPO                   17,150         543,122,491         .00
+AIA     AUCKLAND INTERNATIONAL AIRPORT LI FPO NZX               61,297       1,472,551,137         .00
+AIS     AERIS RESOURCES LIMITED           FPO                   43,456       1,897,018,636         .00
+AIZ     AIR NEW ZEALAND LIMITED           FPO NZX               27,359       1,122,844,227         .00
+ALC     ALCIDION GROUP LIMITED            FPO                    7,200         990,694,052         .00
+ALD     AMPOL LIMITED                     FPO                   47,416         249,706,947         .01
+ALG     ARDENT LEISURE GROUP LIMITED      FPO                   65,221         479,706,016         .01
+ALK     ALKANE RESOURCES LIMITED          FPO                   78,065         595,388,800         .01
+ALL     ARISTOCRAT LEISURE LIMITED        FPO                  191,328         638,544,150         .03
+ALQ     ALS LIMITED                       FPO                  133,018         482,425,769         .02
+ALU     ALTIUM LIMITED                    FPO                  101,014         130,965,775         .07
+ALX     ATLAS ARTERIA                     FPOSFORUS            264,433         959,018,226         .02
+AMA     AMA GROUP LIMITED                 FPO                  303,283         742,024,298         .04
+AMC     AMCOR PLC                         CDI 1:1              483,393         878,113,376         .05
+AMI     AURELIA METALS LIMITED            FPO                  205,908       1,234,326,525         .01
+AMP     AMP LIMITED                       FPO                1,317,009       3,436,599,241         .03
+AMS     ATOMOS LIMITED                    FPO                   93,675         218,482,912         .04
+AMX     AEROMETREX LIMITED                FPO                      998          94,400,000         .00
+ANG     AUSTIN ENGINEERING LIMITED        FPO                   23,400         579,874,323         .00
+ANN     ANSELL LIMITED                    FPO                   37,501         128,527,343         .02
+ANP     ANTISENSE THERAPEUTICS LIMITED    FPO                    8,045         573,988,171         .00
+ANZ     AUSTRALIA AND NEW ZEALAND BANKING FPO                  570,712       2,845,541,800         .02
+AOF     AUSTRALIAN UNITY OFFICE FUND      FPO                      756         163,463,884         .00
+AOU     AUROCH MINERALS LTD               FPO                  242,944         255,685,133         .09
+APA     APA GROUP                         STAPLED              538,659       1,179,893,848         .04
+APE     EAGERS AUTOMOTIVE LIMITED         FPO                   36,803         256,933,106         .01
+API     AUSTRALIAN PHARMACEUTICAL INDUSTR FPO                   74,092         492,656,035         .01
+APT     AFTERPAY LIMITED                  FPO                  213,880         285,155,191         .07
+APX     APPEN LIMITED                     FPO                   74,295         122,345,605         .06
+AQZ     ALLIANCE AVIATION SERVICES LIMITE FPO                    2,498         160,476,516         .00
+AR9     ARCHTIS LIMITED                   FPO                   39,637         222,165,057         .01
+ARB     ARB CORPORATION LIMITED.          FPO                   16,514          80,853,876         .02
+ARD     ARGENT MINERALS LIMITED           FPO                  142,158         875,146,204         .01
+ARF     ARENA REIT.                       STAPLED                9,987         341,867,673         .00
+ARG     ARGO INVESTMENTS LIMITED          FPO                    2,106         722,656,529         .00
+ARR     AMERICAN RARE EARTHS LIMITED      FPO NZ                17,147         329,836,259         .00
+ARV     ARTEMIS RESOURCES LIMITED         FPO                   48,272       1,136,764,317         .00
+ASB     AUSTAL LIMITED                    FPO                  253,806         359,558,055         .07
+ASM     AUSTRALIAN STRATEGIC MATERIALS LI FPO                    1,366         119,049,778         .00
+ASN     ANSON RESOURCES LIMITED           FPO                    4,623         869,479,642         .00
+AST     AUSNET SERVICES LIMITED           FPO                1,604,449       3,801,232,373         .04
+ASX     ASX LIMITED                       FPO                   40,233         193,595,162         .02
+ATS     AUSTRALIS OIL & GAS LIMITED       FPO                   29,000         985,963,678         .00
+ATU     ATRUM COAL LIMITED                FPO                      944         580,649,344         .00
+AUB     AUB GROUP LIMITED                 FPO                   11,787          74,379,201         .01
+AUT     AUTECO MINERALS LTD               FPO                   17,317       1,567,178,936         .00
+AUZ     AUSTRALIAN MINES LIMITED          FPO                  473,209       3,961,453,850         .01
+AV1     ADVERITAS LIMITED                 FPO                    1,487         355,923,076         .00
+AVA     AVA RISK GROUP LIMITED            FPO                   42,176         241,379,402         .01
+AVH     AVITA THERAPEUTICS, INC.          CDI 5:1               50,974          66,914,685         .07
+AVN     AVENTUS GROUP                     STAPLED                3,805         567,699,674         .00
+AVZ     AVZ MINERALS LIMITED              FPO                  115,228       2,872,498,508         .00
+AWC     ALUMINA LIMITED                   FPO                1,227,063       2,901,681,417         .04
+AX1     ACCENT GROUP LIMITED              FPO                  152,909         541,866,715         .02
+AXE     ARCHER MATERIALS LIMITED          FPO                   11,543         225,136,546         .00
+AYS     AMAYSIM AUSTRALIA LIMITED         FPO                   21,234         295,110,421         .00
+AZJ     AURIZON HOLDINGS LIMITED          FPO                  527,343       1,858,569,101         .02
+AZS     AZURE MINERALS LIMITED            FPO                   57,586         308,085,721         .01
+BAP     BAPCOR LIMITED                    FPO                   82,475         339,412,500         .02
+BAR     BARRA RESOURCES LIMITED           FPO                  354,712         677,608,101         .05
+BAT     BATTERY MINERALS LIMITED          FPO                  835,091       2,041,273,541         .04
+BBN     BABY BUNTING GROUP LIMITED        FPO                    4,289         129,255,075         .00
+BBOZ    BETASHARES AUSTRALIAN STRONG BEAR TMF UNITS            669,236          53,850,000        1.24
+BDA     BOD AUSTRALIA LIMITED             FPO                    4,573         105,823,920         .00
+BDC     BARDOC GOLD LIMITED               FPO                    3,316       1,731,157,376         .00
+BEN     BENDIGO AND ADELAIDE BANK LIMITED FPO                  170,259         531,294,248         .03
+BET     BETMAKERS TECHNOLOGY GROUP LTD    FPO                   14,589         684,835,180         .00
+BFG     BELL FINANCIAL GROUP LIMITED      FPO                    8,109         320,743,948         .00
+BGA     BEGA CHEESE LIMITED               FPO                   25,952         302,337,115         .00
+BGL     BELLEVUE GOLD LIMITED             FPO                   83,215         851,197,473         .01
+BHP     BHP GROUP LIMITED                 FPO                  579,225       2,945,851,394         .02
+BID     BILL IDENTITY LIMITED             FPO                   49,665         161,299,080         .03
+BILL    ISHARES CORE CASH ETF             ETF UNITS              4,668           5,380,869         .08
+BIN     BINGO INDUSTRIES LIMITED          FPO                  620,651         654,269,502         .09
+BKG     BOOKTOPIA GROUP LIMITED           FPO                       88         137,359,299         .00
+BKL     BLACKMORES LIMITED                FPO                    3,661          19,347,715         .01
+BKW     BRICKWORKS LIMITED                FPO                    9,779         151,596,520         .00
+BLD     BORAL LIMITED.                    FPO                  241,597       1,225,653,798         .02
+BLG     BLUGLASS LIMITED                  FPO                   10,770         722,577,933         .00
+BLX     BEACON LIGHTING GROUP LIMITED     FPO                      895         223,321,406         .00
+BOE     BOSS ENERGY LTD                   FPO                   23,287       1,831,098,605         .00
+BOQ     BANK OF QUEENSLAND LIMITED.       FPO                  220,497         455,480,790         .04
+BPT     BEACH ENERGY LIMITED              FPO                  725,822       2,281,333,656         .03
+BRG     BREVILLE GROUP LIMITED            FPO                    8,340         138,940,804         .00
+BRN     BRAINCHIP HOLDINGS LTD            FPO                  107,151       1,616,591,588         .00
+BSE     BASE RESOURCES LIMITED            FPO                      173       1,178,011,850         .00
+BSL     BLUESCOPE STEEL LIMITED           FPO                  150,915         503,782,240         .03
+BTH     BIGTINCAN HOLDINGS LIMITED        FPO                   20,562         412,023,373         .00
+BUB     BUBS AUSTRALIA LIMITED            FPO                  116,637         612,775,580         .01
+BUD     BUDDY TECHNOLOGIES LTD            FPO                  187,066       2,947,166,796         .00
+BVS     BRAVURA SOLUTIONS LIMITED.        FPO                  303,407         247,165,023         .12
+BWP     BWP TRUST                         ORD UNITS            234,197         642,383,803         .03
+BWX     BWX LIMITED                       FPO                   16,897         139,543,998         .01
+BXB     BRAMBLES LIMITED                  FPO                  372,178       1,472,680,751         .02
+BYE     BYRON ENERGY LIMITED              FPO                   10,417       1,040,295,102         .00
+CAI     CALIDUS RESOURCES LIMITED         FPO                   67,010         336,170,075         .02
+CAN     CANN GROUP LIMITED                FPO                  110,565         269,985,378         .04
+CAR     CARSALES.COM LIMITED.             FPO                   21,396         246,385,533         .00
+CAT     CATAPULT GROUP INTERNATIONAL LTD  FPO                    2,075         200,431,654         .00
+CBA     COMMONWEALTH BANK OF AUSTRALIA.   FPO                  486,781       1,774,096,410         .02
+CBR     CARBON REVOLUTION LIMITED         FPO                    4,907         136,010,388         .00
+CCL     COCA-COLA AMATIL LIMITED          FPO                  178,305         723,999,699         .02
+CCP     CREDIT CORP GROUP LIMITED         FPO                   19,257          67,315,767         .02
+CCR     CREDIT CLEAR LIMITED              FPO                    1,228         158,377,970         .00
+CCX     CITY CHIC COLLECTIVE LIMITED      FPO                   37,813         228,663,238         .01
+CCZ     CASTILLO COPPER LIMITED           FPO                  461,264       1,014,126,222         .04
+CDA     CODAN LIMITED                     FPO                   15,818         180,506,054         .00
+CDD     CARDNO LIMITED                    FPO                   99,787         401,282,243         .02
+CDP     CARINDALE PROPERTY TRUST          UNIT                   2,530          70,000,000         .00
+CEN     CONTACT ENERGY LIMITED            FPO NZX                1,467         185,629,586         .00
+CGB     CANN GLOBAL LIMITED               FPO                1,387,417       5,136,338,617         .02
+CGC     COSTA GROUP HOLDINGS LIMITED      FPO                  148,316         400,830,387         .03
+CGF     CHALLENGER LIMITED                FPO                  465,794         675,614,730         .06
+CGS     COGSTATE LTD                      FPO                    1,590         170,238,331         .00
+CHC     CHARTER HALL GROUP                STP FORUS            178,602         465,777,131         .03
+CHK     COHIBA MINERALS LIMITED           FPO                  825,000       1,364,917,696         .06
+CHN     CHALICE MINING LIMITED            FPO                  119,840         337,824,147         .03
+CHZ     CHESSER RESOURCES LIMITED         FPO                   52,384         449,565,832         .01
+CI1     CREDIT INTELLIGENCE LTD           FPO                   29,411       1,235,051,278         .00
+CIA     CHAMPION IRON LIMITED             FPO                  133,151         489,273,197         .02
+CIE     CONTANGO INCOME GENERATOR  LIMITE FPO                   23,880         125,529,319         .01
+CIM     CIMIC GROUP LIMITED               FPO                   86,977         311,296,286         .02
+CIP     CENTURIA INDUSTRIAL REIT          ORD UNIT             135,218         550,679,760         .02
+CKF     COLLINS FOODS LIMITED             FPO                   20,231         116,581,244         .01
+CL1     CLASS LIMITED                     FPO                      310         123,758,834         .00
+CLV     CLOVER CORPORATION LIMITED        FPO                   18,294         166,310,104         .01
+CLW     CHARTER HALL LONG WALE REIT       STAPLED              600,790         571,402,774         .10
+CM8     CROWD MEDIA HOLDINGS LIMITED      FPO                   35,029         516,624,996         .00
+CMM     CAPRICORN METALS LTD              FPO                  167,370         343,974,807         .04
+CMW     CROMWELL PROPERTY GROUP           STAPLED              618,083       2,617,470,675         .02
+CNI     CENTURIA CAPITAL GROUP            STAPLED              105,108         600,236,123         .01
+CNJ     CONICO LTD                        FPO                   17,348         756,435,041         .00
+CNU     CHORUS LIMITED                    FPO NZX               64,426         447,024,884         .01
+COB     COBALT BLUE HOLDINGS LIMITED      FPO                   14,681         243,221,847         .00
+COE     COOPER ENERGY LIMITED             FPO                  161,152       1,631,026,105         .01
+COF     CENTURIA OFFICE REIT              ORD UNIT              18,532         514,522,807         .00
+COH     COCHLEAR LIMITED                  FPO                   21,754          65,741,777         .03
+COI     COMET RIDGE LIMITED               FPO                   94,227         791,211,719         .01
+COL     COLES GROUP LIMITED.              FPO                  237,836       1,333,929,696         .01
+CPH     CRESO PHARMA LIMITED              FPO                1,430,422         705,018,417         .20
+CPU     COMPUTERSHARE LIMITED.            FPO                  273,956         540,879,593         .05
+CQE     CHARTER HALL SOCIAL INFRASTRUCTUR UNIT                  37,614         361,255,506         .01
+CQR     CHARTER HALL RETAIL REIT          UNIT                 165,561         570,944,990         .02
+CRED    BETASHARES AUSTRALIAN INVESTMENT  ETF UNITS              1,446          16,651,737         .00
+CRN     CORONADO GLOBAL RESOURCES INC.    CDI FORUS            211,190       1,383,878,900         .01
+CRO     CIRRALTO LIMITED                  FPO                  735,341       1,696,393,588         .04
+CSE     COPPER STRIKE LIMITED             FPO                    4,790         106,844,810         .00
+CSL     CSL LIMITED                       FPO                   75,623         454,974,366         .01
+CSR     CSR LIMITED                       FPO                  152,685         485,382,776         .03
+CSS     CLEAN SEAS SEAFOOD LIMITED        FPO                   31,033         113,690,715         .02
+CSX     CLEANSPACE HOLDINGS LIMITED       FPO                    1,821          77,019,523         .00
+CTD     CORPORATE TRAVEL MANAGEMENT LIMIT FPO                   27,661         136,425,516         .02
+CTM     CENTAURUS METALS LIMITED          FPO                    3,000         325,987,160         .00
+CTT     CETTIRE LIMITED                   FPO                    1,027         381,238,220         .00
+CUV     CLINUVEL PHARMACEUTICALS LIMITED  FPO                   19,566          49,410,338         .04
+CVN     CARNARVON PETROLEUM LIMITED       FPO                   41,652       1,565,379,917         .00
+CWN     CROWN RESORTS LIMITED             FPO                  148,120         677,158,271         .02
+CWP     CEDAR WOODS PROPERTIES LIMITED    FPO                    7,826          80,743,294         .01
+CWX     CARAWINE RESOURCES LIMITED        FPO                   22,794         108,889,902         .02
+CWY     CLEANAWAY WASTE MANAGEMENT LIMITE FPO                1,106,793       2,057,854,704         .05
+CXO     CORE LITHIUM LTD                  FPO                  247,804         999,430,321         .02
+CYL     CATALYST METALS LIMITED           FPO                    1,090          91,971,126         .00
+CYM     CYPRIUM METALS LIMITED            FPO                      318          98,569,214         .00
+CYP     CYNATA THERAPEUTICS LIMITED       FPO                    2,543         138,564,299         .00
+DBI     DALRYMPLE BAY INFRASTRUCTURE LIMI STAPLED              129,669         500,277,934         .02
+DCG     DECMIL GROUP LIMITED              FPO                   38,900         128,737,597         .03
+DCN     DACIAN GOLD LIMITED               FPO                  765,585         556,508,554         .13
+DDR     DICKER DATA LIMITED               FPO                    3,765         172,134,046         .00
+DEG     DE GREY MINING LIMITED            FPO                  115,148       1,278,415,061         .00
+DEV     DEVEX RESOURCES LIMITED           FPO                  137,880         282,653,840         .04
+DGO     DGO GOLD LIMITED                  FPO                    1,132          73,551,748         .00
+DHG     DOMAIN HOLDINGS AUSTRALIA LIMITED FPO                  112,228         584,263,689         .01
+DJRE    SPDR DOW JONES GLOBAL REAL ESTATE ETF UNITS              3,778          18,164,007         .02
+DJW     DJERRIWARRH INVESTMENTS LIMITED   FPO                    1,366         224,762,498         .00
+DMP     DOMINO'S PIZZA ENTERPRISES LIMITE FPO                   17,108          86,523,365         .02
+DNK     DANAKALI LIMITED                  FPO                   31,868         318,741,306         .01
+DOW     DOWNER EDI LIMITED                FPO                  307,999         701,292,354         .04
+DRR     DETERRA ROYALTIES LIMITED         FPO                  243,234         528,462,101         .04
+DTC     DAMSTRA HOLDINGS LIMITED          FPO                   34,106         186,813,130         .01
+DTL     DATA#3 LIMITED                    FPO                   16,025         153,974,950         .01
+DUB     DUBBER CORPORATION LIMITED        FPO                   15,903         255,365,715         .00
+DXS     DEXUS                             STAPLED              556,374       1,089,055,137         .05
+DYL     DEEP YELLOW LIMITED               FPO                   92,654         245,483,379         .03
+E200    SPDR S&P/ASX 200 ESG FUND         ETF UNITS                 84             850,109         .01
+E25     ELEMENT 25 LIMITED                FPO                   14,443         132,634,774         .01
+E2M     E2 METALS LIMITED                 FPO                    3,881         149,658,406         .00
+EBO     EBOS GROUP LIMITED                FPO NZ                    17         164,134,077         .00
+ECS     ECS BOTANICS HOLDINGS LTD         FPO                  180,179         447,822,664         .04
+ECX     ECLIPX GROUP LIMITED              FPO                   27,502         319,636,693         .00
+EGG     ENERO GROUP LIMITED               FPO                    4,206          86,655,518         .00
+EHE     ESTIA HEALTH LIMITED              FPO                    4,619         261,294,969         .00
+EHL     EMECO HOLDINGS LIMITED            FPO                  196,179         544,055,134         .03
+ELD     ELDERS LIMITED                    FPO                  219,894         156,353,652         .14
+ELO     ELMO SOFTWARE LIMITED             FPO                    1,923          89,221,831         .00
+ELS     ELSIGHT LIMITED                   FPO                   17,433         133,341,582         .01
+EMH     EUROPEAN METALS HOLDINGS LIMITED  CDI 1:1                2,000         117,348,097         .00
+EML     EML PAYMENTS LIMITED              FPO                  437,465         361,803,890         .12
+EMV     EMVISION MEDICAL DEVICES LTD      FPO                    2,174          70,762,860         .00
+ENN     ELANOR INVESTORS GROUP            STAPLED                  677         120,974,515         .00
+EOF     ECOFIBRE LIMITED                  FPO                    8,039         147,462,117         .00
+EOS     ELECTRO OPTIC SYSTEMS HOLDINGS LI FPO                   36,010         149,579,229         .02
+ERA     ENERGY RESOURCES OF AUSTRALIA LIM FPO 'A'                2,899       3,691,383,198         .00
+ERD     EROAD LIMITED                     FPO NZX                5,628          81,896,340         .00
+ESGI    VANECK VECTORS MSCI INTERNATIONAL ETF UNITS              2,427           1,901,779         .12
+ESR     ESTRELLA RESOURCES LIMITED        FPO                  198,132         899,512,241         .02
+ETHI    BETASHARES GLOBAL SUSTAINABILITY  ETF UNITS              1,417          98,847,467         .00
+EVN     EVOLUTION MINING LIMITED          FPO                  869,165       1,708,667,085         .05
+EVO     EVOLVE EDUCATION GROUP LIMITED    FPO NZX                  274         139,825,639         .00
+EVS     ENVIROSUITE LIMITED               FPO                  117,862       1,026,143,906         .01
+EVT     EVENT HOSPITALITY AND ENTERTAINME FPO                    1,685         161,195,521         .00
+EXL     ELIXINOL GLOBAL LIMITED           FPO                  276,765         313,360,227         .08
+EXR     ELIXIR ENERGY LIMITED             FPO                      980         749,995,405         .00
+FBR     FBR LTD                           FPO                       63       2,179,170,092         .00
+FBU     FLETCHER BUILDING LIMITED         FPO NZX              105,879         824,256,416         .01
+FCL     FINEOS CORPORATION HOLDINGS PLC   CDI 1:1                  846         301,632,559         .00
+FEMX    FIDELITY GLOBAL EMERGING MARKETS  TMF UNITS             59,494          26,156,739         .22
+FEX     FENIX RESOURCES LTD               FPO                  121,464         432,913,920         .02
+FFG     FATFISH GROUP LIMITED             FPO                  194,320         928,643,554         .02
+FFX     FIREFINCH LIMITED                 FPO                  161,603         781,907,251         .02
+FGG     FUTURE GENERATION GLOBAL INVESTME FPO                    3,500         392,947,106         .00
+FGR     FIRST GRAPHENE LIMITED            FPO                   32,166         526,068,985         .00
+FID     FIDUCIAN GROUP LIMITED            FPO                      730          31,442,623         .00
+FLC     FLUENCE CORPORATION LIMITED       FPO                       83         624,854,034         .00
+FLOT    VANECK VECTORS AUSTRALIAN FLOATIN ETF UNITS                583          11,262,745         .00
+FLT     FLIGHT CENTRE TRAVEL GROUP LIMITE FPO                  289,469         199,177,744         .14
+FMG     FORTESCUE METALS GROUP LTD        FPO                  713,936       3,078,964,918         .02
+FPH     FISHER & PAYKEL HEALTHCARE CORPOR FPO NZX               44,223         576,311,083         .00
+FRI     FINBAR GROUP LIMITED              FPO                   31,220         272,123,142         .01
+FZO     FAMILY ZONE CYBER SAFETY LIMITED  FPO                    9,134         385,395,354         .00
+G1A     GALENA MINING LIMITED             FPO                   93,700         461,855,353         .02
+GCY     GASCOYNE RESOURCES LIMITED        FPO                    6,184         250,858,128         .00
+GDF     GARDA PROPERTY GROUP              STAPLED                  685         227,644,361         .00
+GDI     GDI PROPERTY GROUP                STAPLED               24,300         542,030,027         .00
+GDX     VANECK VECTORS GOLD MINERS ETF    ETF UNITS                636           7,633,071         .00
+GEM     G8 EDUCATION LIMITED              FPO                  160,943         847,390,315         .01
+GEV     GLOBAL ENERGY VENTURES LIMITED    FPO                   25,000         386,978,223         .00
+GGG     GREENLAND MINERALS LIMITED        FPO                   67,594       1,339,071,546         .00
+GMA     GENWORTH MORTGAGE INSURANCE AUSTR FPO                   41,238         412,514,184         .01
+GMD     GENESIS MINERALS LIMITED          FPO                  280,217       1,943,004,643         .01
+GMG     GOODMAN GROUP                     STAPLED              565,826       1,847,429,255         .03
+GNC     GRAINCORP LIMITED                 FPO                  151,237         228,855,628         .06
+GNE     GENESIS ENERGY LIMITED            FPO NZX                2,978       1,043,568,651         .00
+GNX     GENEX POWER LIMITED               FPO                   31,369         511,505,999         .00
+GOR     GOLD ROAD RESOURCES LIMITED       FPO                  489,038         879,924,748         .05
+GOZ     GROWTHPOINT PROPERTIES AUSTRALIA  STAPLED              109,211         772,195,170         .01
+GPT     GPT GROUP                         STAPLED            1,138,696       1,947,929,316         .05
+GRR     GRANGE RESOURCES LIMITED.         FPO                   56,033       1,157,338,698         .00
+GSS     GENETIC SIGNATURES LIMITED        FPO                       15         142,874,746         .00
+GUD     G.U.D. HOLDINGS LIMITED           FPO                    7,392          93,697,294         .00
+GWA     GWA GROUP LIMITED.                FPO                  147,314         264,195,869         .05
+GXY     GALAXY RESOURCES LIMITED          FPO                  338,896         504,063,884         .06
+HACK    BETASHARES GLOBAL CYBERSECURITY E ETF UNITS             71,750          42,176,469         .17
+HAS     HASTINGS TECHNOLOGY METALS LTD    FPO                  169,594       1,204,312,093         .01
+HCT     HOLISTA COLLTECH LIMITED          FPO                  292,435         275,349,087         .10
+HDN     HOMECO DAILY NEEDS REIT           UNITS                 17,236         482,913,263         .00
+HFR     HIGHFIELD RESOURCES LIMITED       FPO                    4,334         329,600,171         .00
+HLO     HELLOWORLD TRAVEL LIMITED         FPO                   17,374         155,027,845         .01
+HLS     HEALIUS LIMITED                   FPO                   67,386         623,008,113         .01
+HMC     HOME CONSORTIUM                   STAPLED                1,261         290,121,283         .00
+HPI     HOTEL PROPERTY INVESTMENTS        STAPLED               10,805         173,545,259         .00
+HSN     HANSEN TECHNOLOGIES LIMITED       FPO                    6,101         198,802,764         .00
+HT1     HT&E LIMITED                      FPO                   17,430         278,246,349         .00
+HT8     HARRIS TECHNOLOGY GROUP LIMITED   FPO                   15,000         254,995,481         .00
+HUB     HUB24 LIMITED                     FPO                   15,191          66,954,435         .02
+HUM     HUMM GROUP LIMITED                FPO                  251,461         495,268,318         .05
+HUO     HUON AQUACULTURE GROUP LIMITED    FPO                    1,973         109,872,959         .00
+HVN     HARVEY NORMAN HOLDINGS LIMITED    FPO                1,028,401       1,246,006,654         .08
+HWH     HOUSTON WE HAVE LIMITED           FPO                  146,000         261,757,713         .05
+IAF     ISHARES CORE COMPOSITE BOND ETF   ETF UNITS             23,575          14,146,232         .16
+IAG     INSURANCE AUSTRALIA GROUP LIMITED FPO                1,242,595       2,465,100,206         .05
+IAP     IRONGATE GROUP                    STAPLED              113,621         611,298,084         .01
+ICQ     ICAR ASIA LIMITED                 FPO                    9,934         435,697,827         .00
+IDX     INTEGRAL DIAGNOSTICS LIMITED      FPO                    6,790         198,545,113         .00
+IEL     IDP EDUCATION LIMITED             FPO                   22,608         278,336,211         .00
+IEM     ISHARES MSCI EMERGING MARKETS ETF ETF UNITS             46,150          12,752,939         .36
+IEU     ISHARES EUROPE ETF                ETF UNITS              2,173           8,699,847         .02
+IFL     IOOF HOLDINGS LIMITED             FPO                  295,130         649,324,356         .04
+IFM     INFOMEDIA LTD                     FPO                    8,183         375,217,384         .00
+IGB     ISHARES TREASURY ETF              ETF UNITS                202             970,018         .02
+IGL     IVE GROUP LIMITED                 FPO                   15,941         148,207,285         .01
+IGO     IGO LIMITED                       FPO                  624,994         744,952,314         .08
+IHCB    ISHARES CORE GLOBAL CORPORATE BON ETF UNITS              1,384           2,782,332         .05
+IHVV    ISHARES S&P 500 AUD HEDGED ETF    ETF UNITS              3,535           1,685,243         .21
+IHWL    ISHARES CORE MSCI WORLD ALL CAP ( ETF UNITS             24,204           6,161,140         .39
+IIND    BETASHARES INDIA QUALITY ETF.     ETF UNITS              4,820           3,960,015         .12
+IJH     ISHARES S&P MID-CAP ETF           ETF UNITS                 20             504,699         .00
+IJR     ISHARES S&P SMALL-CAP ETF         ETF UNITS              3,512           1,861,968         .18
+ILB     ISHARES GOVERNMENT INFLATION ETF  ETF UNITS              1,029           1,888,668         .05
+ILU     ILUKA RESOURCES LIMITED           FPO                  286,218         422,769,681         .06
+IMA     IMAGE RESOURCES NL                FPO                   94,291         992,139,693         .01
+IMD     IMDEX LIMITED                     FPO                   23,276         396,452,400         .00
+IMM     IMMUTEP LIMITED                   FPO                    9,420         648,725,286         .00
+IMPQ    EINVEST FUTURE IMPACT SMALL CAPS  TMF UNITS                 18             788,533         .00
+IMU     IMUGENE LIMITED                   FPO                  657,177       4,740,920,126         .01
+INA     INGENIA COMMUNITIES GROUP         STAPLED               76,688         326,651,610         .02
+ING     INGHAMS GROUP LIMITED             FPO                  134,201         371,679,601         .03
+INR     IONEER LTD                        FPO                  197,646       1,685,898,867         .01
+IOO     ISHARES GLOBAL 100 ETF            ETF UNITS                238          23,913,798         .00
+IOZ     ISHARES CORE S&P/ASX 200 ETF      ETF UNITS             70,813         135,743,008         .05
+IP1     INTEGRATED PAYMENT TECHNOLOGIES L FPO                   24,945         573,260,447         .00
+IPH     IPH LIMITED                       FPO                  133,081         216,235,113         .06
+IPL     INCITEC PIVOT LIMITED             FPO                1,333,057       1,942,225,029         .06
+IRE     IRESS LIMITED                     FPO                   85,639         193,326,463         .04
+IRI     INTEGRATED RESEARCH LIMITED       FPO                   68,767         172,174,753         .04
+ISD     ISENTIA GROUP LIMITED             FPO                    8,762         200,000,001         .00
+ISEC    ISHARES ENHANCED CASH ETF         ETF UNITS              2,593           2,030,777         .12
+ISU     ISELECT LIMITED.                  FPO                    4,124         217,861,393         .00
+IVC     INVOCARE LIMITED                  FPO                   44,586         144,060,733         .03
+IVR     INVESTIGATOR RESOURCES LTD        FPO                   20,000       1,298,096,345         .00
+IVV     ISHARES S&P 500 ETF               ETF UNITS                613           7,358,918         .00
+IXJ     ISHARES GLOBAL HEALTHCARE ETF     ETF UNITS                 92           8,097,415         .00
+JBH     JB HI-FI LIMITED                  FPO                   44,728         114,883,372         .03
+JHC     JAPARA HEALTHCARE LIMITED         FPO                  120,602         267,247,328         .04
+JHG     JANUS HENDERSON GROUP PLC         CDI 1:1                4,981          29,204,140         .01
+JHX     JAMES HARDIE INDUSTRIES PLC       CDI 1:1               85,756         444,167,489         .01
+JIN     JUMBO INTERACTIVE LIMITED         FPO                   11,974          62,448,757         .01
+JLG     JOHNS LYNG GROUP LIMITED          FPO                    2,568         224,008,910         .00
+JMS     JUPITER MINES LIMITED.            FPO                  267,935       1,958,991,033         .01
+KAI     KAIROS MINERALS LIMITED           FPO                  842,792       1,675,625,317         .05
+KAR     KAROON ENERGY LTD                 FPO                  293,751         553,646,423         .05
+KCN     KINGSGATE CONSOLIDATED LIMITED.   FPO                   12,069         226,225,940         .00
+KGN     KOGAN.COM LTD                     FPO                  131,470         105,708,527         .12
+KIN     KIN MINING NL                     FPO                  109,960         700,434,672         .01
+KLA     KIRKLAND LAKE GOLD LTD            CDI 1:1                  115           1,000,000         .01
+KLL     KALIUM LAKES LIMITED              FPO                   66,013         839,161,349         .00
+KMD     KATHMANDU HOLDINGS LIMITED        FPO NZX               38,680         709,001,384         .00
+KSL     KINA SECURITIES LIMITED           FPO                    2,701         275,203,884         .00
+KSN     KINGSTON RESOURCES LIMITED        FPO                       75         281,638,869         .00
+KTA     KRAKATOA RESOURCES LIMITED        FPO                   19,715         278,950,000         .00
+KWR     KINGWEST RESOURCES LIMITED        FPO                  140,311         153,693,858         .09
+KYK     KYCKR LIMITED                     FPO                   28,080         343,849,862         .00
+KZA     KAZIA THERAPEUTICS LIMITED        FPO                   12,755         126,166,264         .01
+LBY     LAYBUY GROUP HOLDINGS LIMITED     FPO                       85         174,462,228         .00
+LCL     LOS CERROS LIMITED                FPO                  388,524         468,779,522         .08
+LEP     ALE PROPERTY GROUP                STAPLED                7,987         197,809,643         .00
+LGP     LITTLE GREEN PHARMA LTD           FPO                    8,063          81,142,027         .01
+LIC     LIFESTYLE COMMUNITIES LIMITED     FPO                    9,716         104,545,131         .00
+LKE     LAKE RESOURCES N.L.               FPO                  102,741         835,428,624         .01
+LLC     LENDLEASE GROUP                   STAPLED              297,035         688,338,455         .04
+LNK     LINK ADMINISTRATION HOLDINGS LIMI FPO                  171,658         534,952,814         .03
+LOM     LUCAPA DIAMOND COMPANY LIMITED    FPO                  193,327         833,175,575         .02
+LOV     LOVISA HOLDINGS LIMITED           FPO                   25,741         107,459,646         .02
+LPI     LITHIUM POWER INTERNATIONAL LIMIT FPO                    6,847         298,263,903         .00
+LTR     LIONTOWN RESOURCES LIMITED        FPO                  176,733       1,808,148,068         .01
+LVH     LIVEHIRE LIMITED                  FPO                    6,572         299,391,859         .00
+LYC     LYNAS RARE EARTHS LIMITED         FPO                1,320,425         901,078,579         .14
+LYL     LYCOPODIUM LIMITED                FPO                      100          39,740,226         .00
+M7T     MACH7 TECHNOLOGIES LIMITED        FPO                   14,426         234,717,716         .00
+MAH     MACMAHON HOLDINGS LIMITED         FPO                    7,763       2,154,985,818         .00
+MAQ     MACQUARIE TELECOM GROUP LIMITED   FPO                      158          21,339,941         .00
+MCP     MCPHERSON'S LIMITED               FPO                   72,797         128,403,460         .05
+MCR     MINCOR RESOURCES NL               FPO                   11,300         431,861,826         .00
+MCY     MERCURY NZ LIMITED                FPO NZX                1,115       1,362,023,932         .00
+MDC     MEDLAB CLINICAL LIMITED           FPO                    4,692         279,675,671         .00
+MEB     MEDIBIO LIMITED                   FPO                1,260,072       1,347,662,569         .09
+MEY     MARENICA ENERGY LTD               FPO                   12,000         200,594,191         .00
+MEZ     MERIDIAN ENERGY LIMITED           FPO NZX                   88       1,255,003,958         .00
+MFG     MAGELLAN FINANCIAL GROUP LIMITED  FPO                  112,745         183,687,634         .06
+MGF     MAGELLAN GLOBAL FUND.             CLOSED CL                303       1,241,629,119         .00
+MGH     MAAS GROUP HOLDINGS LIMITED       FPO                      662         264,945,748         .00
+MGR     MIRVAC GROUP                      STAPLED            1,704,345       3,937,556,510         .04
+MGX     MOUNT GIBSON IRON LIMITED         FPO                  128,729       1,185,917,178         .01
+MHJ     MICHAEL HILL INTERNATIONAL LIMITE FPO                    8,693         387,980,688         .00
+MIN     MINERAL RESOURCES LIMITED         FPO                  100,090         188,597,501         .05
+MLD     MACA LIMITED                      FPO                  104,186         326,538,690         .03
+MLT     MILTON CORPORATION LIMITED        FPO                    4,893         672,529,778         .00
+MLX     METALS X LIMITED                  FPO                    6,373         907,266,067         .00
+MMI     METRO MINING LIMITED              FPO                   31,295       1,390,125,438         .00
+MML     MEDUSA MINING LIMITED             FPO                    2,999         207,794,301         .00
+MMM     MARLEY SPOON AG                   CDI1000:1              7,795         256,025,000         .00
+MMS     MCMILLAN SHAKESPEARE LIMITED      FPO                    3,708          77,381,107         .00
+MND     MONADELPHOUS GROUP LIMITED        FPO                   36,069          94,681,002         .03
+MNF     MNF GROUP LIMITED                 FPO                    2,801          84,474,800         .00
+MNS     MAGNIS ENERGY TECHNOLOGIES LTD    FPO                  132,042         730,005,974         .01
+MNY     MONEY3 CORPORATION LIMITED        FPO                    3,629         205,038,744         .00
+MOE     MOELIS AUSTRALIA LIMITED          FPO                      706         151,141,070         .00
+MP1     MEGAPORT LIMITED                  FPO                  102,201         154,765,229         .06
+MPL     MEDIBANK PRIVATE LIMITED          FPO                  633,567       2,754,003,240         .02
+MQG     MACQUARIE GROUP LIMITED           FPO                  117,189         361,821,377         .03
+MRM     MMA OFFSHORE LIMITED              FPO                  667,401       3,593,302,169         .01
+MSB     MESOBLAST LIMITED                 FPO                  646,644         587,586,780         .11
+MSTR    MORNINGSTAR INTERNATIONAL SHARES  TMF UNITS             17,038          10,105,561         .16
+MSV     MITCHELL SERVICES LIMITED         FPO                    3,854         199,238,740         .00
+MTS     METCASH LIMITED                   FPO                  233,967       1,022,362,821         .02
+MVA     VANECK VECTORS AUSTRALIAN PROPERT ETF UNITS              3,278          17,709,479         .01
+MVF     MONASH IVF GROUP LIMITED          FPO                   85,685         389,634,840         .02
+MVP     MEDICAL DEVELOPMENTS INTERNATIONA FPO                   19,311          69,454,260         .02
+MYD     MYDEAL.COM.AU LIMITED             FPO                    4,044         258,827,306         .00
+MYE     MASTERMYNE GROUP LIMITED          FPO                    2,577         106,116,145         .00
+MYL     MYANMAR METALS LIMITED            FPO                    3,728       1,901,109,600         .00
+MYR     MYER HOLDINGS LIMITED             FPO                    9,564         821,278,815         .00
+MYX     MAYNE PHARMA GROUP LIMITED        FPO                  184,794       1,679,068,131         .01
+NAB     NATIONAL AUSTRALIA BANK LIMITED   FPO                  630,638       3,297,128,357         .01
+NAN     NANOSONICS LIMITED                FPO                  109,592         301,048,442         .03
+NCK     NICK SCALI LIMITED                FPO                    7,216          81,000,000         .00
+NCM     NEWCREST MINING LIMITED           FPO                  407,183         816,556,534         .05
+NCZ     NEW CENTURY RESOURCES LIMITED     FPO                  482,522       1,209,928,046         .04
+NEA     NEARMAP LTD                       FPO                  682,253         492,370,297         .13
+NEC     NINE ENTERTAINMENT CO. HOLDINGS L FPO                1,153,509       1,705,393,253         .06
+NET     NETLINKZ LIMITED                  FPO                  273,601       2,488,148,584         .01
+NEU     NEUREN PHARMACEUTICALS LIMITED    FPO NZ                 7,855         114,608,108         .00
+NEW     NEW ENERGY SOLAR                  STAPLED               10,739         355,269,911         .00
+NGI     NAVIGATOR GLOBAL INVESTMENTS LIMI FPO                   67,709         162,147,897         .04
+NHC     NEW HOPE CORPORATION LIMITED      FPO                   65,795         832,357,082         .00
+NHF     NIB HOLDINGS LIMITED              FPO                  300,190         457,166,066         .06
+NIC     NICKEL MINES LIMITED              FPO                  835,726       2,515,029,051         .03
+NMT     NEOMETALS LTD                     FPO                   68,455         545,351,266         .01
+NOX     NOXOPHARM LIMITED                 FPO                    7,250         256,490,836         .00
+NSR     NATIONAL STORAGE REIT             STAPLED              432,275       1,017,691,898         .04
+NST     NORTHERN STAR RESOURCES LTD       FPO                  586,601         740,962,173         .07
+NSX     NSX LIMITED                       FPO                   11,345         257,305,928         .00
+NTO     NITRO SOFTWARE LIMITED            FPO                   25,954         190,352,878         .01
+NUF     NUFARM LIMITED                    FPO                  178,750         379,694,706         .04
+NVX     NOVONIX LIMITED                   FPO                   37,938         351,615,637         .01
+NWH     NRW HOLDINGS LIMITED              FPO                  367,777         429,628,269         .08
+NWL     NETWEALTH GROUP LIMITED           FPO                   21,858         237,694,997         .00
+NWS     NEWS CORPORATION..                B VOTING              10,616          44,543,392         .02
+NXL     NUIX LIMITED                      FPO                   10,714         317,304,794         .00
+NXS     NEXT SCIENCE LIMITED              FPO                      210         121,353,602         .00
+NXT     NEXTDC LIMITED                    FPO                  211,486         455,803,059         .04
+NZM     NZME LIMITED                      FPO NZX               27,391         197,570,061         .01
+OBL     OMNI BRIDGEWAY LIMITED            FPO FORUS             86,811         262,180,473         .03
+OBM     ORA BANDA MINING LTD              FPO                    2,986         842,221,957         .00
+OCC     ORTHOCELL LIMITED                 FPO                   12,043         185,386,957         .00
+OCL     OBJECTIVE CORPORATION LIMITED     FPO                   11,564          93,725,371         .01
+OEC     ORBITAL CORPORATION LIMITED       FPO                    1,543          77,658,776         .00
+OFX     OFX GROUP LIMITED                 FPO                   70,330         243,872,167         .02
+OGC     OCEANAGOLD CORPORATION            CDI 1:1              592,854          70,309,927         .84
+OKU     OKLO RESOURCES LIMITED            FPO                   65,580         504,029,812         .01
+OMH     OM HOLDINGS LIMITED               FPO 10C               23,142         738,623,337         .00
+OML     OOH!MEDIA LIMITED                 FPO                   95,920         591,788,280         .01
+OPT     OPTHEA LIMITED                    FPO                   51,112         337,664,169         .01
+ORA     ORORA LIMITED                     FPO                  216,534         932,729,083         .02
+ORE     OROCOBRE LIMITED                  FPO                   66,365         344,043,556         .01
+ORG     ORIGIN ENERGY LIMITED             FPO                  756,762       1,761,211,071         .04
+ORI     ORICA LIMITED                     FPO                  121,217         405,878,815         .03
+OSH     OIL SEARCH LIMITED                FPO 10T            1,900,555       2,077,850,664         .09
+OSL     ONCOSIL MEDICAL LTD               FPO                   54,759         815,881,756         .00
+OSP     OSPREY MEDICAL INC                CDI FORUS            221,136       1,623,346,962         .01
+OSX     OSTEOPORE LIMITED                 FPO                   19,296          78,037,800         .02
+OZL     OZ MINERALS LIMITED               FPO                  218,579         331,293,359         .06
+PAC     PACIFIC CURRENT GROUP LIMITED     FPO                       66          50,817,967         .00
+PAN     PANORAMIC RESOURCES LIMITED       FPO                  458,788       2,050,914,004         .02
+PAR     PARADIGM BIOPHARMACEUTICALS LIMIT FPO                   22,538         225,854,548         .01
+PBH     POINTSBET HOLDINGS LIMITED        FPO                   31,261         183,305,723         .01
+PBHO    POINTSBET HOLDINGS LIMITED        OPT SEP22                689          11,788,472         .00
+PDL     PENDAL GROUP LIMITED              FPO                  131,169         323,970,526         .04
+PDN     PALADIN ENERGY LTD                FPO                1,257,206       2,043,197,636         .06
+PEK     PEAK RESOURCES LIMITED            FPO                  110,517       1,549,447,131         .00
+PEN     PENINSULA ENERGY LIMITED          FPO                  784,543         893,351,625         .08
+PEX     PEEL MINING LIMITED               FPO                   50,000         341,643,814         .01
+PFP     PROPEL FUNERAL PARTNERS LIMITED   FPO                    1,440          99,946,016         .00
+PGC     PARAGON CARE LIMITED              FPO                   99,000         337,885,292         .02
+PGH     PACT GROUP HOLDINGS LTD           FPO                   17,960         343,993,595         .00
+PLL     PIEDMONT LITHIUM LTD              FPO                  270,800       1,390,704,858         .01
+PLS     PILBARA MINERALS LIMITED          FPO                1,935,047       2,728,513,635         .07
+PLY     PLAYSIDE STUDIOS LIMITED          FPO                   14,244         104,786,203         .01
+PM8     PENSANA RARE EARTHS PLC           CDI 1:1                9,527         124,068,729         .00
+PME     PRO MEDICUS LIMITED               FPO                    8,940         104,211,574         .00
+PMV     PREMIER INVESTMENTS LIMITED       FPO                   15,452         158,863,959         .01
+PNI     PINNACLE INVESTMENT MANAGEMENT GR FPO                    3,616         188,680,062         .00
+PNR     PANTORO LIMITED                   FPO                   80,000       1,408,398,228         .00
+PNV     POLYNOVO LIMITED                  FPO                  327,951         661,088,044         .05
+PPC     PEET LIMITED                      FPO                      398         483,300,489         .00
+PPE     PEOPLE INFRASTRUCTURE LTD         FPO                      840          92,341,953         .00
+PPH     PUSHPAY HOLDINGS LIMITED          FPO NZX              936,916       1,103,589,000         .08
+PPT     PERPETUAL LIMITED                 FPO                   45,521          56,509,004         .08
+PRN     PERENTI GLOBAL LIMITED            FPO                  261,213         704,295,221         .03
+PRT     PRIME MEDIA GROUP LIMITED         FPO                    9,992         366,330,303         .00
+PRU     PERSEUS MINING LIMITED            FPO                  921,393       1,226,056,870         .07
+PSI     PSC INSURANCE GROUP LIMITED       FPO                      159         312,496,442         .00
+PTM     PLATINUM ASSET MANAGEMENT LIMITED FPO                   44,961         586,678,900         .00
+PWH     PWR HOLDINGS LIMITED              FPO                    6,597         100,179,774         .00
+PWN     PARKWAY MINERALS NL               FPO                  166,555       1,900,753,983         .00
+PXS     PHARMAXIS LTD                     FPO                  247,211         397,179,798         .06
+QAN     QANTAS AIRWAYS LIMITED            FPO                1,934,488       1,886,044,698         .10
+QAU     BETASHARES GOLD BULLION ETF - CUR ETF UNITS            127,114          20,172,066         .63
+QBE     QBE INSURANCE GROUP LIMITED       FPO                  381,463       1,470,863,973         .02
+QFE     QUICKFEE LIMITED                  FPO                   79,947         201,545,715         .04
+QHAL    VANECK VECTORS MSCI WORLD EX AUST ETF UNITS             34,115           7,701,019         .44
+QIP     QANTM INTELLECTUAL PROPERTY LIMIT FPO                    3,978         135,647,091         .00
+QPON    BETASHARES AUSTRALIAN BANK SENIOR ETF UNITS                353          29,067,986         .00
+QRE     BETASHARES AUSTRALIAN RESOURCES S ETF UNITS             10,007          11,136,187         .09
+QUAL    VANECK VECTORS MSCI WORLD EX AUST ETF UNITS              1,141          40,877,135         .00
+QUB     QUBE HOLDINGS LIMITED             FPO                  555,956       1,902,819,621         .02
+RAC     RACE ONCOLOGY LTD                 FPO                    6,400         129,458,875         .00
+RBL     REDBUBBLE LIMITED                 FPO                   32,305         271,482,891         .01
+RDC     REDCAPE HOTEL GROUP               STAPLED                    3         552,195,195         .00
+REA     REA GROUP LTD                     FPO                   12,736         132,117,217         .01
+RED     RED 5 LIMITED                     FPO                  246,135       1,970,908,357         .01
+REG     REGIS HEALTHCARE LIMITED          FPO                    3,588         300,780,573         .00
+REH     REECE LIMITED                     FPO                   94,261         645,984,181         .01
+REX     REGIONAL EXPRESS HOLDINGS LIMITED FPO                   16,134         110,154,375         .01
+RFF     RURAL FUNDS GROUP                 STAPLED               18,828         338,905,436         .00
+RGI     ROTO-GRO INTERNATIONAL LIMITED    FPO                  107,001         223,928,016         .04
+RHC     RAMSAY HEALTH CARE LIMITED        FPO                   50,165         228,881,705         .02
+RHP     RHIPE LIMITED                     FPO                    1,980         161,075,376         .00
+RHY     RHYTHM BIOSCIENCES LIMITED        FPO                   28,166         201,495,811         .01
+RIC     RIDLEY CORPORATION LIMITED        FPO                    2,200         319,494,975         .00
+RIO     RIO TINTO LIMITED                 FPO                  144,682         371,216,214         .03
+RKN     RECKON LIMITED                    FPO                      789         113,294,832         .00
+RLG     ROOLIFE GROUP LTD                 FPO                   30,000         579,728,113         .00
+RLT     RENERGEN LIMITED                  CDI 1:1                    6          17,291,667         .00
+RMD     RESMED INC                        CDI 10:1              75,728         359,206,470         .02
+RMS     RAMELIUS RESOURCES LIMITED        FPO                1,180,650         809,017,266         .14
+ROO     ROOTS SUSTAINABLE AGRICULTURAL TE CDI 1:1               88,879         539,783,931         .01
+RRL     REGIS RESOURCES LIMITED           FPO                  666,998         512,027,079         .13
+RSG     RESOLUTE MINING LIMITED           FPO                1,682,088       1,103,892,706         .15
+RUL     RPMGLOBAL HOLDINGS LIMITED        FPO                   31,483         229,040,172         .01
+RWC     RELIANCE WORLDWIDE CORPORATION LI FPO                  218,173         790,094,765         .02
+RXM     REX MINERALS LIMITED              FPO                   15,487         376,237,586         .00
+S2R     S2 RESOURCES LTD                  FPO                    2,089         314,891,179         .00
+S32     SOUTH32 LIMITED                   FPO                4,433,412       4,780,759,751         .09
+SAR     SARACEN MINERAL HOLDINGS LIMITED  FPO                  622,968       1,107,645,715         .05
+SBM     ST BARBARA LIMITED                FPO                  336,717         705,358,114         .04
+SCG     SCENTRE GROUP                     STAPLED            2,306,050       5,190,378,339         .04
+SCP     SHOPPING CENTRES AUSTRALASIA PROP STAPLED              271,237       1,076,587,534         .02
+SDF     STEADFAST GROUP LIMITED           FPO                  219,218         868,476,036         .02
+SDG     SUNLAND GROUP LIMITED             FPO                    5,302         136,909,515         .00
+SEK     SEEK LIMITED                      FPO                   97,801         353,030,190         .02
+SES     SECOS GROUP LTD                   FPO                   15,300         533,526,862         .00
+SFR     SANDFIRE RESOURCES LIMITED        FPO                   89,169         178,251,333         .05
+SGF     SG FLEET GROUP LIMITED            FPO                    4,416         262,159,900         .00
+SGM     SIMS LIMITED                      FPO                   61,227         201,464,599         .03
+SGP     STOCKLAND                         STAPLED              897,357       2,387,081,662         .03
+SGR     THE STAR ENTERTAINMENT GROUP LIMI FPO                  332,561         952,014,210         .03
+SHL     SONIC HEALTHCARE LIMITED          FPO                  128,505         477,810,801         .02
+SHO     SPORTSHERO LIMITED                FPO                   23,462         396,667,661         .00
+SHV     SELECT HARVESTS LIMITED           FPO                   19,440         119,845,254         .01
+SIG     SIGMA HEALTHCARE LIMITED          FPO                   19,169       1,059,356,416         .00
+SIQ     SMARTGROUP CORPORATION LTD        FPO                   36,377         132,820,695         .02
+SKC     SKYCITY ENTERTAINMENT GROUP LIMIT FPO NZX               60,877         760,205,209         .00
+SKI     SPARK INFRASTRUCTURE GROUP        STP FORUS            528,262       1,738,044,591         .03
+SKT     SKY NETWORK TELEVISION LIMITED.   FPO NZ                 1,683       1,746,279,558         .00
+SLC     SUPERLOOP LIMITED                 FPO                  119,120         365,866,416         .03
+SLK     SEALINK TRAVEL GROUP LIMITED      FPO                   10,884         218,399,048         .00
+SLR     SILVER LAKE RESOURCES LIMITED     FPO                1,320,704         881,575,315         .15
+SLX     SILEX SYSTEMS LIMITED             FPO                   70,148         172,767,339         .04
+SM1     SYNLAIT MILK LIMITED              FPO NZX                1,853         218,581,661         .00
+SMP     SMARTPAY HOLDINGS LIMITED         FPO NZX                8,158         232,109,592         .00
+SO4     SALT LAKE POTASH LIMITED          FPO                   96,193         711,002,885         .01
+SOL     WASHINGTON H SOUL PATTINSON & COM FPO                   46,769         239,395,320         .02
+SOR     STRATEGIC ELEMENTS LIMITED        FPO                  406,856         378,379,891         .10
+SOV     SOVEREIGN CLOUD HOLDINGS LIMITED  FPO                      600          52,484,349         .00
+SPK     SPARK NEW ZEALAND LIMITED         FPO NZX              531,443       1,851,871,427         .02
+SPL     STARPHARMA HOLDINGS LIMITED       FPO                   21,459         406,015,212         .00
+SPT     SPLITIT PAYMENTS LTD              FPO                   64,973         338,759,587         .01
+SRG     SRG GLOBAL LIMITED                FPO                    5,000         445,796,415         .00
+SRN     SUREFIRE RESOURCES NL             FPO                  200,000         969,010,794         .02
+SRV     SERVCORP LIMITED                  FPO                      622          96,817,888         .00
+SSG     SHAVER SHOP GROUP LIMITED         FPO                    2,687         128,812,494         .00
+SSM     SERVICE STREAM LIMITED            FPO                  392,339         409,760,858         .09
+SSR     SSR MINING INC.                   CDI 1:1                  888          17,500,332         .00
+ST1     SPIRIT TECHNOLOGY SOLUTIONS LTD   FPO                   57,168         546,590,755         .01
+STA     STRANDLINE RESOURCES LIMITED      FPO                   59,500         522,895,557         .01
+STO     SANTOS LIMITED                    FPO                1,502,448       2,083,066,041         .07
+STW     SPDR S&P/ASX 200 FUND             ETF UNITS             20,088          68,810,631         .02
+STX     STRIKE ENERGY LIMITED             FPO                   28,735       1,721,503,684         .00
+SUBD    VANECK VECTORS AUSTRALIAN SUBORDI ETF UNITS                 56           4,800,105         .00
+SUL     SUPER RETAIL GROUP LIMITED        FPO                   44,900         225,826,500         .02
+SUN     SUNCORP GROUP LIMITED             FPO                  429,036       1,280,601,422         .03
+SVL     SILVER MINES LIMITED              FPO                  276,962       1,038,284,322         .02
+SVW     SEVEN GROUP HOLDINGS LIMITED      FPO                   50,934         339,357,656         .01
+SVY     STAVELY MINERALS LIMITED          FPO                      383         260,961,452         .00
+SWF     SELFWEALTH LIMITED                FPO                   28,446         205,357,919         .01
+SWM     SEVEN WEST MEDIA LIMITED          FPO                  141,279       1,538,034,368         .00
+SXE     SOUTHERN CROSS ELECTRICAL ENGINEE FPO                   22,463         248,050,102         .00
+SXL     SOUTHERN CROSS MEDIA GROUP LIMITE FPO                   70,463         264,214,027         .02
+SXY     SENEX ENERGY LIMITED              FPO                  106,822       1,463,717,064         .00
+SYD     SYDNEY AIRPORT                    STAPLED              708,885       2,698,700,253         .02
+SYR     SYRAH RESOURCES LIMITED           FPO                  472,623         477,087,059         .09
+SZL     SEZZLE INC.                       CDI FORUS              3,355         101,648,792         .00
+TAH     TABCORP HOLDINGS LIMITED          FPO                  647,269       2,217,139,394         .02
+TCL     TRANSURBAN GROUP                  STAPLED              636,852       2,736,546,715         .02
+TGP     360 CAPITAL GROUP                 STAPLED               16,366         229,522,645         .00
+TGR     TASSAL GROUP LIMITED              FPO                  235,932         211,334,135         .11
+TIE     TIETTO MINERALS LIMITED           FPO                    9,343         453,310,456         .00
+TLG     TALGA GROUP LTD                   FPO                   61,671         282,507,834         .02
+TLS     TELSTRA CORPORATION LIMITED.      FPO                1,744,477      11,893,297,855         .01
+TLX     TELIX PHARMACEUTICALS LIMITED     FPO                    3,876         280,405,322         .00
+TMT     TECHNOLOGY METALS AUSTRALIA LIMIT FPO                    1,892         149,391,390         .00
+TNE     TECHNOLOGY ONE LIMITED            FPO                  200,720         321,242,976         .06
+TNT     TESSERENT LIMITED                 FPO                      210         998,319,200         .00
+TNY     TINYBEANS GROUP LTD               FPO                    1,582          45,965,400         .00
+TPG     TPG TELECOM LIMITED.              FPO                   76,447       1,859,341,669         .00
+TPW     TEMPLE & WEBSTER GROUP LTD        FPO                   22,720         120,452,928         .01
+TRS     THE REJECT SHOP LIMITED           FPO                   15,521          38,276,622         .04
+TRU     TRUSCREEN GROUP LIMITED           FPO NZX              732,944         360,966,253         .20
+TRY     TROY RESOURCES LIMITED            FPO                   10,000         757,563,768         .00
+TTB     TOTAL BRAIN LIMITED               FPO                      737         108,303,784         .00
+TTI     TRAFFIC TECHNOLOGIES LTD.         FPO                  419,402         482,224,695         .08
+TTM     TITAN MINERALS LIMITED            FPO                   21,316       1,139,452,483         .00
+TTT     TITOMIC LIMITED                   FPO                   11,549         153,249,669         .00
+TUA     TUAS LIMITED                      FPO                   15,502         463,909,021         .00
+TWE     TREASURY WINE ESTATES LIMITED     FPO                  402,425         721,440,424         .05
+TYR     TYRO PAYMENTS LIMITED             FPO                   21,616         507,642,993         .00
+UMG     UNITED MALT GROUP LIMITED         FPO                  368,384         299,179,135         .12
+URW     UNIBAIL-RODAMCO-WESTFIELD         CDI 20:1             163,835         240,218,360         .06
+UWL     UNITI GROUP LIMITED               FPO                   93,957         637,587,405         .01
+VACF    VANGUARD AUSTRALIAN CORP FIXED IN ETF UNITS              3,800           8,733,366         .04
+VAF     VANGUARD AUSTRALIAN FIXED INTERES ETF UNITS             16,356          29,689,453         .05
+VAN     VANGO MINING LIMITED              FPO                   35,011       1,030,954,860         .00
+VAP     VANGUARD AUSTRALIAN PROPERTY SECU ETF UNITS                330          22,024,888         .00
+VAS     VANGUARD AUSTRALIAN SHARES INDEX  ETF UNITS             15,378          84,791,681         .01
+VBLD    VANGUARD GLOBAL INFRASTRUCTURE IN ETF UNITS                463           2,054,210         .02
+VBND    VANGUARD GLOBAL AGGREGATE BOND IN ETF UNITS              3,428           6,046,888         .05
+VCX     VICINITY CENTRES                  STAPLED            3,774,404       4,552,275,358         .08
+VDHG    VANGUARD DIVERSIFIED HIGH GROWTH  ETF UNITS             23,611          11,544,717         .20
+VEA     VIVA ENERGY GROUP LIMITED         FPO                  944,804       1,607,638,647         .05
+VEQ     VANGUARD FTSE EUROPE SHARES ETF   ETF UNITS              6,759           4,113,191         .16
+VGB     VANGUARD AUSTRALIAN GOVERNMENT BO ETF UNITS             17,358          10,878,439         .16
+VGL     VISTA GROUP INTERNATIONAL LIMITED FPO NZX                4,583         228,614,812         .00
+VGS     VANGUARD MSCI INDEX INTERNATIONAL ETF UNITS             21,837          31,195,864         .07
+VHT     VOLPARA HEALTH TECHNOLOGIES LIMIT FPO NZ                 1,469         251,003,081         .00
+VHY     VANGUARD AUSTRALIAN SHARES HIGH Y ETF UNITS              6,227          26,821,363         .02
+VIF     VANGUARD INTERNATIONAL FIXED INTE ETF UNITS              5,259          12,305,336         .04
+VML     VITAL METALS LIMITED              FPO                      216       2,629,194,622         .00
+VMS     VENTURE MINERALS LIMITED          FPO                   86,532       1,025,944,170         .00
+VMT     VMOTO LIMITED                     FPO                   60,197         277,347,515         .02
+VMY     VIMY RESOURCES LIMITED            FPO                   70,102         778,667,069         .00
+VOC     VOCUS GROUP LIMITED               FPO                  211,088         621,214,651         .03
+VR1     VECTION TECHNOLOGIES LTD          FPO                    1,144         965,849,047         .00
+VRT     VIRTUS HEALTH LIMITED             FPO                    5,349          80,389,938         .00
+VRX     VRX SILICA LIMITED                FPO                      590         502,065,129         .00
+VSO     VANGUARD MSCI AUSTRALIAN SMALL CO ETF UNITS                 80           7,241,594         .00
+VTH     VITALHARVEST FREEHOLD TRUST       UNIT                   3,948         185,000,000         .00
+VUK     VIRGIN MONEY UK PLC               CDI 1:1              977,078         914,832,483         .10
+VVA     VIVA LEISURE LIMITED              FPO                      362          81,956,221         .00
+VXR     VENTUREX RESOURCES LIMITED        FPO                      394         386,846,516         .00
+WAF     WEST AFRICAN RESOURCES LIMITED    FPO                   76,834         878,682,646         .00
+WBC     WESTPAC BANKING CORPORATION       FPO                  688,397       3,668,591,808         .01
+WEB     WEBJET LIMITED                    FPO                  581,025         339,002,523         .17
+WES     WESFARMERS LIMITED                FPO                  247,565       1,133,840,242         .02
+WGX     WESTGOLD RESOURCES LIMITED.       FPO                1,123,741         423,855,270         .26
+WHC     WHITEHAVEN COAL LIMITED           FPO                1,581,457       1,032,644,232         .15
+WHK     WHITEHAWK LIMITED                 FPO                   39,111         198,177,373         .02
+WMX     WILUNA MINING CORPORATION LIMITED FPO                    5,201         117,247,732         .00
+WOR     WORLEY LIMITED                    FPO                  155,342         522,073,628         .03
+WOW     WOOLWORTHS GROUP LIMITED          FPO                  294,791       1,265,363,083         .02
+WPL     WOODSIDE PETROLEUM LTD            FPO                  735,271         962,225,814         .07
+WPP     WPP AUNZ LTD                      FPO                    6,702         852,151,870         .00
+WPR     WAYPOINT REIT                     STAPLED              230,953         785,022,077         .02
+WSA     WESTERN AREAS LIMITED             FPO                  186,395         275,067,005         .06
+WSP     WHISPIR LIMITED                   FPO                   39,924         104,261,314         .03
+WTC     WISETECH GLOBAL LIMITED           FPO                  144,910         323,756,165         .04
+XRO     XERO LIMITED                      FPO                   90,531         146,679,692         .06
+XTE     XTEK LIMITED.                     FPO                    7,636          70,844,560         .01
+Z1P     ZIP CO LIMITED.                   FPO                  891,919         541,603,343         .16
+ZEL     Z ENERGY LIMITED.                 FPO NZX                3,367         520,476,853         .00
+ZEO     ZEOTECH LIMITED                   FPO                   20,474       1,399,051,184         .00
+ZLD     ZELIRA THERAPEUTICS LIMITED       FPO                  633,158       1,185,322,966         .05
+ZNO     ZOONO GROUP LIMITED               FPO                   13,649         164,112,707         .00
