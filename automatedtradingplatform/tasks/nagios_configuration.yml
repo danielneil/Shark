@@ -53,13 +53,6 @@
    owner: nagios
    group: nagios
 
-- name: Adding out custom service groups file
-  copy:
-   src: servicegroups.cfg
-   dest: /usr/local/nagios/etc/conf.d
-   owner: nagios
-   group: nagios
-
 - name: Restart apache2
   service: 
    name: apache2
