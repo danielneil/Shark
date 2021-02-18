@@ -463,7 +463,7 @@ WBC:
   
 WPL:
 
- Check RSI2: 
+ RSI Check: 
   description: "RSI 14 Day - Warn if either side of 10 or 90"
   check_command: check_rsi
   ticker: WPL
