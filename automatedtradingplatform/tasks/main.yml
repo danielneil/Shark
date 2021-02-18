@@ -143,8 +143,6 @@
 
 - include: website_check.yml
 
-- include: check_rsi.yml
-
 - include: check_short.yml
 
 - name: Running plugin smoke tests
