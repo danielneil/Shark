@@ -7,9 +7,9 @@
 # <check_unique_name>
 #  description: "<Check description - what appears in the web UI>"
 #  check_command: <check_command>
-#   <check_argument>: <arg>
-#   <check_argument>: <arg>
-#   <check_argument>: <arg>
+#  <check_argument>: <arg>
+#  <check_argument>: <arg>
+#  <check_argument>: <arg>
 
 AMC:
 
