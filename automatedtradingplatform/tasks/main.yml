@@ -141,8 +141,6 @@
 
 - include: back_testing.yml
 
-- include: website_check.yml
-
 - include: check_short.yml
 
 - name: Running plugin smoke tests
