@@ -1,5 +1,16 @@
 # This is how you apply each check to specifics ticker.
 
+# The structure of this file is important.
+
+# <ticker>:
+#
+# <check_unique_name>
+#  description: "<Check description - what appears in the web UI>"
+#  check_command: <check_command>
+#  <check_argument>: <arg>
+#  <check_argument>: <arg>
+#  <check_argument>: <arg>
+
 AMC:
 
  check_rsi2: 
