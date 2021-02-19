@@ -11,6 +11,7 @@ The plugins enable the platform to monitor and alert on just about **anything** 
 * [check_sma](#check_sma)
 * [check_website_for_changes](#check_website_for_changes)
 * [check_vix](#check_vix)
+* [check_backtest](#check_backtest)
 * [check_ema](#check_ema)
 * [check_trend](#check_trend)
 * [check_short_interest](#check_short_interest)
@@ -113,6 +114,19 @@ output, you can decide to set certain warning and critical threshold levels.
 
 **Optional Arguments**:
   -h, --help  show this help message and exit
+## <a name="check_backtest"/>check_backtest
+
+**Usage:** check_backtest.py [-h] [-t TICKER] [-s BACKTEST]
+
+This executes the backtest code. For a simple backtest example, see the
+template
+
+**Optional Arguments**:
+  -h, --help            show this help message and exit
+  -t TICKER, --ticker TICKER
+                        Ticker code of the stock in question
+  -s BACKTEST, --backtest BACKTEST
+                        The file name of the backtest
 ## <a name="check_ema"/>check_ema
 
 **Usage:** check_ema.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
