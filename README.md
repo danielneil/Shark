@@ -30,7 +30,7 @@ cd Shark && ./build.sh
 ```
 6. Navigate to https://shark-server/nagios using the aforementioned credentials.
 
-# Screen Shot
+# Screen Shots
 
 ![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/screenshot.JPG?raw=true)
 
