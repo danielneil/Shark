@@ -40,7 +40,7 @@ AMC:
  Backtest:
   description: "BACKTEST: Moving Averages"
   check_command: check_backtest
-  ticker: ANZ
+  ticker: AMC
   name: backtest_moving_averages.py
   shares: 1000
   capital: 100000
@@ -71,6 +71,14 @@ ANZ:
   ticker: ANZ
   name: moving_averages.py
   
+ Backtest:
+  description: "BACKTEST: Moving Averages"
+  check_command: check_backtest
+  ticker: ANZ
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
+  
 BHP:
 
  RSI Check: 
@@ -96,6 +104,14 @@ BHP:
   check_command: check_strategy
   ticker: BHP
   name: moving_averages.py
+ 
+ Backtest:
+  description: "BACKTEST: Moving Averages"
+  check_command: check_backtest
+  ticker: BHP
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
 
 BXB:
 
@@ -122,6 +138,14 @@ BXB:
   check_command: check_strategy
   ticker: BXB
   name: moving_averages.py
+  
+ Backtest:
+  description: "BACKTEST: Moving Averages"
+  check_command: check_backtest
+  ticker: BXB
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
 
 CBA:
 
