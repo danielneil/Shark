@@ -22,23 +22,23 @@ AMC:
   max: 90
 
  Simple Moving Average - 10 Days:
-  description: "Moving Average [ 50 Day ]"
+  description: "Moving Average: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average [ 5 Day ]"
+  description: "Moving Average: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
  Strategy: 
-  description: "Moving Averages [ v.01 ]"
+  description: "Stategy: Moving Averages"
   check_command: check_strategy
   ticker: AMC
   name: moving_averages.py
    
  Backtest:
-  description: "Backtest: Moving Averages [ v.01 ]"
+  description: "Backtest: Moving Averages"
   check_command: check_backtest
   ticker: ANZ
   name: moving_averages
