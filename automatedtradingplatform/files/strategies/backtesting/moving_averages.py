@@ -21,8 +21,8 @@ cmd_arg_help = "Example Backtest: trigger a buy when the shorter simple moving a
 strategy_name = "Moving Averages Backtest"
 
 class MyStrategy(strategy.BacktestingStrategy):
-    def __init__(self, feed, instrument, smaPeriod):
-        super(MyStrategy, self).__init__(feed, 1000)
+    def __init__(self, feed, instrument, smaPeriod, shares, capital):
+        super(MyStrategy, self).__init__(feed, capital)
         self.__position = None
         self.__instrument = instrument
         # We'll use adjusted close values instead of regular close values.
@@ -55,19 +55,19 @@ class MyStrategy(strategy.BacktestingStrategy):
         if self.__position is None:
             if bar.getPrice() > self.__sma[-1]:
                 # Enter a buy market order for 10 shares. The order is good till canceled.
-                self.__position = self.enterLong(self.__instrument, 10, True)
+                self.__position = self.enterLong(self.__instrument, shares, True)
         # Check if we have to exit the position.
         elif bar.getPrice() < self.__sma[-1] and not self.__position.exitActive():
             self.__position.exitMarket()
 
 
-def run_strategy(smaPeriod, ticker):
+def run_strategy(smaPeriod, ticker, shares, capital):
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
     feed.addBarsFromCSV(ticker, "/atp/ticker-data/"+ticker+".AX.txt")
 
     # Evaluate the strategy with the feed.
-    myStrategy = MyStrategy(feed, ticker, smaPeriod)
+    myStrategy = MyStrategy(feed, ticker, smaPeriod, shares, capital)
     myStrategy.run()
     print("Final portfolio value: $%.2f" % myStrategy.getBroker().getEquity())
 
@@ -75,12 +75,24 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
+    parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
+    parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
     args = parser.parse_args()
 
     if not args.ticker:
         print ("UNKNOWN - No ticker specified")
         sys.exit(UNKNOWN)
 
+    if not args.shares:
+        print("UNKNOWN - No shares specified")
+        sys.exit(UNKNOWN)
+
+    if not args.capital:
+        print("UNKNOWN - No capital amount specified")
+        sys.exit(UNKNOWN)
+
     ticker = args.ticker 
+    shares = int(args.shares)
+    capital = int(args.capital)
     
-    run_strategy(15, ticker)
+    run_strategy(15, ticker, shares, capital)
