@@ -74,7 +74,11 @@ def run_strategy(smaPeriod, ticker, shares, capital):
     maStrategy.attachAnalyzer(sharpeRatioAnalyzer)
     
     maStrategy.run()
+    
     print("Final portfolio value: $%.2f" % maStrategy.getBroker().getEquity())
+    
+    print("Sharpe ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+
 
 if __name__ == "__main__":
 
