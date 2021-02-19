@@ -38,7 +38,7 @@ AMC:
   name: moving_averages.py
    
  Backtest:
-  description: "Backtest of Moving Averages Strategy - v.01"
+  description: "Backtest: Moving Averages Strategy - v.01"
   check_command: check_backtest
   ticker: ANZ
   name: moving_averages
