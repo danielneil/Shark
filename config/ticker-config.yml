@@ -32,13 +32,13 @@ AMC:
   period: 5
 
  Strategy: 
-  description: "Stategy: Moving Averages"
+  description: "STRATEGY: Moving Averages"
   check_command: check_strategy
-  ticker: AMC
+  ticker: ANZ
   name: moving_averages.py
    
  Backtest:
-  description: "Backtest: Moving Averages"
+  description: "BACKTEST: Moving Averages"
   check_command: check_backtest
   ticker: ANZ
   name: backtest_moving_averages.py
