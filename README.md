@@ -24,8 +24,10 @@ See the example [strategy](https://github.com/danielneil/AutomatedTradingPlatfor
 
 4. Change the http credentials in ./site.yml to your liking.
 
-5. Run: cd Shark && ./build.sh
-
+5. Run: 
+```
+cd Shark && ./build.sh
+```
 6. Navigate to https://shark-server/nagios using the aforementioned credentials.
 
 # Screen Shot
