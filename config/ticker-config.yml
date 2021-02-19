@@ -173,6 +173,14 @@ CBA:
   ticker: CBA
   name: moving_averages.py
 
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: CBA
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
+
 CSL:
 
  RSI Check: 
@@ -198,6 +206,14 @@ CSL:
   check_command: check_strategy
   ticker: CSL
   name: moving_averages.py
+ 
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: CSL
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
 
 GMG:
 
@@ -225,6 +241,14 @@ GMG:
   ticker: GMG
   name: moving_averages.py
    
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: GMG
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
+   
 IAG:
 
  RSI Check: 
@@ -251,6 +275,14 @@ IAG:
   ticker: IAG
   name: moving_averages.py
  
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: IAG
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
+
 MQG:
 
  RSI Check: 
@@ -276,6 +308,14 @@ MQG:
   check_command: check_strategy
   ticker: MQG
   name: moving_averages.py
+
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: MQG
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000
 
 NAB:
 
@@ -303,6 +343,14 @@ NAB:
   ticker: NAB
   name: moving_averages.py
    
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: NAB
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000  
+   
 NCM:
 
  RSI Check: 
@@ -328,6 +376,14 @@ NCM:
   check_command: check_strategy
   ticker: NCM
   name: moving_averages.py
+
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: NCM
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000  
 
 RIO:
 
@@ -355,6 +411,14 @@ RIO:
   ticker: RIO
   name: moving_averages.py
   
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: RIO
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000  
+
 SCG:
 
  RSI Check: 
@@ -380,6 +444,14 @@ SCG:
   check_command: check_strategy
   ticker: SCG
   name: moving_averages.py
+
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: SCG
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000  
 
 SUN:
 
@@ -407,6 +479,14 @@ SUN:
   ticker: SUN
   name: moving_averages.py
 
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: SUN
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000 
+
 TLS:
 
  RSI Check: 
@@ -433,6 +513,14 @@ TLS:
   ticker: TLS
   name: moving_averages.py
 
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: TLS
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000 
+ 
 TCL:
 
  RSI Check: 
@@ -458,6 +546,14 @@ TCL:
   check_command: check_strategy
   ticker: TCL
   name: moving_averages.py
+  
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: TCL
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000 
    
 WES:
 
@@ -484,7 +580,15 @@ WES:
   check_command: check_strategy
   ticker: WES
   name: moving_averages.py
-
+  
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: WES
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000 
+  
 WBC:
 
  RSI Check: 
@@ -511,6 +615,14 @@ WBC:
   ticker: WBC
   name: moving_averages.py
   
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: WBC
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000 
+
 WPL:
 
  RSI Check: 
@@ -537,6 +649,14 @@ WPL:
   ticker: WPL
   name: moving_averages.py
   
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: WPL
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000 
+  
 WOW:
 
  RSI Check: 
@@ -562,3 +682,11 @@ WOW:
   check_command: check_strategy
   ticker: WOW
   name: moving_averages.py
+  
+ Backtest:
+  description: "BACKTEST: [ Moving Averages ]"
+  check_command: check_backtest
+  ticker: WOW
+  name: backtest_moving_averages.py
+  shares: 1000
+  capital: 100000 
