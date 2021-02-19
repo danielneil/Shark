@@ -26,7 +26,7 @@ See the example [strategy](https://github.com/danielneil/AutomatedTradingPlatfor
 
 5. Run: 
 ```
-cd Shark && ./build.sh
+git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 ```
 6. Navigate to https://shark-server/nagios using the aforementioned credentials.
 
