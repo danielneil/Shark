@@ -6,7 +6,8 @@ from pyalgotrade import strategy
 from pyalgotrade.barfeed import yahoofeed
 from pyalgotrade.technical import ma
 
-import argpase
+import argparse
+import sys
 
 # Nagios constants. 
 
