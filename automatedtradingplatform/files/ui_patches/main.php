@@ -185,7 +185,7 @@ $this_year = '2020';
 
 	<div id='splashrow1'>
 
-		<div id="splashbox1" class="splashbox splashbox-clear">
+		<div id="sp1" class="splashbox splashbox-clear">
 			<h2>Trading Overview</h2>
 			<ul>
 				<li><a href="https://go.nagios.com/nagioscore/startmonitoring" target="_blank">Start monitoring your infrastructure</a></li>
@@ -198,7 +198,7 @@ $this_year = '2020';
 			</ul>
 		</div>
 
-		<div id="splashbox2" class="splashbox">
+		<div id="sp2" class="splashbox">
 			<h2>Top Opportunities</h2>
 			<ul>
 				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
@@ -210,7 +210,7 @@ $this_year = '2020';
 			</ul>
 		</div>
 
-		<div id="splashbox3" class="splashbox">
+		<div id="sp3" class="splashbox">
 			<h2>Top Opportunities</h2>
 			<ul>
 				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
@@ -224,7 +224,7 @@ $this_year = '2020';
 		
 	</div><!-- end splashrow1 -->
 
-	<div id="splashrow2">
+	<div id="sp1">
 		<div id="splashbox1" class="splashbox splashbox-clear">
 			<h2>Trading Overview</h2>
 			<ul>
@@ -238,7 +238,7 @@ $this_year = '2020';
 			</ul>
 		</div>
 
-		<div id="splashbox2" class="splashbox">
+		<div id="sp2" class="splashbox">
 			<h2>Top Opportunities</h2>
 			<ul>
 				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
@@ -250,7 +250,7 @@ $this_year = '2020';
 			</ul>
 		</div>
 
-		<div id="splashbox3" class="splashbox">
+		<div id="sp3" class="splashbox">
 			<h2>Top Opportunities</h2>
 			<ul>
 				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
