@@ -106,7 +106,7 @@ BHP:
   name: moving_averages.py
  
  Backtest:
-  description: "BACKTEST: Moving Averages"
+  description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: BHP
   name: backtest_moving_averages.py
@@ -140,7 +140,7 @@ BXB:
   name: moving_averages.py
   
  Backtest:
-  description: "BACKTEST: Moving Averages"
+  description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: BXB
   name: backtest_moving_averages.py
