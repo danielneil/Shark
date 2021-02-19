@@ -5,6 +5,7 @@ from __future__ import print_function
 from pyalgotrade import strategy
 from pyalgotrade.barfeed import yahoofeed
 from pyalgotrade.technical import ma
+from pyalgotrade.stratanalyzer import sharpe
 
 import argparse
 import sys
@@ -68,6 +69,10 @@ def run_strategy(smaPeriod, ticker, shares, capital):
 
     # Evaluate the strategy with the feed.
     maStrategy = MovingAverages(feed, ticker, smaPeriod, shares, capital)
+    
+    sharpeRatioAnalyzer = sharpe.SharpeRatio()
+    maStrategy.attachAnalyzer(sharpeRatioAnalyzer)
+    
     maStrategy.run()
     print("Final portfolio value: $%.2f" % maStrategy.getBroker().getEquity())
 
