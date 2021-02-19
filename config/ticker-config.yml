@@ -395,7 +395,7 @@ RIO:
   min: 10
   max: 90
 
-  Simple Moving Average - 50 Days:
+ Simple Moving Average - 50 Days:
   description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
   check_command: check_sma 
   period: 50
