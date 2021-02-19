@@ -20,9 +20,9 @@ cmd_arg_help = "Example Backtest: trigger a buy when the shorter simple moving a
 
 strategy_name = "Moving Averages Backtest"
 
-class MyStrategy(strategy.BacktestingStrategy):
+class MovingAverages(strategy.BacktestingStrategy):
     def __init__(self, feed, instrument, smaPeriod, shares, capital):
-        super(MyStrategy, self).__init__(feed, capital)
+        super(MovingAverages, self).__init__(feed, capital)
         self.__position = None
         self.__instrument = instrument
         # We'll use adjusted close values instead of regular close values.
@@ -67,9 +67,9 @@ def run_strategy(smaPeriod, ticker, shares, capital):
     feed.addBarsFromCSV(ticker, "/atp/ticker-data/"+ticker+".AX.txt")
 
     # Evaluate the strategy with the feed.
-    myStrategy = MyStrategy(feed, ticker, smaPeriod, shares, capital)
-    myStrategy.run()
-    print("Final portfolio value: $%.2f" % myStrategy.getBroker().getEquity())
+    maStrategy = MovingAverages(feed, ticker, smaPeriod, shares, capital)
+    maStrategy.run()
+    print("Final portfolio value: $%.2f" % maStrategy.getBroker().getEquity())
 
 if __name__ == "__main__":
 
