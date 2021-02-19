@@ -6,6 +6,19 @@ from pyalgotrade import strategy
 from pyalgotrade.barfeed import yahoofeed
 from pyalgotrade.technical import ma
 
+import argpase
+
+# Nagios constants. 
+
+OK           = 0
+WARNING      = 1
+CRITICAL     = 2
+UNKNOWN      = 3
+
+cmd_arg_help = "Example Backtest: trigger a buy when the shorter simple moving average, crosses above the longer simple moving average"
+
+strategy_name = "Moving Averages Backtest"
+
 class MyStrategy(strategy.BacktestingStrategy):
     def __init__(self, feed, instrument, smaPeriod):
         super(MyStrategy, self).__init__(feed, 1000)
@@ -47,14 +60,26 @@ class MyStrategy(strategy.BacktestingStrategy):
             self.__position.exitMarket()
 
 
-def run_strategy(smaPeriod):
+def run_strategy(smaPeriod, ticker):
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
-    feed.addBarsFromCSV("BHP", "/atp/ticker-data/BHP.AX.txt")
+    feed.addBarsFromCSV(ticker, "/atp/ticker-data/"+ticker+".AX.txt")
 
     # Evaluate the strategy with the feed.
-    myStrategy = MyStrategy(feed, "BHP", smaPeriod)
+    myStrategy = MyStrategy(feed, ticker, smaPeriod)
     myStrategy.run()
     print("Final portfolio value: $%.2f" % myStrategy.getBroker().getEquity())
 
-run_strategy(15)
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description=cmd_arg_help)
+    parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
+    args = parser.parse_args()
+
+    if not args.ticker:
+        print ("UNKNOWN - No ticker specified")
+        sys.exit(UNKNOWN)
+
+    ticker = args.ticker 
+    
+    run_strategy(15, ticker)
