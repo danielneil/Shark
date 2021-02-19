@@ -32,14 +32,12 @@ class MovingAverages(strategy.BacktestingStrategy):
 
     def onEnterOk(self, position):
         execInfo = position.getEntryOrder().getExecutionInfo()
-        self.info("BUY at $%.2f" % (execInfo.getPrice()))
 
     def onEnterCanceled(self, position):
         self.__position = None
 
     def onExitOk(self, position):
         execInfo = position.getExitOrder().getExecutionInfo()
-        self.info("SELL at $%.2f" % (execInfo.getPrice()))
         self.__position = None
 
     def onExitCanceled(self, position):
@@ -77,7 +75,7 @@ def run_strategy(smaPeriod, ticker, shares, capital):
     
     # print("Final portfolio value: $%.2f" % maStrategy.getBroker().getEquity())
     
-    print("Sharpe ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+    print("Sharpe ratio: %.2f\n" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
 
 if __name__ == "__main__":

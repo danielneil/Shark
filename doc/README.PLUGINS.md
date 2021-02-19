@@ -116,7 +116,8 @@ output, you can decide to set certain warning and critical threshold levels.
   -h, --help  show this help message and exit
 ## <a name="check_backtest"/>check_backtest
 
-**Usage:** check_backtest.py [-h] [-t TICKER] [-s BACKTEST]
+**Usage:** check_backtest.py [-h] [-t TICKER] [-b BACKTEST] [-s SHARES]
+                         [-c CAPITAL]
 
 This executes the backtest code. For a simple backtest example, see the
 template
@@ -125,8 +126,13 @@ template
   -h, --help            show this help message and exit
   -t TICKER, --ticker TICKER
                         Ticker code of the stock in question
-  -s BACKTEST, --backtest BACKTEST
+  -b BACKTEST, --backtest BACKTEST
                         The file name of the backtest
+  -s SHARES, --shares SHARES
+                        The imaginary number of shares to use in the backtest
+  -c CAPITAL, --capital CAPITAL
+                        The imaginary amount of a capital which to use in the
+                        backtest
 ## <a name="check_ema"/>check_ema
 
 **Usage:** check_ema.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
