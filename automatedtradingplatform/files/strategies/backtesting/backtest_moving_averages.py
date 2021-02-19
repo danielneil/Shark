@@ -75,7 +75,14 @@ def run_strategy(smaPeriod, ticker, shares, capital):
     
     # print("Final portfolio value: $%.2f" % maStrategy.getBroker().getEquity())
     
-    print("Sharpe ratio: %.2f\n" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+    print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+
+    sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
+
+    if sharpeRatio > 0: 
+        sys.exit(OK)
+    else:
+        sys.exit(CRITICAL)
 
 
 if __name__ == "__main__":

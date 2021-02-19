@@ -54,6 +54,6 @@ if __name__ == "__main__":
 
     exitcode = process.wait()
 
-    print(stdout, stderr)
+    print(stdout)
 
     sys.exit(exitcode)
