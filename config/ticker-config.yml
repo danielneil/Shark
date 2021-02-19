@@ -41,7 +41,7 @@ AMC:
   description: "Backtest: Moving Averages"
   check_command: check_backtest
   ticker: ANZ
-  name: moving_averages
+  name: backtest_moving_averages.py
   shares: 1000
   capital: 100000
  
