@@ -102,14 +102,11 @@ def process_service_config(a_dict,ticker):
 
             # the descript will always be the first element.
             if str(k) == "description":
-
                 print("\tservice_description " + str(v))
             else:
-            
                 if str(k) == "check_command":
                     command_str = "check_command " + str(v)
                 else:
-                
                     # print the command arguments
                     command_str += "!" + str(v)
 
