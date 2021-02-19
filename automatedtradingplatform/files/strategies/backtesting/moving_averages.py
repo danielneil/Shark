@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+
 from __future__ import print_function
 
 from pyalgotrade import strategy
-from pyalgotrade.barfeed import quandlfeed
+from pyalgotrade.barfeed import yahoofeed
 from pyalgotrade.technical import ma
 
 
@@ -48,7 +50,7 @@ class MyStrategy(strategy.BacktestingStrategy):
 
 def run_strategy(smaPeriod):
     # Load the bar feed from the CSV file
-    feed = quandlfeed.Feed()
+    feed = yahoofeed.Feed()
     feed.addBarsFromCSV("BHP", "/atp/ticker-data/BHP.AX.txt")
 
     # Evaluate the strategy with the feed.
