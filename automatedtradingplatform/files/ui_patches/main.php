@@ -209,8 +209,8 @@ $this_year = '2020';
 				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
 			</ul>
 		</div>
-
-	
+		<div id="splashbox3" class="splashbox">
+		</div>
 
 	</div><!-- end splashrow1 -->
 
