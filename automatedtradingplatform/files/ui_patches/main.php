@@ -186,7 +186,7 @@ $this_year = '2020';
 	<div id='splashrow1'>
 
 		<div id="splashbox1" class="splashbox splashbox-clear">
-			<h2>Get Started</h2>
+			<h2>Trading Overview</h2>
 			<ul>
 				<li><a href="https://go.nagios.com/nagioscore/startmonitoring" target="_blank">Start monitoring your infrastructure</a></li>
 				<li><a href="https://go.nagios.com/nagioscore/changelook" target="_blank">Change the look and feel of Nagios</a></li>
@@ -199,7 +199,7 @@ $this_year = '2020';
 		</div>
 
 		<div id="splashbox2" class="splashbox">
-			<h2>Quick Links</h2>
+			<h2>Top Opportunities</h2>
 			<ul>
 				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
 				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
@@ -210,21 +210,18 @@ $this_year = '2020';
 			</ul>
 		</div>
 
-		<div id="splashbox3" class="splashbox3-empty"><!-- youtube playlist -->
-		</div>
-
 	</div><!-- end splashrow1 -->
 
 	<div id="splashrow2">
 
 		<div id="splashbox4" class="splashbox splashbox-clear"><!-- latest news feed -->
-			<h2>Latest News</h2>
+			<h2>Backtest Results</h2>
 			<div id="splashbox4-contents">
 			</div>
 		</div>
 
 		<div id="splashbox5" class="splashbox"><!-- core promo feed -->
-			<h2>Don't Miss...</h2>
+			<h2>Data Info</h2>
 			<div id="splashbox5-contents">
 			</div>
 		</div>
