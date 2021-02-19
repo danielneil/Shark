@@ -27,7 +27,7 @@ AMC:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average: [ 5 Day ]"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -61,7 +61,7 @@ ANZ:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -87,7 +87,7 @@ BHP:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -113,7 +113,7 @@ BXB:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -139,7 +139,7 @@ CBA:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -165,7 +165,7 @@ CSL:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -191,7 +191,7 @@ GMG:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -217,7 +217,7 @@ IAG:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -243,7 +243,7 @@ MQG:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -269,7 +269,7 @@ NAB:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -295,7 +295,7 @@ NCM:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -321,7 +321,7 @@ RIO:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -347,7 +347,7 @@ SCG:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -373,7 +373,7 @@ SUN:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -399,7 +399,7 @@ TLS:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -425,7 +425,7 @@ TCL:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -451,7 +451,7 @@ WES:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -477,7 +477,7 @@ WBC:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -503,7 +503,7 @@ WPL:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -529,7 +529,7 @@ WOW:
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "Moving Average 5 Day"
+  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
