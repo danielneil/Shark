@@ -8,9 +8,6 @@
           webui_auth_user: shark
           webui_auth_pass: yourswimmingwithsharks
 
-          # ---- Strategiy variables
-          set_strategy: "moving_averages.py"
-
           # ---- System variables
 
           # We're interested in the timezone of the ASX.
