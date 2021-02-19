@@ -32,7 +32,7 @@
    mode: 0755
 
 - name: Generating our nagios ticker configuration
-  shell: python /atp/process_tickers.py > /usr/local/nagios/etc/conf.d/atp.cfg
+  shell: /atp/process_tickers.py > /usr/local/nagios/etc/conf.d/atp.cfg
 
 - name: Install pandas which is a prereq for the below
   apt:
