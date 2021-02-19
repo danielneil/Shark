@@ -39,13 +39,6 @@
    name: python-pandas
    state: latest
 
-- name: Adding our custom strategy nagios commands file
-  template:
-   src: nagios_command_strategy.cfg
-   dest: /usr/local/nagios/etc/conf.d/
-   owner: nagios
-   group: nagios
-
 - name: Adding our custom nagios commands file
   copy:
    src: commands.cfg

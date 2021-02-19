@@ -35,7 +35,7 @@ AMC:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: AMC
-  name: moving_averages
+  name: moving_averages.py
 
 ANZ:
 
@@ -61,7 +61,7 @@ ANZ:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: ANZ
-  name: moving_averages
+  name: moving_averages.py
   
 BHP:
 
@@ -87,7 +87,7 @@ BHP:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: BHP
-  name: moving_averages
+  name: moving_averages.py
 
 BXB:
 
@@ -113,7 +113,7 @@ BXB:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: BXB
-  name: moving_averages
+  name: moving_averages.py
 
 CBA:
 
@@ -139,7 +139,7 @@ CBA:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: CBA
-  name: moving_averages
+  name: moving_averages.py
 
 CSL:
 
@@ -165,7 +165,7 @@ CSL:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: CSL
-  name: moving_averages
+  name: moving_averages.py
 
 GMG:
 
@@ -191,7 +191,7 @@ GMG:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: GMG
-  name: moving_averages
+  name: moving_averages.py
    
 IAG:
 
@@ -217,7 +217,7 @@ IAG:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: IAG
-  name: moving_averages
+  name: moving_averages.py
  
 MQG:
 
@@ -243,7 +243,7 @@ MQG:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: MQG
-  name: moving_averages
+  name: moving_averages.py
 
 NAB:
 
@@ -269,7 +269,7 @@ NAB:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: NAB
-  name: moving_averages
+  name: moving_averages.py
    
 NCM:
 
@@ -295,7 +295,7 @@ NCM:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: NCM
-  name: moving_averages
+  name: moving_averages.py
 
 RIO:
 
@@ -321,7 +321,7 @@ RIO:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: RIO
-  name: moving_averages
+  name: moving_averages.py
   
 SCG:
 
@@ -347,7 +347,7 @@ SCG:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: SCG
-  name: moving_averages
+  name: moving_averages.py
 
 SUN:
 
@@ -373,7 +373,7 @@ SUN:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: SUN
-  name: moving_averages
+  name: moving_averages.py
 
 TLS:
 
@@ -399,7 +399,7 @@ TLS:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: TLS
-  name: moving_averages
+  name: moving_averages.py
 
 TCL:
 
@@ -425,7 +425,7 @@ TCL:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: TCL
-  name: moving_averages
+  name: moving_averages.py
    
 WES:
 
@@ -451,7 +451,7 @@ WES:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: WES
-  name: moving_averages
+  name: moving_averages.py
 
 WBC:
 
@@ -477,7 +477,7 @@ WBC:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: WBC
-  name: moving_averages
+  name: moving_averages.py
   
 WPL:
 
@@ -503,7 +503,7 @@ WPL:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: WPL
-  name: moving_averages
+  name: moving_averages.py
   
 WOW:
 
@@ -529,4 +529,4 @@ WOW:
   description: "Moving Averages Strategy v.01"
   check_command: check_strategy
   ticker: WOW
-  name: moving_averages
+  name: moving_averages.py
