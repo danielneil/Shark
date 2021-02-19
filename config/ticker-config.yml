@@ -48,7 +48,7 @@ AMC:
 ANZ:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: ANZ
   period: 14
@@ -66,7 +66,7 @@ ANZ:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: ANZ
   name: moving_averages.py
@@ -82,7 +82,7 @@ ANZ:
 BHP:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: BHP
   period: 14
@@ -100,7 +100,7 @@ BHP:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: BHP
   name: moving_averages.py
@@ -116,7 +116,7 @@ BHP:
 BXB:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: BXB
   period: 14
@@ -134,7 +134,7 @@ BXB:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: BXB
   name: moving_averages.py
@@ -150,7 +150,7 @@ BXB:
 CBA:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: CBA
   period: 14
@@ -168,7 +168,7 @@ CBA:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: CBA
   name: moving_averages.py
@@ -184,7 +184,7 @@ CBA:
 CSL:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: CSL
   period: 14
@@ -202,7 +202,7 @@ CSL:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: CSL
   name: moving_averages.py
@@ -218,7 +218,7 @@ CSL:
 GMG:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: GMG
   period: 14
@@ -236,7 +236,7 @@ GMG:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: GMG
   name: moving_averages.py
@@ -252,7 +252,7 @@ GMG:
 IAG:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: IAG
   period: 14
@@ -270,7 +270,7 @@ IAG:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: IAG
   name: moving_averages.py
@@ -286,7 +286,7 @@ IAG:
 MQG:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: MQG
   period: 14
@@ -304,7 +304,7 @@ MQG:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: MQG
   name: moving_averages.py
@@ -320,7 +320,7 @@ MQG:
 NAB:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: NAB
   period: 14
@@ -338,7 +338,7 @@ NAB:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: NAB
   name: moving_averages.py
@@ -354,7 +354,7 @@ NAB:
 NCM:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: NCM
   period: 14
@@ -372,7 +372,7 @@ NCM:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: NCM
   name: moving_averages.py
@@ -388,7 +388,7 @@ NCM:
 RIO:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: RIO
   period: 14
@@ -406,7 +406,7 @@ RIO:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: RIO
   name: moving_averages.py
@@ -422,7 +422,7 @@ RIO:
 SCG:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: SCG
   period: 14
@@ -440,7 +440,7 @@ SCG:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: SCG
   name: moving_averages.py
@@ -456,7 +456,7 @@ SCG:
 SUN:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: SUN
   period: 14
@@ -474,7 +474,7 @@ SUN:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: SUN
   name: moving_averages.py
@@ -490,7 +490,7 @@ SUN:
 TLS:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: TLS
   period: 14
@@ -508,7 +508,7 @@ TLS:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: TLS
   name: moving_averages.py
@@ -524,7 +524,7 @@ TLS:
 TCL:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: TCL
   period: 14
@@ -542,7 +542,7 @@ TCL:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: TCL
   name: moving_averages.py
@@ -558,7 +558,7 @@ TCL:
 WES:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: WES
   period: 14
@@ -576,7 +576,7 @@ WES:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WES
   name: moving_averages.py
@@ -592,7 +592,7 @@ WES:
 WBC:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: WBC
   period: 14
@@ -610,7 +610,7 @@ WBC:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WBC
   name: moving_averages.py
@@ -626,7 +626,7 @@ WBC:
 WPL:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: WPL
   period: 14
@@ -644,7 +644,7 @@ WPL:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WPL
   name: moving_averages.py
@@ -660,7 +660,7 @@ WPL:
 WOW:
 
  RSI Check: 
-  description: "RSI 14 Day - Warn if either side of 10 or 90"
+  description: "RSI [ 14 Day ]"
   check_command: check_rsi
   ticker: WOW
   period: 14
@@ -678,7 +678,7 @@ WOW:
   period: 5
 
  Strategy: 
-  description: "Moving Averages Strategy v.01"
+  description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WOW
   name: moving_averages.py
