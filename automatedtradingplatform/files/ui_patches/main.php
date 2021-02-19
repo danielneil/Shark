@@ -25,31 +25,6 @@ $this_year = '2020';
 		var vboxText = "<a href=https://www.nagios.com/tours target=_blank> " +
 						"Click here to watch the entire Nagios Core 4 Tour!</a>";
 	<?php } ?>
-	$(document).ready(function() {
-		var user = "<?php echo htmlspecialchars($_SERVER['REMOTE_USER']); ?>";
-
-		<?php if ($cfg["enable_page_tour"]) { ?>
-			vBoxId += ";" + user;
-			vbox = new vidbox({pos:'lr',vidurl:'https://www.youtube.com/embed/2hVBAet-XpY',
-								text:vboxText,vidid:vBoxId});
-		<?php } ?>
-		loadRemoteFeed( // Our top banner splash.
-			'#splashbox0-contents', 'corebanner', 1,
-			'', processBannerItem, ''
-		);
-
-		loadRemoteFeed( // "Latest News"
-			'#splashbox4-contents', 'frontpage', 3,
-			'<ul>', processNewsItem, '<li><a href="https://www.nagios.org/news" target="_blank">More news...</a></li></ul>'
-		);
-
-		loadRemoteFeed( // "Don't Miss..."
-			'#splashbox5-contents', 'corepromo', 3,
-			'<ul>', processPromoItem, '</ul>'
-		);
-
-		getCoreStatus();
-	});
 
 	// Fetch an RSS feed and format HTML for the first n items.
 	function loadRemoteFeed(id, name, n, prefix, formatter, suffix) {
@@ -94,18 +69,6 @@ $this_year = '2020';
 			: '';
 	}
 
-
-	// Set our playlist HTML when we know we have Internet access.
-	var playlistInitialized = false;
-	function initializePlaylist() {
-		if (!playlistInitialized) {
-			playlistInitialized = true;
-			$('#splashbox3')
-				.addClass('splashbox3-full')
-				.removeClass('splashbox3-empty')
-				.html('<iframe width="100%" height="100%" src="//www.youtube.com/embed/videoseries?list=PLN-ryIrpC_mCUW1DFwZpxpAk00i60lSkE&iv_load_policy=3&rel=0" frameborder="0" allowfullscreen></iframe>');
-		}
-	}
 
 	// Get the daemon status JSON.
 	function getCoreStatus() {
