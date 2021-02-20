@@ -37,7 +37,7 @@ AMC:
   ticker: ANZ
   name: moving_averages.py
    
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: AMC
@@ -71,7 +71,7 @@ ANZ:
   ticker: ANZ
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: ANZ
@@ -105,7 +105,7 @@ BHP:
   ticker: BHP
   name: moving_averages.py
  
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: BHP
@@ -139,7 +139,7 @@ BXB:
   ticker: BXB
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: BXB
@@ -173,7 +173,7 @@ CBA:
   ticker: CBA
   name: moving_averages.py
 
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: CBA
@@ -207,7 +207,7 @@ CSL:
   ticker: CSL
   name: moving_averages.py
  
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: CSL
@@ -241,7 +241,7 @@ GMG:
   ticker: GMG
   name: moving_averages.py
    
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: GMG
@@ -275,7 +275,7 @@ IAG:
   ticker: IAG
   name: moving_averages.py
  
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: IAG
@@ -309,7 +309,7 @@ MQG:
   ticker: MQG
   name: moving_averages.py
 
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: MQG
@@ -343,7 +343,7 @@ NAB:
   ticker: NAB
   name: moving_averages.py
    
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: NAB
@@ -377,7 +377,7 @@ NCM:
   ticker: NCM
   name: moving_averages.py
 
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: NCM
@@ -411,7 +411,7 @@ RIO:
   ticker: RIO
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: RIO
@@ -445,7 +445,7 @@ SCG:
   ticker: SCG
   name: moving_averages.py
 
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: SCG
@@ -479,7 +479,7 @@ SUN:
   ticker: SUN
   name: moving_averages.py
 
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: SUN
@@ -513,7 +513,7 @@ TLS:
   ticker: TLS
   name: moving_averages.py
 
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: TLS
@@ -547,7 +547,7 @@ TCL:
   ticker: TCL
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: TCL
@@ -581,7 +581,7 @@ WES:
   ticker: WES
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: WES
@@ -615,7 +615,7 @@ WBC:
   ticker: WBC
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: WBC
@@ -649,7 +649,7 @@ WPL:
   ticker: WPL
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: WPL
@@ -683,7 +683,7 @@ WOW:
   ticker: WOW
   name: moving_averages.py
   
- Backtest:
+ Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
   check_command: check_backtest
   ticker: WOW
