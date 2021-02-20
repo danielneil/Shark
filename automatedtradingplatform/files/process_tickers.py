@@ -5,6 +5,7 @@
 import csv
 import re
 import yaml
+import socket
 
 # Open up our excludes file so we know which tickers to skip.
 
@@ -106,9 +107,15 @@ def process_service_config(a_dict,ticker):
             if str(k) == "description":
                 print("\tservice_description " + str(v))
             elif str(k) == "check_command":
+
                 command_str = "check_command " + str(v)
-            elif str(k) == "url":
-                print("\tnotes_url " + str(v) + "/" + ticker)
+            
+                if str(v) == "check_backtest":
+
+                    # Add a web link to the details of the backtest.
+                    # The ansible script seds the LOCAL_IP out with the server IP. It's rough, but meh.
+
+                    print("\tnotes_url http://LOCAL_IP/shark/backtest/" + ticker)
             else:
                  # print the command arguments
                 command_str += "!" + str(v)
