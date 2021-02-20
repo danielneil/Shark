@@ -28,7 +28,7 @@ if __name__ == "__main__":
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
 
-    if not os.path.isfile('/atp/ticker-data/'+args.ticker+'.AX.txt'):
+    if not os.path.isfile('/shark/ticker-data/'+args.ticker+'.AX.txt'):
         print ("UNKNOWN - Ticker data file not found, exit...")
         sys.exit(UNKNOWN)
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     ticker = args.ticker
     smaPeriod = int(args.periods)
 
-    data = pd.read_csv('/atp/ticker-data/'+ticker+'.AX.txt')
+    data = pd.read_csv('/shark/ticker-data/'+ticker+'.AX.txt')
     dataFrame = data['Adj Close']
     sma = np.round(dataFrame.rolling(smaPeriod).mean().iloc[-1], 2)
 

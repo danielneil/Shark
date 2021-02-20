@@ -1,73 +1,73 @@
 ---
 # tasks file for automatedtradingplatform
 
-- name: Adding atp group
+- name: Adding shark group
   group:
-    name: atp
+    name: shark
     state: present
 
-- name: Adding atp user
+- name: Adding shark user
   user:
-    name: atp
+    name: shark
     comment: AutomatedTradingPlatform user account
-    group: atp
+    group: shark
     shell: /bin/false
-    home: /atp
+    home: /shark
 
-- name: Creating atp working directory
+- name: Creating shark working directory
   file:
-    name: /atp
-    owner: atp
-    group: atp
+    name: /shark
+    owner: shark
+    group: shark
     state: directory
 
 - name: Creating strategies working directory
   file:
-    name: /atp/strategies
-    owner: atp
-    group: atp
+    name: /shark/strategies
+    owner: shark
+    group: shark
     state: directory
 
 - name: Creating tmp cache directory
   file:
-   name: /tmp/.atp
-   group: atp
-   owner: atp
+   name: /tmp/.shark
+   group: shark
+   owner: shark
    state: directory
 
 - name: Synchronsing ticker data dir
   copy: 
    src: ticker-data
-   dest: /atp/
-   owner: atp
-   group: atp
+   dest: /shark/
+   owner: shark
+   group: shark
 
 - name: Synchronsing data in strategies directory
   copy:
     src: strategies
-    dest: /atp/
-    owner: atp
-    group: atp
+    dest: /shark/
+    owner: shark
+    group: shark
     mode: 0755
 
 - name: Copy our ASX List of companies downloaded from the ASX site. 
   copy:
     src: ASX_Listed_Companies.csv
-    dest: /atp/
-    owner: atp
-    group: atp
+    dest: /shark/
+    owner: shark
+    group: shark
 
 - name: Copying out list of excluded tickers
   copy: 
    src: excluded_tickers.txt
-   dest: /atp/
+   dest: /shark/
 
 - name: Copying in our nagios ticker config generation script
   copy:
    src: process_tickers.py
-   dest: /atp
-   owner: atp
-   group: atp
+   dest: /shark
+   owner: shark
+   group: shark
    mode: 0755
 
 - name: Installing pyyaml for the above
@@ -78,9 +78,9 @@
 - name: Copying out ticker-config.yml file
   copy:
    src: ticker-config.yml
-   dest: /atp
-   group: atp
-   owner: atp
+   dest: /shark
+   group: shark
+   owner: shark
 
 - name: Copying in custom UI changes - side.php
   copy:
@@ -147,7 +147,7 @@
 - include: check_short.yml
 
 - name: Running plugin smoke tests
-  shell: cd /atp/plugins/ && ./smoke_tests.py
+  shell: cd /shark/plugins/ && ./smoke_tests.py
   register: tests_results
 
 - debug: 

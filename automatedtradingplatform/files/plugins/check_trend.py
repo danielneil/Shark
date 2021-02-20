@@ -45,9 +45,9 @@ if __name__ == "__main__":
     secondMAarg = args.secondMA
     thirdMAarg = args.thirdMA
 
-    firstMA = subprocess.check_output(['/atp/plugins/check_sma.py', ticker, firstMAarg])
-    secondMA = subprocess.check_output(['/atp/plugins/check_sma.py', ticker, secondMAarg])
-    thirdMA = subprocess.check_output(['/atp/plugins/check_sma.py', ticker, thirdMAarg])
+    firstMA = subprocess.check_output(['/shark/plugins/check_sma.py', ticker, firstMAarg])
+    secondMA = subprocess.check_output(['/shark/plugins/check_sma.py', ticker, secondMAarg])
+    thirdMA = subprocess.check_output(['/shark/plugins/check_sma.py', ticker, thirdMAarg])
 
     numbers = [ float(firstMA), float(secondMA), float(thirdMA) ]
     

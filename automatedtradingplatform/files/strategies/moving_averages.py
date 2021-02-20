@@ -32,8 +32,8 @@ if __name__ == "__main__":
 
     ticker = args.ticker 
 
-    short_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, '--periods', str(shorter_sma_periods), '--raw'])
-    long_sma = subprocess.check_output(['/atp/plugins/check_sma.py', '--ticker', ticker, '--periods', str(longer_sma_periods), '--raw'])
+    short_sma = subprocess.check_output(['/shark/plugins/check_sma.py', '--ticker', ticker, '--periods', str(shorter_sma_periods), '--raw'])
+    long_sma = subprocess.check_output(['/shark/plugins/check_sma.py', '--ticker', ticker, '--periods', str(longer_sma_periods), '--raw'])
 
     if short_sma > long_sma:
 

@@ -19,7 +19,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     args = parser.parse_args()
 
-    data = pd.read_csv('/atp/ticker-data/AXVI.csv')
+    data = pd.read_csv('/shark/ticker-data/AXVI.csv')
 
     dataFrame = data['Adj Close']
 

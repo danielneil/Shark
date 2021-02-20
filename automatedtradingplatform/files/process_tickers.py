@@ -11,7 +11,7 @@ import socket
 
 excluded_tickers = []
 
-with open('/atp/excluded_tickers.txt') as exclude_file:
+with open('/shark/excluded_tickers.txt') as exclude_file:
 
     while True:
         ticker = exclude_file.readline().rstrip()
@@ -22,7 +22,7 @@ with open('/atp/excluded_tickers.txt') as exclude_file:
         excluded_tickers.append(ticker)
 
 
-with open ('/atp/ASX_Listed_Companies.csv','r') as csvfile:
+with open ('/shark/ASX_Listed_Companies.csv','r') as csvfile:
     tickerreader = csv.reader(csvfile, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
 
     # skip the first row.
@@ -134,7 +134,7 @@ def process_service_config(a_dict,ticker):
 # Store services groups
 service_group_defs = []
 
-with open ("/atp/ticker-config.yml", "r") as f:
+with open ("/shark/ticker-config.yml", "r") as f:
 
     docs = yaml.safe_load(f)
     process_ticker_config(docs)

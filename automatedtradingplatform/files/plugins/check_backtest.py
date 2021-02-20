@@ -44,11 +44,11 @@ if __name__ == "__main__":
     capital = args.capital
     shares = args.shares
 
-    if not os.path.isfile('/atp/strategies/backtesting/' + backtestFile):
+    if not os.path.isfile('/shark/strategies/backtesting/' + backtestFile):
         print ("UNKNOWN - Backtest file (" + backtestFile  + ") not found...")
         sys.exit(UNKNOWN)
 
-    process = subprocess.Popen(['/atp/strategies/backtesting/' + backtestFile, '--ticker', ticker, '--shares', shares, '--capital', capital], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    process = subprocess.Popen(['/shark/strategies/backtesting/' + backtestFile, '--ticker', ticker, '--shares', shares, '--capital', capital], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
 
     stdout, stderr = process.communicate()
 

@@ -67,7 +67,7 @@ class MovingAverages(strategy.BacktestingStrategy):
 def run_strategy(ticker, shares, capital, longsma, shortsma):
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
-    feed.addBarsFromCSV(ticker, "/atp/ticker-data/"+ticker+".AX.txt")
+    feed.addBarsFromCSV(ticker, "/shark/ticker-data/"+ticker+".AX.txt")
 
     # Evaluate the strategy with the feed.
     maStrategy = MovingAverages(feed, ticker, shares, capital, longsma, shortsma)

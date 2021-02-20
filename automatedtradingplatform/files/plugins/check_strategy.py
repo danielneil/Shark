@@ -32,11 +32,11 @@ if __name__ == "__main__":
     ticker = args.ticker 
     strategyFile = args.strategy
 
-    if not os.path.isfile('/atp/strategies/' + strategyFile):
+    if not os.path.isfile('/shark/strategies/' + strategyFile):
         print ("UNKNOWN - Strategy file (" + strategyFile  + ") not found...")
         sys.exit(UNKNOWN)
 
-    process = subprocess.Popen(['/atp/strategies/' + strategyFile, '--ticker', ticker], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    process = subprocess.Popen(['/shark/strategies/' + strategyFile, '--ticker', ticker], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
 
     stdout, stderr = process.communicate()
 
