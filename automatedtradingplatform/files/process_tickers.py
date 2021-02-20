@@ -108,7 +108,7 @@ def process_service_config(a_dict,ticker):
             elif str(k) == "check_command":
                 command_str = "check_command " + str(v)
             elif str(k) == "url":
-                command_str = "notes_url " + str(v)
+                print("\tnotes_url " + str(v) + "/" + ticker)
             else:
                  # print the command arguments
                 command_str += "!" + str(v)
