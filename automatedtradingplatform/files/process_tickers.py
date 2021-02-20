@@ -69,7 +69,8 @@ for industry_group in industry_groups:
     """)
 
 
-# Process configuration file - this sux so much, if someone can help me rewrite this POS that'd be greatttttt.
+# Process the yaml configuration file, so we can regenerate it into something nagios understands.
+# This sux so much, if someone can help me rewrite this POS that'd be greatttttt.
 def process_ticker_config(a_dict):
     
     for key, value in a_dict.items():
