@@ -17,8 +17,14 @@
     state: absent
   notify: restart-apache2
 
+- name: Adding Shark webroot into config
+  copy:
+     src: shark.conf
+     dest: /etc/apache2/conf-enabled/
+  notify: restart-apache2
 
 - name: Starting apache
   service:
    name: apache2 
    state: started
+
