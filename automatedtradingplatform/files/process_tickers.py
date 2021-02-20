@@ -77,6 +77,7 @@ def process_ticker_config(a_dict):
         if isinstance(value, dict):
             process_service_config(value, ticker)
 
+    # Prune the duplicates from the service groups. 
     sg_list = list ( dict.fromkeys(service_group_defs) )
 
     for sg in sg_list:
@@ -88,13 +89,13 @@ def process_ticker_config(a_dict):
 
 def process_service_config(a_dict,ticker):
 
-
     for key, value in a_dict.items():
 
         print("\ndefine service {")
         print("\thost_name " + ticker)
         print("\tservice_groups " + str(key))
 
+        # Add the parent node, and we'll prune duplicates after.
         service_group_defs.append(str(key))
 
         command_str = ""
