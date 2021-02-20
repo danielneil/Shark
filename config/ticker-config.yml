@@ -34,11 +34,12 @@ AMC:
  Strategy: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
-  ticker: ANZ
+  ticker: AMC
   name: moving_averages.py
    
  Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
+  notes_url: "http://localhost/backtest/AMC"
   check_command: check_backtest
   ticker: AMC
   name: backtest_moving_averages.py
