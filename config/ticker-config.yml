@@ -22,12 +22,12 @@ AMC:
   max: 90
 
  Simple Moving Average - 10 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -56,12 +56,12 @@ ANZ:
   max: 90
 
  Simple Moving Average - 10 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -90,12 +90,12 @@ BHP:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -124,12 +124,12 @@ BXB:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -158,12 +158,12 @@ CBA:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -192,12 +192,12 @@ CSL:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -226,12 +226,12 @@ GMG:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -260,12 +260,12 @@ IAG:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -294,12 +294,12 @@ MQG:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -328,12 +328,12 @@ NAB:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -362,12 +362,12 @@ NCM:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -396,12 +396,12 @@ RIO:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -430,12 +430,12 @@ SCG:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -464,12 +464,12 @@ SUN:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -498,12 +498,12 @@ TLS:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -532,12 +532,12 @@ TCL:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -566,12 +566,12 @@ WES:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -600,12 +600,12 @@ WBC:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -634,12 +634,12 @@ WPL:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
@@ -668,12 +668,12 @@ WOW:
   max: 90
 
  Simple Moving Average - 50 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 50 Day ]"
+  description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   period: 50
 
  Simple Moving Average - 5 Days:
-  description: "SIMPLE MOVING AVERAGE: [ 5 Day ]"
+  description: "SMA: [ 5 Day ]"
   check_command: check_sma 
   period: 5
 
