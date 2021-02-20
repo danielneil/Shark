@@ -22,13 +22,14 @@ cmd_arg_help = "Example Backtest: trigger a buy when the shorter simple moving a
 strategy_name = "Moving Averages Backtest"
 
 class MovingAverages(strategy.BacktestingStrategy):
-    def __init__(self, feed, instrument, smaPeriod, shares, capital):
+    def __init__(self, feed, instrument, shares, capital, longsma, shortsma):
         super(MovingAverages, self).__init__(feed, capital)
         self.__position = None
         self.__instrument = instrument
         # We'll use adjusted close values instead of regular close values.
         self.setUseAdjustedValues(True)
-        self.__sma = ma.SMA(feed[instrument].getPriceDataSeries(), smaPeriod)
+        self.__longSma = ma.SMA(feed[instrument].getPriceDataSeries(), longsma)
+        self.__shortSma = ma.SMA(feed[instrument].getPriceDataSeries(), shortsma)
 
     def onEnterOk(self, position):
         execInfo = position.getEntryOrder().getExecutionInfo()
@@ -46,27 +47,30 @@ class MovingAverages(strategy.BacktestingStrategy):
 
     def onBars(self, bars):
         # Wait for enough bars to be available to calculate a SMA.
-        if self.__sma[-1] is None:
+        if self.__longSma[-1] is None:
+            return
+
+        if self.__shortSma[-1] is None:
             return
 
         bar = bars[self.__instrument]
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
-            if bar.getPrice() > self.__sma[-1]:
+            if self.__shortSma[-1] > self.__longSma[-1]:
                 # Enter a buy market order for n shares. The order is good till canceled.
                 self.__position = self.enterLong(self.__instrument, shares, True)
         # Check if we have to exit the position.
-        elif bar.getPrice() < self.__sma[-1] and not self.__position.exitActive():
+        elif self.__shortSma[-1] < self.__longSma[-1] and not self.__position.exitActive():
             self.__position.exitMarket()
 
 
-def run_strategy(smaPeriod, ticker, shares, capital):
+def run_strategy(ticker, shares, capital, longsma, shortsma):
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
     feed.addBarsFromCSV(ticker, "/atp/ticker-data/"+ticker+".AX.txt")
 
     # Evaluate the strategy with the feed.
-    maStrategy = MovingAverages(feed, ticker, smaPeriod, shares, capital)
+    maStrategy = MovingAverages(feed, ticker, shares, capital, longsma, shortsma)
     
     sharpeRatioAnalyzer = sharpe.SharpeRatio()
     maStrategy.attachAnalyzer(sharpeRatioAnalyzer)
@@ -108,5 +112,8 @@ if __name__ == "__main__":
     ticker = args.ticker 
     shares = int(args.shares)
     capital = int(args.capital)
+
+    longer_sma = 50
+    shorter_sma = 10
     
-    run_strategy(15, ticker, shares, capital)
+    run_strategy(ticker, shares, capital, longer_sma, shorter_sma)
