@@ -39,7 +39,6 @@ AMC:
    
  Backtesting:
   description: "BACKTEST: [ Moving Averages ]"
-  web_dir: "http://localhost/backtest"
   check_command: check_backtest
   ticker: AMC
   name: backtest_moving_averages.py
