@@ -28,6 +28,13 @@
     group: shark
     state: directory
 
+- name: Creating our backtest web dir to store the historical back test web files
+  file:
+   name: /shark/backtest
+   owner: shark
+   group: shark
+   state: directory
+
 - name: Creating tmp cache directory
   file:
    name: /tmp/.shark
