@@ -63,16 +63,6 @@ $link_target = 'main';
 		</form>
 	</div>
 </div>
-
-<div class="navsection">
-	<div class="navsectiontitle">Backtesting</div>
-	<div class="navsectionlinks">
-		<ul class="navsectionlinks">
-			<li><a href="main.php" target="/shark/backtest">Summary</a></li>
-			<li><a href="https://github.com/danielneil/AutomatedTradingPlatform/tree/main/doc" target="_blank">Documentation</a></li>
-		</ul>
-	</div>
-</div>	
 	
 <div class="navsection">
 	<div class="navsectiontitle">Reports</div>
