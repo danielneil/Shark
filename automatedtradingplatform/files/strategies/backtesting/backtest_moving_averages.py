@@ -95,6 +95,8 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
 
+        htmlFile.write("<h1>Backtest Results - "+ticker+"</h1><br />") 
+        
         htmlFile.write("Final portfolio value: $%.2f" % strat.getResult())
         htmlFile.write("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
 
