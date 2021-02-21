@@ -65,6 +65,25 @@ $link_target = 'main';
 </div>
 
 <div class="navsection">
+	<div class="navsectiontitle">Backtesting</div>
+	<div class="navsectionlinks">
+		<ul class="navsectionlinks">
+			<li><a href="main.php" target="<?php echo $link_target;?>">Summary</a></li>
+			<li><a href="https://github.com/danielneil/AutomatedTradingPlatform/tree/main/doc" target="_blank">Documentation</a></li>
+		</ul>
+	</div>
+	<div class="navbarsearch">
+		<form method="get" action="<?php echo $cfg["cgi_base_url"];?>/status.cgi" target="<?php echo $link_target;?>">
+			<fieldset>
+				<legend>Ticker Lookup:</legend>
+				<input type='hidden' name='navbarsearch' value='1'>
+				<input type='text' name='host' size='15' class="NavBarSearchItem">
+			</fieldset>
+		</form>
+	</div>
+</div>	
+	
+<div class="navsection">
 	<div class="navsectiontitle">Reports</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
