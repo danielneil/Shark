@@ -80,8 +80,10 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     # print("Final portfolio value: $%.2f" % maStrategy.getBroker().getEquity())
     
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
-
     sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
+
+    # Write detailed backtest file to the web dir
+
 
     if sharpeRatio > 0: 
         sys.exit(OK)

@@ -138,5 +138,3 @@ with open ("/shark/ticker-config.yml", "r") as f:
 
     docs = yaml.safe_load(f)
     process_ticker_config(docs)
-
-
