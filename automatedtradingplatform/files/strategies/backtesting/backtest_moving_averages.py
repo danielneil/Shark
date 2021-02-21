@@ -126,45 +126,42 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
             htmlFile.write("<tr><td>Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100)) 
             htmlFile.write("<tr><td>Profitable trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getProfitableCount()))
 
-            htmlFile.write("</table>")
-            htmlFile.write("<br />")
-
         if tradesAnalyzer.getProfitableCount() > 0:
 
             profits = tradesAnalyzer.getProfits()
 
-            htmlFile.write("Avg. profit: $%2.f" % (profits.mean()))
-            htmlFile.write("Profits std. dev.: $%2.f" % (profits.std()))
-            htmlFile.write("Max. profit: $%2.f" % (profits.max()))
-            htmlFile.write("Min. profit: $%2.f" % (profits.min()))
+            htmlFile.write("<tr><td>Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
+            htmlFile.write("<tr><td>Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
+            htmlFile.write("<tr><td>Max. profit:</td><td>$%2.f</td></tr>" % (profits.max()))
+            htmlFile.write("<tr><td>Min. profit:</td><td>$%2.f</td></tr>" % (profits.min()))
 
             returns = tradesAnalyzer.getPositiveReturns()
 
-            htmlFile.write("Avg. return: %2.f %%" % (returns.mean() * 100))
-            htmlFile.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
-            htmlFile.write("Max. return: %2.f %%" % (returns.max() * 100))
-            htmlFile.write("Min. return: %2.f %%" % (returns.min() * 100))
+            htmlFile.write("<tr><td>Avg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
+            htmlFile.write("<tr><td>Returns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
+            htmlFile.write("<tr><td>Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
+            htmlFile.write("<tr><td>Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
 
-            htmlFile.write("")
-            htmlFile.write("Unprofitable trades: %d" % (tradesAnalyzer.getUnprofitableCount()))
+            htmlFile.write("<tr><td>Unprofitable trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
 
         if tradesAnalyzer.getUnprofitableCount() > 0:
 
             losses = tradesAnalyzer.getLosses()
 
-            htmlFile.write("Avg. loss: $%2.f" % (losses.mean()))
-            htmlFile.write("Losses std. dev.: $%2.f" % (losses.std()))
-            htmlFile.write("Max. loss: $%2.f" % (losses.min()))
-            htmlFile.write("Min. loss: $%2.f" % (losses.max()))
+            htmlFile.write("<tr><td>Avg. loss:</td><td>$%2.f</td></tr>" % (losses.mean()))
+            htmlFile.write("<tr><td>Losses std. dev.:</td><td>$%2.f</td></tr>" % (losses.std()))
+            htmlFile.write("<tr><td>Max. loss:</td><td>$%2.f</td></tr>" % (losses.min()))
+            htmlFile.write("<tr><td>Min. loss:</td><td>$%2.f</td></tr>" % (losses.max()))
 
             returns = tradesAnalyzer.getNegativeReturns()
 
-            htmlFile.write("Avg. return: %2.f %%" % (returns.mean() * 100))
-            htmlFile.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
-            htmlFile.write("Max. return: %2.f %%" % (returns.max() * 100))
-            htmlFile.write("Min. return: %2.f %%" % (returns.min() * 100))
+            htmlFile.write("<tr><td>Avg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
+            htmlFile.write("<tr><td>Returns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
+            htmlFile.write("<tr><td>Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
+            htmlFile.write("<tr><td>Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
     
-            htmlFile.write("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+            htmlFile.write("</table>")
+            htmlFile.write("<br />")
 
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
