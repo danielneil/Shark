@@ -95,9 +95,11 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
         
+        htmlFile.write("<h1>Summary - "+ticker+"</h1>") 
+ 
         htmlFile.write("<br />")
         htmlFile.write("<table border=1>")
-        htmlFile.write("<tr><th colspan='2'>Backtest Results - "+ticker+"</th></tr>") 
+        htmlFile.write("<tr><th colspan='2'>Summary</th></tr>") 
         htmlFile.write("<tr><td>Final portfolio value:</td><td>$%.2f</td></tr>" % strat.getResult())
         htmlFile.write("<tr><td>Cumulative returns:</td><td>%.2f %%</td></tr>" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
 
@@ -108,11 +110,16 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
         htmlFile.write("<tr><td>Longest drawdown duration:</td><td>%s</td></tr>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
         htmlFile.write("<tr><td>Total trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getCount()))
 
+        htmlFile.write("</table>")
+        htmlFile.write("<br />")
 
         if tradesAnalyzer.getCount() > 0:
 
             profits = tradesAnalyzer.getAll()
 
+            htmlFile.write("<table border=1>")
+            htmlFile.write("<tr><th colspan='2'>Averages</th></tr>") 
+            
             htmlFile.write("<tr><td>Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
             htmlFile.write("<tr><td>Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
             htmlFile.write("<tr><td>Max. profit:</td><td>$%2.f</td></tr>" % (profits.max()))
@@ -125,11 +132,17 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
             htmlFile.write("<tr><td>Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
             htmlFile.write("<tr><td>Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100)) 
             htmlFile.write("<tr><td>Profitable trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getProfitableCount()))
+            
+            htmlFile.write("</table>")
+            htmlFile.write("<br />")
 
         if tradesAnalyzer.getProfitableCount() > 0:
 
             profits = tradesAnalyzer.getProfits()
 
+            htmlFile.write("<table border=1>")
+            htmlFile.write("<tr><th colspan='2'>Profits</th></tr>") 
+            
             htmlFile.write("<tr><td>Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
             htmlFile.write("<tr><td>Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
             htmlFile.write("<tr><td>Max. profit:</td><td>$%2.f</td></tr>" % (profits.max()))
@@ -143,10 +156,16 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
             htmlFile.write("<tr><td>Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
 
             htmlFile.write("<tr><td>Unprofitable trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
+            
+            htmlFile.write("</table>")
+            htmlFile.write("<br />")
 
         if tradesAnalyzer.getUnprofitableCount() > 0:
 
             losses = tradesAnalyzer.getLosses()
+            
+            htmlFile.write("<table border=1>")
+            htmlFile.write("<tr><th colspan='2'>Losses</th></tr>") 
 
             htmlFile.write("<tr><td>Avg. loss:</td><td>$%2.f</td></tr>" % (losses.mean()))
             htmlFile.write("<tr><td>Losses std. dev.:</td><td>$%2.f</td></tr>" % (losses.std()))
