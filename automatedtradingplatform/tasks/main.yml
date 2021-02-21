@@ -34,6 +34,7 @@
    owner: shark
    group: shark
    state: directory
+   mode: 0777
 
 - name: Creating tmp cache directory
   file:

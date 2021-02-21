@@ -83,6 +83,7 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
     sharpeRatioAnalyzer = sharpe.SharpeRatio()
     strat.attachAnalyzer(sharpeRatioAnalyzer)
+    sharpeRatio = 0
    
     drawDownAnalyzer = drawdown.DrawDown()
     strat.attachAnalyzer(drawDownAnalyzer)
@@ -94,9 +95,12 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
 
-        htmlFile.write("Final portfolio value: $%.2f" % strat.getResult())
+        htmlFile.write("F inal portfolio value: $%.2f" % strat.getResult())
         htmlFile.write("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
-        htmlFile.write("Sharpe ratio: %.2f" % (sharpeRatioAnalyzer.getSharpeRatio(0.05)))
+
+        sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
+
+        htmlFile.write("Sharpe ratio: %.2f" % (sharpeRatio))
         htmlFile.write("Max. drawdown: %.2f %%" % (drawDownAnalyzer.getMaxDrawDown() * 100))
         htmlFile.write("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))
 
@@ -159,7 +163,9 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     
             htmlFile.write("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
-    sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
+
+    print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+
 
     if sharpeRatio > 0: 
        sys.exit(OK)
