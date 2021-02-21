@@ -109,7 +109,7 @@ $this_year = '2020';
 	<div class="product">Shark<sup><span style="font-size: small;">&reg;</span></sup> Automated Trading Platform<sup><span style="font-size: small;">&trade;</span></sup></div>
 	<div class="version">Version <?php echo $this_version; ?></div>
 	<div class="releasedate">April 28, 2020</div>
-	<div class="checkforupdates"><a href="https://www.github/danielneil/Shark" target="_blank">Github</a></div>
+	<div class="checkforupdates"><a href="https://www.github.com/danielneil/Shark" target="_blank">Github</a></div>
 </div>
 
 

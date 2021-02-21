@@ -94,20 +94,20 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     strat.run()
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
-
-        htmlFile.write("<h1>Backtest Results - "+ticker+"</h1><br />") 
         
-        htmlFile.write("Final portfolio value: $%.2f" % strat.getResult())
-        htmlFile.write("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
+        htmlFile.write("<br />")
+        htmlFile.write("<table border=1>")
+        htmlFile.write("<tr><th colspan='2'>Backtest Results - "+ticker+"</th></tr>") 
+        htmlFile.write("<tr><td>Final portfolio value:</td><td>$%.2f</td></tr>" % strat.getResult())
+        htmlFile.write("<tr><td>Cumulative returns:</td><td>%.2f %%</td></tr>" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
 
         sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
-        htmlFile.write("Sharpe ratio: %.2f" % (sharpeRatio))
-        htmlFile.write("Max. drawdown: %.2f %%" % (drawDownAnalyzer.getMaxDrawDown() * 100))
-        htmlFile.write("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))
+        htmlFile.write("<tr><td>Sharpe ratio:</td><td>%.2f</td></tr>" % (sharpeRatio))
+        htmlFile.write("<tr><td>Max. drawdown:</td><td>%.2f %%</td></tr>" % (drawDownAnalyzer.getMaxDrawDown() * 100))
+        htmlFile.write("<tr><td>Longest drawdown duration:</td><td>%s</td></tr>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
+        htmlFile.write("<tr><td>Total trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getCount()))
 
-        htmlFile.write("")
-        htmlFile.write("Total trades: %d" % (tradesAnalyzer.getCount()))
 
         if tradesAnalyzer.getCount() > 0:
 
@@ -127,6 +127,9 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
             htmlFile.write("")
             htmlFile.write("Profitable trades: %d" % (tradesAnalyzer.getProfitableCount()))
+
+            htmlFile.write("</table>")
+            htmlFile.write("<br />")
 
         if tradesAnalyzer.getProfitableCount() > 0:
 
