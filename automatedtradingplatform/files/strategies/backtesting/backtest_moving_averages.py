@@ -95,7 +95,7 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
 
-        htmlFile.write("F inal portfolio value: $%.2f" % strat.getResult())
+        htmlFile.write("Final portfolio value: $%.2f" % strat.getResult())
         htmlFile.write("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
 
         sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
