@@ -5,7 +5,11 @@ from __future__ import print_function
 from pyalgotrade import strategy
 from pyalgotrade.barfeed import yahoofeed
 from pyalgotrade.technical import ma
+
 from pyalgotrade.stratanalyzer import sharpe
+from pyalgotrade.stratanalyzer import drawdown
+from pyalgotrade.stratanalyzer import trades
+import pyalgotrade
 
 import argparse
 import sys
@@ -65,6 +69,7 @@ class MovingAverages(strategy.BacktestingStrategy):
 
 
 def run_strategy(ticker, shares, capital, longsma, shortsma):
+
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
     feed.addBarsFromCSV(ticker, "/shark/ticker-data/"+ticker+".AX.txt")
@@ -73,12 +78,12 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     strat = MovingAverages(feed, ticker, shares, capital, longsma, shortsma)
     
     # Attach  analyzers to the strategy before executing it.
+    retAnalyzer = pyalgotrade.stratanalyzer.returns.Returns()
+    strat.attachAnalyzer(retAnalyzer)
+
     sharpeRatioAnalyzer = sharpe.SharpeRatio()
     strat.attachAnalyzer(sharpeRatioAnalyzer)
-    
-    retAnalyzer = returns.Returns()
-    strat.attachAnalyzer(retAnalyzer)
-    
+   
     drawDownAnalyzer = drawdown.DrawDown()
     strat.attachAnalyzer(drawDownAnalyzer)
     
@@ -86,73 +91,79 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     strat.attachAnalyzer(tradesAnalyzer)
 
     strat.run()
+
+    with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
+
+        htmlFile.write("Final portfolio value: $%.2f" % strat.getResult())
+        htmlFile.write("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
+        htmlFile.write("Sharpe ratio: %.2f" % (sharpeRatioAnalyzer.getSharpeRatio(0.05)))
+        htmlFile.write("Max. drawdown: %.2f %%" % (drawDownAnalyzer.getMaxDrawDown() * 100))
+        htmlFile.write("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))
+
+        htmlFile.write("")
+        htmlFile.write("Total trades: %d" % (tradesAnalyzer.getCount()))
+
+        if tradesAnalyzer.getCount() > 0:
+
+            profits = tradesAnalyzer.getAll()
+
+            htmlFile.write("Avg. profit: $%2.f" % (profits.mean()))
+            htmlFile.write("Profits std. dev.: $%2.f" % (profits.std()))
+            htmlFile.write("Max. profit: $%2.f" % (profits.max()))
+            htmlFile.write("Min. profit: $%2.f" % (profits.min()))
+
+            returns = tradesAnalyzer.getAllReturns()
+
+            htmlFile.write("Avg. return: %2.f %%" % (returns.mean() * 100))
+            htmlFile.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+            htmlFile.write("Max. return: %2.f %%" % (returns.max() * 100))
+            htmlFile.write("Min. return: %2.f %%" % (returns.min() * 100)) 
+
+            htmlFile.write("")
+            htmlFile.write("Profitable trades: %d" % (tradesAnalyzer.getProfitableCount()))
+
+        if tradesAnalyzer.getProfitableCount() > 0:
+
+            profits = tradesAnalyzer.getProfits()
+
+            htmlFile.write("Avg. profit: $%2.f" % (profits.mean()))
+            htmlFile.write("Profits std. dev.: $%2.f" % (profits.std()))
+            htmlFile.write("Max. profit: $%2.f" % (profits.max()))
+            htmlFile.write("Min. profit: $%2.f" % (profits.min()))
+
+            returns = tradesAnalyzer.getPositiveReturns()
+
+            htmlFile.write("Avg. return: %2.f %%" % (returns.mean() * 100))
+            htmlFile.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+            htmlFile.write("Max. return: %2.f %%" % (returns.max() * 100))
+            htmlFile.write("Min. return: %2.f %%" % (returns.min() * 100))
+
+            htmlFile.write("")
+            htmlFile.write("Unprofitable trades: %d" % (tradesAnalyzer.getUnprofitableCount()))
+
+        if tradesAnalyzer.getUnprofitableCount() > 0:
+
+            losses = tradesAnalyzer.getLosses()
+
+            htmlFile.write("Avg. loss: $%2.f" % (losses.mean()))
+            htmlFile.write("Losses std. dev.: $%2.f" % (losses.std()))
+            htmlFile.write("Max. loss: $%2.f" % (losses.min()))
+            htmlFile.write("Min. loss: $%2.f" % (losses.max()))
+
+            returns = tradesAnalyzer.getNegativeReturns()
+
+            htmlFile.write("Avg. return: %2.f %%" % (returns.mean() * 100))
+            htmlFile.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+            htmlFile.write("Max. return: %2.f %%" % (returns.max() * 100))
+            htmlFile.write("Min. return: %2.f %%" % (returns.min() * 100))
     
-    
-    
-    
-    print("Final portfolio value: $%.2f" % myStrategy.getResult())
-    print("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
-    print("Sharpe ratio: %.2f" % (sharpeRatioAnalyzer.getSharpeRatio(0.05)))
-    print("Max. drawdown: %.2f %%" % (drawDownAnalyzer.getMaxDrawDown() * 100))
-    print("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))
+            htmlFile.write("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
-    print("")
-    print("Total trades: %d" % (tradesAnalyzer.getCount()))
+    sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
-    if tradesAnalyzer.getCount() > 0:
-      profits = tradesAnalyzer.getAll()
-      print("Avg. profit: $%2.f" % (profits.mean()))
-      print("Profits std. dev.: $%2.f" % (profits.std()))
-      print("Max. profit: $%2.f" % (profits.max()))
-      print("Min. profit: $%2.f" % (profits.min()))
-      returns = tradesAnalyzer.getAllReturns()
-      print("Avg. return: %2.f %%" % (returns.mean() * 100))
-      print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
-      print("Max. return: %2.f %%" % (returns.max() * 100))
-      print("Min. return: %2.f %%" % (returns.min() * 100)) 
-
-      print("")
-      print("Profitable trades: %d" % (tradesAnalyzer.getProfitableCount()))
-
-   if tradesAnalyzer.getProfitableCount() > 0:
-      profits = tradesAnalyzer.getProfits()
-      print("Avg. profit: $%2.f" % (profits.mean()))
-      print("Profits std. dev.: $%2.f" % (profits.std()))
-      print("Max. profit: $%2.f" % (profits.max()))
-      print("Min. profit: $%2.f" % (profits.min()))
-      returns = tradesAnalyzer.getPositiveReturns()
-      print("Avg. return: %2.f %%" % (returns.mean() * 100))
-      print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
-      print("Max. return: %2.f %%" % (returns.max() * 100))
-      print("Min. return: %2.f %%" % (returns.min() * 100))
-
-      print("")
-      print("Unprofitable trades: %d" % (tradesAnalyzer.getUnprofitableCount()))
-
-   if tradesAnalyzer.getUnprofitableCount() > 0:
-     losses = tradesAnalyzer.getLosses()
-     print("Avg. loss: $%2.f" % (losses.mean()))
-     print("Losses std. dev.: $%2.f" % (losses.std()))
-     print("Max. loss: $%2.f" % (losses.min()))
-     print("Min. loss: $%2.f" % (losses.max()))
-     returns = tradesAnalyzer.getNegativeReturns()
-     print("Avg. return: %2.f %%" % (returns.mean() * 100))
-     print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
-     print("Max. return: %2.f %%" % (returns.max() * 100))
-     print("Min. return: %2.f %%" % (returns.min() * 100))
-    
-    
-    
-    
-   print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
-   sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
-
-    # Write detailed backtest file to the web dir
-
-
-   if sharpeRatio > 0: 
+    if sharpeRatio > 0: 
        sys.exit(OK)
-   else:
+    else:
        sys.exit(CRITICAL)
 
 
