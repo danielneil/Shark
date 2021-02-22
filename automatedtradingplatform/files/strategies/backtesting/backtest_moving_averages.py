@@ -82,7 +82,7 @@ class MovingAverages(strategy.BacktestingStrategy):
                 self.__position = self.enterLong(self.__instrument, shares, True)
 
         # Check if we have to exit the position.
-        elif self.__shortSma[-1] < self.__longSma[-1] and not self.__position.exitActive():
+        elif bar.getPrice() < self.__longSma[-1] and not self.__position.exitActive():
             self.__position.exitMarket()
 
 
@@ -112,14 +112,18 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     strat.run()
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
-       
-        htmlFile.write("<h1>Summary - "+ticker+"</h1>") 
 
+        htmlFile.write("<html>")
+        htmlFile.write("<head>")
+        htmlFile.write("<style>.content { margin: auto; max-width: 800px; }</style>")
+        htmlFile.write("</head>")
+        htmlFile.write("<body class='content'>")
+        htmlFile.write("<h1>Strategy Performance - "+ticker+"</h1>") 
         htmlFile.write("<a href = '/shark/backtest/" + ticker + ".trade.log'>Trade Log</a>")
- 
         htmlFile.write("<br />")
-        htmlFile.write("<table border=1>")
-        htmlFile.write("<tr><th colspan='2'>Summary</th></tr>") 
+        htmlFile.write("<br />")
+        htmlFile.write("<table border=1 style='width: 800px'>")
+        htmlFile.write("<tr><th style='background-color: #E0E0E0' colspan='2'>Portfolio Summary</th></tr>") 
         htmlFile.write("<tr><td>Final portfolio value:</td><td>$%.2f</td></tr>" % strat.getResult())
         htmlFile.write("<tr><td>Cumulative returns:</td><td>%.2f %%</td></tr>" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
 
@@ -128,8 +132,9 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
         htmlFile.write("<tr><td>Sharpe ratio:</td><td>%.2f</td></tr>" % (sharpeRatio))
         htmlFile.write("<tr><td>Max. drawdown:</td><td>%.2f %%</td></tr>" % (drawDownAnalyzer.getMaxDrawDown() * 100))
         htmlFile.write("<tr><td>Longest drawdown duration:</td><td>%s</td></tr>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
-        htmlFile.write("<tr><td>Total trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getCount()))
-
+        htmlFile.write("<tr><td style='background-color: #E8E8E8'>Total trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getCount()))
+        htmlFile.write("<tr><td style='text-align: right'>Wins:</td><td>%d</td></tr>" % (tradesAnalyzer.getProfitableCount()))
+        htmlFile.write("<tr><td style='text-align: right'>Losses:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
         htmlFile.write("</table>")
         htmlFile.write("<br />")
 
@@ -137,8 +142,8 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
             profits = tradesAnalyzer.getAll()
 
-            htmlFile.write("<table border=1>")
-            htmlFile.write("<tr><th colspan='2'>Averages</th></tr>") 
+            htmlFile.write("<table border=1 style='width: 800px'>")
+            htmlFile.write("<tr><th colspan='2' style='background-color: #E0E0E0'>Overall Performance (Wins + Losses)</th></tr>") 
             
             htmlFile.write("<tr><td>Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
             htmlFile.write("<tr><td>Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
@@ -151,7 +156,6 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
             htmlFile.write("<tr><td>Returns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
             htmlFile.write("<tr><td>Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
             htmlFile.write("<tr><td>Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100)) 
-            htmlFile.write("<tr><td>Profitable trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getProfitableCount()))
             
             htmlFile.write("</table>")
             htmlFile.write("<br />")
@@ -160,8 +164,8 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
             profits = tradesAnalyzer.getProfits()
 
-            htmlFile.write("<table border=1>")
-            htmlFile.write("<tr><th colspan='2'>Profits</th></tr>") 
+            htmlFile.write("<table border=1 style='width: 800px'>")
+            htmlFile.write("<tr><th colspan='2' style='background-color: #E0E0E0'>Profits</th></tr>") 
             
             htmlFile.write("<tr><td>Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
             htmlFile.write("<tr><td>Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
@@ -175,7 +179,6 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
             htmlFile.write("<tr><td>Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
             htmlFile.write("<tr><td>Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
 
-            htmlFile.write("<tr><td>Unprofitable trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
             
             htmlFile.write("</table>")
             htmlFile.write("<br />")
@@ -184,8 +187,8 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
 
             losses = tradesAnalyzer.getLosses()
             
-            htmlFile.write("<table border=1>")
-            htmlFile.write("<tr><th colspan='2'>Losses</th></tr>") 
+            htmlFile.write("<table border=1 style='width: 800px'>")
+            htmlFile.write("<tr><th colspan='2' style='background-color: #E0E0E0'>Losses</th></tr>") 
 
             htmlFile.write("<tr><td>Avg. loss:</td><td>$%2.f</td></tr>" % (losses.mean()))
             htmlFile.write("<tr><td>Losses std. dev.:</td><td>$%2.f</td></tr>" % (losses.std()))
