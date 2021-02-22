@@ -4,7 +4,7 @@ Shark is an open source algorithmic trading platform derived from tools that mon
 
 It enables the use of programmable strategies to identify and execute upon trading opportunities.
 
-The example strategy is simple moving averages crossover with the chosen financial market being the Australian Stock Exchange (Top 20). It also demonstrates determing the strength of an opportunity using the RSI indicator coupled with an automatic backtest.  
+The example strategy is simple moving averages crossover with the chosen financial market being the Australian Stock Exchange (Top 20). It also demonstrates determing the strength of an opportunity using the RSI indicator coupled with a backtest.  
 
 Though it focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy.  
 
