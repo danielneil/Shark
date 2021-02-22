@@ -1,6 +1,6 @@
 # Shark - An Automated Trading Platform
 
-Shark is an open source automated trading platform derived from tools that monitor IT infrastructure.
+Shark is an open source algorithmic trading platform derived from tools that monitor IT infrastructure.
 
 It enables the use of programmable strategies to identify and execute upon trading opportunities.
 
