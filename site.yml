@@ -1,6 +1,6 @@
 ---
 
-- name: Automated Platform Trading Role
+- name: Algorithmic Platform Trading Role
   hosts: shark-server
   become: true
   vars:

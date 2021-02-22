@@ -1,4 +1,4 @@
-# Shark - An Automated Trading Platform
+# Shark - An Algorithmic Trading Platform
 
 Shark is an open source algorithmic trading platform derived from tools that monitor IT infrastructure.
 
@@ -10,9 +10,9 @@ Though it focuses on the ASX, it could easily be adjusted to suit any financial 
 
 The ticker data supplied doesn't refresh. If you need it to refresh, see my other project that uses [Nifi](https://github.com/danielneil/Using-NiFi-on-Yahoo-Finance).
 
-See the [plugins](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
+See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
-See the example [strategy](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/automatedtradingplatform/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/automatedtradingplatform/files/strategies/backtesting/backtest_moving_averages.py).
+See the example [strategy](https://github.com/danielneil/Shark/blob/main/automatedtradingplatform/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/automatedtradingplatform/files/strategies/backtesting/backtest_moving_averages.py).
 
 # Setup Instructions
 
@@ -32,11 +32,11 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 # Screen Shots
 
-![alt text](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/screenshots/screenshot.JPG?raw=true)
+![alt text](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
 
 # Warning
 
 1. Don't install this on an internet-facing server.
 
-2. [Read the disclaimer](https://github.com/danielneil/AutomatedTradingPlatform/blob/main/DISCLAIMER).
+2. [Read the disclaimer](https://github.com/danielneil/Shark/blob/main/DISCLAIMER).
 

@@ -11,7 +11,7 @@ $this_year = '2020';
 <head>
 
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-<title>Automated Trading Platform</title>
+<title>Algorithmic Trading Platform</title>
 <link rel="stylesheet" type="text/css" href="stylesheets/common.css?<?php echo $this_version; ?>" />
 <link rel="stylesheet" type="text/css" href="stylesheets/nag_funcs.css?<?php echo $this_version; ?>" />
 <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
@@ -106,7 +106,7 @@ $this_year = '2020';
 
 
 <div id="currentversioninfo">
-	<div class="product">Shark<sup><span style="font-size: small;">&reg;</span></sup> Automated Trading Platform<sup><span style="font-size: small;">&trade;</span></sup></div>
+	<div class="product">Shark<sup><span style="font-size: small;">&reg;</span></sup> Algorithmic Trading Platform<sup><span style="font-size: small;">&trade;</span></sup></div>
 	<div class="version">Version <?php echo $this_version; ?></div>
 	<div class="releasedate">April 28, 2020</div>
 	<div class="checkforupdates"><a href="https://www.github.com/danielneil/Shark" target="_blank">Github</a></div>

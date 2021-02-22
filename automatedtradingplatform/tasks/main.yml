@@ -9,7 +9,7 @@
 - name: Adding shark user
   user:
     name: shark
-    comment: AutomatedTradingPlatform user account
+    comment: AlgorithmicTradingPlatform user account
     group: shark
     shell: /bin/false
     home: /shark
