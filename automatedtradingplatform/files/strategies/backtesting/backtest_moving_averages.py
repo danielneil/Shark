@@ -13,6 +13,7 @@ import pyalgotrade
 
 import argparse
 import sys
+import os
 
 # Nagios constants. 
 
@@ -22,21 +23,33 @@ CRITICAL     = 2
 UNKNOWN      = 3
 
 cmd_arg_help = "Example Backtest: trigger a buy when the shorter simple moving average, crosses above the longer simple moving average"
-
 strategy_name = "Moving Averages Backtest"
 
 class MovingAverages(strategy.BacktestingStrategy):
+
     def __init__(self, feed, instrument, shares, capital, longsma, shortsma):
+
         super(MovingAverages, self).__init__(feed, capital)
+
         self.__position = None
         self.__instrument = instrument
+
         # We'll use adjusted close values instead of regular close values.
         self.setUseAdjustedValues(True)
+
+        # Grab the moving averages.
         self.__longSma = ma.SMA(feed[instrument].getPriceDataSeries(), longsma)
         self.__shortSma = ma.SMA(feed[instrument].getPriceDataSeries(), shortsma)
 
+        # if our trade log exists, delete it.
+        if os.path.isfile("/shark/backtest/" + ticker + ".trade.log"):
+            os.remove("/shark/backtest/" + ticker + ".trade.log")
+
     def onEnterOk(self, position):
         execInfo = position.getEntryOrder().getExecutionInfo()
+
+        with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
+            tradeLog.write(str(self.getCurrentDateTime()) + ": BUY at $%.2f" % (execInfo.getPrice()) + "\n")
 
     def onEnterCanceled(self, position):
         self.__position = None
@@ -44,6 +57,9 @@ class MovingAverages(strategy.BacktestingStrategy):
     def onExitOk(self, position):
         execInfo = position.getExitOrder().getExecutionInfo()
         self.__position = None
+
+        with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
+            tradeLog.write(str(self.getCurrentDateTime()) + ": SELL at $%.2f" % (execInfo.getPrice()) + "\n")
 
     def onExitCanceled(self, position):
         # If the exit was canceled, re-submit it.
@@ -60,9 +76,11 @@ class MovingAverages(strategy.BacktestingStrategy):
         bar = bars[self.__instrument]
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
+
             if self.__shortSma[-1] > self.__longSma[-1]:
                 # Enter a buy market order for n shares. The order is good till canceled.
                 self.__position = self.enterLong(self.__instrument, shares, True)
+
         # Check if we have to exit the position.
         elif self.__shortSma[-1] < self.__longSma[-1] and not self.__position.exitActive():
             self.__position.exitMarket()
@@ -94,8 +112,10 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     strat.run()
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
-        
+       
         htmlFile.write("<h1>Summary - "+ticker+"</h1>") 
+
+        htmlFile.write("<a href = '/shark/backtest/" + ticker + ".trade.log'>Trade Log</a>")
  
         htmlFile.write("<br />")
         htmlFile.write("<table border=1>")
@@ -181,7 +201,6 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     
             htmlFile.write("</table>")
             htmlFile.write("<br />")
-
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
