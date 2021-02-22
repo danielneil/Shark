@@ -41,7 +41,7 @@ class MovingAverages(strategy.BacktestingStrategy):
         # We'll use adjusted close values instead of regular close values.
         self.setUseAdjustedValues(True)
 
-        self.__smaPeriod = ma.SMA(self.__prices, smaPeriod)
+        self.__sma = ma.SMA(self.__prices, smaPeriod)
 
         # if our trade log exists, delete it.
         if os.path.isfile("/shark/backtest/" + ticker + ".trade.log"):
@@ -74,20 +74,20 @@ class MovingAverages(strategy.BacktestingStrategy):
 
     def onBars(self, bars):
         # Wait for enough bars to be available to calculate a SMA.
-        if self.__smaPeriod[-1] is None:
+        if self.__sma[-1] is None:
             return
 
         bar = bars[self.__instrument]
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
 
-            if cross.cross_above(self.__prices, self.__smaPeriod) > 0:
+            if cross.cross_above(self.__prices, self.__sma) > 0:
 
                 # Enter a buy market order for n shares. The order is good till canceled.
                 self.__position = self.enterLong(self.__instrument, shares, True)
 
         # Check if we have to exit the position.
-        elif cross.cross_below(self.__prices, self.__smaPeriod) > 0 and not self.__position.exitActive():
+        elif cross.cross_below(self.__prices, self.__sma) > 0 and not self.__position.exitActive():
             self.__position.exitMarket()
 
 
