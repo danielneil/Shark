@@ -10,7 +10,7 @@ $link_target = 'main';
 
 <head>
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-<title>Automated Trading Platform</title>
+<title>Algorithmic Trading Platform</title>
 <link href="stylesheets/common.css?<?php echo $this_version; ?>" type="text/css" rel="stylesheet">
 </head>
 
@@ -63,6 +63,15 @@ $link_target = 'main';
 		</form>
 	</div>
 </div>
+	
+<div class="navsection">
+	<div class="navsectiontitle">Backtesting</div>
+	<div class="navsectionlinks">
+		<ul class="navsectionlinks">
+			<li><a href="/shark/backtest" target="<?php echo $link_target;?>">Summary</a></li>
+		</ul>
+	</div>
+</div>	
 	
 <div class="navsection">
 	<div class="navsectiontitle">Reports</div>
