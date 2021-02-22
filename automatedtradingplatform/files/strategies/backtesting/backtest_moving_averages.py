@@ -4,11 +4,14 @@ from __future__ import print_function
 
 from pyalgotrade import strategy
 from pyalgotrade.barfeed import yahoofeed
+
 from pyalgotrade.technical import ma
+from pyalgotrade.technical import cross
 
 from pyalgotrade.stratanalyzer import sharpe
 from pyalgotrade.stratanalyzer import drawdown
 from pyalgotrade.stratanalyzer import trades
+from pyalgotrade import plotter
 import pyalgotrade
 
 import argparse
@@ -22,34 +25,35 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Example Backtest: trigger a buy when the shorter simple moving average, crosses above the longer simple moving average"
-strategy_name = "Moving Averages Backtest"
+cmd_arg_help = "Example Backtest: Buy when a moving average cross above occurs, sell when a cross below happens."
+strategy_name = "Moving Averages Crossover Backtest"
 
 class MovingAverages(strategy.BacktestingStrategy):
 
-    def __init__(self, feed, instrument, shares, capital, longsma, shortsma):
+    def __init__(self, feed, instrument, shares, capital, smaPeriod):
 
         super(MovingAverages, self).__init__(feed, capital)
 
         self.__position = None
         self.__instrument = instrument
+        self.__prices = feed[instrument].getPriceDataSeries()
 
         # We'll use adjusted close values instead of regular close values.
         self.setUseAdjustedValues(True)
 
-        # Grab the moving averages.
-        self.__longSma = ma.SMA(feed[instrument].getPriceDataSeries(), longsma)
-        self.__shortSma = ma.SMA(feed[instrument].getPriceDataSeries(), shortsma)
+        self.__smaPeriod = ma.SMA(self.__prices, smaPeriod)
 
         # if our trade log exists, delete it.
         if os.path.isfile("/shark/backtest/" + ticker + ".trade.log"):
             os.remove("/shark/backtest/" + ticker + ".trade.log")
 
     def onEnterOk(self, position):
+
         execInfo = position.getEntryOrder().getExecutionInfo()
+        quantity = str(execInfo.getQuantity())
 
         with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
-            tradeLog.write(str(self.getCurrentDateTime()) + ": BUY at $%.2f" % (execInfo.getPrice()) + "\n")
+            tradeLog.write(str(execInfo.getDateTime()) + ": BUY "+ticker+" ("+quantity+" shares) at $%.2f" % (execInfo.getPrice()) + ")\n")
 
     def onEnterCanceled(self, position):
         self.__position = None
@@ -58,8 +62,11 @@ class MovingAverages(strategy.BacktestingStrategy):
         execInfo = position.getExitOrder().getExecutionInfo()
         self.__position = None
 
+        execInfo = position.getEntryOrder().getExecutionInfo()
+        quantity = str(execInfo.getQuantity())
+
         with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
-            tradeLog.write(str(self.getCurrentDateTime()) + ": SELL at $%.2f" % (execInfo.getPrice()) + "\n")
+            tradeLog.write(str(execInfo.getDateTime()) + ": SELL "+ticker+" ("+quantity+" shares) at $%.2f" % (execInfo.getPrice()) + ")\n")
 
     def onExitCanceled(self, position):
         # If the exit was canceled, re-submit it.
@@ -67,33 +74,31 @@ class MovingAverages(strategy.BacktestingStrategy):
 
     def onBars(self, bars):
         # Wait for enough bars to be available to calculate a SMA.
-        if self.__longSma[-1] is None:
-            return
-
-        if self.__shortSma[-1] is None:
+        if self.__smaPeriod[-1] is None:
             return
 
         bar = bars[self.__instrument]
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
 
-            if self.__shortSma[-1] > self.__longSma[-1]:
+            if cross.cross_above(self.__prices, self.__smaPeriod) > 0:
+
                 # Enter a buy market order for n shares. The order is good till canceled.
                 self.__position = self.enterLong(self.__instrument, shares, True)
 
         # Check if we have to exit the position.
-        elif bar.getPrice() < self.__longSma[-1] and not self.__position.exitActive():
+        elif cross.cross_below(self.__prices, self.__smaPeriod) > 0 and not self.__position.exitActive():
             self.__position.exitMarket()
 
 
-def run_strategy(ticker, shares, capital, longsma, shortsma):
+def run_strategy(ticker, shares, capital, smaPeriod):
 
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
     feed.addBarsFromCSV(ticker, "/shark/ticker-data/"+ticker+".AX.txt")
 
     # Evaluate the strategy with the feed.
-    strat = MovingAverages(feed, ticker, shares, capital, longsma, shortsma)
+    strat = MovingAverages(feed, ticker, shares, capital, smaPeriod)
     
     # Attach  analyzers to the strategy before executing it.
     retAnalyzer = pyalgotrade.stratanalyzer.returns.Returns()
@@ -109,15 +114,20 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
     tradesAnalyzer = trades.Trades()
     strat.attachAnalyzer(tradesAnalyzer)
 
+    # Attach the plotter
+    plot = plotter.StrategyPlotter(strat)
+
     strat.run()
+
+    # Save the plot.
+    plot.savePlot("/shark/backtest/" + ticker + ".png") 
 
     with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
 
         htmlFile.write("<html>")
         htmlFile.write("<head>")
-        htmlFile.write("<style>.content { margin: auto; max-width: 800px; }</style>")
         htmlFile.write("</head>")
-        htmlFile.write("<body class='content'>")
+        htmlFile.write("<body>")
         htmlFile.write("<h1>Strategy Performance - "+ticker+"</h1>") 
         htmlFile.write("<a href = '/shark/backtest/" + ticker + ".trade.log'>Trade Log</a>")
         htmlFile.write("<br />")
@@ -137,6 +147,8 @@ def run_strategy(ticker, shares, capital, longsma, shortsma):
         htmlFile.write("<tr><td style='text-align: right'>Losses:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
         htmlFile.write("</table>")
         htmlFile.write("<br />")
+
+        htmlFile.write("<img src = '/shark/backtest/" + ticker + ".png' />")
 
         if tradesAnalyzer.getCount() > 0:
 
@@ -237,8 +249,7 @@ if __name__ == "__main__":
     ticker = args.ticker 
     shares = int(args.shares)
     capital = int(args.capital)
-
-    longer_sma = 50
-    shorter_sma = 10
     
-    run_strategy(ticker, shares, capital, longer_sma, shorter_sma)
+    smaPeriod = 50
+
+    run_strategy(ticker, shares, capital, smaPeriod)
