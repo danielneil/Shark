@@ -1,5 +1,5 @@
 ---
-# handlers file for automatedtradingplatform
+# handlers file for algorithmictradingplatform
 
 - name: restart-nagios
   service:

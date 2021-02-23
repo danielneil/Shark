@@ -1,5 +1,4 @@
 ---
-# tasks file for automatedtradingplatform
 
 - name: Copying our template short data file
   copy:

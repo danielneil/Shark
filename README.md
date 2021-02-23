@@ -12,7 +12,7 @@ The ticker data supplied doesn't refresh. If you need it to refresh, see my othe
 
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
-See the example [strategy](https://github.com/danielneil/Shark/blob/main/automatedtradingplatform/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/automatedtradingplatform/files/strategies/backtesting/backtest_moving_averages.py).
+See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorithmictradingplatform/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/algorithmicdtradingplatform/files/strategies/backtesting/backtest_moving_averages.py).
 
 # Setup Instructions
 

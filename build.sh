@@ -4,7 +4,7 @@
 # Generate the documentation for the plugins
 
 CURR_DIR=`pwd`
-CHECKS_PATH=automatedtradingplatform/files/plugins
+CHECKS_PATH=algorithmictradingplatform/files/plugins
 DOC_FILE=doc/README.PLUGINS.md
 
 generate_documentation() {

@@ -155,7 +155,7 @@ def run_strategy(ticker, shares, capital, smaPeriod):
             profits = tradesAnalyzer.getAll()
 
             htmlFile.write("<table border=1 style='width: 800px'>")
-            htmlFile.write("<tr><th colspan='2' style='background-color: #E0E0E0'>Overall Performance (Wins + Losses)</th></tr>") 
+            htmlFile.write("<tr><th colspan='2' style='background-color: #E0E0E0'>Wins + Losses</th></tr>") 
             
             htmlFile.write("<tr><td>Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
             htmlFile.write("<tr><td>Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
@@ -177,7 +177,7 @@ def run_strategy(ticker, shares, capital, smaPeriod):
             profits = tradesAnalyzer.getProfits()
 
             htmlFile.write("<table border=1 style='width: 800px'>")
-            htmlFile.write("<tr><th colspan='2' style='background-color: #E0E0E0'>Profits</th></tr>") 
+            htmlFile.write("<tr><th colspan='2' style='background-color: #E0E0E0'>Wins</th></tr>") 
             
             htmlFile.write("<tr><td>Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
             htmlFile.write("<tr><td>Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))

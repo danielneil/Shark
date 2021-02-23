@@ -1,5 +1,4 @@
 ---
-# tasks file for automatedtradingplatform
 
 - name: Install pip
   apt:

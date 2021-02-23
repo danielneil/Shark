@@ -1,5 +1,4 @@
 ---
-# tasks file for automatedtradingplatform
 
 - name: Adding shark group
   group:
