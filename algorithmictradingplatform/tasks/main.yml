@@ -38,7 +38,7 @@
 - name: Copying the backtest web dir index.php
   copy:
    src: strategies/backtesting/index.php
-   dest: /share/backtest
+   dest: /shark/backtest/
    owner: shark
    group: shark
    mode: 0755
