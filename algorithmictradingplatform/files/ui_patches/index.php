@@ -15,6 +15,13 @@
 				continue;
 			}
 		}
+		
+		if ( $action == "tradelogs" ) {
+
+			if ( ! strpos($value, '.trade.log' ) ) {
+				continue;
+			}
+		}
 
 		echo "<a href ='$value'>$value</a><br />";
 	}
