@@ -18,6 +18,8 @@ import argparse
 import sys
 import os
 
+import time
+
 from backtest_functions import PrintHTMLReport
 
 # Nagios constants. 
@@ -75,11 +77,6 @@ class MovingAverages(strategy.BacktestingStrategy):
         self.__position.exitMarket()
 
     def onBars(self, bars):
-        # Wait for enough bars to be available to calculate a SMA.
-        if self.__sma[-1] is None:
-            return
-
-        bar = bars[self.__instrument]
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
 
@@ -94,6 +91,9 @@ class MovingAverages(strategy.BacktestingStrategy):
 
 
 def run_strategy(ticker, shares, capital, smaPeriod):
+
+    # Measure the execution time of the backtest.
+    start_time = time.time()
 
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
@@ -123,8 +123,10 @@ def run_strategy(ticker, shares, capital, smaPeriod):
     # Save the plot.
     plot.savePlot("/shark/backtest/" + ticker + ".png") 
 
+    time_taken = ( time.time() - start_time )
+
     # Generate the HTML Report    
-    PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer)
+    PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 

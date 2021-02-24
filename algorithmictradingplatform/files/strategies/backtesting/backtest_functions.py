@@ -1,6 +1,6 @@
 import datetime
 
-def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer):
+def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
 
   with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
 
@@ -8,12 +8,13 @@ def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAna
         htmlFile.write("<head>")
         htmlFile.write("</head>")
         htmlFile.write("<body>")
-        htmlFile.write("<h1>Strategy Performance - "+ticker+"</h1>") 
+        htmlFile.write("<h1>Strategy Performance - "+ticker+"</h1><hr />") 
 
         now = datetime.datetime.now()
         generationTime = now.strftime("%H:%M:%S (%Y-%m-%d)")
 
-        htmlFile.write("<p> Generated: " + generationTime + "</p>")
+        htmlFile.write("<p>Generated: " + generationTime + "</p>")
+        htmlFile.write("<p>Strategy computation time: " + str(time_taken) + " seconds.</p><hr />")
 
         htmlFile.write("<a href = '/shark/backtest/" + ticker + ".trade.log'>Trade Log</a>")
         htmlFile.write("<br />")
