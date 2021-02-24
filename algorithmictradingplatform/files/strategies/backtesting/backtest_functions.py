@@ -1,19 +1,13 @@
 import datetime
 import json
 
-def CreateJSONTradeLog(jsonFile, dt, action, ticker, shares, price):
+def CreateJSONTradeLog(tradeLogDict, ticker):
 
-    tradeLogDict = {
-                'datetime': dt,
-                'ticker': ticker,
-                'action': action,
-                'shares': shares,
-                'price': price
-            }
+    with open("/shark/backtest/" + ticker + ".trade.log", 'w') as jsonFile:
 
-    json.dump(tradeLogDict, jsonFile)
+        json.dump(tradeLogDict, jsonFile)
 
-def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
+def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
 
   with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
 

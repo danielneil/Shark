@@ -20,7 +20,7 @@ import os
 
 import time
 
-from backtest_functions import PrintHTMLReport
+from backtest_functions import CreateHTMLReport
 from backtest_functions import CreateJSONTradeLog
 
 # Nagios constants. 
@@ -35,7 +35,7 @@ strategy_name = "Moving Averages Crossover Backtest"
 
 class MovingAverages(strategy.BacktestingStrategy):
 
-    def __init__(self, feed, instrument, shares, capital, smaPeriod):
+    def __init__(self, feed, instrument, shares, capital, smaPeriod, tradeLog):
 
         super(MovingAverages, self).__init__(feed, capital)
 
@@ -43,23 +43,27 @@ class MovingAverages(strategy.BacktestingStrategy):
         self.__instrument = instrument
         self.__prices = feed[instrument].getPriceDataSeries()
 
+        self.__tradeLog = tradeLog
+
         # We'll use adjusted close values instead of regular close values.
         self.setUseAdjustedValues(True)
 
         self.__sma = ma.SMA(self.__prices, smaPeriod)
-
-        # if our trade log exists, delete it.
-        if os.path.isfile("/shark/backtest/" + ticker + ".trade.log"):
-            os.remove("/shark/backtest/" + ticker + ".trade.log")
 
     def onEnterOk(self, position):
 
         execInfo = position.getEntryOrder().getExecutionInfo()
         quantity = str(execInfo.getQuantity())
 
-        with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
+        tradeLogDict = {
+                    "datetime": str(execInfo.getDateTime()),
+                    "action": "BUY",
+                    "ticker": ticker,
+                    "quantity": quantity,
+                    "price": execInfo.getPrice()
+                }
 
-            CreateJSONTradeLog(tradeLog, str(execInfo.getDateTime()), "BUY", ticker, quantity, execInfo.getPrice())
+        self.__tradeLog.append(tradeLogDict)
 
     def onEnterCanceled(self, position):
         self.__position = None
@@ -69,11 +73,17 @@ class MovingAverages(strategy.BacktestingStrategy):
         execInfo = position.getExitOrder().getExecutionInfo()
         quantity = str(execInfo.getQuantity())
 
+        tradeLogDict = {
+                    "datetime": str(execInfo.getDateTime()),
+                    "action": "SELL",
+                    "ticker": ticker,
+                    "quantity": quantity, 
+                    "price": execInfo.getPrice()
+                }
+
+        self.__tradeLog.append(tradeLogDict)
+
         self.__position = None
-
-        with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
-
-            CreateJSONTradeLog(tradeLog, str(execInfo.getDateTime()), "SELL", ticker, quantity, execInfo.getPrice())
 
     def onExitCanceled(self, position):
         # If the exit was canceled, re-submit it.
@@ -102,8 +112,11 @@ def run_strategy(ticker, shares, capital, smaPeriod):
     feed = yahoofeed.Feed()
     feed.addBarsFromCSV(ticker, "/shark/ticker-data/"+ticker+".AX.txt")
 
+    # Create a dict to store the trade log.
+    tradeLog = []
+
     # Evaluate the strategy with the feed.
-    strat = MovingAverages(feed, ticker, shares, capital, smaPeriod)
+    strat = MovingAverages(feed, ticker, shares, capital, smaPeriod, tradeLog)
     
     # Attach  analyzers to the strategy before executing it.
     retAnalyzer = pyalgotrade.stratanalyzer.returns.Returns()
@@ -126,10 +139,14 @@ def run_strategy(ticker, shares, capital, smaPeriod):
     # Save the plot.
     plot.savePlot("/shark/backtest/" + ticker + ".png") 
 
+    # measure the execution time to here.
     time_taken = ( time.time() - start_time )
 
     # Generate the HTML Report    
-    PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
+    CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
+
+    # Generate the trade log.
+    CreateJSONTradeLog(tradeLog, ticker)
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
