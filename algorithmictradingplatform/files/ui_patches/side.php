@@ -68,10 +68,10 @@ $link_target = 'main';
 	<div class="navsectiontitle">Backtesting</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="/shark/backtest/index.php?action=summary" target="<?php echo $link_target;?>">Summary</a></li>
+			<li><a href="<?php echo $cfg["cgi_base_url"];?>/history.cgi?host=all" target="<?php echo $link_target;?>">Summary</a>
 			<ul>
-				<li><a href="<?php echo $cfg["cgi_base_url"];?>/history.cgi?host=all" target="<?php echo $link_target;?>">Results</a></li>
-				<li><a href="<?php echo $cfg["cgi_base_url"];?>/summary.cgi" target="<?php echo $link_target;?>">Trade Logs</a></li>
+				<li><a href="<?php echo $cfg["cgi_base_url"];?>/history.cgi?host=all" target="<?php echo $link_target;?>">History</a></li>
+				<li><a href="<?php echo $cfg["cgi_base_url"];?>/summary.cgi" target="<?php echo $link_target;?>">Summary</a></li>
 			</ul>
 			</li>
 		</ul>
