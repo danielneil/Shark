@@ -18,7 +18,7 @@ import argparse
 import sys
 import os
 
-from backtest_functions import PrintHtmlREPORT
+from backtest_functions import PrintHTMLReport
 
 # Nagios constants. 
 
@@ -128,7 +128,7 @@ def run_strategy(ticker, shares, capital, smaPeriod):
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
-    if sharpeRatio > 0: 
+    if sharpeRatioAnalyzer.getSharpeRatio(0.05) > 0: 
        sys.exit(OK)
     else:
        sys.exit(CRITICAL)

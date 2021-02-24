@@ -1,4 +1,4 @@
-def PrintHtmlREPORT(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer):
+def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer):
 
   with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
 
