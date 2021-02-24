@@ -21,7 +21,7 @@ import os
 import time
 
 from backtest_functions import PrintHTMLReport
-from backtest_functions import CreateJSONLogFile
+from backtest_functions import CreateJSONTradeLog
 
 # Nagios constants. 
 
@@ -59,7 +59,7 @@ class MovingAverages(strategy.BacktestingStrategy):
 
         with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
 
-            CreateJSONLogFile(tradeLog, str(execInfo.getDateTime()), "BUY", ticker, quantity, execInfo.getPrice())
+            CreateJSONTradeLog(tradeLog, str(execInfo.getDateTime()), "BUY", ticker, quantity, execInfo.getPrice())
 
     def onEnterCanceled(self, position):
         self.__position = None
@@ -73,7 +73,7 @@ class MovingAverages(strategy.BacktestingStrategy):
 
         with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
 
-            CreateJSONLogFile(tradeLog, str(execInfo.getDateTime()), "SELL", ticker, quantity, execInfo.getPrice())
+            CreateJSONTradeLog(tradeLog, str(execInfo.getDateTime()), "SELL", ticker, quantity, execInfo.getPrice())
 
     def onExitCanceled(self, position):
         # If the exit was canceled, re-submit it.
