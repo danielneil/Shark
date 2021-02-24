@@ -65,11 +65,11 @@ class MovingAverages(strategy.BacktestingStrategy):
         self.__position = None
 
     def onExitOk(self, position):
-        execInfo = position.getExitOrder().getExecutionInfo()
-        self.__position = None
 
-        execInfo = position.getEntryOrder().getExecutionInfo()
+        execInfo = position.getExitOrder().getExecutionInfo()
         quantity = str(execInfo.getQuantity())
+
+        self.__position = None
 
         with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
 
