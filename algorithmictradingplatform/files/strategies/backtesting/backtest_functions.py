@@ -6,6 +6,7 @@ def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAna
 
         htmlFile.write("<html>")
         htmlFile.write("<head>")
+        htmlFile.write("<style> .bold { font-weight: bold } </style>")
         htmlFile.write("</head>")
         htmlFile.write("<body>")
         htmlFile.write("<h1>Strategy Performance - "+ticker+"</h1><hr />") 
@@ -13,8 +14,8 @@ def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAna
         now = datetime.datetime.now()
         generationTime = now.strftime("%H:%M:%S (%Y-%m-%d)")
 
-        htmlFile.write("<p>Generated: " + generationTime + "</p>")
-        htmlFile.write("<p>Strategy computation time: " + str(time_taken) + " seconds.</p><hr />")
+        htmlFile.write("<p><span class='bold'>Generated:</span> " + generationTime + "</p>")
+        htmlFile.write("<p><span class='bold'>Strategy computation time:</span> " + str(time_taken) + " seconds.</p><hr />")
 
         htmlFile.write("<a href = '/shark/backtest/" + ticker + ".trade.log'>Trade Log</a>")
         htmlFile.write("<br />")
