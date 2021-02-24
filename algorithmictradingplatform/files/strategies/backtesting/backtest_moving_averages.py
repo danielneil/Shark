@@ -21,6 +21,7 @@ import os
 import time
 
 from backtest_functions import PrintHTMLReport
+from backtest_functions import CreateJSONLogFile
 
 # Nagios constants. 
 
@@ -57,7 +58,8 @@ class MovingAverages(strategy.BacktestingStrategy):
         quantity = str(execInfo.getQuantity())
 
         with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
-            tradeLog.write(str(execInfo.getDateTime()) + ": BUY "+ticker+" ("+quantity+" shares) at $%.2f" % (execInfo.getPrice()) + ")\n")
+
+            CreateJSONLogFile(tradeLog, str(execInfo.getDateTime()), "BUY", ticker, quantity, execInfo.getPrice())
 
     def onEnterCanceled(self, position):
         self.__position = None
@@ -70,7 +72,8 @@ class MovingAverages(strategy.BacktestingStrategy):
         quantity = str(execInfo.getQuantity())
 
         with open("/shark/backtest/" + ticker + ".trade.log", "a") as tradeLog:
-            tradeLog.write(str(execInfo.getDateTime()) + ": SELL "+ticker+" ("+quantity+" shares) at $%.2f" % (execInfo.getPrice()) + ")\n")
+
+            CreateJSONLogFile(tradeLog, str(execInfo.getDateTime()), "SELL", ticker, quantity, execInfo.getPrice())
 
     def onExitCanceled(self, position):
         # If the exit was canceled, re-submit it.

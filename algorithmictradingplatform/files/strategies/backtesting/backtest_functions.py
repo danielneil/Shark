@@ -1,4 +1,17 @@
 import datetime
+import json
+
+def CreateJSONTradeLog(jsonFile, dt, action, ticker, shares, price):
+
+    tradeLogDict = {
+                'datetime': dt,
+                'ticker': ticker,
+                'action': action,
+                'shares': shares,
+                'price': price
+            }
+
+    json.dump(tradeLogDict, jsonFile)
 
 def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
 
@@ -14,8 +27,8 @@ def PrintHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAna
         now = datetime.datetime.now()
         generationTime = now.strftime("%H:%M:%S (%Y-%m-%d)")
 
-        htmlFile.write("<p><span class='bold'>Generated:</span> " + generationTime + "</p>")
-        htmlFile.write("<p><span class='bold'>Strategy computation time:</span> " + str(time_taken) + " seconds.</p><hr />")
+        htmlFile.write("<p><span class='bold'>Date generated:</span> " + generationTime + "</p>")
+        htmlFile.write("<p><span class='bold'>Strategy code computation time:</span> " + str(time_taken) + " seconds.</p><hr />")
 
         htmlFile.write("<a href = '/shark/backtest/" + ticker + ".trade.log'>Trade Log</a>")
         htmlFile.write("<br />")
