@@ -6,18 +6,12 @@
    name: default-jre
    state: latest
    
-- name: Creating Apache Drill work directory
-  file:
-    path: /shark/apache-drill
-    state: directory
-    mode: 0755
-
 - name: Downloading apache drill (This is a crap way to do it, but ansible's get_url kept redownload the file slowing everything down)
-  shell: cd /shark/apache-drill && wget -N http://apache.mirrors.hoobly.com/drill/drill-1.18.0/apache-drill-1.18.0.tar.gz
+  shell: cd /shark && wget -N http://apache.mirrors.hoobly.com/drill/drill-1.18.0/apache-drill-1.18.0.tar.gz
 
 - name: Unzipping the above
   unarchive: 
-   src: /shark/apache-drill/apache-drill-1.18.0.tar.gz
+   src: /shark/apache-drill-1.18.0.tar.gz
    dest: /shark/
 
 - name: Install setup tools for python3
@@ -34,15 +28,4 @@
   pip:
    name: pandas
    executable: pip3
-
-- name: Configuring our necessary system environment variables /etc/environment
-  lineinfile:
-    dest: "/etc/environment"
-    state: present
-    regexp: "^{{ item.key }}="
-    line: "{{ item.key }}={{ item.value}}"
-  with_items: "{{ os_environment }}"
-
-- name: Make them avaiable right meow
-  shell: source /etc/environment executable=/bin/bash
 
