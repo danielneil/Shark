@@ -25,3 +25,10 @@
    owner: zk 
    group: zk 
    recurse: yes
+
+- name: Creating zookeeper data directory
+  file:
+    path: /shark/zookeeper-data
+    state: directory
+    owner: zk 
+    group: zk 
