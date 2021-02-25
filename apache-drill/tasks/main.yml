@@ -44,3 +44,15 @@
     name: drill
     shell: /bin/bash
     groups: drill 
+    
+- name: Configuring permissions on the above
+  file: 
+   dest: /shark/apache-drill-1.18.0
+   owner: drill 
+   group: drill 
+   recurse: yes
+   
+- name: Adding drill systemd file
+  copy:
+   src: drill.service
+   dest: /etc/systemd/system/
