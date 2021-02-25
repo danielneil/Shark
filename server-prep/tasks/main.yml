@@ -1,5 +1,6 @@
 ---
 # tasks file for server-prep
+
 - name: Setting system timezone.
   timezone:
    name: "{{ timezone }}"
@@ -17,3 +18,11 @@
   apt:
    name: curl
    state: latest
+
+- name: Setting environement vars - /etc/environment
+  lineinfile:
+    dest: "/etc/environment"
+    state: present
+    regexp: "^{{ item.key }}="
+    line: "{{ item.key }}={{ item.value}}"
+  with_items: "{{ os_environment }}"
