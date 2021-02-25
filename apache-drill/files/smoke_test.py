@@ -1,35 +1,22 @@
 #!/usr/bin/python3
+from pydrill.client import PyDrill
 
-import jaydebeapi
-import jpype
-import os
-import pandas as pd
+drill = PyDrill(host='localhost', port=8047)
 
-drill_home = '/shark/apache-drill/apache-drill-1.18.0'
+if not drill.is_active():
+    raise ImproperlyConfigured('Please run Drill first')
 
-classpath = [ 
-            drill_home + '/jars',
-            drill_home + '/jars/thirdparty'
-        ]
+yelp_reviews = drill.query('''
+  SELECT * FROM
+  `dfs.root`.`./Users/macbookair/Downloads/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json`
+  LIMIT 5
+''')
 
-jpype.startJVM("-ea", 
+for result in yelp_reviews:
+    print("%s: %s" %(result['type'], result['date']))
 
-conn = jaydebeapi.connect(
-    'org.apache.drill.jdbc.Driver',
-    'jdbc:drill:drillbit=localhost'
-)
 
-cursor = conn.cursor()
+# pandas dataframe
 
-query = """
-    SELECT *
-    FROM dfs.`./testFile.json`
-    LIMIT 1
-"""
-
-cursor.execute(query)
-columns = [c[0] for c in cursor.description]
-data = cursor.fetchall()
-df = pd.DataFrame(data, columns=columns)
-
-df.head()
+df = yelp_reviews.to_dataframe()
+print(df[df['stars'] > 3])
