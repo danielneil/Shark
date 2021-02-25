@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 from pydrill.client import PyDrill
 
 drill = PyDrill(host='localhost', port=8047)
@@ -8,15 +9,10 @@ if not drill.is_active():
 
 yelp_reviews = drill.query('''
   SELECT * FROM
-  `dfs.root`.`./Users/macbookair/Downloads/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json`
-  LIMIT 5
+  `dfs.root`.`/home/daniel/Shark/apache-drill/files/testFile.json`
+  LIMIT 1
 ''')
 
 for result in yelp_reviews:
-    print("%s: %s" %(result['type'], result['date']))
+    print("%s: %s" %(result['ticker'], result['quantity']))
 
-
-# pandas dataframe
-
-df = yelp_reviews.to_dataframe()
-print(df[df['stars'] > 3])
