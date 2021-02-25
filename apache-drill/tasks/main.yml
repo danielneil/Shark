@@ -12,9 +12,10 @@
     state: directory
     mode: 0755
    
-- name: Downloading apache drill
-  get_url:
-    url: http://apache.mirrors.hoobly.com/drill/drill-1.18.0/apache-drill-1.18.0.tar.gz
-    dest: /shark/apache-drill
-    mode: 0755
-    
+- name: Downloading apache drill (This is a crap way to do it, but ansible's get_url kept redownload the file slowing everything down)
+  shell: cd /shark/apache-drill && wget -N http://apache.mirrors.hoobly.com/drill/drill-1.18.0/apache-drill-1.18.0.tar.gz
+
+- name: Unzipping the above
+  unarchive: 
+   src: /shark/apache-drill/apache-drill-1.18.0.tar.gz
+   dest: /shark/apache-drill/
