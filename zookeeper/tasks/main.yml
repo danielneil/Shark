@@ -8,4 +8,11 @@
   unarchive:
    src: /tmp/apache-zookeeper-3.6.2-bin.tar.gz
    dest: /shark/
-
+   
+- name: Add zk user
+  user:
+    name: zookeeper
+    shell: /bin/bash
+    groups: sudo 
+    
+ chown -R zookeeper:zookeeper /opt/zookeeper
