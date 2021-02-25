@@ -17,4 +17,5 @@
   - httpd
   - base-from-source
   - algorithmictradingplatform
+  - zookeeper
   - apache-drill
