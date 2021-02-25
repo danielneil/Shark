@@ -7,8 +7,8 @@ After=network.target
 [Service]    
 Type=forking
 WorkingDirectory=/shark/apache-zookeeper-3.6.2-bin
-User=zookeeper
-Group=zookeeper
+User=zk
+Group=zk
 ExecStart=/shark/apache-zookeeper-3.6.2-bin/bin/zkServer.sh start /shark/apache-zookeeper-3.6.2-bin/conf/zoo.cfg
 ExecStop=/shark/apache-zookeeper-3.6.2-bin/bin/zkServer.sh stop /shark/apache-zookeeper-3.6.2-bin/conf/zoo.cfg
 ExecReload=/shark/apache-zookeeper-3.6.2-bin/bin/zkServer.sh restart /shark/apache-zookeeper-3.6.2-bin/conf/zoo.cfg
