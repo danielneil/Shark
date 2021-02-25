@@ -18,7 +18,7 @@
 - name: Unzipping the above
   unarchive: 
    src: /shark/apache-drill/apache-drill-1.18.0.tar.gz
-   dest: /shark/apache-drill/
+   dest: /shark/
 
 - name: Install setup tools for python3
   pip:
