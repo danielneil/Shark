@@ -6,7 +6,7 @@ import os
 import pandas as pd
 
 DRILL_HOME = os.environ["DRILL_HOME"]
-classpath = DRILL_HOME + "/shark/apache-drill/apache-drill-1.18.0/jars/drill-jdbc-1.18.0.jar"
+classpath = DRILL_HOME + "/jars/drill-jdbc-1.18.0.jar"
 
 jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=%s" % classpath)
 

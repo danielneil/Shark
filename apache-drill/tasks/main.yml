@@ -11,7 +11,7 @@
     path: /shark/apache-drill
     state: directory
     mode: 0755
-   
+
 - name: Downloading apache drill (This is a crap way to do it, but ansible's get_url kept redownload the file slowing everything down)
   shell: cd /shark/apache-drill && wget -N http://apache.mirrors.hoobly.com/drill/drill-1.18.0/apache-drill-1.18.0.tar.gz
 
@@ -19,3 +19,16 @@
   unarchive: 
    src: /shark/apache-drill/apache-drill-1.18.0.tar.gz
    dest: /shark/apache-drill/
+
+- name: Install JayDeBeApi which is prereq for python and jdbc connectivitty
+  pip:
+   name: JayDeBeApi
+   executable: pip3
+
+- name: Installing pandas
+  pip:
+   name: pandas
+   executable: pip3
+
+- name: Setting up our DRILL_HOME env
+
