@@ -49,4 +49,4 @@
   service:
    name: zookeeper
    state: started
-   enable: true
+   enabled: true
