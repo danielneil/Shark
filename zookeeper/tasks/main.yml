@@ -14,5 +14,3 @@
     name: zookeeper
     shell: /bin/bash
     groups: sudo 
-    
- chown -R zookeeper:zookeeper /opt/zookeeper
