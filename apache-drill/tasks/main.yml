@@ -14,9 +14,9 @@
    name: setuptools
    executable: pip3
 
-- name: Install JayDeBeApi which is prereq for python and jdbc connectivitty
+- name: Install pydrill 
   pip:
-   name: JayDeBeApi
+   name: pydrill
    executable: pip3
 
 - name: Installing pandas
