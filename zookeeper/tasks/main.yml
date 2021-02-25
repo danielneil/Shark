@@ -40,10 +40,13 @@
    owner: zk 
    group: zk 
    
-- name: Adding zoo systemd file
+- name: Adding zookeeper systemd file
   copy:
    src: zookeeper.service
    dest: /etc/systemd/system/
-
    
-   
+- name: Starting zookeeper
+  service:
+   name: zookeeper
+   state: started
+   enable: true
