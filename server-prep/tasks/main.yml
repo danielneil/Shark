@@ -18,6 +18,11 @@
   apt:
    name: curl
    state: latest
+   
+- name: Install java (required for Apache Drill )
+  apt:
+   name: default-jre
+   state: latest
 
 - name: Setting environement vars - /etc/environment
   lineinfile:
@@ -26,3 +31,6 @@
     regexp: "^{{ item.key }}="
     line: "{{ item.key }}={{ item.value}}"
   with_items: "{{ os_environment }}"
+
+- name: Sourcing environmental variables
+  shell: source /etc/environment executable=bash
