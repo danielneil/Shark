@@ -1,6 +1,16 @@
 ---
 # tasks file for zookeeper
-
+- name: Ensure group "zk" exists
+  group:
+    name: zk
+    state: present
+    
+- name: Add zk user
+  user:
+    name: zk
+    shell: /bin/bash
+    groups: zk 
+    
 - name: Downloading ZooKeeper 
   shell: cd /tmp && wget -N https://apache.mirror.digitalpacific.com.au/zookeeper/zookeeper-3.6.2/apache-zookeeper-3.6.2-bin.tar.gz
   
@@ -9,8 +19,9 @@
    src: /tmp/apache-zookeeper-3.6.2-bin.tar.gz
    dest: /shark/
    
-- name: Add zk user
-  user:
-    name: zookeeper
-    shell: /bin/bash
-    groups: sudo 
+- name: Configuring permissions on the above
+  file: 
+   dest: /shark/apache-zookeeper-3.6.2-bin
+   owner: zk 
+   group: zk 
+   recurse: yes
