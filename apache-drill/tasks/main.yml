@@ -56,3 +56,9 @@
   copy:
    src: drill.service
    dest: /etc/systemd/system/
+
+- name: Starting drill
+  service:
+   name: drill
+   state: started
+   enabled: true
