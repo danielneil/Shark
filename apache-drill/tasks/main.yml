@@ -30,5 +30,11 @@
    name: pandas
    executable: pip3
 
-- name: Setting up our DRILL_HOME env
+- name: Configuring our necessary system environment variables /etc/environment
+  lineinfile:
+    dest: "/etc/environment"
+    state: present
+    regexp: "^{{ item.key }}="
+    line: "{{ item.key }}={{ item.value}}"
+  with_items: "{{ os_environment }}"
 
