@@ -1,2 +1,11 @@
 ---
 # tasks file for zookeeper
+
+- name: Downloading ZooKeeper 
+  shell: cd /tmp && wget -N https://apache.mirror.digitalpacific.com.au/zookeeper/zookeeper-3.6.2/apache-zookeeper-3.6.2-bin.tar.gz
+  
+- name: Unzipping the above
+  unarchive:
+   src: /tmp/apache-zookeeper-3.6.2-bin.tar.gz
+   dest: /shark/
+
