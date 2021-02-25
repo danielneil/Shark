@@ -32,3 +32,18 @@
     state: directory
     owner: zk 
     group: zk 
+   
+- name: Adding zoo configuration file
+  copy:
+   src: zoo.cfg
+   dest: /shark/apache-zookeeper-3.6.2-bin/conf
+   owner: zk 
+   group: zk 
+   
+- name: Adding zoo systemd file
+  copy:
+   src: zookeeper.service
+   dest: /etc/systemd/system/
+
+   
+   
