@@ -29,3 +29,8 @@
    name: pandas
    executable: pip3
 
+- name: Copying configuration file
+  copy:
+   src: drill-override.conf
+   dest: /shark/apache-drill-1.18.0/conf/
+   
