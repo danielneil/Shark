@@ -5,10 +5,14 @@ import jpype
 import os
 import pandas as pd
 
-DRILL_HOME = os.environ["DRILL_HOME"]
-classpath = DRILL_HOME + "/jars/drill-jdbc-1.18.0.jar"
+drill_home = '/shark/apache-drill/apache-drill-1.18.0'
 
-jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=%s" % classpath)
+classpath = [ 
+            drill_home + '/jars',
+            drill_home + '/jars/thirdparty'
+        ]
+
+jpype.startJVM("-ea", 
 
 conn = jaydebeapi.connect(
     'org.apache.drill.jdbc.Driver',
