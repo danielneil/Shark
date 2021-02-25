@@ -20,6 +20,11 @@
    src: /shark/apache-drill/apache-drill-1.18.0.tar.gz
    dest: /shark/apache-drill/
 
+- name: Install setup tools for python3
+  pip:
+   name: setuptools
+   executable: pip3
+
 - name: Install JayDeBeApi which is prereq for python and jdbc connectivitty
   pip:
    name: JayDeBeApi

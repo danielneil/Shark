@@ -16,5 +16,5 @@
   - server-prep
   - httpd
   - base-from-source
-  - apache-drill
   - algorithmictradingplatform
+  - apache-drill
