@@ -1,0 +1,6 @@
+---
+
+- name: Adding UI refresh code for backtests
+  copy:
+   src: ui_refresh/ui_backtest_refresh.py
+   dest: /shark/bin
