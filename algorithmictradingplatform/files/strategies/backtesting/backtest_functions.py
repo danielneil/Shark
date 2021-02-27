@@ -3,7 +3,7 @@ import json
 
 def CreateJSONTradeLog(tradeLogDict, ticker):
 
-    with open("/shark/backtest/" + ticker + ".trade.log", 'w') as jsonFile:
+    with open("/shark/backtest/tradelog/" + ticker + ".trade.log", 'w') as jsonFile:
 
         json.dump(tradeLogDict, jsonFile)
 
