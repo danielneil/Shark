@@ -26,6 +26,13 @@
     owner: shark
     group: shark
     state: directory
+    
+- name: Creating bin working directory
+  file:
+   name: /shark/bin
+   owner: shark
+   group: shark
+   state: directory
 
 - name: Creating our backtest web dir to store the historical back test web files
   file:
