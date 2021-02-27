@@ -44,10 +44,11 @@
    
 - name: Copying dfs configuration file
   copy:
-   src: storage-plugins-override-example.conf
-   dest: /shark/apache-drill-1.18.0/conf/storage-plugins-override-example.conf
+   src: storage-plugins-override.conf
+   dest: /shark/apache-drill-1.18.0/conf/storage-plugins-override.conf
    owner: drill 
    group: drill 
+  notify: restart-drill
     
 - name: Configuring permissions on the above
   file: 
