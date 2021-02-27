@@ -1,6 +1,17 @@
 ---
 # tasks file for apache-drill
    
+ - name: Ensure group "drill" exists
+   group:
+    name: drill
+    state: present
+    
+- name: Add drill user
+  user:
+    name: drill
+    shell: /bin/bash
+    groups: drill 
+    
 - name: Downloading apache drill (This is a crap way to do it, but ansible's get_url kept redownload the file slowing everything down)
   shell: cd /shark && wget -N http://apache.mirrors.hoobly.com/drill/drill-1.18.0/apache-drill-1.18.0.tar.gz
 
@@ -27,18 +38,16 @@
 - name: Copying configuration file
   copy:
    src: drill-override.conf
-   dest: /shark/apache-drill-1.18.0/conf/
+   dest: /shark/apache-drill-1.18.0/conf/  
+   owner: drill 
+   group: drill 
    
-- name: Ensure group "drill" exists
-  group:
-    name: drill
-    state: present
-    
-- name: Add drill user
-  user:
-    name: drill
-    shell: /bin/bash
-    groups: drill 
+- name: Copying dfs configuration file
+  copy:
+   src: storage-plugins-override-example.conf
+   dest: /shark/apache-drill-1.18.0/conf/storage-plugins-override-example.conf
+   owner: drill 
+   group: drill 
     
 - name: Configuring permissions on the above
   file: 
