@@ -48,6 +48,7 @@
    owner: shark
    group: shark
    state: directory
+   mode: 0777
 
 - name: Copying the backtest web dir index.php
   copy:
