@@ -1,8 +1,8 @@
 ---
 # tasks file for apache-drill
    
- - name: Ensure group "drill" exists
-   group:
+- name: Ensure group "drill" exists
+  group:
     name: drill
     state: present
     
