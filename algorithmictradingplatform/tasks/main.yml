@@ -42,6 +42,13 @@
    state: directory
    mode: 0777
 
+- name: Creating our backtest tradelog web dir
+  file:
+   name: /shark/backtest/tradelog
+   owner: shark
+   group: shark
+   state: directory
+
 - name: Copying the backtest web dir index.php
   copy:
    src: strategies/backtesting/index.php
