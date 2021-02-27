@@ -175,6 +175,8 @@
 
 - include: check_short.yml
 
+- include: ui_refresh/ui_backtest_refresh.py
+
 - name: Running plugin smoke tests
   shell: cd /shark/plugins/ && ./smoke_tests.py
   register: tests_results
