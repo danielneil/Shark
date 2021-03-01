@@ -40,7 +40,8 @@
    src: drill-override.conf
    dest: /shark/apache-drill-1.18.0/conf/  
    owner: drill 
-   group: drill 
+   group: drill
+  notify: restart-drill
    
 - name: Copying dfs configuration file
   copy:
