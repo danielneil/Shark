@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker of the stock in question.")
-    parser.add_argument("-t", "--htmlFile", help="Name of the HTML file to save the report as.")
+    parser.add_argument("-f", "--htmlFile", help="Name of the HTML file to save the report as.")
     args = parser.parse_args()
 
     if not args.ticker:
