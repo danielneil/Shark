@@ -7,10 +7,12 @@ drill = PyDrill(host='localhost', port=8047)
 if not drill.is_active():
     raise ImproperlyConfigured('Please run Drill first')
 
-test_json = drill.query('''
-  SELECT * FROM
-  `dfs.root`.`/shark/backtest/tradelog/`
+tradeCount = drill.query('''
+  SELECT count(datetime) FROM
+  dfs.tradelog.`SCG.trade.log`
 ''')
 
-for result in test_json:
-    print("%s: %s" %(result['ticker'], result['quantity']))
+df = tradeCount.to_dataframe()
+count = df.iloc[0,0]
+
+print(count)
