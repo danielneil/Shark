@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
         if args.htmlFile:
             
-            f = open("/shark/backtest/tradelog/" + args.htmlFile, "w")
+            f = open(args.htmlFile, "w")
             f.write(tmpl.render(ticker = ticker, x = df))
             f.close()
             
