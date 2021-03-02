@@ -1,5 +1,6 @@
 import datetime
 import json
+import subprocess
 
 def CreateJSONTradeLog(tradeLogDict, ticker):
 
@@ -7,6 +8,10 @@ def CreateJSONTradeLog(tradeLogDict, ticker):
 
         json.dump(tradeLogDict, jsonFile)
 
+def CreateJSONTradeLogHTML(ticker):
+
+    subprocess.call(["/shark/bin/ui_backtest_refresh.py", "--ticker", ticker])
+       
 def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
 
   with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
