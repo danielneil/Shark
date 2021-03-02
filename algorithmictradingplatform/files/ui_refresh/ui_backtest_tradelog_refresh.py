@@ -45,5 +45,6 @@ if __name__ == "__main__":
         tmpl = Template(f.read())
 
         print(tmpl.render(
+            ticker = ticker,
             x = df
         ))

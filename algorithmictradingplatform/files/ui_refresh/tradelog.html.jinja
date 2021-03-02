@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+	  <title>Backtest Trade Log for ticker: {{ ticker }}</title>
   </head>
   <body>
-	  <table>
+	  <h2>Trade Log for {{ ticker }}</h2>
+	  <hr />
+	  <div style="font-weight: bold">Summary:</div>
+	  <hr />
+	  <table width="80%" border=1>
+		<tr>
+			<th>Date/Time</th>
+			<th>Action</th>
+			<th>Ticker</th>
+			<th>Quanity</th>
+			<th>Price</th>
+		</tr>
   		{% for key,value in x.iterrows() %}
 		<tr>
 			<td>{{ value['datetime'] }}</td>
