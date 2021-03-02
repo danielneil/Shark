@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Gets the number of records in the trade log - purely for example. 
+from jinja2 import Template
 
 import datetime
 import sys
