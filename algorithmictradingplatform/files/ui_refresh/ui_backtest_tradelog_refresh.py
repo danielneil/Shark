@@ -37,5 +37,12 @@ if __name__ == "__main__":
 
     df = tradeRecord.to_dataframe()
 
-    for index, row in df.iterrows():
-        print(row["datetime"], row["action"], row["ticker"], row["quantity"], row["price"])
+    with open('tradelog.html.jinja') as f:
+    tmpl = Template(f.read())
+    print(tmpl.render(
+        variable = "Trade recors for ticker: " + ticker,
+        item_list = df.to_html()
+    ))
+    
+    #for index, row in df.iterrows():
+    #    print(row["datetime"], row["action"], row["ticker"], row["quantity"], row["price"])
