@@ -4,9 +4,8 @@
     <title>{{ html_title }}</title>
   </head>
   <body>
-  {%- for item in item_list %}
-    {{ item["datetime"] }}{% if not loop.last %},{% endif %}
-    
-  {%- endfor %}
+  {% for key,value in x.iterrows() %}
+      <option value="{{ value['id'] }}">{{ value['text'] }}</option>
+  {% endfor %}
   </body>
 </html>
