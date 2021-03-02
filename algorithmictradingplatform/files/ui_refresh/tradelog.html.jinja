@@ -3,8 +3,16 @@
   <head>
   </head>
   <body>
-  {% for key,value in x.iterrows() %}
-      <option value="{{ value['id'] }}">{{ value['text'] }}</option>
-  {% endfor %}
+	  <table>
+  		{% for key,value in x.iterrows() %}
+		<tr>
+			<td>{{ value['datetime'] }}</td>
+			<td>{{ value['action'] }}</td>
+			<td>{{ value['ticker'] }}</td>
+			<td>{{ value['quantity'] }}</td>
+			<td>{{ value['price'] }}</td>
+		</tr>
+  		{% endfor %}
+  	  </table>
   </body>
 </html>

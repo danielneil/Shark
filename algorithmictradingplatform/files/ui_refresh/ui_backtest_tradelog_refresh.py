@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# Using jinja templating engine, it gernates the trade log based on the json file using apache drill.
+# Drill is used to provide scability options in the future.
+
 from jinja2 import Template
 
 import datetime
@@ -38,11 +41,9 @@ if __name__ == "__main__":
     df = tradeRecord.to_dataframe()
 
     with open('tradelog.html.jinja') as f:
-    tmpl = Template(f.read())
-    print(tmpl.render(
-        variable = "Trade recors for ticker: " + ticker,
-        item_list = df.to_html()
-    ))
-    
-    #for index, row in df.iterrows():
-    #    print(row["datetime"], row["action"], row["ticker"], row["quantity"], row["price"])
+
+        tmpl = Template(f.read())
+
+        print(tmpl.render(
+            x = df
+        ))
