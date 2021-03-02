@@ -145,8 +145,11 @@ def run_strategy(ticker, shares, capital, smaPeriod):
     # Generate the HTML Report    
     CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
 
-    # Generate the trade log.
+    # Generate the trade log json file.
     CreateJSONTradeLog(tradeLog, ticker)
+    
+    # Generate the trade log in HTML
+    CreateJSONTradeLogHTML(ticker)
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
