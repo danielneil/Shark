@@ -9,6 +9,7 @@ import datetime
 import sys
 import subprocess
 import argparse
+import pandas
 
 from pydrill.client import PyDrill
 
@@ -20,38 +21,68 @@ UNKNOWN      = 3
 drill = PyDrill(host='localhost', port=8047)
 
 if not drill.is_active():
-    raise ImproperlyConfigured('Please run Drill first')
+   raise ImproperlyConfigured('Please run Drill first')
 
 cmd_arg_help = "Refreshes the backtest traderecord UI for a specific ticker"
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description=cmd_arg_help)
-    parser.add_argument("-t", "--ticker", help="Ticker of the stock in question.")
-    parser.add_argument("-f", "--htmlFile", help="Name of the HTML file to save the report as.")
-    args = parser.parse_args()
+        parser = argparse.ArgumentParser(description=cmd_arg_help)
+        parser.add_argument("-t", "--ticker", help="Ticker of the stock in question.")
+        parser.add_argument("-f", "--htmlFile", help="Name of the HTML file to save the report as.")
+        args = parser.parse_args()
 
-    if not args.ticker:
-        print ("UNKNOWN - No ticker specified")
-        sys.exit(UNKNOWN)
+        if not args.ticker:
+
+            print ("UNKNOWN - No ticker specified")
+            sys.exit(UNKNOWN)
     
-    ticker = args.ticker
-    
-    tradeRecord = drill.query("SELECT * FROM dfs.tradelog.`" + ticker + ".trade.log`")
+        ticker = args.ticker
+   
+        # Select all trades.
 
-    df = tradeRecord.to_dataframe()
+        tradeRecord = drill.query("SELECT * FROM dfs.tradelog.`" + ticker + ".trade.log`")
+        df = tradeRecord.to_dataframe()
 
-    with open('/shark/bin/tradelog.html.jinja') as f:
+        # Count the total number of rows in the DF (represents the number of trades)
 
-        tmpl = Template(f.read())
+        index = df.index
+        total_trades = len(index)
 
-        if args.htmlFile:
+        df["price"] = pandas.to_numeric(df['price'])
+
+        # Get the most costly trade
+
+        pos = df["price"].argmax()
+        highest_trade = df["price"].iloc[pos]
+
+        # Get the cheapest trade.
+
+        pos = df["price"].argmin()
+        lowest_trade = df["price"].iloc[pos]
+
+        with open('/shark/bin/tradelog.html.jinja') as f:
+
+            tmpl = Template(f.read())
+
+            if args.htmlFile:
+           
+                with open(args.htmlFile, "w") as f:
+                    
+                    f.write(tmpl.render(
+                        ticker = ticker, 
+                        total_trades = total_trades,
+                        highest_trade = highest_trade,
+                        lowest_trade = lowest_trade,
+                        x = df
+                    ))
             
-            f = open(args.htmlFile, "w")
-            f.write(tmpl.render(ticker = ticker, x = df))
-            f.close()
+            else:
             
-        else:
-            
-            # Else just print it to STDIO.
-            print(tmpl.render(ticker = ticker, x = df))
+                print(tmpl.render(
+                    ticker = ticker, 
+                    total_trades = total_trades,
+                    highest_trade = highest_trade,
+                    lowest_trade = lowest_trade,
+                    x = df
+                ))
