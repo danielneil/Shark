@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+# Gets the number of records in the trade log - purely for example. 
+
 import datetime
 import sys
 import subprocess
