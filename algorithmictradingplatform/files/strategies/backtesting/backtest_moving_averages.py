@@ -22,6 +22,7 @@ import time
 
 from backtest_functions import CreateHTMLReport
 from backtest_functions import CreateJSONTradeLog
+from backtest_functions import CreateJSONTradeLogHTML
 
 # Nagios constants. 
 
