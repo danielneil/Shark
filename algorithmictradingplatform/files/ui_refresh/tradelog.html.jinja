@@ -5,7 +5,8 @@
   </head>
   <body>
   {%- for item in item_list %}
-    {{ item }}{% if not loop.last %},{% endif %}
+    {{ item["datetime"] }}{% if not loop.last %},{% endif %}
+    
   {%- endfor %}
   </body>
 </html>
