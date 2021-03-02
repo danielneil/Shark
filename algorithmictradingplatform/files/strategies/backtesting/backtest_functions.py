@@ -29,7 +29,7 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         htmlFile.write("<p><span class='bold'>Date generated:</span> " + generationTime + "</p>")
         htmlFile.write("<p><span class='bold'>Strategy code computation time:</span> " + str(time_taken) + " seconds.</p><hr />")
 
-        htmlFile.write("<a href = '/shark/backtest/" + ticker + ".trade.log.html'>Trade Log</a>")
+        htmlFile.write("<a href = '/shark/backtest/tradelog/" + ticker + ".trade.log.html'>Trade Log</a>")
         htmlFile.write("<br />")
         htmlFile.write("<br />")
         htmlFile.write("<table border=1 style='width: 800px'>")
