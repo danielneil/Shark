@@ -4,6 +4,7 @@
   copy:
    src: ui_refresh/ui_backtest_tradelog_refresh.py
    dest: /shark/bin
+   mode: 0755
    
 - name: Adding UI jinja code for backtests tradelog
   copy:
