@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     df = tradeRecord.to_dataframe()
 
-    with open('tradelog.html.jinja') as f:
+    with open('/shark/bin/tradelog.html.jinja') as f:
 
         tmpl = Template(f.read())
 
