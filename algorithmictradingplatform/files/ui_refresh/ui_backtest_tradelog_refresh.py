@@ -28,6 +28,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-t", "--ticker", help="Ticker of the stock in question.")
+    parser.add_argument("-t", "--htmlFile", help="Name of the HTML file to save the report as.")
     args = parser.parse_args()
 
     if not args.ticker:
@@ -44,7 +45,13 @@ if __name__ == "__main__":
 
         tmpl = Template(f.read())
 
-        print(tmpl.render(
-            ticker = ticker,
-            x = df
-        ))
+        if args.htmlFile:
+            
+            f = open("/shark/backtest/tradelog/" + args.htmlFile, "w")
+            f.write(tmpl.render(ticker = ticker, x = df))
+            f.close()
+            
+        else:
+            
+            # Else just print it to STDIO.
+            print(tmpl.render(ticker = ticker, x = df))
