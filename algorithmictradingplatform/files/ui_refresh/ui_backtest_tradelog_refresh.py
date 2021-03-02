@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
         parser = argparse.ArgumentParser(description=cmd_arg_help)
         parser.add_argument("-t", "--ticker", help="Ticker of the stock in question.")
-        parser.add_argument("-f", "--htmlFile", help="Name of the HTML file to save the report as.")
+        parser.add_argument("-f", "--htmlFile", help="Name of the HTML file to save the report as (or otherwise it goes to STDIO).")
         args = parser.parse_args()
 
         if not args.ticker:
@@ -49,6 +49,7 @@ if __name__ == "__main__":
         index = df.index
         total_trades = len(index)
 
+        # This is needed for the below.
         df["price"] = pandas.to_numeric(df['price'])
 
         # Get the most costly trade

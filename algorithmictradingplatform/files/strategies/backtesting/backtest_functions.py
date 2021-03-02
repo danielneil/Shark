@@ -11,6 +11,8 @@ def CreateJSONTradeLog(tradeLogDict, ticker):
 def CreateJSONTradeLogHTML(ticker):
 
     subprocess.call(["/shark/bin/ui_backtest_tradelog_refresh.py", "--ticker", ticker, "--htmlFile", "/shark/backtest/tradelog/"+ticker+".trade.log.html"])
+
+    # This is pox, I need to rewrite this one day
        
 def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
 
