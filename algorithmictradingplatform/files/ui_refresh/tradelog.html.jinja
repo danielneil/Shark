@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <title>Backtest Trade Log for ticker: {{ ticker }}</title>
+	  <title>Transaction Log: {{ ticker }}</title>
   </head>
   <body>
-	  <h2>Trade Log for {{ ticker }}</h2>
+	  <h2>Transaction log: {{ ticker }}</h2>
 	  <hr />
-	  <div style="font-weight: bold">Summary:</div><br />
-	  <span style="font-weight: bold">Total Transactions: </span>{{ total_transactions }}<br />
+	  <span style="font-weight: bold">Transactions: </span>{{ total_transactions }}<br />
 	  <span style="font-weight: bold">Highest Buy: </span>{{ highest_buy }}<br />
 	  <span style="font-weight: bold">Lowest Buy: </span>{{ lowest_buy }}<br />
 	  <span style="font-weight: bold">Highest Sell: </span>{{ highest_sell }}<br />

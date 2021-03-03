@@ -18,7 +18,7 @@
 		
 		if ( $action == "tradelogs" ) {
 
-			if ( ! strpos($value, '.trade.log' ) ) {
+			if ( ! strpos($value, '.trade.log.html' ) ) {
 				continue;
 			}
 		}
