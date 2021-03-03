@@ -42,25 +42,49 @@ if __name__ == "__main__":
         # Select all trades.
 
         tradeRecord = drill.query("SELECT * FROM dfs.tradelog.`" + ticker + ".trade.log`")
+
         df = tradeRecord.to_dataframe()
 
         # Count the total number of rows in the DF (represents the number of trades)
 
         index = df.index
-        total_trades = len(index)
+        total_transactions = len(index)
 
         # This is needed for the below.
         df["price"] = pandas.to_numeric(df['price'])
 
-        # Get the most costly trade
+        # Get the most costly BUY
+
+        filter = df["action"] == 'BUY'
+        df.where(filter, inplace = True)
 
         pos = df["price"].argmax()
-        highest_trade = df["price"].iloc[pos]
+        highest_buy = df["price"].iloc[pos]
 
-        # Get the cheapest trade.
+        # Get the cheapest BUY.
 
         pos = df["price"].argmin()
-        lowest_trade = df["price"].iloc[pos]
+        lowest_buy = df["price"].iloc[pos]
+
+        # Reset the index (reset using reset_index() on the df didn't work? Anyone?
+        df = tradeRecord.to_dataframe()
+        df["price"] = pandas.to_numeric(df['price'])
+
+        # Get the most costly SELL
+
+        filter = df["action"] == 'SELL'
+        df.where(filter, inplace = True)
+        
+        pos = df["price"].argmax()
+        highest_sell = df["price"].iloc[pos]
+
+        # Get the most cheapest SELL
+
+        pos = df["price"].argmin()
+        lowest_sell = df["price"].iloc[pos]
+
+        # Reset the dataframe
+        df = tradeRecord.to_dataframe()
 
         with open('/shark/bin/tradelog.html.jinja') as f:
 
@@ -71,19 +95,27 @@ if __name__ == "__main__":
                 with open(args.htmlFile, "w") as f:
                     
                     f.write(tmpl.render(
+
                         ticker = ticker, 
-                        total_trades = total_trades,
-                        highest_trade = highest_trade,
-                        lowest_trade = lowest_trade,
+                        total_transactions = total_transactions,
+                        highest_buy = highest_buy,
+                        lowest_buy = lowest_buy,
+                        highest_sell = highest_sell,
+                        lowest_sell = lowest_sell,
                         x = df
+
                     ))
             
             else:
             
                 print(tmpl.render(
+
                     ticker = ticker, 
-                    total_trades = total_trades,
-                    highest_trade = highest_trade,
-                    lowest_trade = lowest_trade,
+                    total_transactions = total_transactions,
+                    highest_buy = highest_buy,
+                    lowest_buy = lowest_buy,
+                    highest_sell = highest_sell,
+                    lowest_sell = lowest_sell,
                     x = df
+
                 ))
