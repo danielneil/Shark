@@ -42,21 +42,29 @@
    state: directory
    mode: 0777
 
-- name: Creating our backtest tradelog web dir
+- name: Creating our backtest transactions web dir
   file:
-   name: /shark/backtest/tradelog
+   name: /shark/backtest/transactions
    owner: shark
    group: shark
    state: directory
    mode: 0777
-
-- name: Copying the backtest web dir index.php
-  copy:
-   src: strategies/backtesting/index.php
-   dest: /shark/backtest/
+   
+- name: Creating our backtest images web dir
+  file:
+   name: /shark/backtest/images
    owner: shark
    group: shark
-   mode: 0755
+   state: directory
+   mode: 0777
+   
+- name: Creating the backtest HTML web dir
+  file:
+   name: /shark/backtest/html
+   owner: shark
+   group: shark
+   state: directory
+   mode: 0777
 
 - name: Creating tmp cache directory
   file:
