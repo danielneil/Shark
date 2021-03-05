@@ -2,21 +2,21 @@ import datetime
 import json
 import subprocess
 
-def CreateJSONTradeLog(tradeLogDict, ticker):
+def CreateJSONTransactionLog(transactionDict, ticker):
 
-    with open("/shark/backtest/tradelog/" + ticker + ".trade.log", 'w') as jsonFile:
+    with open("/shark/backtest/transactions/" + ticker + ".transaction.json", 'w') as jsonFile:
 
-        json.dump(tradeLogDict, jsonFile)
+        json.dump(transactionDict, jsonFile)
 
-def CreateJSONTradeLogHTML(ticker):
+def CreateJSONTransactionLogHTML(ticker):
 
-    subprocess.call(["/shark/bin/ui_backtest_tradelog_refresh.py", "--ticker", ticker, "--htmlFile", "/shark/backtest/tradelog/"+ticker+".trade.log.html"])
+    subprocess.call(["/shark/bin/ui_backtest_transactions_refresh.py", "--ticker", ticker, "--htmlFile", "/shark/backtest/transactions/"+ticker+".transaction.html"])
 
     # This is pox, I need to rewrite this one day
        
 def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
 
-  with open("/shark/backtest/" + ticker + ".html", 'w') as htmlFile:
+  with open("/shark/backtest/html/" + ticker + ".html", 'w') as htmlFile:
 
         htmlFile.write("<html>")
         htmlFile.write("<head>")
@@ -31,7 +31,7 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         htmlFile.write("<p><span class='bold'>Date generated:</span> " + generationTime + "</p>")
         htmlFile.write("<p><span class='bold'>Strategy code computation time:</span> " + str(time_taken) + " seconds.</p><hr />")
 
-        htmlFile.write("<a href = '/shark/backtest/tradelog/" + ticker + ".trade.log.html'>Trade Log</a>")
+        htmlFile.write("<a href = '/shark/backtest/transactions/" + ticker + ".transaction.html'>Trade Log</a>")
         htmlFile.write("<br />")
         htmlFile.write("<br />")
         htmlFile.write("<table border=1 style='width: 800px'>")
@@ -50,7 +50,7 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         htmlFile.write("</table>")
         htmlFile.write("<br />")
 
-        htmlFile.write("<img src = '/shark/backtest/" + ticker + ".png' />")
+        htmlFile.write("<img src = '/shark/backtest/html/" + ticker + ".png' />")
 
         if tradesAnalyzer.getCount() > 0:
 

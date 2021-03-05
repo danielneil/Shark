@@ -21,8 +21,8 @@ import os
 import time
 
 from backtest_functions import CreateHTMLReport
-from backtest_functions import CreateJSONTradeLog
-from backtest_functions import CreateJSONTradeLogHTML
+from backtest_functions import CreateJSONTransactionLog
+from backtest_functions import CreateJSONTransactionLogHTML
 
 # Nagios constants. 
 
@@ -138,7 +138,7 @@ def run_strategy(ticker, shares, capital, smaPeriod):
     strat.run()
 
     # Save the plot.
-    plot.savePlot("/shark/backtest/" + ticker + ".png") 
+    plot.savePlot("/shark/backtest/html/" + ticker + ".png") 
 
     # measure the execution time to here.
     time_taken = ( time.time() - start_time )
@@ -147,10 +147,10 @@ def run_strategy(ticker, shares, capital, smaPeriod):
     CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
 
     # Generate the trade log json file.
-    CreateJSONTradeLog(tradeLog, ticker)
+    CreateJSONTransactionLog(tradeLog, ticker)
     
     # Generate the trade log in HTML
-    CreateJSONTradeLogHTML(ticker)
+    CreateJSONTransactionLogHTML(ticker)
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 

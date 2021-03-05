@@ -115,7 +115,7 @@ def process_service_config(a_dict,ticker):
                     # Add a web link to the details of the backtest.
                     # The ansible script seds the LOCAL_IP out with the server IP. It's rough, but meh.
 
-                    print("\tnotes_url http://LOCAL_IP/shark/backtest/" + ticker + ".html")
+                    print("\tnotes_url http://LOCAL_IP/shark/backtest/html/" + ticker + ".html")
             else:
                  # print the command arguments
                 command_str += "!" + str(v)

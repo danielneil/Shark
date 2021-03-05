@@ -23,7 +23,7 @@ drill = PyDrill(host='localhost', port=8047)
 if not drill.is_active():
    raise ImproperlyConfigured('Please run Drill first')
 
-cmd_arg_help = "Refreshes the backtest traderecord UI for a specific ticker"
+cmd_arg_help = "Refreshes the backtest transaction UI for a specific ticker"
 
 if __name__ == "__main__":
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
    
         # Select all trades.
 
-        tradeRecord = drill.query("SELECT * FROM dfs.tradelog.`" + ticker + ".trade.log`")
+        tradeRecord = drill.query("SELECT * FROM dfs.transactions.`" + ticker + ".transaction.json`")
 
         df = tradeRecord.to_dataframe()
 
@@ -86,7 +86,7 @@ if __name__ == "__main__":
         # Reset the dataframe
         df = tradeRecord.to_dataframe()
 
-        with open('/shark/bin/tradelog.html.jinja') as f:
+        with open('/shark/bin/transaction.html.jinja') as f:
 
             tmpl = Template(f.read())
 

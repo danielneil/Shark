@@ -24,7 +24,7 @@ if not drill.is_active():
    raise ImproperlyConfigured('Please run Drill first')
 
 
-tradeRecord = drill.query("SELECT * FROM dfs.tradelogg`")
+tradeRecord = drill.query("SELECT * FROM dfs.transactions`")
 
 df = tradeRecord.to_dataframe()
 

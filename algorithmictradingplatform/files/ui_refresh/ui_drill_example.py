@@ -33,7 +33,7 @@ if __name__ == "__main__":
     
     ticker = args.ticker
     
-    tradeCount = drill.query("SELECT count(datetime) FROM dfs.tradelog.`" + ticker + ".trade.log`")
+    tradeCount = drill.query("SELECT count(datetime) FROM dfs.transactions.`" + ticker + ".trade.log`")
 
     df = tradeCount.to_dataframe()
     count = df.iloc[0,0]
