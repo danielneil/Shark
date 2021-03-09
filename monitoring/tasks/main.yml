@@ -8,6 +8,11 @@
    
 - name: Configuring, making and install the above
   shell: cd /tmp/nagios-plugins-2.3.3 && ./configure && make && make install 
+
+- name: Copying the custom check service command
+  copy:
+   src: check_service
+   dest: /usr/local/nagios/libexec/
  
 - name: Deploying monitoring nagios config file
   copy:
