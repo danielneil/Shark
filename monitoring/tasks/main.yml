@@ -5,3 +5,6 @@
   unarchive:
    src: nagios-plugins-2.3.3.tar.gz
    dest: /tmp
+   
+- name: Configuring, making and install the above
+  shell: cd /tmp/nagios-plugins-2.3.3 && ./configure && make && make install 
