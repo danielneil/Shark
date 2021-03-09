@@ -13,6 +13,7 @@
   copy:
    src: check_service
    dest: /usr/local/nagios/libexec/
+  mode: 0755
  
 - name: Deploying monitoring nagios config file
   copy:
