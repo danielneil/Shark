@@ -8,3 +8,9 @@
    
 - name: Configuring, making and install the above
   shell: cd /tmp/nagios-plugins-2.3.3 && ./configure && make && make install 
+ 
+- name: Depploying monitoring nagios config file
+  copy:
+   src: shark_monitoring.cfg
+   dest: /usr/local/nagios/etc/conf.d
+  notify: restart-nagios

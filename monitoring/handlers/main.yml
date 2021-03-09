@@ -1,2 +1,6 @@
 ---
 # handlers file for monitoring
+- name: restart-nagios
+  service:
+   name: nagios
+   state: restarted
