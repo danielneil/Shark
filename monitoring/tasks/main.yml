@@ -1,2 +1,7 @@
 ---
 # tasks file for monitoring
+
+- name: Unpacking nagios-plugins zip file into temp
+  unarchive:
+   src: nagios-plugins-2.3.3.tar.gz
+   dest: /tmp
