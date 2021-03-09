@@ -19,4 +19,4 @@
   - algorithmictradingplatform
   - zookeeper
   - apache-drill
-  - monitoring # Comment this out if you want to remove the monitoring element.
+ # - monitoring # Uncomment this if you want to debug Shark.
