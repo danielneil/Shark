@@ -19,3 +19,4 @@
   - algorithmictradingplatform
   - zookeeper
   - apache-drill
+  - monitoring # Comment this out if you want to remove the monitoring element.
