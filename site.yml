@@ -19,4 +19,4 @@
   - algorithmictradingplatform
   - zookeeper
   - apache-drill
- # - monitoring # Uncomment this if you want to debug Shark.
+  - monitoring # Uncomment this if you want to debug Shark.
