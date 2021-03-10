@@ -49,7 +49,7 @@ if __name__ == "__main__":
         print ("UNKNOWN - Backtest file (" + backtestFile  + ") not found...")
         sys.exit(UNKNOWN)
 
-    process = subprocess.Popen(['/shark/strategies/backtesting/' + backtestFile, '--ticker', ticker, '--shares', shares, '--capital', capital, args.noreport], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    process = subprocess.Popen(['/shark/strategies/backtesting/' + backtestFile, '--ticker', ticker, '--shares', shares, '--capital', capital, '--noreport', args.noreport], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
 
     stdout, stderr = process.communicate()
 

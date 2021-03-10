@@ -117,7 +117,7 @@ output, you can decide to set certain warning and critical threshold levels.
 ## <a name="check_backtest"/>check_backtest
 
 **Usage:** check_backtest.py [-h] [-t TICKER] [-b BACKTEST] [-s SHARES]
-                         [-c CAPITAL]
+                         [-c CAPITAL] [-n]
 
 This executes the backtest code. For a simple backtest example, see the
 template
@@ -133,6 +133,7 @@ template
   -c CAPITAL, --capital CAPITAL
                         The imaginary amount of a capital which to use in the
                         backtest
+  -n, --noreport        Do not generate the back test reports
 ## <a name="check_ema"/>check_ema
 
 **Usage:** check_ema.py [-h] [-t TICKER] [-p PERIODS] [-r [RAW]] [-max MAX]
