@@ -104,7 +104,7 @@ class MovingAverages(strategy.BacktestingStrategy):
             self.__position.exitMarket()
 
 
-def run_strategy(ticker, shares, capital, smaPeriod):
+def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
 
     # Measure the execution time of the backtest.
     start_time = time.time()
@@ -136,21 +136,23 @@ def run_strategy(ticker, shares, capital, smaPeriod):
     plot = plotter.StrategyPlotter(strat)
 
     strat.run()
-
-    # Save the plot.
-    plot.savePlot("/shark/backtest/html/" + ticker + ".png") 
-
-    # measure the execution time to here.
-    time_taken = ( time.time() - start_time )
-
-    # Generate the HTML Report    
-    CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
-
-    # Generate the trade log json file.
-    CreateJSONTransactionLog(tradeLog, ticker)
     
-    # Generate the trade log in HTML
-    CreateJSONTransactionLogHTML(ticker)
+    if generate_reports:
+        
+        # Save the plot.
+        plot.savePlot("/shark/backtest/html/" + ticker + ".png") 
+
+        # measure the execution time to here.
+        time_taken = ( time.time() - start_time )
+
+        # Generate the HTML Report    
+        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
+
+        # Generate the trade log json file.
+        CreateJSONTransactionLog(tradeLog, ticker)
+    
+        # Generate the trade log in HTML
+        CreateJSONTransactionLogHTML(ticker)
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
@@ -166,6 +168,7 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
+    parser.add_argument("-c", "--noreport", help="Do not generate the back test report", action=argparse.BooleanOptionalAction)
     args = parser.parse_args()
 
     if not args.ticker:
@@ -186,4 +189,4 @@ if __name__ == "__main__":
     
     smaPeriod = 50
 
-    run_strategy(ticker, shares, capital, smaPeriod)
+    run_strategy(ticker, shares, capital, smaPeriod, args.noreport)
