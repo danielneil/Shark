@@ -21,7 +21,7 @@ if __name__ == "__main__":
     parser.add_argument("-b", "--backtest", help="The file name of the backtest")
     parser.add_argument("-s", "--shares", help="The imaginary number of shares to use in the backtest")
     parser.add_argument("-c", "--capital", help="The imaginary amount of a capital which to use in the backtest")
-    parser.add_argument("-c", "--noreport", help="Do not generate the back test reports", action="store_true")
+    parser.add_argument("-n", "--noreport", help="Do not generate the back test reports", action="store_true", default=False)
     args = parser.parse_args()
 
     if not args.ticker:
