@@ -19,4 +19,5 @@
   copy:
    src: shark_monitoring.cfg
    dest: /usr/local/nagios/etc/conf.d/
+   force: yes
   notify: restart-nagios
