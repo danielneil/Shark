@@ -168,7 +168,7 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
-    parser.add_argument("-c", "--noreport", help="Do not generate the back test report", action=argparse.BooleanOptionalAction)
+    parser.add_argument("-c", "--noreport", help="Do not generate the back test report", action=action="store_true")
     args = parser.parse_args()
 
     if not args.ticker:
