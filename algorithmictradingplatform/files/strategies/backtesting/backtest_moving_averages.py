@@ -137,7 +137,7 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
 
     strat.run()
     
-    if generate_reports:
+    if not generate_reports:
         
         # Save the plot.
         plot.savePlot("/shark/backtest/html/" + ticker + ".png") 
@@ -168,7 +168,7 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
-    parser.add_argument("-n", "--noreport", help="Do not generate the back test report", action="store_true", default=False)
+    parser.add_argument("-n", "--noreport", help="Do not generate the back test report", action="store_false", default=True)
     args = parser.parse_args()
 
     if not args.ticker:

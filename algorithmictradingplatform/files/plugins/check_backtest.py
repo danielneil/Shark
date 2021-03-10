@@ -21,7 +21,7 @@ if __name__ == "__main__":
     parser.add_argument("-b", "--backtest", help="The file name of the backtest")
     parser.add_argument("-s", "--shares", help="The imaginary number of shares to use in the backtest")
     parser.add_argument("-c", "--capital", help="The imaginary amount of a capital which to use in the backtest")
-    parser.add_argument("-n", "--noreport", help="Do not generate the back test reports", action="store_true", default=False)
+    parser.add_argument("-n", "--noreport", help="Do not generate the back test reports", action="store_false", default=True)
     args = parser.parse_args()
 
     if not args.ticker:
@@ -49,12 +49,15 @@ if __name__ == "__main__":
         print ("UNKNOWN - Backtest file (" + backtestFile  + ") not found...")
         sys.exit(UNKNOWN)
 
-    process = subprocess.Popen(['/shark/strategies/backtesting/' + backtestFile, '--ticker', ticker, '--shares', shares, '--capital', capital, '--noreport', args.noreport], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    if args.noreport:
+        process = subprocess.Popen(['/shark/strategies/backtesting/' + backtestFile, '--ticker', ticker, '--shares', shares, '--capital', capital, "--noreport"], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    else:
+        process = subprocess.Popen(['/shark/strategies/backtesting/' + backtestFile, '--ticker', ticker, '--shares', shares, '--capital', capital], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
 
     stdout, stderr = process.communicate()
 
     exitcode = process.wait()
 
-    print(stdout)
+    print(stdout + stderr)
 
     sys.exit(exitcode)
