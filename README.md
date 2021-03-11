@@ -36,7 +36,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 ![alt text](https://github.com/danielneil/Shark/blob/main/screenshots/opportunity.JPG?raw=true)
 ![alt text](https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true)
 
-## Want to get involved? 
+# Want to get involved? 
 
 Shark's technology stack comprises of the below, therefore I need people with knowledge of ( or a willingness to learn ) any of the following. 
 
