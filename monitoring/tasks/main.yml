@@ -15,6 +15,11 @@
    dest: /usr/local/nagios/libexec/
    mode: 0755
  
+- name: Delete nagios monitoring file (it wasn't being deleted for crap reason.....)
+  file:
+    state: absent
+    path: /usr/local/nagios/etc/conf.d/shark_monitoring.cfg
+
 - name: Deploying monitoring nagios config file
   copy:
    src: shark_monitoring.cfg
