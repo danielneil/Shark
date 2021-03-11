@@ -55,11 +55,17 @@ PERL
 **Technologies**
 
 Nagios 
+
 Nagios Plugins
+
 Apache ZooKeeper
+
 Apache Drill
+
 Logtstash
+
 Apache HTTPD
+
 Docker
 
 **Operating Systems**
