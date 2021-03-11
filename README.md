@@ -54,8 +54,7 @@ PERL
 
 **Technologies**
 
-Nagios 
-
+Nagios \n
 Nagios Plugins
 
 Apache ZooKeeper
