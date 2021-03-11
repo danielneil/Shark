@@ -38,7 +38,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 # Want to get involved? 
 
-Shark has lots of moving parts, so feel free to cherry pick a component that interests you. 
+Shark has lots of moving parts, so feel free to cherry pick a component that interests you.
 
 The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) any of the following:
 
