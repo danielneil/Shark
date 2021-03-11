@@ -39,8 +39,8 @@ if __name__ == "__main__":
     number_of_rows = len(index)
         
     if number_of_rows == 1:
-        print("Found a single row in the dataframe")
+        print("Connected to Drill and a single row was returned")
         sys.exit(OK)          
     else:
-        print("Found more than a single row in the dataframe")
+        print("Connected to Drill, but we only expected a single row, this is bad...")
         sys.exit(CRITICAL)      
