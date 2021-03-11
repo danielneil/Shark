@@ -32,7 +32,12 @@ if __name__ == "__main__":
         sys.exit(CRITICAL)
 
     drill_result = drill.query(args.sql)
-
-    for result in drill_result:
-        print("%s: %s" %(result['ticker'], result['quantity']))
     
+    dataframe = drill_result.to_dataframe()
+    
+    if dataframe.count() == 1:
+        print("Found a single row in the dataframe")
+        sys.exit(OK)          
+    else:
+        print("Found more than a single row in the dataframe")
+        sys.exit(CRITICAL)      
