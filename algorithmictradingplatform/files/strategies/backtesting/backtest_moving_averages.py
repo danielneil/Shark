@@ -140,7 +140,7 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
     if not generate_reports:
         
         # Save the plot.
-        plot.savePlot("/shark/backtest/html/" + ticker + ".png") 
+        plot.savePlot("/shark/backtest/images/" + ticker + ".png") 
 
         # measure the execution time to here.
         time_taken = ( time.time() - start_time )
