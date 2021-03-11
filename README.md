@@ -40,7 +40,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 Shark's technology stack comprises of the below, therefore I need people with knowledge of ( or a willingness to learn ) any of the following. 
 
-# Programming Languages
+**Programming Languages**
 
 Bash Scripting
 Ansible
@@ -52,7 +52,7 @@ Python
 PANDAS
 PERL
 
-# Technologies 
+**Technologies**
 
 Nagios 
 Nagios Plugins
@@ -62,13 +62,14 @@ Logtstash
 Apache HTTPD
 Docker
 
-## Operating Systems
+**Operating Systems**
 
 Debian (or a derivative) 
 
-## Financial Analytics
+**Financials**
 
 At least an elementry understanding of financial markets and algorithmic trading. 
+Any kind of financial analytics specialisations are strongly
 
 
 # Warning
