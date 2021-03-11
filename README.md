@@ -38,26 +38,27 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 # Want to get involved? 
 
-Shark's technology stack comprises of the below, therefore I need people with knowledge of ( or a willingness to learn ) any of the following. 
+Shark has lots of moving parts, so feel free to cherry pick a component that interests you. 
+
+The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) any of the following:
 
 **Programming Languages**
 
-Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, Python , PANDAS, PERL
+Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, Python , PANDAS and. PERL
 
 **Technologies**
 
-Nagios, Nagios Plugins, Apache ZooKeeper, Apache Drill, Logtstash, Apache HTTPD, Docker
+Nagios, Nagios Plugins, Apache ZooKeeper, Apache Drill, Logtstash, Apache HTTPD, Docker, any kind of clustering.
 
 **Operating Systems**
 
-Debian (or a derivative) 
+Linux, ideally Debian or a derivative. 
 
 **Financials**
 
-At least an elementry understanding of financial markets and algorithmic trading. 
+An elementry understanding of financial markets and algorithmic trading. 
 
 Any kind of financial analytics specialisations are strongly
-
 
 # Warning
 
