@@ -24,11 +24,13 @@ AMC:
  Simple Moving Average - 10 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: AMC
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
-  check_command: check_sma 
+  check_command: check_sma
+  ticker: AMC
   period: 5
 
  Strategy: 
@@ -58,11 +60,13 @@ ANZ:
  Simple Moving Average - 10 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: ANZ
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: ANZ
   period: 5
 
  Strategy: 
@@ -92,11 +96,13 @@ BHP:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: BHP
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: BHP
   period: 5
 
  Strategy: 
@@ -126,11 +132,13 @@ BXB:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: BXB
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: BXB
   period: 5
 
  Strategy: 
@@ -160,11 +168,13 @@ CBA:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: CBA
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: CBA
   period: 5
 
  Strategy: 
@@ -194,11 +204,13 @@ CSL:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: CSL
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: CSL
   period: 5
 
  Strategy: 
@@ -228,11 +240,13 @@ GMG:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: GMG
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: GMG
   period: 5
 
  Strategy: 
@@ -262,11 +276,13 @@ IAG:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: IAG
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: IAG
   period: 5
 
  Strategy: 
@@ -296,11 +312,13 @@ MQG:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: MQG
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: MQG
   period: 5
 
  Strategy: 
@@ -330,11 +348,13 @@ NAB:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: NAB
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: NAB
   period: 5
 
  Strategy: 
@@ -364,11 +384,13 @@ NCM:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: NCM
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: NCM
   period: 5
 
  Strategy: 
@@ -398,11 +420,13 @@ RIO:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: RIO
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: RIO
   period: 5
 
  Strategy: 
@@ -432,11 +456,13 @@ SCG:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: SCG
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: SCG
   period: 5
 
  Strategy: 
@@ -466,11 +492,13 @@ SUN:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: SUN
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: SUN
   period: 5
 
  Strategy: 
@@ -500,11 +528,13 @@ TLS:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: TLS
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: TLS
   period: 5
 
  Strategy: 
@@ -534,11 +564,13 @@ TCL:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: TCL
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: TCL
   period: 5
 
  Strategy: 
@@ -568,11 +600,13 @@ WES:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: WES
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: WES
   period: 5
 
  Strategy: 
@@ -602,11 +636,13 @@ WBC:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: WBC
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: WBC
   period: 5
 
  Strategy: 
@@ -636,11 +672,13 @@ WPL:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: WPL
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: WPL
   period: 5
 
  Strategy: 
@@ -670,11 +708,13 @@ WOW:
  Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
+  ticker: WOW
   period: 50
 
  Simple Moving Average - 5 Days:
   description: "SMA: [ 5 Day ]"
   check_command: check_sma 
+  ticker: WOW
   period: 5
 
  Strategy: 
