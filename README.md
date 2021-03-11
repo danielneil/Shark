@@ -38,6 +38,43 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 # Warning
 
+Want to get involved? 
+
+Shark's technology stack comprises of the below, therefore I need people with knowledge of ( or a willingness to learn ) any of the below. 
+
+## Programming Languages
+
+Bash Scripting
+Ansible
+C/C++ 
+BOOST
+HTML/CSS
+PHP
+Python 
+PANDAS
+PERL
+
+## Technologies 
+
+Nagios 
+Nagios Plugins
+Apache ZooKeeper
+Apache Drill
+Logtstash
+Apache HTTPD
+Docker
+
+## Operating Systems
+
+Debian (or a derivative) 
+
+## Financial Analytics
+
+At least an elementry understanding of financial markets and algorithmic trading. 
+
+
+# Warning
+
 1. Don't install this on an internet-facing server.
 
 2. [Read the disclaimer](https://github.com/danielneil/Shark/blob/main/DISCLAIMER).
