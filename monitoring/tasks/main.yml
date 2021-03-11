@@ -14,6 +14,12 @@
    src: check_service
    dest: /usr/local/nagios/libexec/
    mode: 0755
+
+- name: Copying the apache drill check
+  copy:
+   src: check_apache_drill.py
+   dest: /usr/local/nagios/libexec/
+   mode: 0755 
  
 - name: Delete nagios monitoring file (it wasn't being deleted for crap reason.....)
   file:
