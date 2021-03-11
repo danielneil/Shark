@@ -33,6 +33,11 @@ if __name__ == "__main__":
 
     drill_result = drill.query(args.sql)
     
+    df = drill_result.to_dataframe()
+    index = df.index
+    number_of_rows = len(index)
+    
+    
     if len(drill_result) == 1:
         print("Found a single row in the dataframe")
         sys.exit(OK)          
