@@ -50,7 +50,7 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         htmlFile.write("</table>")
         htmlFile.write("<br />")
 
-        htmlFile.write("<img src = '/shark/backtest/html/" + ticker + ".png' />")
+        htmlFile.write("<img src = '/shark/backtest/images/" + ticker + ".png' />")
 
         if tradesAnalyzer.getCount() > 0:
 
