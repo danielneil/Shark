@@ -44,21 +44,17 @@ The technology stack comprises of the below, therefore knowledge of ( or a willi
 
 **Programming Languages**
 
-Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, Python , PANDAS and. PERL
+Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, Python, PANDAS, REST and PERL
 
 **Technologies**
 
-Nagios, Nagios Plugins, Apache ZooKeeper, Apache Drill, Logtstash, Apache HTTPD, Docker, any kind of clustering.
-
-**Operating Systems**
-
-Linux, ideally Debian or a derivative. 
+Linux, ideally Debian or a derivative, the Nagios product stack (Nagios Core / Plugins / NRPE), RabbitMQ, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
 
 **Financials**
 
 An elementry understanding of financial markets and algorithmic trading. 
 
-Any kind of financial analytics specialisations are strongly
+Any kind of financial analytics specialisations are strongly desired. 
 
 # Warning
 
