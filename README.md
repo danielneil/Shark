@@ -52,9 +52,7 @@ Linux, ideally Debian or a derivative, the Nagios tech stack (Nagios Core / Plug
 
 **Financials**
 
-An understanding of financial markets and algorithmic trading. 
-
-Any kind of financial analytics specialisations are **strongly** desired. 
+An understanding of financial markets, algorithmic trading, or any kind of analytical specialisations are **strongly** desired. 
 
 **Mathematics**
 
