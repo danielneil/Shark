@@ -42,30 +42,11 @@ Shark's technology stack comprises of the below, therefore I need people with kn
 
 **Programming Languages**
 
-Bash Scripting
-Ansible
-C/C++ 
-BOOST
-HTML/CSS
-PHP
-Python 
-PANDAS
-PERL
+Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, Python , PANDAS, PERL
 
 **Technologies**
 
-Nagios \n
-Nagios Plugins
-
-Apache ZooKeeper
-
-Apache Drill
-
-Logtstash
-
-Apache HTTPD
-
-Docker
+Nagios, Nagios Plugins, Apache ZooKeeper, Apache Drill, Logtstash, Apache HTTPD, Docker
 
 **Operating Systems**
 
@@ -74,6 +55,7 @@ Debian (or a derivative)
 **Financials**
 
 At least an elementry understanding of financial markets and algorithmic trading. 
+
 Any kind of financial analytics specialisations are strongly
 
 
