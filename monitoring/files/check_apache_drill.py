@@ -24,7 +24,6 @@ if __name__ == "__main__":
         print ("UNKNOWN - You were supposed to give me some SQL")
         sys.exit(UNKNOWN)
 
-
     drill = PyDrill(host='localhost', port=8047) 
 
     if not drill.is_active():
@@ -34,11 +33,12 @@ if __name__ == "__main__":
     drill_result = drill.query(args.sql)
     
     df = drill_result.to_dataframe()
+    
+    # Get a count of the number of rows.
     index = df.index
     number_of_rows = len(index)
-    
-    
-    if len(drill_result) == 1:
+        
+    if number_of_rows == 1:
         print("Found a single row in the dataframe")
         sys.exit(OK)          
     else:
