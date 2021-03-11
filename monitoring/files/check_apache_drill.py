@@ -11,7 +11,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This plugin runs sql code against Apache Drill."
+cmd_arg_help = "This plugin runs sql code against Apache Drill - only used for testing, and only expects a single row to be returned."
 
 if __name__ == "__main__":
 
