@@ -42,9 +42,9 @@ Shark has lots of moving parts, so feel free to cherry pick a component that int
 
 The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) **any** of the following:
 
-**Programming Languages**
+**Programming**
 
-Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, JSON, CSV, Python, PANDAS, REST and PERL
+Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, Python, PANDAS, REST and PERL
 
 **Technologies**
 
