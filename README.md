@@ -48,7 +48,7 @@ Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, 
 
 **Technologies**
 
-Linux, ideally Debian or a derivative, the Nagios tech stack (Nagios Core / Plugins / NRPE), RabbitMQ, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
+Linux, ideally Debian or a derivative, the Nagios tech stack (Nagios Core / Plugins / NRPE), RabbitMQ, PyAlgoTrade, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
 
 **Financials**
 
