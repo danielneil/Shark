@@ -1,0 +1,25 @@
+These are some ideas for tuning variables to pass into the backtest component. 
+
+commission_amount:
+rounding:
+lot_size:
+tick_size:
+margin_requirement:
+interest_rates:
+slippage_assumptions:
+position_sizing_rules:
+same_bar_exit_rules:
+trailing_stop_settings:
+rentry_rules:
+
+The come from the below
+
+"Backtesting customization is extremely important. 
+Many backtesting applications have input for commission amounts, round (or fractional) lot sizes, tick sizes, 
+margin requirements, interest rates, slippage assumptions, position-sizing rules, same-bar exit rules, (trailing)
+stop settings and much more. To get the most accurate backtesting results, it is important to tune these settings
+to mimic the broker to be used when the system goes live."
+
+
+"The Importance of Backtesting Trading Strategies"
+https://www.investopedia.com/articles/trading/05/030205.asp
