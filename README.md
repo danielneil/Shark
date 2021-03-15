@@ -18,7 +18,7 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 1. Install ansible on your workstation ([help](https://linuxhint.com/install_ansible_debian10/)).
 
-2. Prepare a vanilla Debian server ([help](https://linuxhint.com/install_debian10_virtualbox/)).
+2. Prepare a vanilla Debian server in VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
 
 3. Run:
 ```
