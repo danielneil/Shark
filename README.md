@@ -16,7 +16,7 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 # Setup Instructions
 
-1. Install ansible on your local machine.
+1. Install ansible on your local machine ([help](https://linuxhint.com/install_ansible_debian10/)).
 
 2. Prepare a vanilla Debian server.
 
