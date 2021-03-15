@@ -19,4 +19,5 @@
   - algorithmictradingplatform
   - zookeeper
   - apache-drill
+  - rabbitmq
   - monitoring # Uncomment this if you want to debug Shark.
