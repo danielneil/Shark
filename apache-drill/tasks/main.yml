@@ -50,6 +50,14 @@
    owner: drill 
    group: drill 
   notify: restart-drill
+  
+- name: Copying test jsonFile
+  copy:
+   src: testFile.json
+   dest: /shark/apache-drill-1.18.0/sample-data/
+   owner: drill 
+   group: drill 
+  notify: restart-drill
     
 - name: Configuring permissions on the above
   file: 
