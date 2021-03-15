@@ -24,9 +24,9 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 ```
-7. Navigate to https://shark-server/nagios (web credentials are shark/shark).
+4. Navigate to https://shark-server/nagios (web credentials are shark/shark).
 
-8. Please reach out to me for help if you get stuck!
+5. Please reach out to me for help if you get stuck!
 
 # Screen Shots
 
