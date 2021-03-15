@@ -1,3 +1,5 @@
+![alt text](https://github.com/danielneil/Shark/blob/main/algorithmictradingplatform/files/ui_patches/logofullsize.png?raw=true)
+
 # Shark - An Algorithmic Trading Platform
 
 Shark is scalable open source algorithmic trading platform derived from tools that monitor IT infrastructure.
