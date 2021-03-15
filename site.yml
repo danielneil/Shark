@@ -6,7 +6,7 @@
   vars:
           # ---- Web UI credentials
           webui_auth_user: shark
-          webui_auth_pass: yourswimmingwithsharks
+          webui_auth_pass: shark
 
           # ---- System variables
 
