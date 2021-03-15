@@ -22,7 +22,7 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 3. Run:
 ```
-git clone https://github.com/danielneil/Shark.git && 
+git clone https://github.com/danielneil/Shark.git 
 ```
 4. Add the Debian server's IP address to the ./hosts files under [shark-server]
 
