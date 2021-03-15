@@ -17,7 +17,7 @@
 
 - name: Copying the apache drill check
   copy:
-   src: check_apache_drill.py
+   src: check_apache_drill_row_count.py
    dest: /usr/local/nagios/libexec/
    mode: 0755 
  

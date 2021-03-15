@@ -11,17 +11,22 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "This plugin runs sql code against Apache Drill - only used for testing, and only expects a single row to be returned."
+cmd_arg_help = "This plugin runs sql code against Apache Drill - only used for testing, and will only return N rows."
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
     parser.add_argument("-s", "--sql", help="SQL code to execute")
+    parser.add_argument("-c", "--rows", help="The number of rows we expect Apache Drill to return")
 
     args = parser.parse_args()
 
     if not args.sql:
         print ("UNKNOWN - You were supposed to give me some SQL")
+        sys.exit(UNKNOWN)
+
+    if not args.rows:
+        print("UNKNOWN - You were suppoed to tell me how many rows you expected in return")
         sys.exit(UNKNOWN)
 
     drill = PyDrill(host='localhost', port=8047) 
@@ -38,9 +43,9 @@ if __name__ == "__main__":
     index = df.index
     number_of_rows = len(index)
         
-    if number_of_rows == 1:
-        print("Connected to Drill and a single row was returned")
+    if number_of_rows == args.rows:
+        print("Connected to Apache Drill and " + args.rows  + " row(s) were returned")
         sys.exit(OK)          
     else:
-        print("Connected to Drill, but we only expected a single row, this is bad...")
+        print("Connected to Apache Drill, but we expected " + args.rows  + " row(s), therefore is bad...")
         sys.exit(CRITICAL)      
