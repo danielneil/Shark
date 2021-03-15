@@ -1,2 +1,17 @@
 ---
 # tasks file for rabbitmq
+- name: Installing erlang
+  apt:
+   name: erlang
+   state: present
+   
+- name: Installing RabbitMQ
+  apt:
+   name: rabbitmq-server
+   state: present
+   
+- name: Starting rabbitmq-server
+  service:
+   name: rabbitmq-server
+   state: started
+   enabled: true
