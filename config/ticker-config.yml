@@ -21,7 +21,7 @@ AMC:
   min: 10
   max: 90
 
- Simple Moving Average - 10 Days:
+ Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   ticker: AMC
@@ -57,7 +57,7 @@ ANZ:
   min: 10
   max: 90
 
- Simple Moving Average - 10 Days:
+ Simple Moving Average - 50 Days:
   description: "SMA: [ 50 Day ]"
   check_command: check_sma 
   ticker: ANZ
