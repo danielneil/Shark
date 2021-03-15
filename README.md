@@ -23,6 +23,8 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 3. Open a terminal on the above, and run:
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
+
+# The build takes about 5 mins.
 ```
 4. Navigate to https://shark-server/nagios (web credentials are shark/shark).
 
