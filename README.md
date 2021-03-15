@@ -16,19 +16,25 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 # Setup Instructions
 
-1. Install ansible on your local machine ([help](https://linuxhint.com/install_ansible_debian10/)).
+1. Install ansible on your workstation ([help](https://linuxhint.com/install_ansible_debian10/)).
 
-2. Prepare a vanilla Debian server.
+2. Prepare a vanilla Debian server ([help](https://linuxhint.com/install_debian10_virtualbox/)).
 
-3. Add its IP address to the ./hosts files under [shark-server]
-
-4. Change the http credentials in ./site.yml to your liking.
-
-5. Run: 
+3. Run:
 ```
-git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
+git clone https://github.com/danielneil/Shark.git && 
 ```
-6. Navigate to https://shark-server/nagios using the aforementioned credentials.
+4. Add the Debian server's IP address to the ./hosts files under [shark-server]
+
+5. Change the http credentials in ./site.yml to your liking.
+
+6. Run: 
+```
+cd Shark && ./build.sh
+```
+7. Navigate to https://shark-server/nagios using the aforementioned credentials.
+
+8. Please reach out to me for help if you get stuck!
 
 # Screen Shots
 
