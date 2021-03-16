@@ -43,7 +43,7 @@ if __name__ == "__main__":
     index = df.index
     number_of_rows = len(index)
         
-    if number_of_rows == args.rows:
+    if number_of_rows == int(args.rows):
         print("Connected to Apache Drill and " + args.rows  + " row(s) were returned")
         sys.exit(OK)          
     else:
