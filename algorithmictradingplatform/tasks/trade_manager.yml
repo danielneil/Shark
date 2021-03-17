@@ -1,6 +1,16 @@
 ---
-
-- name: Install pika - Python client recommended by the RabbitMQ team
+- name: Installing pika - Python client recommended by the RabbitMQ team
   pip:
    name: pika
    executable: pip3
+
+- name: Create directory to store event handlers.
+  file:
+    path: /shark/event-handlers/
+    state: directory
+
+- name: Copying enter_trade.py event handler
+  copy:
+   src: event-handlers/enter_trade.sh
+   dest: /shark/event-handlers/
+   mode: 0755
