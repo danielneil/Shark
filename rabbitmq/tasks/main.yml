@@ -18,19 +18,17 @@
    
 - name: Enabling the rabbit-mq management server
   shell: rabbitmq-plugins enable rabbitmq_management
-  ignore_errors: yes
 
 - name: Adding the rabbitmq admin user and password
   shell: rabbitmqctl add_user admin password 
   ignore_errors: yes
+  no_log: true
   
 - name: Configuring the rabbitmq admin user user_tag
   shell: rabbitmqctl set_user_tags admin administrator
-  ignore_errors: yes
   
 - name: Configuring the rabbitmq admin user permissions
   shell: rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
-  ignore_errors: yes
 
 - name: Starting rabbitmq-server
   service:
