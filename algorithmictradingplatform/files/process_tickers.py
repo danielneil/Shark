@@ -116,6 +116,12 @@ def process_service_config(a_dict,ticker):
                     # The ansible script seds the LOCAL_IP out with the server IP. It's rough, but meh.
 
                     print("\tnotes_url http://LOCAL_IP/shark/backtest/html/" + ticker + ".html")
+                    
+                if str(v) == "check_strategy":
+                    
+                    # If this is the strategy command, add the event handler to perform the BUY order.
+                    print("\tevent_handler enter_trade")
+                    
             else:
                  # print the command arguments
                 command_str += "!" + str(v)
