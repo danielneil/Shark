@@ -120,7 +120,7 @@ def process_service_config(a_dict,ticker):
                 if str(v) == "check_strategy":
                     
                     # If this is the strategy command, add the event handler to perform the BUY order.
-                    print("\tevent_handler enter_trade " + ticker)
+                    print("\tevent_handler enter_trade")
                     
             else:
                  # print the command arguments
