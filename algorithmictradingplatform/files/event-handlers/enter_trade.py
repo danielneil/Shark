@@ -42,13 +42,16 @@ if __name__ == "__main__":
     ticker = args.ticker
 
     if not args.servicestate == "CRITICAL":
-        sys.exit(exitcode)
+        sys.exit(CRITICAL)
         
     if not args.statetype == "HARD":    
         if args.statetype == "SOFT" and not int(args.serviceattempt) == 3:
-            sys.exit(exitcode)
+            sys.exit(CRITICAL)
     
     with pika.BlockingConnection(pika.ConnectionParameters('localhost')) as connection:
 
         channel = connection.channel()
         channel.basic_publish(exchange='', routing_key='BUYS', body="TICKER:" + ticker)
+        
+# We're cool!        
+sys.exit(OK)
