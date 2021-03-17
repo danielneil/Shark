@@ -1,0 +1,6 @@
+---
+
+- name: Install pika - Python client recommended by the RabbitMQ team
+  pip:
+   name: pika
+   executable: pip3
