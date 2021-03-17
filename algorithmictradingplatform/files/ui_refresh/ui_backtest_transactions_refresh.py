@@ -39,9 +39,8 @@ if __name__ == "__main__":
     
         ticker = args.ticker
    
-        # Select all trades.
-
-        tradeRecord = drill.query("SELECT * FROM dfs.backtests.`" + ticker + ".transaction.json`")
+        # Select all transactions associated with ticker.
+        tradeRecord = drill.query("SELECT * FROM `dfs.backtests`.`./transactions/" + ticker + ".transaction.json`")
 
         df = tradeRecord.to_dataframe()
 
