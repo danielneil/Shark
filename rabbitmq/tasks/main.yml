@@ -20,7 +20,7 @@
   shell: rabbitmq-plugins enable rabbitmq_management
 
 - name: Adding the rabbitmq admin user and password
-  shell: if rabbitmqctl list_user_permissions admin; then "Admin user already configured, skipping..."; else rabbitmqctl add_user admin password; fi
+  shell: if rabbitmqctl list_user_permissions admin > /dev/null; then echo "Admin user already configured, skipping..."; else rabbitmqctl add_user admin password; fi
 
 - name: Configuring the rabbitmq admin user user_tag
   shell: rabbitmqctl set_user_tags admin administrator
