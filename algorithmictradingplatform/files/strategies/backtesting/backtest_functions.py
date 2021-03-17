@@ -10,7 +10,7 @@ def CreateJSONTransactionLog(transactionDict, ticker):
 
 def CreateJSONTransactionLogHTML(ticker):
 
-    subprocess.call(["/shark/bin/ui_backtest_transactions_refresh.py", "--ticker", ticker, "--htmlFile", "/shark/backtest/transactions/"+ticker+".transaction.html"])
+    subprocess.call(["/shark/bin/ui_backtest_transactions_refresh.py", "--ticker", ticker, "--htmlFile", "/shark/backtest/html/"+ticker+".transaction.html"])
 
     # This is pox, I need to rewrite this one day
        
