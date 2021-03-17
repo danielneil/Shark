@@ -27,6 +27,18 @@ if __name__ == "__main__":
         print ("UNKNOWN - No ticker found")
         sys.exit(UNKNOWN)
 
+    if not args.servicestate:
+        print ("UNKNOWN - No servicestate found")
+        sys.exit(UNKNOWN)       
+    
+    if not args.statetype:
+        print ("UNKNOWN - No statetype found")
+        sys.exit(UNKNOWN)    
+    
+    if not args.serviceattempt:
+        print ("UNKNOWN - No serviceattempt found")
+        sys.exit(UNKNOWN)    
+    
     ticker = args.ticker
 
     if not args.servicestate == "CRITICAL":
