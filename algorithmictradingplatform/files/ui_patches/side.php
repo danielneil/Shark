@@ -102,6 +102,17 @@ $link_target = 'main';
 		</ul>
 	</div>
 </div>
+	
+<div class="navsection">
+	<div class="navsectiontitle">Development</div>
+	<div class="navsectionlinks">
+		<ul class="navsectionlinks">
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:15672">RabbitMQ</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8047">Apache Drill</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8047">Shark Web</a></li>
+		</ul>
+	</div>
+</div>
 
 </body>
 </html>
