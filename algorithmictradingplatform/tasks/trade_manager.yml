@@ -11,6 +11,6 @@
 
 - name: Copying enter_trade.py event handler
   copy:
-   src: event-handlers/enter_trade.sh
+   src: event-handlers/enter_trade.py
    dest: /shark/event-handlers/
    mode: 0755
