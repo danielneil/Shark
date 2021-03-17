@@ -41,6 +41,13 @@
    group: shark
    state: directory
    mode: 0777
+    
+- name: Creating logs  directory
+  file:
+   name: /shark/logs
+   owner: shark
+   group: shark
+   state: directory
 
 - name: Creating our backtest transactions web dir
   file:
