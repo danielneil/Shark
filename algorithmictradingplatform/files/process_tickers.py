@@ -127,7 +127,7 @@ def process_service_config(a_dict,ticker):
                 command_str += "!" + str(v)
 
         print("\t" + command_str)
-        print("\tmax_check_attempts 5")
+        print("\tmax_check_attempts 1")
         print("\tcheck_interval 5")
         print("\tretry_interval 3")
         print("\tcheck_period 24x7")
