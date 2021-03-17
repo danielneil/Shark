@@ -14,10 +14,10 @@
           timezone: "Australia/Sydney"
   roles:
   - server-prep
+  - rabbitmq
   - httpd
   - base-from-source
   - algorithmictradingplatform
   - zookeeper
   - apache-drill
-  - rabbitmq
   - monitoring # Uncomment this if you want to debug Shark.
