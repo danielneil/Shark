@@ -31,7 +31,7 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
 
         # Only show the transaction log if transactions exist. 
         if tradesAnalyzer.getCount():
-            htmlFile.write("<a href = '/shark/backtest/transactions/" + ticker + ".transaction.html'>Transaction Log</a>")
+            htmlFile.write("<a href = '/shark/backtest/html/" + ticker + ".transaction.html'>Transaction Log</a>")
         
         htmlFile.write("<br />")
         htmlFile.write("<br />")
