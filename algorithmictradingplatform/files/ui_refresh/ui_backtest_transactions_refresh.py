@@ -41,7 +41,7 @@ if __name__ == "__main__":
    
         # Select all trades.
 
-        tradeRecord = drill.query("SELECT * FROM dfs.transactions.`" + ticker + ".transaction.json`")
+        tradeRecord = drill.query("SELECT * FROM dfs.backtest_transactions.`" + ticker + ".transaction.json`")
 
         df = tradeRecord.to_dataframe()
 
