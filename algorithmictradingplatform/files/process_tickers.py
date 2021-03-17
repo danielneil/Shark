@@ -103,28 +103,31 @@ def process_service_config(a_dict,ticker):
         command_str = ""
         for k,v in value.items():
 
-            # the descript will always be the first element.
-            if str(k) == "description":
-                print("\tservice_description " + str(v))
-            elif str(k) == "check_command":
-
-                command_str = "check_command " + str(v)
+            yml_item = str(k)
+            yml_value = str(v)
             
-                if str(v) == "check_backtest":
+            # the descript will always be the first element.
+            if yml_item == "description":
+                print("\tservice_description " + yml_value)
+            elif yml_item == "check_command":
+
+                command_str = "check_command " + yml_value
+            
+                if yml_value == "check_backtest":
 
                     # Add a web link to the details of the backtest.
                     # The ansible script seds the LOCAL_IP out with the server IP. It's rough, but meh.
 
                     print("\tnotes_url http://LOCAL_IP/shark/backtest/html/" + ticker + ".html")
                     
-                if str(v) == "check_strategy":
+                if yml_value == "check_strategy":
                     
                     # If this is the strategy command, add the event handler to perform the BUY order.
                     print("\tevent_handler enter_trade")
                     
             else:
                  # print the command arguments
-                command_str += "!" + str(v)
+                command_str += "!" + yml_value
 
         print("\t" + command_str)
         print("\tmax_check_attempts 1")
