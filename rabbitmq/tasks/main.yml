@@ -28,6 +28,12 @@
 - name: Configuring the rabbitmq admin user permissions
   shell: rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
 
+- name: Declaring BUYS queue
+  shell: rabbitmqadmin declare queue name=BUYS durable=true
+  
+- name: Declaring SELLS queue
+  shell: rabbitmqadmin declare queue name=SELLS durable=true
+
 - name: Starting rabbitmq-server
   service:
    name: rabbitmq-server
