@@ -33,7 +33,7 @@ if __name__ == "__main__":
         sys.exit(exitcode)
         
     if not args.statetype == "HARD":    
-        if args.statetype == "SOFT" and if not args.serviceattempt == 3:
+        if args.statetype == "SOFT" and not int(args.serviceattempt) == 3:
             sys.exit(exitcode)
     
     with pika.BlockingConnection(pika.ConnectionParameters('localhost')) as connection:
