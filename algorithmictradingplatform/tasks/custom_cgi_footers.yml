@@ -1,9 +1,9 @@
 - name: 
   copy:
-   src: common-footer.ssi
+   src: ui_patches/common-footer.ssi
    dest: /usr/local/nagios/share/ssi
   
 - name: 
   copy:
-   src: common-header.ssi
+   src: ui_patches/common-header.ssi
    dest: /usr/local/nagios/share/ssi
