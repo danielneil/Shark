@@ -1,0 +1,9 @@
+- name: 
+  copy:
+   src: common-footer.ssi
+   dest: /usr/local/nagios/share/ssi
+  
+- name: 
+  copy:
+   src: common-header.ssi
+   dest: /usr/local/nagios/share/ssi
