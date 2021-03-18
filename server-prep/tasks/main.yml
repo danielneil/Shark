@@ -36,3 +36,4 @@
   shell: source /etc/environment executable=bash
   
 - include: shark_prereqs.yml
+- include: python_prereqs.yml
