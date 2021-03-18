@@ -24,15 +24,17 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 2. Install ansible on your newly installed Debian Server ([help](https://linuxhint.com/install_ansible_debian10/)).
 
-3. Open a terminal on the above, and run:
+3. Install Git ([help](https://linuxhint.com/install_git_debian_10/)).
+
+4. Open a terminal on the above, and run:
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 # The build takes about 5 mins.
 ```
-4. Navigate to https://debian-server-ip/nagios (web credentials are shark/shark).
+5. Navigate to https://debian-server-ip/nagios (web credentials are shark/shark).
 
-5. Please reach out to me for help if you get stuck!
+6. Please reach out to me for help if you get stuck!
 
 # Screen Shots
 
