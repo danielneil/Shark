@@ -42,7 +42,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
 
-## Sorting by Industry Groups
+### Sorting by Industry Groups
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true)
 
