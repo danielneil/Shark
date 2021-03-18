@@ -18,8 +18,8 @@
   - rabbitmq
   - docker
   - httpd
-  - base-from-source
-  - algorithmictradingplatform
-  - zookeeper
   - apache-drill
+  - zookeeper
+  - base-from-source
   - monitoring # Uncomment this if you want to debug Shark.
+  - algorithmictradingplatform
