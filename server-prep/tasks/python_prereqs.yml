@@ -9,3 +9,8 @@
   pip:
    name: pyalgotrade
    executable: pip3
+
+- name: Install Python Requests
+  apt:
+   name: python3-requests
+   state: latest
