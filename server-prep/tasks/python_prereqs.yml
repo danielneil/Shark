@@ -24,3 +24,9 @@
   apt:
    name: python-pandas
    state: latest
+   
+- name: pip3 installing docker-compose
+  shell: sudo pip3 install docker-compose
+  
+- name: Required for python ansible stuff.
+  shell: sudo cp -r /usr/local/lib/python2.7/dist-packages/backports/ssl_match_hostname/ /usr/lib/python2.7/dist-packages/backports
