@@ -34,3 +34,5 @@
 
 - name: Sourcing environmental variables
   shell: source /etc/environment executable=bash
+  
+- include: shark_prereqs.yml
