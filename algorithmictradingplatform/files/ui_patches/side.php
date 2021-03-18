@@ -109,7 +109,7 @@ $link_target = 'main';
 		<ul class="navsectionlinks">
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:15672" target="_blank">RabbitMQ WebUI</a></li>
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8047" target="_blank">Apache Drill WebUI</a></li>
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8080" target="_blank">Apache NiFi WebUI</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8080/nifi" target="_blank">Apache NiFi WebUI</a></li>
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>/shark" target="_blank">Work Directory</a></li>
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:81" target="_blank">CI/CD</a></li>
 		</ul>
