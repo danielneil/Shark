@@ -106,8 +106,6 @@
 
 - include: nagios_configuration.yml
 
-- include: back_testing.yml
-
 - include: check_short.yml
 
 - include: ui_refresh.yml
