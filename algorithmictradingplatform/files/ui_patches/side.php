@@ -104,7 +104,7 @@ $link_target = 'main';
 </div>
 	
 <div class="navsection">
-	<div class="navsectiontitle">:::Development:::</div>
+	<div class="navsectiontitle" style="background-color: red; color: white; text-align: center">Development</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:15672" target="_blank">RabbitMQ WebUI</a></li>
