@@ -110,6 +110,8 @@
 
 - include: ui_refresh.yml
 
+- include: custom_cgi_footers.yml
+
 - include: trade_manager.yml
 
 - name: Running plugin smoke tests
