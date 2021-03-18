@@ -7,7 +7,7 @@
 
 - name: Create the docker container of the above
   docker_container:
-    name: nagios-monitoring
+    name: shark-monitoring
     image: jasonrivers/nagios 
     state: present
     restart: yes
@@ -18,7 +18,7 @@
 
 - name: Start the nifi container
   docker_container:
-   name: jasonrivers/nagios 
+   name: shark-monitoring
    state: started
 
 - name: Unpacking nagios-plugins zip file into temp
