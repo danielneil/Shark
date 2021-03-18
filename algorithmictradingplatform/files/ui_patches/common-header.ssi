@@ -1,3 +1,35 @@
-<div style="p.solid {border-style: solid;}; width: 100%; background-color: coral; margin: auto;" >
-DEVELOPMENT 
+<style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+
+<div class="container">
+  <div class="vertical-center">
+<div style="
+text-align:             center;
+height:                 20px;
+font-weight:            bold;
+color:                  black;
+border-color:           black;
+border-style:           solid;
+position:               relative;
+border-width:           thin;
+width:                  100%;
+background-color:       #F0F0F0;
+margin:                 auto;
+">
+MARKET: ASX, STOCKS: TOP 20, STRATEGY: Moving Averages (BUY: SMA10 > SMA50) # DEV
+  </div>
+</div>
 </div>
