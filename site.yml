@@ -1,6 +1,6 @@
 ---
 
-- name: Algorithmic Platform Trading Role
+- name: Algorithmic Trading Platform Role
   hosts: shark-server
   become: true
   vars:
@@ -12,9 +12,11 @@
 
           # We're interested in the timezone of the ASX.
           timezone: "Australia/Sydney"
+           
   roles:
   - server-prep
   - rabbitmq
+  - docker
   - httpd
   - base-from-source
   - algorithmictradingplatform
