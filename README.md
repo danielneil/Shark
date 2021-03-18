@@ -22,11 +22,11 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 1. Prepare a vanilla Debian Server with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
 
-2. Install ansible on your newly installed Debian Server ([help](https://linuxhint.com/install_ansible_debian10/)).
+2. Install ansible ([help](https://linuxhint.com/install_ansible_debian10/)).
 
 3. Install Git ([help](https://linuxhint.com/install_git_debian_10/)).
 
-4. Open a terminal on the above, and run:
+4. Open a terminal, and run:
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
