@@ -42,6 +42,30 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
 
+## Sorting by Industry Groups
+
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true)
+
+## Main Screen
+
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+
+## Main Screen
+
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+
+## Main Screen
+
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+
+## Main Screen
+
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+
+## Main Screen
+
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+
 # Want to get involved? 
 
 Shark has lots of moving parts, so feel free to cherry pick a component that interests you.
