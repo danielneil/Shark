@@ -3,18 +3,23 @@
 
 - name: Pull the Docker image
   docker_image:
-    name: jasonrivers/nagios:latest
+    name: jasonrivers/nagios 
 
 - name: Create the docker container of the above
   docker_container:
     name: nagios-monitoring
-    image: jasonrivers/nagios:latest
-    state: started
+    image: jasonrivers/nagios 
+    state: present
     restart: yes
     ports:
      - "0.0.0.0:81:80/tcp"
     volumes:
       - /shark
+
+- name: Start the nifi container
+  docker_container:
+   name: jasonrivers/nagios 
+   state: started
 
 - name: Unpacking nagios-plugins zip file into temp
   unarchive:
