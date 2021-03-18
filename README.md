@@ -38,6 +38,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 # Screen Shots
 
+<h3>Main Screen</h3>
 ![alt text](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
 ![alt text](https://github.com/danielneil/Shark/blob/main/screenshots/opportunity.JPG?raw=true)
 ![alt text](https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true)
