@@ -19,6 +19,11 @@
    name: curl
    state: latest
    
+- name: Install net-tools
+  apt:
+   name: net-tools
+   state: latest   
+   
 - name: Install java (required for Apache Drill )
   apt:
    name: default-jre
