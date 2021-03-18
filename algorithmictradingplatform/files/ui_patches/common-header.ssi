@@ -1,35 +1,21 @@
 <style>
-.container {
-  height: 200px;
-  position: relative;
-  border: 3px solid green;
-}
+        .header {
+        margin: auto;
+        width: 100%;
+        border: 1px solid #B8B8B8;
+        text-align: center;
+        padding: 2px;
+        background-color: #F0F0F0;
+        }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+        .bold {
+                font-weight: bold;
+        }
 </style>
 
-<div class="container">
-  <div class="vertical-center">
-<div style="
-text-align:             center;
-height:                 20px;
-font-weight:            bold;
-color:                  black;
-border-color:           black;
-border-style:           solid;
-position:               relative;
-border-width:           thin;
-width:                  100%;
-background-color:       #F0F0F0;
-margin:                 auto;
-">
-MARKET: ASX, STOCKS: TOP 20, STRATEGY: Moving Averages (BUY: SMA10 > SMA50) # DEV
-  </div>
-</div>
+
+<div class="header">
+<span class="bold">MARKET:</span> Australian Stock Exchange,
+<span class="bold">SECURITIES:</span> S&P/ASX 20,
+<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)
 </div>
