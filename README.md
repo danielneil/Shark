@@ -64,7 +64,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ## Historic Strategy Performance - Transaction Log 
 
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy-transactions-log?raw=true)
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy-transactions-log.JPG?raw=true)
 
 # Want to get involved? 
 
