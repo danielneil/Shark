@@ -1,11 +1,11 @@
 <style>
         .header {
-        margin: auto;
-        width: 100%;
-        border: 1px solid #B8B8B8;
-        text-align: center;
-        padding: 2px;
-        background-color: #F0F0F0;
+                margin: auto;
+                width: 100%;
+                border: 1px solid #B8B8B8;
+                text-align: center;
+                padding: 2px;
+                background-color: #F0F0F0;
         }
 
         .bold {
