@@ -15,11 +15,11 @@
            
   roles:
   - server-prep
+  - httpd
+  - zookeeper
+  - apache-drill
   - rabbitmq
   - docker
-  - httpd
-  - apache-drill
-  - zookeeper
   - base-from-source
   - monitoring # Uncomment this if you want to debug Shark.
   - algorithmictradingplatform
