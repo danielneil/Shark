@@ -19,3 +19,8 @@
   apt:
    name: python3-requests
    state: latest
+
+- name: Install pandas which is a prereq for the below
+  apt:
+   name: python-pandas
+   state: latest
