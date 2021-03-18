@@ -1,8 +1,13 @@
 ---
 
-- name: Install pip
+- name: Install pip3
   apt:
    name: python3-pip
+   state: latest
+   
+- name: Install pip1
+  apt:
+   name: python-pip
    state: latest
 
 - name: Pyalgotrade for backtesting
