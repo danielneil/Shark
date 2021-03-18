@@ -1,6 +1,21 @@
 ---
 # tasks file for monitoring
 
+- name: Pull the Docker image
+  docker_image:
+    name: jasonrivers/nagios:latest
+
+- name: Create the docker container of the above
+  docker_container:
+    name: nagios-monitoring
+    image: jasonrivers/nagios:latest
+    state: started
+    restart: yes
+    ports:
+     - "0.0.0.0:81:80/tcp"
+    volumes:
+      - /shark
+
 - name: Unpacking nagios-plugins zip file into temp
   unarchive:
    src: nagios-plugins-2.3.3.tar.gz
