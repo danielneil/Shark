@@ -1,2 +1,32 @@
 ---
 # tasks file for docker
+
+- name: Update apt-get repo and cache
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+- name: Install prereqs 
+  apt:
+   name: [ "apt-transport-https", "ca-certificates", "curl", "gnupg-agent", "software-properties-common" ]
+    
+- name: Adding gpg key
+  shell: curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+   
+- name: Adding apt-repo
+  shell: add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+   
+- name: Update apt-get repo and cache
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+  
+- name: Install Docker 
+  apt:
+   name: [ "docker-ce", "docker-ce-cli", "containerd.io" ]
+ 
+- name: Install Docker Module for Python
+  pip:
+   name: docker
+
+- name: Starting docker service
+  service:
+   name: docker
+   state: started
+   enabled: true
