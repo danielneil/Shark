@@ -20,6 +20,12 @@
   - apache-drill
   - rabbitmq
   - docker
+  
+  # Builds and installs Nagios Core from source. 
   - base-from-source
-  - monitoring # Uncomment this if you want to debug Shark.
+  
+   # Monitors the Shark architecture.
+  - monitoring
+  
+  # The Shark customisations to Nagios Core. 
   - algorithmictradingplatform
