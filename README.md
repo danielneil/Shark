@@ -36,9 +36,9 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 6. Please reach out to me for help if you get stuck!
 
-# Screen Shots
+# Screenshots
 
-## Main Screen
+### Main Screen
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
 
@@ -46,25 +46,25 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true)
 
-## Main Screen
+### Sorting by Indicator Groups
 
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true)
 
-## Main Screen
+## Strategy Detection
 
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true)
 
-## Main Screen
+## Backtest Alerting
 
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true)
 
-## Main Screen
+## Historic Strategy Performance
 
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy-performance.JPG?raw=true)
 
-## Main Screen
+## Historic Strategy Performance - Transaction Log 
 
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
+![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy-transactions-log?raw=true)
 
 # Want to get involved? 
 
