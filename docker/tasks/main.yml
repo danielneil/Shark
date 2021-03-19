@@ -26,7 +26,7 @@
    name: docker
 
 - name: Required for python ansible stuff.
-  shell: sudo cp -r /usr/local/lib/python2.7/dist-packages/backports/ssl_match_hostname/ /usr/lib/python2.7/dist-packages/backports
+  shell: cp -r /usr/local/lib/python2.7/dist-packages/backports/ssl_match_hostname/ /usr/lib/python2.7/dist-packages/backports
 
 - name: Starting docker service
   service:
