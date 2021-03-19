@@ -50,7 +50,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true)
 
-## Strategy Detection
+## Opportunity Detection
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true)
 
