@@ -1,6 +1,6 @@
 ---
 - name: Setting credentials for web UI
-  shell: htpasswd -b -c /usr/local/nagios/etc/htpasswd.users {{ webui_auth_user }} {{ webui_auth_pass }}
+  shell: htpasswd -b -c /usr/local/nagios/etc/htpasswd.users {{ shark_webui_auth_user }} {{ shark_webui_auth_pass }}
 
 - name: Copying our custom cgi file which enables the above user with access
   template:
