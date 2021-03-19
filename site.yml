@@ -7,18 +7,36 @@
           # ---- Shark Web UI credentials
           shark_webui_auth_user: shark
           shark_webui_auth_pass: shark
+          
+          # ---- RabbitMQ Web UI credentials
+          rabbitmq_webui_auth_user: shark
+          rabbitmq_webui_auth_pass: shark
+          
+          # ---- CI/CD Web UI credentials
+          cicd_webui_auth_user: shark
+          cicd_webui_auth_pass: shark
 
-          # ---- System variables
-
-          # We're interested in the timezone of the ASX.
+          # ---- We're interested in the timezone of the ASX.
           timezone: "Australia/Sydney"
            
   roles:
+  
+  # Commonalities accross servers.
   - server-prep
+  
+  # Apache Web Server
   - httpd
+  
+  # Apache Zookeeper
   - zookeeper
+  
+  # Apache Drill
   - apache-drill
+  
+  # Rabbit MQ
   - rabbitmq
+  
+  # Docker
   - docker
   
   # Builds and installs Nagios Core from source. 
