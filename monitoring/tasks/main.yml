@@ -20,6 +20,12 @@
   docker_container:
    name: shark-monitoring
    state: started
+   
+- name: Adding the cgi.cgi file containing our custom auth
+  template:
+   src: cgi.cgf
+   dest: /shark/monitoring
+  notify: restart-container
 
 - name: Unpacking nagios-plugins zip file into temp
   unarchive:
