@@ -78,15 +78,11 @@ Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, 
 
 ### Technologies
 
-Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plugins / NRPE), RabbitMQ, Redis, PyAlgoTrade, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
+Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plugins / NRPE), RabbitMQ, Redis, eXchange (FIX) protocol, PyAlgoTrade, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
 
 ### Financials
 
 An understanding of financial markets, algorithmic trading, or any kind of analytical specialisations are **strongly** desired. 
-
-### Mathematics
-
-Any kind of mathematical knowledge in relation to financial algorithms is **strongly** desired. 
 
 # Warning
 
