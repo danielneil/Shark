@@ -35,3 +35,14 @@ where action like 'SELL'
 select min(price)
 from `dfs.backtests`.`transactions`
 where action like 'BUY'
+
+-- Get the ticker of the highest price paid.
+SELECT ticker
+FROM `dfs.backtests`.`transactions`
+WHERE price = (SELECT max(price) FROM `dfs.backtests`.`transactions`)
+
+-- Get the ticker of the lowest price paid.
+SELECT ticker
+FROM `dfs.backtests`.`transactions`
+WHERE price = (SELECT min(price) FROM `dfs.backtests`.`transactions`)
+
