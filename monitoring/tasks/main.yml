@@ -19,7 +19,7 @@
 - name: Synchronizing the nagios-container-config
   synchronize:
     src: nagios-container-conf
-    dest: /shark/monitoring
+    dest: /shark/monitoring/
   
 - name: Adding the cgi.cgi file containing our custom auth
   template:
