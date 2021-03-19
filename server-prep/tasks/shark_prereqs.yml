@@ -33,6 +33,13 @@
    group: shark
    state: directory
 
+- name: Creating monitoring working directory
+  file:
+   name: /shark/monitoring
+   owner: shark
+   group: shark
+   state: directory
+
 - name: Creating our backtest web dir to store the historical back test web files
   file:
    name: /shark/backtest
