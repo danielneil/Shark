@@ -67,6 +67,14 @@
   - rebuild-nagios
   - restart-nagios
 
+- name: Copying left hand header UI code
+  copy:
+   src: ui_patches/cgiutils.c
+   dest: /tmp/nagios-4.4.6/cgi
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
 - name: Copying in custom UI changes - status.c
   copy:
    src: ui_patches/status.c
