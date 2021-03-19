@@ -70,11 +70,11 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 Shark has lots of moving parts, so feel free to cherry pick a component that interests you.
 
-The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) **any** of the following would be highly warranted.
+The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) **any** of the following would be ideal.
 
 ### Programming
 
-Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, Python, PANDAS, REST and PERL
+Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, Python, PANDAS, REST and PERL
 
 ### Technologies
 
@@ -82,7 +82,7 @@ Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plu
 
 ### Financials
 
-An understanding of financial markets, algorithmic trading, or any kind of analytical specialisations are **strongly** desired. 
+An understanding of financial markets, algorithmic trading, or any kind of financial analytical specialisations.
 
 # Warning
 
