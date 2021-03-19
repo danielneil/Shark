@@ -11,7 +11,7 @@ select count(*)
 from `dfs.backtests`.`transactions`
 where action like 'BUY'
 
--- count all BUY transactions
+-- count all SELL transactions
 select count(*)
 from `dfs.backtests`.`transactions`
 where action like 'SELL'
