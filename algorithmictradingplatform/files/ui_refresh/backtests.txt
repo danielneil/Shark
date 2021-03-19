@@ -1,0 +1,27 @@
+-- select all transactions
+select *
+from `dfs.backtests`.`transactions`
+
+-- count all transactions
+select count(*)
+from `dfs.backtests`.`transactions`
+
+-- count all BUY transactions
+select count(*)
+from `dfs.backtests`.`transactions`
+where action like 'BUY'
+
+-- count all BUY transactions
+select count(*)
+from `dfs.backtests`.`transactions`
+where action like 'SELL'
+
+-- select highest SELL price transaction
+select max(price)
+from `dfs.backtests`.`transactions`
+where action like 'SELL'
+
+-- select highest BUY price transaction
+select max(price)
+from `dfs.backtests`.`transactions`
+where action like 'BUY'
