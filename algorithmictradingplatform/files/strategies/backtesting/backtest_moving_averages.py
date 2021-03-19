@@ -61,7 +61,7 @@ class MovingAverages(strategy.BacktestingStrategy):
                     "action": "BUY",
                     "ticker": ticker,
                     "quantity": quantity,
-                    "price": execInfo.getPrice()
+                    "price":  round(execInfo.getPrice(), 2)
                 }
 
         self.__tradeLog.append(tradeLogDict)
@@ -79,7 +79,7 @@ class MovingAverages(strategy.BacktestingStrategy):
                     "action": "SELL",
                     "ticker": ticker,
                     "quantity": quantity, 
-                    "price": execInfo.getPrice()
+                    "price": round(execInfo.getPrice(), 2)
                 }
 
         self.__tradeLog.append(tradeLogDict)
