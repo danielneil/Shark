@@ -12,9 +12,9 @@
           rabbitmq_webui_auth_user: shark
           rabbitmq_webui_auth_pass: shark
           
-          # ---- CI/CD Web UI credentials
-          cicd_webui_auth_user: shark
-          cicd_webui_auth_pass: shark
+          # ---- Monitoring Web UI credentials
+          monitoring_webui_auth_user: shark
+          monitoring_webui_auth_pass: shark
 
           # ---- We're interested in the timezone of the ASX.
           timezone: "Australia/Sydney"
