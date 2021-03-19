@@ -25,3 +25,13 @@ where action like 'SELL'
 select max(price)
 from `dfs.backtests`.`transactions`
 where action like 'BUY'
+
+-- select lowest SELL price transaction
+select min(price)
+from `dfs.backtests`.`transactions`
+where action like 'SELL'
+
+-- select lowest BUY price transaction
+select min(price)
+from `dfs.backtests`.`transactions`
+where action like 'BUY'
