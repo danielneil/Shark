@@ -50,19 +50,19 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true)
 
-## Strategy Detection
+### Opportunity Detection
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true)
 
-## Backtest Alerting
+### Backtest Alerting
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true)
 
-## Historic Strategy Performance
+### Historic Strategy Performance
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy-performance.JPG?raw=true)
 
-## Historic Strategy Performance - Transaction Log 
+### Historic Strategy Performance - Transaction Log 
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy-transactions-log.JPG?raw=true)
 
@@ -72,19 +72,19 @@ Shark has lots of moving parts, so feel free to cherry pick a component that int
 
 The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) **any** of the following would be highly warranted.
 
-**Programming**
+### Programming
 
 Bash Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, Python, PANDAS, REST and PERL
 
-**Technologies**
+### Technologies
 
 Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plugins / NRPE), RabbitMQ, Redis, PyAlgoTrade, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
 
-**Financials**
+### Financials
 
 An understanding of financial markets, algorithmic trading, or any kind of analytical specialisations are **strongly** desired. 
 
-**Mathematics**
+### Mathematics
 
 Any kind of mathematical knowledge in relation to financial algorithms is **strongly** desired. 
 
