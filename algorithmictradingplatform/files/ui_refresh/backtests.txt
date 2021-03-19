@@ -46,3 +46,6 @@ SELECT ticker
 FROM `dfs.backtests`.`transactions`
 WHERE price = (SELECT min(price) FROM `dfs.backtests`.`transactions`)
 
+-- sum the total number of shares in all transactions
+SELECT sum(quantity)
+FROM `dfs.backtests`.`transactions`
