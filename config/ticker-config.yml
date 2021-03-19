@@ -33,7 +33,7 @@ AMC:
   ticker: AMC
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: AMC
@@ -69,7 +69,7 @@ ANZ:
   ticker: ANZ
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: ANZ
@@ -105,7 +105,7 @@ BHP:
   ticker: BHP
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: BHP
@@ -141,7 +141,7 @@ BXB:
   ticker: BXB
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: BXB
@@ -177,7 +177,7 @@ CBA:
   ticker: CBA
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: CBA
@@ -213,7 +213,7 @@ CSL:
   ticker: CSL
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: CSL
@@ -249,7 +249,7 @@ GMG:
   ticker: GMG
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: GMG
@@ -285,7 +285,7 @@ IAG:
   ticker: IAG
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: IAG
@@ -321,7 +321,7 @@ MQG:
   ticker: MQG
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: MQG
@@ -357,7 +357,7 @@ NAB:
   ticker: NAB
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: NAB
@@ -393,7 +393,7 @@ NCM:
   ticker: NCM
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: NCM
@@ -429,7 +429,7 @@ RIO:
   ticker: RIO
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: RIO
@@ -465,7 +465,7 @@ SCG:
   ticker: SCG
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: SCG
@@ -501,7 +501,7 @@ SUN:
   ticker: SUN
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: SUN
@@ -537,7 +537,7 @@ TLS:
   ticker: TLS
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: TLS
@@ -573,7 +573,7 @@ TCL:
   ticker: TCL
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: TCL
@@ -609,7 +609,7 @@ WES:
   ticker: WES
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WES
@@ -645,7 +645,7 @@ WBC:
   ticker: WBC
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WBC
@@ -681,7 +681,7 @@ WPL:
   ticker: WPL
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WPL
@@ -717,7 +717,7 @@ WOW:
   ticker: WOW
   period: 5
 
- Strategy: 
+ Opportunity Detection: 
   description: "STRATEGY: [ Moving Averages ]"
   check_command: check_strategy
   ticker: WOW
