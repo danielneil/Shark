@@ -54,7 +54,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true)
 
-### Backtest Alerting
+### Integrated Backtesting
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true)
 
