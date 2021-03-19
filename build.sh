@@ -73,9 +73,12 @@ cp -pr config/ticker-data algorithmictradingplatform/files/
 
 ##################################################
 # Now run the playbook.
-
 ansible-playbook ./site.yml -i hosts
 
 ##################################################
 # Generate the configuration
 generate_documentation
+
+##################################################
+# Verify the nagios configuration - this is purely used for debugging. 
+ansible shark-server -i hosts -a 'sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
