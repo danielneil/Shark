@@ -1,6 +1,16 @@
 ---
 # tasks file for monitoring
 
+- name: Synchronizing the nagios-container-config
+  copy:
+    src: nagios-container-conf
+    dest: /shark/monitoring/
+  
+- name: Adding the cgi.cgi file containing our custom auth
+  template:
+   src: cgi.cfg
+   dest: /shark/monitoring/nagios-container-conf/cgi.cfg
+
 - name: Pull the Docker image
   docker_image:
     name: jasonrivers/nagios 
@@ -15,16 +25,7 @@
      - "0.0.0.0:81:80/tcp"
     volumes:
       - /shark
-   
-- name: Synchronizing the nagios-container-config
-  copy:
-    src: nagios-container-conf
-    dest: /shark/monitoring/
-  
-- name: Adding the cgi.cgi file containing our custom auth
-  template:
-   src: cgi.cfg
-   dest: /shark/monitoring/nagios-container-conf/cgi.cfg
+      - /shark/monitoring/nagios-container-conf:/opt/nagios/etc/
 
 - name: Start the nifi container
   docker_container:
