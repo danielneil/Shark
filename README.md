@@ -83,10 +83,3 @@ Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plu
 ### Financials
 
 An understanding of financial markets, algorithmic trading, or any kind of financial analytical specialisations.
-
-# Warning
-
-1. Don't install this on an internet-facing server.
-
-2. [Read the disclaimer](https://github.com/danielneil/Shark/blob/main/DISCLAIMER).
-
