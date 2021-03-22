@@ -20,7 +20,7 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 # Setup Instructions
 
-1. Prepare a vanilla Debian Server (4 CPUS, 8GB MEM, 20GB HDD) with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
+1. Prepare a vanilla Debian Server with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
 
 2. Install ansible ([help](https://linuxhint.com/install_ansible_debian10/)).
 
