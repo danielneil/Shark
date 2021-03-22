@@ -12,7 +12,7 @@ def CreateJSONTransactionLogHTML(ticker):
     subprocess.call(["/shark/bin/ui_backtest_transactions_refresh.py", "--ticker", ticker, "--htmlFile", "/shark/backtest/html/"+ticker+".transaction.html"])
     # This is pox, I need to rewrite this one day
        
-def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken):
+def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, strategy_name):
 
   with open("/shark/backtest/html/" + ticker + ".html", 'w') as htmlFile:
 
@@ -26,8 +26,9 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         now = datetime.datetime.now()
         generationTime = now.strftime("%H:%M:%S (%Y-%m-%d)")
 
-        htmlFile.write("<p><span class='bold'>Date generated:</span> " + generationTime + "</p>")
-        htmlFile.write("<p><span class='bold'>Strategy code computation time:</span> " + str(time_taken) + " seconds.</p><hr />")
+        htmlFile.write("<p><span class='bold'>Date Generated:</span> " + generationTime + "</p>")
+        htmlFile.write("<p><span class='bold'>Strategy Name:</span> " + strategy_name + "</p>")
+        htmlFile.write("<p><span class='bold'>CPU time:</span> " + str(time_taken) + " seconds.</p><hr/>")
 
         # Only show the transaction log if transactions exist. 
         if tradesAnalyzer.getCount():
