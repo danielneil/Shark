@@ -22,9 +22,10 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 1. Prepare a vanilla Debian Server with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
 
-CPU  | Memory | DISK
-------------- | -------------
-4+  | 8GB+ | 20GB
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
 
 2. Install ansible ([help](https://linuxhint.com/install_ansible_debian10/)).
 
