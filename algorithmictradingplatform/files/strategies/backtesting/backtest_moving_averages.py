@@ -144,9 +144,17 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
 
         # measure the execution time to here.
         time_taken = ( time.time() - start_time )
+        
+        # Get the number of bars in the dataframe - not ideal to load the dataframe again, so this needs to be looked at.
+        data = pd.read_csv("/shark/ticker-data/"+ticker+".AX.txt")
+       
+        # Count the total number of rows in the DF (represents the number of trades)
+
+        index = data.index
+        nubmerOfBars = len(index)
 
         # Generate the HTML Report    
-        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, "moving_averages")
+        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, "moving_averages", nubmerOfBars)
 
         # Check if there are even any trades to report on.
         if tradesAnalyzer.getCount():
