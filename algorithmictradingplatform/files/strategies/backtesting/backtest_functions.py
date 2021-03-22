@@ -26,8 +26,8 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         now = datetime.datetime.now()
         generationTime = now.strftime("%H:%M:%S (%Y-%m-%d)")
 
-        htmlFile.write("<p><span class='bold'>Date Generated:</span> " + generationTime + "</p>")
-        htmlFile.write("<p><span class='bold'>Strategy Name:</span> " + strategy_name + "</p>")
+        htmlFile.write("<p><span class='bold'>Date generated:</span> " + generationTime + "</p>")
+        htmlFile.write("<p><span class='bold'>Strategy name:</span> " + strategy_name + "</p>")
         htmlFile.write("<p><span class='bold'>CPU time:</span> " + str(time_taken) + " seconds.</p><hr/>")
 
         # Only show the transaction log if transactions exist. 
