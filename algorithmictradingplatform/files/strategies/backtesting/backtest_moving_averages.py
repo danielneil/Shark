@@ -20,6 +20,8 @@ import os
 
 import time
 
+import pandas as pd
+
 from backtest_functions import CreateHTMLReport
 from backtest_functions import CreateJSONTransactionLog
 from backtest_functions import CreateJSONTransactionLogHTML
