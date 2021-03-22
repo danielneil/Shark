@@ -4,7 +4,7 @@
 
 # Shark - An Algorithmic Trading Platform
 
-Shark is scalable open source algorithmic trading platform.
+Shark is scalable open source algorithmic trading and backtesting platform.
 
 It enables the use of programmable strategies to identify and execute upon trading opportunities coupled with an integrated backtesting component. 
 
