@@ -22,6 +22,10 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 1. Prepare a vanilla Debian Server with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
 
+CPU  | Memory | DISK
+------------- | -------------
+4+  | 8GB+ | 20GB
+
 2. Install ansible ([help](https://linuxhint.com/install_ansible_debian10/)).
 
 3. Install Git ([help](https://linuxhint.com/install_git_debian_10/)).
