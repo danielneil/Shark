@@ -18,14 +18,15 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
 
 See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorithmictradingplatform/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/algorithmictradingplatform/files/strategies/backtesting/backtest_moving_averages.py).
 
+# System Requirements
+
+CPU | Memory | DISK
+| :--- | ---: | :---:
+4 Cores+  | 8GB+ | 20GB+
+
 # Setup Instructions
 
 1. Prepare a vanilla Debian Server with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
-
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
 
 2. Install ansible ([help](https://linuxhint.com/install_ansible_debian10/)).
 
