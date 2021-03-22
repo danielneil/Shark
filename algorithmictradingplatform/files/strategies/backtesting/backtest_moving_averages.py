@@ -146,7 +146,7 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
         time_taken = ( time.time() - start_time )
 
         # Generate the HTML Report    
-        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken)
+        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, "moving_averages")
 
         # Check if there are even any trades to report on.
         if tradesAnalyzer.getCount():
