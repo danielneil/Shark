@@ -21,7 +21,7 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         htmlFile.write("<style> .bold { font-weight: bold } </style>")
         htmlFile.write("</head>")
         htmlFile.write("<body>")
-        htmlFile.write("<h1>Strategy Performance - "+ticker+"</h1><hr />") 
+        htmlFile.write("<h1>Historic Strategy Performance - "+ticker+"</h1><hr />") 
 
         now = datetime.datetime.now()
         generationTime = now.strftime("%H:%M:%S (%Y-%m-%d)")
