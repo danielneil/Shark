@@ -38,7 +38,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 <table>
  <tr>
-  <td style='font-weight: bold'>Main View
+   <td style="font-weight: bold">Main View</td>
   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true">
   <td style='font-weight: bold'>Sorting by Industry Groups
   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true" />
