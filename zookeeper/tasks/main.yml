@@ -10,13 +10,10 @@
     name: zk
     shell: /bin/bash
     groups: zk 
-    
-- name: Downloading ZooKeeper 
-  shell: cd /tmp && wget -N https://apache.mirror.digitalpacific.com.au/zookeeper/zookeeper-3.6.2/apache-zookeeper-3.6.2-bin.tar.gz
-  
-- name: Unzipping the above
+      
+- name: Unzipping zk to the system 
   unarchive:
-   src: /tmp/apache-zookeeper-3.6.2-bin.tar.gz
+   src: apache-zookeeper-3.6.2-bin.tar.gz
    dest: /shark/
    
 - name: Configuring permissions on the above
