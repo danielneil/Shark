@@ -34,8 +34,6 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 ```
 5. Navigate to http://debian-server-ip/nagios (web credentials are shark/shark).
 
-6. Please reach out for help if you get stuck!
-
 # Screenshots
 
 <table>
