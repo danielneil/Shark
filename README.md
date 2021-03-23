@@ -38,13 +38,19 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 # Screenshots
 
-### Main Screen
+<table>
+ <tr>
+  <td> Main View
+  <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true">
+  <td> collaborative Sorting by Industry Groups
+  <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true" />
+  <tr>
+   <td> teaching math on <b>WBO</b>
+   <td> <img alt="wbo teaching" width="300" src="https://user-images.githubusercontent.com/552629/59915737-a386e580-941d-11e9-81ff-db9e37f140db.png" />
+   <td> drawing art
+   <td> <img alt="angel drawn on WBO" width="300" src="https://user-images.githubusercontent.com/552629/59914139-08404100-941a-11e9-9c29-bd2569fe4730.png"/>
+</table>
 
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true)
-
-### Sorting by Industry Groups
-
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true)
 
 ### Sorting by Indicator Groups
 
