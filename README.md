@@ -45,18 +45,13 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
   <td> collaborative Sorting by Industry Groups
   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true" />
   <tr>
-   <td> teaching math on <b>WBO</b>
-   <td> <img alt="wbo teaching" width="300" src="https://user-images.githubusercontent.com/552629/59915737-a386e580-941d-11e9-81ff-db9e37f140db.png" />
-   <td> drawing art
-   <td> <img alt="angel drawn on WBO" width="300" src="https://user-images.githubusercontent.com/552629/59914139-08404100-941a-11e9-9c29-bd2569fe4730.png"/>
+   <td> Sorting by Indicator Groups
+   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true" />
+   <td> Opportunity Detection
+   <td> <img src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true"/>
 </table>
 
 
-### Sorting by Indicator Groups
-
-![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true)
-
-### Opportunity Detection
 
 ![Main Screen](https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true)
 
