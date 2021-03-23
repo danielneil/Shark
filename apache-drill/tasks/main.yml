@@ -19,6 +19,7 @@
   unarchive: 
    src: /shark/apache-drill-1.18.0.tar.gz
    dest: /shark/
+   remote_src: yes
 
 - name: Install setup tools for python3
   pip:
