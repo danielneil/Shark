@@ -38,19 +38,19 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 <table>
  <tr>
-  <td> **Main View**
+  <td style='font-weight: bold'>Main View
   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true">
-  <td> **Sorting by Industry Groups**
+  <td style='font-weight: bold'>Sorting by Industry Groups
   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true" />
   <tr>
-   <td> **Sorting by Indicator Groups**
+   <td style='font-weight: bold'>Sorting by Indicator Groups
    <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true" />
-   <td> **Opportunity Detection**
+   <td style='font-weight: bold'>Opportunity Detection
    <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true"/>
    <tr>
-    <td> **Integrated Backtesting**
+    <td>Integrated Backtesting
     <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true" />
-    <td> **Historic Strategy Performance**
+    <td>Historic Strategy Performance
     <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy-performance.JPG?raw=true"/>
 </table>
 
