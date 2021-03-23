@@ -1,10 +1,15 @@
 ---
 # tasks file for monitoring
 
+- name: Ensures nagios-etc dir exists
+  file: 
+   path: /shark/monitoring/nagios-etc
+   state: directory
+
 - name: Synchronizing the nagios-container-config
   copy:
-    src: nagios-etc/
-    dest: /shark/monitoring/
+    src: nagios-etc
+    dest: /shark/monitoring/nagios-etc
   
 - name: Adding the cgi.cgi file containing our custom auth
   template:
