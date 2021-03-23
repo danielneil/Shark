@@ -103,6 +103,7 @@ class MovingAverages(strategy.BacktestingStrategy):
 
         # Check if we have to exit the position.
         elif cross.cross_below(self.__prices, self.__sma) > 0 and not self.__position.exitActive():
+            
             self.__position.exitMarket()
 
 
@@ -150,13 +151,15 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
         # Get the number of bars in the dataframe - not ideal to load the dataframe again, so this needs to be looked at.
         data = pd.read_csv("/shark/ticker-data/"+ticker+".AX.txt")
        
-        # Count the total number of rows in the DF (represents the number of trades)
+        # Count the total number of rows in the DF (represents the number of BARS?)
 
         index = data.index
         nubmerOfBars = len(index)
 
         # Generate the HTML Report    
-        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, "moving_averages", nubmerOfBars)
+        strat_name = "moving_averages" # It'd be nice to have this determined progmatically. 
+        
+        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, strat_name, nubmerOfBars)
 
         # Check if there are even any trades to report on.
         if tradesAnalyzer.getCount():
@@ -178,10 +181,12 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=cmd_arg_help)
+    
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
     parser.add_argument("-n", "--noreport", help="Do not generate the back test report", action="store_false", default=True)
+    
     args = parser.parse_args()
 
     if not args.ticker:
