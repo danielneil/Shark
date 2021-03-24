@@ -74,4 +74,6 @@ An understanding of financial markets, algorithmic trading, or any kind of finan
 
 # Shark is looking for sponsors! 
 
-If you are willing to sponsor Shark, this will equate to your feature requests being prioritised by the development team. Sponsors will also receive integration support for implementing Shark in their own environments. 
+If you are willing to sponsor Shark, this will equate to your feature requests being prioritised by the development team. 
+
+Sponsors will also be entitled to support for integrations in their own environments. 
