@@ -1,7 +1,22 @@
+#################
 # Model Coverage 
+
 Binomial Option Price Model 
 Black Scholes Model
 
-# Strategy Coverage
+#################
+# Strategy Algo Coverage
+
 mean reversion
 cross over 
+grid trading
+
+#################
+# Backtest Framework 
+
+Rewrite the backtest from to make it more generic. 
+
+#################
+# Nagios/ Shark Plugins
+
+Convert Nagios plugins into C++ from Python.
