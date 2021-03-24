@@ -71,7 +71,7 @@ $link_target = 'main';
 			<li><a href="/shark/backtest" target="<?php echo $link_target;?>">Summary</a>
 			<ul>
 				<li><a href="/shark/backtest/index.php?action=reports" target="<?php echo $link_target;?>">Reports</a></li>
-				<li><a href="/shark/backtest/index.php?action=transactions" target="<?php echo $link_target;?>">Trade Logs</a></li>
+				<li><a href="/shark/backtest/index.php?action=transactions" target="<?php echo $link_target;?>">Transactions</a></li>
 			</ul>
 			</li>
 		</ul>
