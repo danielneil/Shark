@@ -71,3 +71,7 @@ Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plu
 ### Financials
 
 An understanding of financial markets, algorithmic trading, or any kind of financial analytical specialisations.
+
+# Shark is looking for sponsors! 
+
+If you are willing to sponsor Shark, this will equate to your feature requests being prioritised by the development team. Sponsors will also receive integration support for implementing Shark in their own environments. 
