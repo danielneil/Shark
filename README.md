@@ -50,7 +50,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
    <tr>
     <td>Integrated Backtesting
     <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true" />
-    <td>Historic Strategy Performance
+    <td>Historic Strategy Performance (Backtest) 
     <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy-performance.JPG?raw=true"/>
 </table>
 
