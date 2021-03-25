@@ -46,7 +46,7 @@ class MovingAverages(strategy.BacktestingStrategy):
         self.__instrument = instrument
         self.__prices = feed[instrument].getPriceDataSeries()
 
-        self.__tradeLog = tradeLog
+        self.__transactionLog = tradeLog
 
         # We'll use adjusted close values instead of regular close values.
         self.setUseAdjustedValues(True)
@@ -58,7 +58,7 @@ class MovingAverages(strategy.BacktestingStrategy):
         execInfo = position.getEntryOrder().getExecutionInfo()
         quantity = str(execInfo.getQuantity())
 
-        tradeLogDict = {
+        __transactionLogDict = {
                     "datetime": str(execInfo.getDateTime()),
                     "action": "BUY",
                     "ticker": ticker,
@@ -66,7 +66,7 @@ class MovingAverages(strategy.BacktestingStrategy):
                     "price":  round(execInfo.getPrice(), 2)
                 }
 
-        self.__tradeLog.append(tradeLogDict)
+        self.__transactionLog.append(__transactionLogDict)
 
     def onEnterCanceled(self, position):
         self.__position = None
@@ -76,7 +76,7 @@ class MovingAverages(strategy.BacktestingStrategy):
         execInfo = position.getExitOrder().getExecutionInfo()
         quantity = str(execInfo.getQuantity())
 
-        tradeLogDict = {
+        __transactionLogDict = {
                     "datetime": str(execInfo.getDateTime()),
                     "action": "SELL",
                     "ticker": ticker,
@@ -84,7 +84,7 @@ class MovingAverages(strategy.BacktestingStrategy):
                     "price": round(execInfo.getPrice(), 2)
                 }
 
-        self.__tradeLog.append(tradeLogDict)
+        self.__transactionLog.append(__transactionLogDict)
 
         self.__position = None
 
