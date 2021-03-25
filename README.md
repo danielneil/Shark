@@ -54,9 +54,9 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
     <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy-performance.JPG?raw=true"/>
 </table>
 
-# Want to get involved? 
+# Contributing 
 
-Shark has lots of moving parts, so feel free to cherry pick a component that interests you.
+Shark has lots of moving parts, so feel free to cherry pick a component that interests you, and send me a pull request.
 
 The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) **any** of the following would be ideal.
 
