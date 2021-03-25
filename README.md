@@ -62,7 +62,7 @@ The technology stack comprises of the below, therefore knowledge of ( or a willi
 
 ### Programming
 
-Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, Python, PANDAS, REST and PERL
+Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, CatBoost, JSON, CSV, Python, PANDAS, QuantLib, REST and PERL
 
 ### Technologies
 
