@@ -11,5 +11,8 @@
    src: ui_refresh/transaction.html.jinja
    dest: /shark/bin
    
-  
-
+- name: Copying the index file for the transaction summary
+  copy:
+   src: ui_refresh/index-transactions.py
+   dest: /shark/backtest/transactions/index.py
+   mode: 0755
