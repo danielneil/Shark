@@ -41,3 +41,11 @@ if not drill.is_active():
 totalTransactions = drill.query("select count(*) from `dfs.backtests`.`transactions`")
 
 df = totalTransactions.to_dataframe()
+
+index = df.index
+transNumber = len(index)
+
+print("<h2>Total Transactions - " + transNumber + "</h2>")
+
+
+
