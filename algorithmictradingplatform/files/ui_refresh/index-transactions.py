@@ -45,7 +45,7 @@ df = totalTransactions.to_dataframe()
 index = df.index
 transNumber = len(index)
 
-print("<h2>Total Transactions - " + transNumber + "</h2>")
+print("<h2>Total Transactions - " + str(transNumber) + "</h2>")
 
 
 
