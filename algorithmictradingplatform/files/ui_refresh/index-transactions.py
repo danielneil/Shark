@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Summarises the transactions into a single web page.
+# Summarises the backtest's transactions into a single web page.
 
 import cgitb
 import pandas
