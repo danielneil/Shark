@@ -2,25 +2,8 @@
 
 import cgitb
 
-#####################################
-# Header 
+# Using jinja templating engine, it gernates the transact log summary page with the json files using apache drill.
 
-cgitb.enable()
-print("Content-Type: text/html;charset=utf-8\r\n\r\n")
-
-#####################################
-# Body 
-
-print("<h3>Transaction Summary</h3>")
-
-
-
-
-
-
-#!/usr/bin/python3
-
-# Using jinja templating engine, it gernates the trade log based on the json file using apache drill.
 # Drill is used to provide scability options in the future.
 
 from jinja2 import Template
@@ -38,11 +21,22 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
+#####################################
+# Header 
+
+cgitb.enable()
+print("Content-Type: text/html;charset=utf-8\r\n\r\n")
+
+#####################################
+# Body 
+
+print("<h3>Transaction Summary</h3>")
+
 drill = PyDrill(host='localhost', port=8047)
 
 if not drill.is_active():
+   
    raise ImproperlyConfigured('Please run Drill first')
-
 
 tradeRecord = drill.query("SELECT * FROM dfs.transactions`")
 
