@@ -35,17 +35,12 @@ print("<h3>Transaction Summary</h3>")
 drill = PyDrill(host='localhost', port=8047)
 
 if not drill.is_active():
-   
-   raise ImproperlyConfigured('Please run Drill first')
+   print("Please run Drill first")
 
-totalTransactions = drill.query("select count(*) from `dfs.backtests`.`transactions`")
+# Select all the transactions with SQL, and we'll manipulate with the pandas functions.
+transactions = drill.query("select * from `dfs.backtests`.`transactions`")
 
-df = totalTransactions.to_dataframe()
-
-index = df.index
-transNumber = len(index)
-
-print("<h2>Total Transactions - " + str(transNumber) + "</h2>")
+dataframe = transactions.to_dataframe()
 
 
 
