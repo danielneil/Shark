@@ -38,6 +38,6 @@ if not drill.is_active():
    
    raise ImproperlyConfigured('Please run Drill first')
 
-tradeRecord = drill.query("SELECT * FROM dfs.transactions`")
+totalTransactions = drill.query("select count(*) from `dfs.backtests`.`transactions`")
 
-df = tradeRecord.to_dataframe()
+df = totalTransactions.to_dataframe()
