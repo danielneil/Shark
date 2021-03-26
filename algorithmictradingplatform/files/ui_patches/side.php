@@ -68,10 +68,10 @@ $link_target = 'main';
 	<div class="navsectiontitle">Backtesting</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="/shark/backtest/index.py" target="<?php echo $link_target;?>">Summary</a>
+			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Summary</a>
 			<ul>
-				<li><a href="/shark/backtest/reports/index.py" target="<?php echo $link_target;?>">Reports</a></li>
-				<li><a href="/shark/backtest/transactions/index.py" target="<?php echo $link_target;?>">Transactions</a></li>
+				<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
+				<li><a href="/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
 			</ul>
 			</li>
 		</ul>
