@@ -14,5 +14,5 @@
 - name: Copying the index file for the transaction summary
   copy:
    src: ui_refresh/index-transactions.py
-   dest: /shark/backtest/transactions/index.py
+   dest: /shark/backtest/
    mode: 0755
