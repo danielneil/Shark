@@ -17,6 +17,8 @@ print("Content-Type: text/html;charset=utf-8\r\n\r\n")
 # Body - Edit away. 
 
 print("<h3>Transaction Summary</h3>")
+print("<hr />")
+
 
 drill = PyDrill(host='localhost', port=8047)
 
