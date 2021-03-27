@@ -30,5 +30,5 @@ dataframe = transactions.to_dataframe()
 
 # Number of total transactions.
 totalTransactions = len(dataframe.index)
-print("<h3>Total transactions: " + totalTransactions + "</h3>")
+print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
 
