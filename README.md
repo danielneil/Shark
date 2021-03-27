@@ -72,6 +72,6 @@ Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plu
 
 An understanding of financial markets, algorithmic trading, or any kind of financial analytical specialisations.
 
-# I need a sponsor
+# Want to sponsor us? 
 
-This will equate to your feature requests being prioritised and also entitled to integration assistance.
+This will equate to your feature requests being prioritised and entitlement to integration assistance.
