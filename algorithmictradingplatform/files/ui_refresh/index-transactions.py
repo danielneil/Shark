@@ -59,5 +59,5 @@ print("<h3>Total Sells: " + str(totalSells) + "</h3>")
 print("<h3>Highest SELL price transaction: </h3>")
 print("<h3>Lowest SELL price transaction: </h3>")
 
-print("<h3>Total number of shares exchanged in all transactions: </h3>")
+print("<h3>Volume of shares exchanged: </h3>")
 print("<h3>Value: </h3>")
