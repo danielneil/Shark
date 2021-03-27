@@ -49,4 +49,7 @@ print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
 print("<h3>Total Sells: " + str(totalSells) + "</h3>")
 
 
-
+print("<h3>highest SELL price transaction</h3>")
+print("<h3>highest BUY price transaction</h3>")
+print("<h3>lowest SELL price transaction</h3>")
+print("<h3>Total number of shares exchanged in all transactions</h3>")
