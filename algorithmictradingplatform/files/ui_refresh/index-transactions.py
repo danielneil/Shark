@@ -32,15 +32,15 @@ dataframe = transactions.to_dataframe()
 # Number of total transactions.
 totalTransactions = len(dataframe.index)
 
-# Number of buys
+# Number of BUYS
 dataframe.sort_values("action", inplace = True)
-filter = dataframe["action"]=="BUY"
+filter = dataframe["action"] == "BUY"
 dataframe.where(filter, inplace = True)
 totalBuys = len(dataframe.index)
 
-# Number of sells
+# Number of SELLS
 dataframe.sort_values("action", inplace = True)
-filter = dataframe["action"]=="SELL"
+filter = dataframe["action"] == "SELL"
 dataframe.where(filter, inplace = True)
 totalSells = len(dataframe.index)
 
