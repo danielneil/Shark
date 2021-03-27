@@ -19,7 +19,6 @@ print("Content-Type: text/html;charset=utf-8\r\n\r\n")
 print("<h3>Transaction Summary</h3>")
 print("<hr />")
 
-
 drill = PyDrill(host='localhost', port=8047)
 
 if not drill.is_active():
@@ -32,5 +31,22 @@ dataframe = transactions.to_dataframe()
 
 # Number of total transactions.
 totalTransactions = len(dataframe.index)
+
+# Number of buys
+dataframe.sort_values("action", inplace = True)
+filter = dataframe["action"]=="BUY"
+dataframe.where(filter, inplace = True)
+totalBuys = len(dataframe.index)
+
+# Number of sells
+dataframe.sort_values("action", inplace = True)
+filter = dataframe["action"]=="SELL"
+dataframe.where(filter, inplace = True)
+totalSells = len(dataframe.index)
+
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
+print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
+print("<h3>Total Sells: " + str(totalSells) + "</h3>")
+
+
 
