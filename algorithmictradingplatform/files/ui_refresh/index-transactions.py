@@ -28,3 +28,7 @@ if not drill.is_active():
 transactions = drill.query("select * from `dfs.backtests`.`transactions`")
 dataframe = transactions.to_dataframe()
 
+# Number of total transactions.
+totalTransactions = len(dataframe.index)
+print("<h3>Total transactions: " + totalTransactions + "</h3>")
+
