@@ -39,7 +39,7 @@ dataframe.where(filter, inplace = True)
 totalBuys = len(dataframe.index)
 
 # Reset the index (reset using reset_index() on the df didn't work? Anyone?
-dataframe = tradeRecord.to_dataframe()
+dataframe = dataframe.to_dataframe()
 
 # Number of SELLS
 dataframe.sort_values("action", inplace = True)
@@ -48,7 +48,7 @@ dataframe.where(filter, inplace = True)
 totalSells = len(dataframe.index)
 
 # Reset the index (reset using reset_index() on the df didn't work? Anyone?
-dataframe = tradeRecord.to_dataframe()
+dataframe = dataframe.to_dataframe()
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
 print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
