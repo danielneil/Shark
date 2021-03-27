@@ -52,11 +52,12 @@ dataframe = transactions.to_dataframe()
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
 print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
-print("<h3>Highest BUY price transaction</h3>")
-print("<h3>Lowest BUY price transaction</h3>")
+print("<h3>Highest BUY price transaction: (ticker)</h3>")
+print("<h3>Lowest BUY price transaction: (ticker)</h3>")
 
 print("<h3>Total Sells: " + str(totalSells) + "</h3>")
-print("<h3>Highest SELL price transaction</h3>")
-print("<h3>Lowest SELL price transaction</h3>")
+print("<h3>Highest SELL price transaction: </h3>")
+print("<h3>Lowest SELL price transaction: </h3>")
 
-print("<h3>Total number of shares exchanged in all transactions</h3>")
+print("<h3>Total number of shares exchanged in all transactions: </h3>")
+print("<h3>Value: </h3>")
