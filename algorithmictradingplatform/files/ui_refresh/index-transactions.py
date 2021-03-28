@@ -33,12 +33,12 @@ dataframe = transactions.to_dataframe()
 totalTransactions = len(dataframe.index)
 
 # Number of BUYS
-buy_subset = dataframe[dataframe["action"] = "BUY"]
+buy_subset = dataframe[dataframe["action"] == "BUY"]
 totalBuys = buy_subset.count()
 
 
 # Number of SELLS
-sell_subset = dataframe[dataframe["action"] = "SELL"]
+sell_subset = dataframe[dataframe["action"] == "SELL"]
 totalSells = sell_subset.count()
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
