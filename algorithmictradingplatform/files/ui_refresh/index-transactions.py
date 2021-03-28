@@ -29,8 +29,9 @@ if not drill.is_active():
 transactions = drill.query("select * from `dfs.backtests`.`transactions`")
 dataframe = transactions.to_dataframe()
 
-# Convert to int.
+# Convert to ints.
 dataframe["quantity"] = pandas.to_numeric(dataframe["quantity"])
+dataframe["quantity"] = pandas.to_numeric(dataframe["price"])
 
 # ----------- Number of total transactions.
 totalTransactions = len(dataframe.index)
