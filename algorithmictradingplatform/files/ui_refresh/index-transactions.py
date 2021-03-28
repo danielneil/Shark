@@ -34,64 +34,45 @@ dataframe["quantity"] = pandas.to_numeric(dataframe["quantity"])
 dataframe["quantity"] = pandas.to_numeric(dataframe["price"])
 
 # ----------- Number of total transactions.
+
 totalTransactions = len(dataframe.index)
 
 # ----------- Number of BUYS
+
 buy_subset = dataframe[dataframe["action"] == "BUY"]
 totalBuys = len(buy_subset)
 
 # ----------- Number of SELLS
+
 sell_subset = dataframe[dataframe["action"] == "SELL"]
 totalSells = len(sell_subset)
 
-# ----------- Highest buy
-filter = dataframe["action"] == 'BUY'
-dataframe.where(filter, inplace = True)
+# ----------- Highest BUY
 
-dataframe = transactions.to_dataframe()
-
-pos = dataframe["price"].argmax()
-highest_buy = dataframe["price"].iloc[pos]
-
-# Reset the index (reset using reset_index() on the df didn't work? Anyone?
-dataframe = transactions.to_dataframe()
+highest_buy_subset = dataframe[dataframe["price"] == "BUY"]
+highest_buy = highest_buy_subset['price'].max()
 
 # ----------- Highest Sell
-filter = dataframe["action"] == 'SELL'
-dataframe.where(filter, inplace = True)
 
-pos = dataframe["price"].argmax()
-highest_sell = dataframe["price"].iloc[pos]
+highest_sell_subset = dataframe[dataframe["price"] == "SELL"]
+highest_sell = highest_sell_subset['price'].max()
 
-# Reset the index (reset using reset_index() on the df didn't work? Anyone?
-dataframe = transactions.to_dataframe()
+# ----------- Lowest BUY
 
-# ----------- Get the most costly SELL
+lowest_buy_subset = dataframe[dataframe["price"] == "BUY"]
+lowest_buy = lowest_buy_subset['price'].min()
 
-filter = dataframe["action"] == 'SELL'
-dataframe.where(filter, inplace = True)
-        
-pos = dataframe["price"].argmax()
-highest_sell = dataframe["price"].iloc[pos]
+# ----------- Lowest SELL
 
-# Reset the dataframe
-dataframe = tradeRecord.to_dataframe()
+lowest_sell_subset = dataframe[dataframe["price"] == "SELL"]
+lowest_sell = lowest_sell_subset['price'].min()
 
-# ----------- Get the most cheapest SELL
-
-pos = dataframe["price"].argmin()
-lowest_sell = dataframe["price"].iloc[pos]
-
-# Reset the dataframe
-dataframe = tradeRecord.to_dataframe()
-
-# Volume of shares exchanged
-totalVolume = dataframe['quantity'].sum()
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
+
 print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
 print("<h3>Highest BUY: (ticker) " + str(highest_buy) + "</h3>")
-print("<h3>Lowest BUY: " + str(lowest_guy) + "</h3>")
+print("<h3>Lowest BUY: " + str(lowest_buy) + "</h3>")
 
 print("<h3>Total Sells: " + str(totalSells) + "</h3>")
 print("<h3>Highest SELL: " + str(highest_sell) + "</h3>")
