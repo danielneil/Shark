@@ -42,6 +42,7 @@ sell_subset = dataframe[dataframe["action"] == "SELL"]
 totalSells = len(sell_subset)
 
 # Volume of shares exchanged
+dataframe["price"] = pandas.to_numeric(dataframe['quantity'])
 totalVolume = sum(dataframe['quantity'])
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
