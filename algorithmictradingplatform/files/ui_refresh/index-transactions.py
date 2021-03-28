@@ -68,8 +68,7 @@ lowest_sell_subset = dataframe[dataframe["price"] == "SELL"]
 lowest_sell = lowest_sell_subset['price'].min()
 
 # ----------- Volume of shares exchanged
-totalVolumeDF = dataframe['quantity'].sum()
-totalVolume = len(totalVolumeDF)
+totalVolume = sum(dataframe['quantity'])
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
 
