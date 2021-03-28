@@ -48,12 +48,13 @@ totalSells = len(sell_subset)
 filter = dataframe["action"] == 'BUY'
 dataframe.where(filter, inplace = True)
 
+dataframe = transactions.to_dataframe()
+
 pos = dataframe["price"].argmax()
 highest_buy = dataframe["price"].iloc[pos]
 
 # Reset the index (reset using reset_index() on the df didn't work? Anyone?
-dataframe = tradeRecord.to_dataframe()
-dataframe["price"] = pandas.to_numeric(dataframe['price'])
+dataframe = transactions.to_dataframe()
 
 # ----------- Highest Sell
 filter = dataframe["action"] == 'SELL'
@@ -63,8 +64,7 @@ pos = dataframe["price"].argmax()
 highest_sell = dataframe["price"].iloc[pos]
 
 # Reset the index (reset using reset_index() on the df didn't work? Anyone?
-dataframe = tradeRecord.to_dataframe()
-dataframe["price"] = pandas.to_numeric(dataframe['price'])
+dataframe = transactions.to_dataframe()
 
 # ----------- Get the most costly SELL
 
