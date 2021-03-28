@@ -33,20 +33,13 @@ dataframe = transactions.to_dataframe()
 totalTransactions = len(dataframe.index)
 
 # Number of BUYS
-dataframe.sort_values("action", inplace = True)
-filter = dataframe["action"] == "BUY"
-dataframe.where(filter, inplace = True)
-totalBuys = len(dataframe.index)
+buy_subset = dataframe[dataframe["action"] = "BUY"]
+totalBuys = buy_subset.count()
 
-# Reset the index (reset using reset_index() on the df didn't work? Anyone?
-dataframe = transactions.to_dataframe()
 
 # Number of SELLS
-dataframe.sort_values("action", inplace = True)
-filter = dataframe["action"] == "SELL"
-dataframe.where(filter, inplace = True)
-totalSells = len(dataframe.index)
-
+sell_subset = dataframe[dataframe["action"] = "SELL"]
+totalSells = sell_subset.count()
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
 print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
