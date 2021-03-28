@@ -41,14 +41,17 @@ totalBuys = len(buy_subset)
 sell_subset = dataframe[dataframe["action"] == "SELL"]
 totalSells = len(sell_subset)
 
+# Volume of shares exchanged
+totalVolume = df['quantity'].sum()
+
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
 print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
-print("<h3>Highest BUY price transaction: (ticker)</h3>")
-print("<h3>Lowest BUY price transaction: (ticker)</h3>")
+print("<h3>Highest BUY: (ticker)</h3>")
+print("<h3>Lowest BUY: (ticker)</h3>")
 
 print("<h3>Total Sells: " + str(totalSells) + "</h3>")
-print("<h3>Highest SELL price transaction: </h3>")
-print("<h3>Lowest SELL price transaction: </h3>")
+print("<h3>Highest SEL: </h3>")
+print("<h3>Lowest SELL: </h3>")
 
-print("<h3>Volume of shares exchanged: </h3>")
+print("<h3>Volume of shares exchanged: " + str(totalVolume) + " </h3>")
 print("<h3>Value: </h3>")
