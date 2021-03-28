@@ -53,7 +53,7 @@ print("<h3>Highest BUY: (ticker)</h3>")
 print("<h3>Lowest BUY: (ticker)</h3>")
 
 print("<h3>Total Sells: " + str(totalSells) + "</h3>")
-print("<h3>Highest SEL: </h3>")
+print("<h3>Highest SELL: </h3>")
 print("<h3>Lowest SELL: </h3>")
 
 print("<h3>Volume of shares exchanged: " + str(totalVolume) + " </h3>")
