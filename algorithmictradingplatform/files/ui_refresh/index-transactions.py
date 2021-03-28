@@ -32,29 +32,69 @@ dataframe = transactions.to_dataframe()
 # Convert to int.
 dataframe["quantity"] = pandas.to_numeric(dataframe["quantity"])
 
-# Number of total transactions.
+# ----------- Number of total transactions.
 totalTransactions = len(dataframe.index)
 
-# Number of BUYS
+# ----------- Number of BUYS
 buy_subset = dataframe[dataframe["action"] == "BUY"]
 totalBuys = len(buy_subset)
 
-
-# Number of SELLS
+# ----------- Number of SELLS
 sell_subset = dataframe[dataframe["action"] == "SELL"]
 totalSells = len(sell_subset)
+
+# ----------- Highest buy
+filter = dataframe["action"] == 'BUY'
+dataframe.where(filter, inplace = True)
+
+pos = dataframe["price"].argmax()
+highest_buy = dataframe["price"].iloc[pos]
+
+# Reset the index (reset using reset_index() on the df didn't work? Anyone?
+dataframe = tradeRecord.to_dataframe()
+dataframe["price"] = pandas.to_numeric(dataframe['price'])
+
+# ----------- Highest Sell
+filter = dataframe["action"] == 'SELL'
+dataframe.where(filter, inplace = True)
+
+pos = dataframe["price"].argmax()
+highest_sell = dataframe["price"].iloc[pos]
+
+# Reset the index (reset using reset_index() on the df didn't work? Anyone?
+dataframe = tradeRecord.to_dataframe()
+dataframe["price"] = pandas.to_numeric(dataframe['price'])
+
+# ----------- Get the most costly SELL
+
+filter = dataframe["action"] == 'SELL'
+dataframe.where(filter, inplace = True)
+        
+pos = dataframe["price"].argmax()
+highest_sell = dataframe["price"].iloc[pos]
+
+# Reset the dataframe
+dataframe = tradeRecord.to_dataframe()
+
+# ----------- Get the most cheapest SELL
+
+pos = dataframe["price"].argmin()
+lowest_sell = dataframe["price"].iloc[pos]
+
+# Reset the dataframe
+dataframe = tradeRecord.to_dataframe()
 
 # Volume of shares exchanged
 totalVolume = dataframe['quantity'].sum()
 
 print("<h3>Total transactions: " + str(totalTransactions) + "</h3>")
 print("<h3>Total Buys: " + str(totalBuys) + "</h3>")
-print("<h3>Highest BUY: (ticker)</h3>")
-print("<h3>Lowest BUY: (ticker)</h3>")
+print("<h3>Highest BUY: (ticker) " + str(highest_buy) + "</h3>")
+print("<h3>Lowest BUY: " + str(lowest_guy) + "</h3>")
 
 print("<h3>Total Sells: " + str(totalSells) + "</h3>")
-print("<h3>Highest SELL: </h3>")
-print("<h3>Lowest SELL: </h3>")
+print("<h3>Highest SELL: " + str(highest_sell) + "</h3>")
+print("<h3>Lowest SELL: " + str(lowest_sell) + "</h3>")
 
 print("<h3>Volume of shares exchanged: " + str(totalVolume) + " </h3>")
 print("<h3>Value: </h3>")
