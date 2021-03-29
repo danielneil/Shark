@@ -70,18 +70,18 @@ lowest_sell = lowest_sell_subset['price'].min()
 # ----------- Volume of shares exchanged
 totalVolume = sum(dataframe['quantity'])
 
-        with open('/shark/bin/index-transaction.html.jinja') as f:
+with open('/shark/bin/index-transaction.html.jinja') as f:
 
-            tmpl = Template(f.read())
+	tmpl = Template(f.read())
             
-                print(tmpl.render(
-                     totalTransactions = totalTransactions,
-	                  totalBuys = totalBuys,
-	                  highest_buy = highest_buy,
-                     lowest_buy = lowest_buy,
-                     totalSells  = totalSells,
-	                  highest_sell = highest_sell,
-	                  lowest_sell = lowest_sell,
-	                  totalVolume = totalVolume,
-	                  totalValue  = totalValue
-                ))
+        print(tmpl.render(
+        	totalTransactions = totalTransactions,
+	        totalBuys = totalBuys,
+	        highest_buy = highest_buy,
+                lowest_buy = lowest_buy,
+                totalSells  = totalSells,
+	        highest_sell = highest_sell,
+	        lowest_sell = lowest_sell,
+	        totalVolume = totalVolume,
+	        totalValue  = totalValue
+	))
