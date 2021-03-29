@@ -9,18 +9,6 @@ import pandas
 import sys 
 from pydrill.client import PyDrill
 
-#####################################
-# Header - Don't edit. 
-
-cgitb.enable()
-print("Content-Type: text/html;charset=utf-8\r\n\r\n")
-
-#####################################
-# Body - Edit away. 
-
-print("<h3>Transaction Summary</h3>")
-print("<hr />")
-
 drill = PyDrill(host='localhost', port=8047)
 
 if not drill.is_active():
