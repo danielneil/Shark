@@ -96,18 +96,17 @@
 	<hr />
 		
 	<div class="dropdown">
+	
   		<button onclick="myFunction()" class="dropbtn">Select Ticker</button>
+		
   		<div id="myDropdown" class="dropdown-content">
-    		<a href="/shark/backtest/html/CBA.transaction.html">CBA</a>
-
-  		{% for key,value in x.iterrows() %}
-		<tr>
-			<a href="/shark/backtest/html/{{ value['ticker'] }}.transaction.html">{{ value['ticker'] }}</a>
-		</tr>
-  		{% endfor %}
-
-  	</div>
-</div>
+			{% for key,value in x.iterrows() %}
+			<tr>
+				<a href="/shark/backtest/html/{{ value['ticker'] }}.transaction.html">{{ value['ticker'] }}</a>
+			</tr>
+			{% endfor %}
+  		</div>
+	</div>
 	  	  	
   </body>
 </html>
