@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <title>Transaction Log: {{ ticker }}</title>
+	  <style>
+		  th {
+		  	background-color: #E0E0E0;
+		  }
+	  </style>
+  </head>
+  <body>
+	  <h1>Transaction log: {{ ticker }}</h1>
+	  <hr />
+	  <span style="font-weight: bold">Transactions: </span>{{ total_transactions }}<br />
+	  <span style="font-weight: bold">Highest Buy: </span>{{ highest_buy }}<br />
+	  <span style="font-weight: bold">Lowest Buy: </span>{{ lowest_buy }}<br />
+	  <span style="font-weight: bold">Highest Sell: </span>{{ highest_sell }}<br />
+	  <span style="font-weight: bold">Lowest Sell: </span>{{ lowest_sell }}<br />
+	  <hr />
+	  <br />
+	  <table width="80%" border=1>
+		<tr>
+			<th>Date/Time</th>
+			<th>Action</th>
+			<th>Ticker</th>
+			<th>Quanity</th>
+			<th>Price</th>
+		</tr>
+  		{% for key,value in x.iterrows() %}
+		<tr>
+			<td>{{ value['datetime'] }}</td>
+			<td>{{ value['action'] }}</td>
+			<td>{{ value['ticker'] }}</td>
+			<td>{{ value['quantity'] }}</td>
+			<td>{{ value['price'] }}</td>
+		</tr>
+  		{% endfor %}
+  	  </table>
+  </body>
+</html>
