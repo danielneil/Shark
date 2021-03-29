@@ -62,7 +62,6 @@ totalVolume = sum(dataframe['quantity'])
 # wrong but change a place holder to come back to
 totalValue = sum(dataframe['quantity'])
 
-
 # Send the HTML headers.
 cgitb.enable()
 print("Content-Type: text/html;charset=utf-8\r\n\r\n")
@@ -80,5 +79,6 @@ with open('/shark/bin/index-transaction.html.jinja') as f:
 	        highest_sell = highest_sell,
 	        lowest_sell = lowest_sell,
 	        totalVolume = totalVolume,
-	        totalValue  = totalValue
+	        totalValue  = totalValue,
+		x = dataframe
 	))
