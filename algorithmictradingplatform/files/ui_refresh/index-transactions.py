@@ -62,9 +62,6 @@ totalVolume = sum(dataframe['quantity'])
 # wrong but change a place holder to come back to
 totalValue = sum(dataframe['quantity'])
 
-# Remove duplicates so we only get one of each ticker.
-dataframe.drop_duplicates(subset='ticker')
-
 # Send the HTML headers.
 cgitb.enable()
 print("Content-Type: text/html;charset=utf-8\r\n\r\n")
