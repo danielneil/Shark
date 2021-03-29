@@ -16,3 +16,8 @@
    src: ui_refresh/index-transactions.py
    dest: /shark/backtest/
    mode: 0755
+
+- name: Adding UI jinja code for index summary  web template
+  copy:
+   src: ui_refresh/index-transaction.html.jinja
+   dest: /shark/bin
