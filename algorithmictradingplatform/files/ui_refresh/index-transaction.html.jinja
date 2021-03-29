@@ -102,7 +102,7 @@
 
   		{% for key,value in x.iterrows() %}
 		<tr>
-			<a href="/shark/backtest/html/{{ value['ticker'] }}.transaction.html">CBA</a>
+			<a href="/shark/backtest/html/{{ value['ticker'] }}.transaction.html">{{ value['ticker'] }}</a>
 		</tr>
   		{% endfor %}
 
