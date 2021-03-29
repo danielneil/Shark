@@ -74,8 +74,8 @@ with open('/shark/bin/index-transaction.html.jinja') as f:
 
 	tmpl = Template(f.read())
             
-        print(tmpl.render(
-        	totalTransactions = totalTransactions,
+	print(tmpl.render(
+		totalTransactions = totalTransactions,
 	        totalBuys = totalBuys,
 	        highest_buy = highest_buy,
                 lowest_buy = lowest_buy,
