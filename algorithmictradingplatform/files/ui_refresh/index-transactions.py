@@ -2,6 +2,8 @@
 
 # Summarises the backtest's transactions into a single web page.
 
+from jinja2 import Template
+
 import cgitb
 import pandas
 import sys 
