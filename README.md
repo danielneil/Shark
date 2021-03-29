@@ -6,7 +6,7 @@
 
 Shark is scalable open source algorithmic trading and backtesting platform.
 
-It enables the use of (multiple simultaneous) programmable strategies to identify and execute upon trading opportunities, coupled with integrated backtesting and nonrepudiation capabilities. 
+It enables the use of (simultaneous) programmable strategies to identify and execute upon trading opportunities, coupled with integrated backtesting and nonrepudiation capabilities. 
 
 The example strategy is simple moving averages crossover with the chosen financial market being the Australian Stock Exchange (Top 20 by market cap). It also demonstrates determing the strength of an opportunity using the RSI indicator accompanied with a historical backtest.  
 
