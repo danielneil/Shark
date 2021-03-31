@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-# Using jinja templating engine, it gernates the trade log based on the json file using apache drill.
+# Using jinja templating engine, it generates the trade log based on the json file using apache drill.
+
 # Drill is used to provide scability options in the future.
 
 from jinja2 import Template
