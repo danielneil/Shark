@@ -13,7 +13,7 @@
   
 - name: Pull the Docker image
   docker_image:
-    name: jasonrivers/nagios/
+    name: jasonrivers/nagios
 
 - name: Create the docker container of the above
   docker_container:
