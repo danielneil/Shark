@@ -66,7 +66,7 @@ totalValue = sum(dataframe['quantity'])
 cgitb.enable()
 print("Content-Type: text/html;charset=utf-8\r\n\r\n")
 
-dataframe.drop_duplicates(subset='ticker', keep=False)
+dataframe = dataframe.drop_duplicates(subset='ticker', keep="first", inplace=False)
 
 with open('/shark/bin/index-transaction.html.jinja') as f:
 
