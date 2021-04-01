@@ -5,10 +5,15 @@
   copy:
     src: nagios-etc
     dest: /shark/monitoring/
+    
+- name: Copying template nagios config file
+  template:
+   src: shark_monitoring.cfg
+   dest: /shark/monitoring/nagios-etc
   
 - name: Pull the Docker image
   docker_image:
-    name: jasonrivers/nagios 
+    name: jasonrivers/nagios/
 
 - name: Create the docker container of the above
   docker_container:
