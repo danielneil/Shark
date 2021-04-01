@@ -9,7 +9,7 @@
 - name: Copying template nagios config file
   template:
    src: shark_monitoring.cfg
-   dest: /shark/monitoring/nagios-etc
+   dest: /shark/monitoring/nagios-etc/conf.d/
   
 - name: Pull the Docker image
   docker_image:
