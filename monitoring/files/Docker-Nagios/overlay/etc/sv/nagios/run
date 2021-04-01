@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "checking permissions for nagios & nagiosgraph"
+find /opt/nagios \! -user ${NAGIOS_USER} -exec chown ${NAGIOS_USER}:${NAGIOS_GROUP} '{}' +
+find /opt/nagiosgraph \! -user ${NAGIOS_USER} -exec chown ${NAGIOS_USER}:${NAGIOS_GROUP} '{}' +
+if ! [ -f /opt/nagiosgraph/etc/ngshared.pm ]; then
+echo "Configuring Nagiosgraph"
+
+cd /tmp/nagiosgraph                                           && \
+./install.pl --install                                      \
+    --prefix /opt/nagiosgraph                               \
+    --nagios-user ${NAGIOS_USER}                            \
+    --www-user ${NAGIOS_USER}                               \
+    --nagios-perfdata-file ${NAGIOS_HOME}/var/perfdata.log  \
+    --nagios-cgi-url /cgi-bin >/dev/null
+echo "done"
+fi
+
+exec "${NAGIOS_HOME}/bin/nagios" "${NAGIOS_HOME}/etc/nagios.cfg"
