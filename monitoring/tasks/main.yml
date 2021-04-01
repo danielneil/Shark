@@ -20,8 +20,6 @@
   docker_image:
    name: jasonrivers/nagios 
    path: /shark/monitoring/Docker-Nagios
-   source: build
-   state: present
 
 - name: Create the docker container of the above
   docker_container:
