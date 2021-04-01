@@ -1,5 +1,4 @@
 ---
-
 - name: Algorithmic Trading Platform Role
   hosts: shark-server
   become: true
@@ -47,3 +46,8 @@
   
   # The Shark customisations to Nagios Core. 
   - algorithmictradingplatform
+
+- name: Install NRPE on all hosts
+  hosts: all
+  roles:
+   - nrpe
