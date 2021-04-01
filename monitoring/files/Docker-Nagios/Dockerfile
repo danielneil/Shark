@@ -80,6 +80,7 @@ RUN echo postfix postfix/main_mailer_type string "'Internet Site'" | debconf-set
         unzip                               \
         python                              \
         python-pandas                       \
+        python3-numpy                       \
                                                 && \
     apt-get clean && rm -Rf /var/lib/apt/lists/*
 
