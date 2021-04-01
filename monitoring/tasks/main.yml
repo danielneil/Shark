@@ -19,20 +19,19 @@
 - name: build container image
   docker_image:
    name: jasonrivers/nagios 
-   build:
-    path: /shark/monitoring/Docker-Nagios
-    source: build
+   path: /shark/monitoring/Docker-Nagios
+   source: build
    state: present
 
 - name: Create the docker container of the above
   docker_container:
-    name: shark-monitoring
-    image: jasonrivers/nagios 
-    state: present
-    restart: yes
-    ports:
-     - "0.0.0.0:81:80/tcp"
-    volumes:
+   name: shark-monitoring
+   image: jasonrivers/nagios 
+   state: present
+   restart: yes
+   ports:
+    - "0.0.0.0:81:80/tcp"
+   volumes:
       - /shark:/shark
       - /shark/monitoring/nagios-etc:/opt/nagios/etc/
 
