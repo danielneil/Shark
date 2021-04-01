@@ -1,6 +1,5 @@
 ---
 # tasks file for monitoring
-
 - name: Synchronizing the nagios-container-config
   copy:
     src: nagios-etc
