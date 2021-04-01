@@ -15,7 +15,7 @@
    src: Docker-Nagios
    dest: /shark/monitoring/
 
-- name: build container image
+- name: Building the Nagios container image from the 'jasonrivers/nagios' template. 
   docker_image:
    name: jasonrivers/nagios 
    path: /shark/monitoring/Docker-Nagios
