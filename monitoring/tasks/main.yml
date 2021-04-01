@@ -11,9 +11,18 @@
    src: shark_monitoring.cfg
    dest: /shark/monitoring/nagios-etc/conf.d/
   
-- name: Pull the Docker image
+- name: Copying Dockerfiles to build nagios instance
+  copy:
+   src: Docker-Nagios
+   dest: /shark/monitoring/
+
+- name: build container image
   docker_image:
-    name: jasonrivers/nagios
+   name: jasonrivers/nagios 
+   build:
+    path: /shark/monitoring/Docker-Nagios
+    source: build
+   state: present
 
 - name: Create the docker container of the above
   docker_container:
