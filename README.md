@@ -30,7 +30,7 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
-# The build takes about 5 mins.
+# The build takes about 5-10 mins.
 ```
 5. Navigate to http://debian-server-ip/nagios (web credentials are shark/shark).
 
