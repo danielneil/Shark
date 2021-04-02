@@ -1,24 +1,15 @@
 ---
 # tasks file for monitoring
-- name: Synchronizing the nagios-container-config
-  copy:
-    src: nagios-etc
-    dest: /shark/monitoring/
-    
-- name: Copying template nagios config file
-  template:
-   src: shark_monitoring.cfg
-   dest: /shark/monitoring/nagios-etc/conf.d/
-  
 - name: Copying Dockerfiles to build nagios instance
   copy:
    src: Docker-Nagios
-   dest: /shark/monitoring/
+   dest: /tmp
+  notify: rebuild-docker-image
 
 - name: Building the Nagios container image from the 'jasonrivers/nagios' template. 
   docker_image:
    name: jasonrivers/nagios 
-   path: /shark/monitoring/Docker-Nagios
+   path: /tmp/Docker-Nagios
 
 - name: Create the docker container of the above
   docker_container:
@@ -33,15 +24,3 @@
   docker_container:
    name: shark-monitoring
    state: started
-
-- name: Copying the custom check service command
-  copy:
-   src: check_service
-   dest: /shark/monitoring/
-   mode: 0755
-
-- name: Copying the apache drill check
-  copy:
-   src: check_apache_drill_row_count.py
-   dest: /shark/monitoring/
-   mode: 0755
