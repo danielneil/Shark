@@ -67,7 +67,7 @@ lowest_sell = lowest_sell_df["price"]
 df = transactions.to_dataframe()
 
 # ----------- Volume of shares exchanged
-totalVolume = sum(df['quantity'])
+totalVolume = int(sum(df['quantity']))
 
 # wrong but change a place holder to come back to
 totalValue = 0
