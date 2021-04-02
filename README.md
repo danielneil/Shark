@@ -21,7 +21,7 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 # Instructions 
 
 <details>
-<summarySystem Requirements</summary>
+<summary>System Requirements</summary>
 <br>
   
 ### Operating System Debian 
