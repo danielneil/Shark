@@ -28,9 +28,6 @@
    restart: yes
    ports:
     - "0.0.0.0:81:80/tcp"
-   volumes:
-      - /shark:/shark
-      - /shark/monitoring/nagios-etc:/opt/nagios/etc/
 
 - name: Start the nifi container
   docker_container:
