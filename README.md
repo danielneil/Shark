@@ -75,18 +75,10 @@ Shark has lots of moving parts, so feel free to cherry pick a component that int
 
 The technology stack comprises of the below.
 
-### Programming
+### Code
 
 Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, JSON, CSV, Python, PANDAS, QuantLib, REST and PERL.
 
-### Technologies
+### Tech
 
 Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plugins / NRPE), RabbitMQ, Redis, eXchange (FIX) protocol, PyAlgoTrade, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
-
-### Financials
-
-An understanding of financial markets, algorithmic trading, or any kind of financial analytical specialisations.
-
-# Want to sponsor us? 
-
-This will equate to your feature requests being prioritised and entitlement to integration assistance.
