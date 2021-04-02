@@ -1,1 +1,3 @@
-apxs -i -a -c main.c
+#!/usr/bin/bash
+
+/usr/bin/apxs -i -a -c main.c
