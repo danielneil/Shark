@@ -1,0 +1,1 @@
+apxs -i -a -c mod_example.c
