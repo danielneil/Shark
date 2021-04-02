@@ -2,3 +2,7 @@ site.retry
 algorithmictradingplatform/files/ticker-config.yml
 algorithmictradingplatform/files/ticker-data
 algorithmictradingplatform/files/strategies/backtesting/__pycache__/
+httpd/files/mod_shark/.libs/
+httpd/files/mod_shark/main.la
+httpd/files/mod_shark/main.lo
+httpd/files/mod_shark/main.slo
