@@ -91,5 +91,9 @@ with open('/shark/bin/index-transaction.html.jinja') as f:
 	        lowest_sell = lowest_sell,
 	        totalVolume = totalVolume,
 	        totalValue  = totalValue,
-		x = dataframe
+		x = dataframe,
+		highest_buy_ticker = highest_buy_ticker,
+		lowest_buy_ticker = lowest_buy_ticker,
+		highest_sell_ticker = highest_sell_ticker,
+		lowest_sell_ticker = lowest_sell_ticker
 	))
