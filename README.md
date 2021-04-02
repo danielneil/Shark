@@ -21,8 +21,9 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 # Instructions 
 
 <details>
-<summary>## System Requirements</summary>
+<summarySystem Requirements</summary>
 <br>
+  
 ### Operating System Debian 
 
 Shark is built on:
