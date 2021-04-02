@@ -98,5 +98,6 @@ with open('/shark/bin/index-transaction.html.jinja') as f:
 		highest_buy_ticker = highest_buy_ticker,
 		lowest_buy_ticker = lowest_buy_ticker,
 		highest_sell_ticker = highest_sell_ticker,
-		lowest_sell_ticker = lowest_sell_ticker
+		lowest_sell_ticker = lowest_sell_ticker,
+		open_trades = totalBuys - totalSells
 	))
