@@ -64,11 +64,13 @@ lowest_sell_df = lowest_sell_subset.min()
 lowest_sell_ticker = lowest_sell_df["ticker"]
 lowest_sell = lowest_sell_df["price"]
 
+df = transactions.to_dataframe()
+
 # ----------- Volume of shares exchanged
-totalVolume = sum(dataframe['quantity'])
+totalVolume = sum(df['quantity'])
 
 # wrong but change a place holder to come back to
-totalValue = sum(dataframe['quantity'])
+totalValue = 0
 
 # Send the HTML headers.
 cgitb.enable()
