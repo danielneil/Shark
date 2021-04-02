@@ -3,7 +3,11 @@
 - name: Install apache2 
   apt:
    name: apache2
-
+   
+- name: Install apache2 development headers.
+  apt:
+   name: apache2-dev
+   
 - name: Installing php deps
   apt:
    name: "{{ item }}"
