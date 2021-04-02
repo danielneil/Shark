@@ -4,3 +4,7 @@
   service:
    name: nagios
    state: restarted
+
+- name: rebuild-docker-image
+  shell: sudo docker stop shark-monitoring && sudo docker rmi jasonrivers/nagios
+  ignore_errors: yes
