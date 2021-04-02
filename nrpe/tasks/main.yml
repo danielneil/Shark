@@ -16,11 +16,11 @@
    src: nrpe.cfg
    dest: /etc/nagios/
    mode: 0644
-  handler: restart-nrpe
+  handle: restart-nrpe
    
 - name: Rolling out Custom NRPE  configuration file
   copy:
     src: custom-nrpe.cfg
     dest: /etc/nagios/conf.d
     mode: 0644
-  handler: restart-nrpe  
+  handle: restart-nrpe  
