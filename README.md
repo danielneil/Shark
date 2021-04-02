@@ -20,8 +20,9 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 # Instructions 
 
-## System Requirements
-
+<details>
+<summary>## System Requirements</summary>
+<br>
 ### Operating System Debian 
 
 Shark is built on:
@@ -45,7 +46,8 @@ Shark is built on:
   SUPPORT_URL="https://www.debian.org/support"
   
   BUG_REPORT_URL="https://bugs.debian.org/"
-
+  
+</details>
 
 ## Setup
 
