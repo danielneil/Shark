@@ -20,7 +20,6 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 # Instructions 
 
-<div style="width: 100%">
   <details>
     <summary>System Requirements</summary>
     <br>
@@ -28,7 +27,6 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
     | ------------- | ------------- | ------------- | ------------- |
     | Debian GNU/Linux 10         | 4 CPU   | 8192 MB | 80 GB  |
   </details>
-</div>
 
 ## Setup
 
