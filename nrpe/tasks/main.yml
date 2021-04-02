@@ -6,5 +6,18 @@
    name: nagios-nrpe-server
    state: latest
    
+- name: Starting nagios-nrpe-server
+  service:
+   name: nagios-nrpe-server 
+   state: started
+  
+ - name: Rolling out NRPE configuration
+   template:
+    src: nrpe.cfg
+    dest: /etc/nagios/
+    mode: 0644
+   handler: restart-nrpe
+   
+   
 
    
