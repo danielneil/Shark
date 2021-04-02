@@ -49,5 +49,6 @@
 
 - name: Install NRPE on all hosts
   hosts: all
+  become: true
   roles:
    - nrpe
