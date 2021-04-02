@@ -20,13 +20,13 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 # Instructions 
 
-  <details>
-    <summary>System Requirements</summary>
-    <br>
+<details>
+<summary>System Requirements</summary>
+<br>
 | Operating System | CPU  | RAM | DISK |
 | ------------- | ------------- | ------------- | ------------- |
 | Debian GNU/Linux 10         | 4 CPU   | 8192 MB | 80 GB  |
-  </details>
+</details>
 
 ## Setup
 
