@@ -1,1 +1,1 @@
-apxs -i -a -c mod_example.c
+apxs -i -a -c main.c
