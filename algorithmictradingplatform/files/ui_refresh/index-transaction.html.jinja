@@ -82,13 +82,14 @@
 		<tr><th class = "bgcol" colspan='2'>Strategy Transaction Summary</th></tr>
 		<tr><td>Total Transactions</td><td>{{ totalTransactions }}</td></tr> 
 		<tr><td class = "bgcol">Buys</td><td>{{ totalBuys }}</td></tr> 
-        	<tr><td style='text-align: right'>Highest</td><td>{{ highest_buy }} </td></tr> 
-        	<tr><td style='text-align: right'>Lowest</td><td>{{ lowest_buy }}</td></tr>
+        	<tr><td style='text-align: right'>Highest</td><td>{{ highest_buy }} ( {{ highest_buy_ticker }} ) </td></tr> 
+        	<tr><td style='text-align: right'>Lowest</td><td>{{ lowest_buy }} ( {{ lowest_buy_ticker }} )</td></tr>
         	<tr><td class = "bgcol">Sells</td><td> {{ totalSells }}</td></tr> 
-        	<tr><td style='text-align: right'>Highest</td><td>{{ highest_sell }}</td></tr> 
-        	<tr><td style='text-align: right'>Lowest</td><td>{{ lowest_sell }}</td></tr> 
+        	<tr><td style='text-align: right'>Highest</td><td>{{ highest_sell }} ( {{ highest_sell_ticker }} )</td></tr> 
+        	<tr><td style='text-align: right'>Lowest</td><td>{{ lowest_sell }} ( {{ lowest_sell_ticker }} )</td></tr> 
 		<tr><td class = "bgcol">Volume Exchanged</td><td> {{ totalVolume }}</td></tr>
         	<tr><td class = "bgcol">Total Value</td><td>{{ totalValue }}</td></tr> 
+				
         </table>
 	
 	<h2>Specific Transaction Summary</h2>
