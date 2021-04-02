@@ -1,2 +1,10 @@
 ---
 # tasks file for nrpe
+
+- name: Installing nagios-nrpe-server
+  apt:
+   name: nagios-nrpe-server
+   state: latest
+   
+
+   
