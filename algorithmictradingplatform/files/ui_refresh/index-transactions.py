@@ -38,23 +38,31 @@ totalSells = len(sell_subset)
 
 # ----------- Highest BUY
 
-highest_buy_subset = dataframe[dataframe["price"] == "BUY"]
-highest_buy = highest_buy_subset['price'].max()
+highest_buy_subset = dataframe[dataframe["action"] == "BUY"]
+highest_buy_df = highest_buy_subset.max()
+highest_buy_ticker = highest_buy_df["ticker"]
+highest_buy = highest_buy_df["price"]
 
 # ----------- Highest Sell
 
-highest_sell_subset = dataframe[dataframe["price"] == "SELL"]
-highest_sell = highest_sell_subset['price'].max()
+highest_sell_subset = dataframe[dataframe["action"] == "SELL"]
+highest_sell_df = highest_sell_subset.max()
+highest_sell_ticker = highest_sell_df["ticker"]
+highest_sell = highest_sell_df["price"]
 
 # ----------- Lowest BUY
 
-lowest_buy_subset = dataframe[dataframe["price"] == "BUY"]
-lowest_buy = lowest_buy_subset['price'].min()
+lowest_buy_subset = dataframe[dataframe["action"] == "BUY"]
+lowest_buy_df = lowest_buy_subset.min()
+lowest_buy_ticker = lowest_buy_df["ticker"]
+lowest_buy = lowest_buy_df["price"]
 
 # ----------- Lowest SELL
 
-lowest_sell_subset = dataframe[dataframe["price"] == "SELL"]
-lowest_sell = lowest_sell_subset['price'].min()
+lowest_sell_subset = dataframe[dataframe["action"] == "SELL"]
+lowest_sell_df = lowest_sell_subset.min()
+lowest_sell_ticker = lowest_sell_df["ticker"]
+lowest_sell = lowest_sell_df["price"]
 
 # ----------- Volume of shares exchanged
 totalVolume = sum(dataframe['quantity'])
