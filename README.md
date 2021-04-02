@@ -73,7 +73,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 Shark has lots of moving parts, so feel free to cherry pick a component that interests you, and send me a pull request.
 
-The technology stack comprises of the below, therefore knowledge of ( or a willingness to learn ) **any** of the following would be ideal.
+The technology stack comprises of the below.
 
 ### Programming
 
