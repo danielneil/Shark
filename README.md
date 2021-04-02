@@ -23,11 +23,11 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 <details>
 <summary>System Requirements</summary>
 <br>
-'''
-CPU: 4 CPUS
-RAM:  8192 MB
-DISK: 80 GB
-'''
+
+| CPU  | RAM | DISK |
+| ------------- | ------------- | ------------- |
+| 4 CPU  | 8192 MB | 80 GB  |
+
 </details>
 
 ## Setup
