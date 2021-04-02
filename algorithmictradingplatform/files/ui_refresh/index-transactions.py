@@ -69,9 +69,6 @@ print("Content-Type: text/html;charset=utf-8\r\n\r\n")
 # Drop the duplicate tickers - we just want a list of them.
 dataframe = dataframe.drop_duplicates('ticker', keep="first", inplace=False)
 
-# Sort the above alphabetically. 
-dataframe.sort_values('ticker')
-
 with open('/shark/bin/index-transaction.html.jinja') as f:
 
 	tmpl = Template(f.read())
