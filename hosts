@@ -16,5 +16,5 @@
 [nifi]
 127.0.0.1
 
-[shark-monitor]
+[shark-monitoring]
 127.0.0.1
