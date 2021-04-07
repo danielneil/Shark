@@ -1,9 +1,11 @@
 <?php
-include_once(dirname(__FILE__).'/includes/utils.inc.php');
+	include_once(dirname(__FILE__).'/includes/utils.inc.php');
 
-$this_version = '4.4.6';
-$link_target = 'main';
+	$this_version = '4.4.6';
+
+	$link_target = 'main';
 ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
 <html>
