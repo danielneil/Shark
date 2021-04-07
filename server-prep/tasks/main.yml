@@ -3,7 +3,7 @@
 
 - name: Setting system timezone.
   timezone:
-   name: "{{ timezone }}"
+   name: "Australia/Sydney"
 
 - name: Updating System
   apt: 
