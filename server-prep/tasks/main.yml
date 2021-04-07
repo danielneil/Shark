@@ -24,7 +24,7 @@
    name: net-tools
    state: latest   
    
-- name: Install java (required for Apache Drill )
+- name: Install java
   apt:
    name: default-jre
    state: latest
