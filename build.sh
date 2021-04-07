@@ -84,4 +84,4 @@ generate_documentation
 
 ##################################################
 # Verify the nagios configuration - this is purely used for debugging. 
-ansible shark-ui -i hosts -a 'sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
+ansible shark -i hosts -a 'sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
