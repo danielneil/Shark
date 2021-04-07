@@ -11,9 +11,9 @@
 <html>
 
 <head>
-<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-<title>Algorithmic Trading Platform</title>
-<link href="stylesheets/common.css?<?php echo $this_version; ?>" type="text/css" rel="stylesheet">
+	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+	<title>Algorithmic Trading Platform</title>
+	<link href="stylesheets/common.css?<?php echo $this_version; ?>" type="text/css" rel="stylesheet">
 </head>
 
 
