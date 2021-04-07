@@ -47,7 +47,7 @@
    owner: shark
 
 - name: Copying in custom UI changes - side.php
-  copy:
+  template:
    src: ui_patches/side.php
    dest: /tmp/nagios-4.4.6/html
 
