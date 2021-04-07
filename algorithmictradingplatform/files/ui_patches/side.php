@@ -72,7 +72,7 @@ $link_target = 'main';
 			<ul>
 				<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
 				<li><a href="/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
-				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Data</a></li>
+				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Ticker Data</a></li>
 			</ul>
 			</li>
 		</ul>
