@@ -64,5 +64,6 @@
           monitoring_webui_auth_user: shark
           monitoring_webui_auth_pass: shark
   roles:
+  - docker
   - monitoring
 
