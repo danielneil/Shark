@@ -2,7 +2,7 @@
 127.0.0.1
 
 [gitlab]
-gitlab ansible_host=127.0.0.1
+127.0.0.1
 
 [rabbitmq]
 127.0.0.1
@@ -17,4 +17,4 @@ gitlab ansible_host=127.0.0.1
 127.0.0.1
 
 [shark_monitoring]
-shark_monitor ansible_host=127.0.0.1
+127.0.0.1
