@@ -78,13 +78,3 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 # Contributing 
 
 Shark has lots of moving parts, so feel free to cherry pick a component that interests you, and send me a pull request.
-
-The technology stack comprises of the below.
-
-### Code
-
-Scripting, Ansible, C/C++, BOOST, HTML/CSS, PHP, SQL, JSON, CSV, Python, PANDAS, QuantLib, REST and PERL.
-
-### Tech
-
-Linux (ideally Debian or a derivative), the Nagios tech stack (Nagios Core / Plugins / NRPE), RabbitMQ, Redis, eXchange (FIX) protocol, PyAlgoTrade, Elasticsearch, Logtstash, Apache ZooKeeper, Apache Drill, Apache HTTPD, Apache NiFi and Docker.
