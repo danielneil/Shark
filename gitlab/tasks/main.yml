@@ -13,8 +13,12 @@
    restart: yes
    ports:
     - "0.0.0.0:82:80/tcp"
-
+    - "0.0.0.0:23:22/tcp"
+    - "0.0.0.0:444:443/tcp"
+    
 - name: Start the container
   docker_container:
    name: shark-gitlab
    state: started
+  
+   
