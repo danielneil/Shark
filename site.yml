@@ -38,6 +38,7 @@
   hosts: gitlab
   become: true
   roles:
+  - docker
   - gitlab
 
 ######################################
