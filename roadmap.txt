@@ -10,20 +10,3 @@ Black Scholes Model
 mean reversion
 cross over 
 grid trading
-
-#################
-# Backtest Framework 
-
-Rewrite the backtest from to make it more generic. 
-
-#################
-# Nagios/ Shark Plugins
-
-Convert Nagios plugins into C++ from Python.
-
-#################
-# UI Work
-
-Create a backtest summary page.
-Create a backtest tranaction summary page.
-Adapt the land page to the platform (show news, stats, metrics, etc) 
