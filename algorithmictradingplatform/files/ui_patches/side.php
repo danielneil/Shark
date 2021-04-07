@@ -81,7 +81,7 @@
 				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=overview" target="<?php echo $link_target;?>">Strategy</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Summary</a></li>
-					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Code</a></li>
+					<li><a href="https://raw.githubusercontent.com/danielneil/Shark/main/algorithmictradingplatform/files/strategies/backtesting/backtest_moving_averages.py" target="<?php echo $link_target;?>">Code</a></li>
 				</ul>
 			</li>
 		</ul>
