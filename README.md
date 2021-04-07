@@ -33,8 +33,10 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 
 ## Setup
 
-### Installation 
-
+<details>
+<summary>System Installation</summary>
+<br>
+  
 1. Prepare a vanilla Debian Server with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
 
 2. Install ansible ([help](https://linuxhint.com/install_ansible_debian10/)).
@@ -48,6 +50,10 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 # The build takes about 5 minutes.
 ```
 5. Navigate to http://debian-server-ip/nagios (web credentials are shark/shark).
+
+  
+</details>
+
 
 # Screenshots
 
