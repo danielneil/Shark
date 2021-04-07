@@ -20,7 +20,7 @@
    ports:
     - "0.0.0.0:81:80/tcp"
 
-- name: Start the nifi container
+- name: Start the shark monitoring container
   docker_container:
    name: shark-monitoring
    state: started
