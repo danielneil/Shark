@@ -1,7 +1,7 @@
 ---
 
 ######################################
-- name: #### Shark - Preparing servers
+- name: Shark - Preparing servers
   hosts: all
   become: true
   roles:
@@ -9,21 +9,21 @@
    - nrpe
 
 ######################################
-- name: #### Shark - Installing zookeeper
+- name: Shark - Installing zookeeper
   hosts: zookeeper
   become: true
   roles:
   - zookeeper
   
 ######################################
-- name: #### Shark - Installing apache-drill
+- name: Shark - Installing apache-drill
   hosts: apache-drill
   become: true
   roles:
   - apache-drill
   
 ######################################
-- name: #### Shark - Installing rabbitmq
+- name: Shark - Installing rabbitmq
   hosts: rabbitmq
   become: true
   vars:
@@ -34,7 +34,7 @@
   - rabbitmq
 
 ######################################
-- name: #### Shark - UI Installation
+- name: Shark - UI Installation
   hosts: shark-ui
   become: true
   vars:
@@ -48,7 +48,7 @@
    - algorithmictradingplatform
           
   ######################################
-- name: #### Shark - Installing monitoring
+- name: Shark - Installing monitoring
   hosts: shark-monitoring
   become: true
   vars:
