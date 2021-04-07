@@ -18,7 +18,7 @@
   
 ######################################
 - name: Shark - Installing apache-drill
-  hosts: apache-drill
+  hosts: apache_drill
   become: true
   roles:
   - apache-drill
@@ -44,7 +44,7 @@
 
 ######################################
 - name: Shark - UI Installation
-  hosts: shark-ui
+  hosts: shark
   become: true
   vars:
           # ---- Shark Web UI credentials
@@ -58,7 +58,7 @@
           
   ######################################
 - name: Shark - Installing monitoring
-  hosts: shark-monitoring
+  hosts: shark_monitoring
   become: true
   vars:
           # ---- Monitoring Web UI credentials

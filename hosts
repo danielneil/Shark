@@ -1,13 +1,13 @@
-[shark-ui]
+[shark]
 127.0.0.1
 
 [gitlab]
-127.0.0.1
+gitlab ansible_host=127.0.0.1
 
 [rabbitmq]
 127.0.0.1
 
-[apache-drill]
+[apache_drill]
 127.0.0.1
 
 [zookeeper]
@@ -16,5 +16,5 @@
 [nifi]
 127.0.0.1
 
-[shark-monitoring]
-127.0.0.1
+[shark_monitoring]
+shark_monitor ansible_host=127.0.0.1
