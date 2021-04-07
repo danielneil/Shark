@@ -1,51 +1,60 @@
 ---
-- name: Algorithmic Trading Platform Role
-  hosts: shark-server
+
+######################################
+- name: #### Shark - Preparing servers
+  hosts: all
+  become: true
+  roles:
+   - server-prep
+   - nrpe
+
+######################################
+- name: #### Shark - Installing zookeeper
+  hosts: zookeeper
+  become: true
+  roles:
+  - zookeeper
+  
+######################################
+- name: #### Shark - Installing apache-drill
+  hosts: apache-drill
+  become: true
+  roles:
+  - apache-drill
+  
+######################################
+- name: #### Shark - Installing rabbitmq
+  hosts: rabbitmq
+  become: true
+  vars:
+            # ---- RabbitMQ Web UI credentials
+          rabbitmq_webui_auth_user: shark
+          rabbitmq_webui_auth_pass: shark
+  roles:
+  - rabbitmq
+
+######################################
+- name: #### Shark - UI Installation
+  hosts: shark-ui
   become: true
   vars:
           # ---- Shark Web UI credentials
           shark_webui_auth_user: shark
           shark_webui_auth_pass: shark
+  roles:
+   - httpd
+   - docker
+   - base-from-source
+   - algorithmictradingplatform
           
-          # ---- RabbitMQ Web UI credentials
-          rabbitmq_webui_auth_user: shark
-          rabbitmq_webui_auth_pass: shark
-          
+  ######################################
+- name: #### Shark - Installing monitoring
+  hosts: shark-monitoring
+  become: true
+  vars:
           # ---- Monitoring Web UI credentials
           monitoring_webui_auth_user: shark
           monitoring_webui_auth_pass: shark
-           
   roles:
-  
-  # Commonalities accross servers.
-  - server-prep
-  
-  # Apache Web Server
-  - httpd
-  
-  # Apache Zookeeper
-  - zookeeper
-  
-  # Apache Drill
-  - apache-drill
-  
-  # Rabbit MQ
-  - rabbitmq
-  
-  # Docker
-  - docker
-  
-  # Builds and installs Nagios Core from source. 
-  - base-from-source
-  
-   # Monitors the Shark architecture.
   - monitoring
-  
-  # The Shark customisations to Nagios Core. 
-  - algorithmictradingplatform
 
-- name: Install NRPE on all hosts
-  hosts: all
-  become: true
-  roles:
-   - nrpe
