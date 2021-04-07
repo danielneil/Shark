@@ -12,7 +12,7 @@
    state: present
    restart: yes
    ports:
-    - "0.0.0.0:82/tcp"
+    - "0.0.0.0:82:80/tcp"
 
 - name: Start the container
   docker_container:
