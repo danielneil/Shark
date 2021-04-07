@@ -14,9 +14,6 @@
           # ---- Monitoring Web UI credentials
           monitoring_webui_auth_user: shark
           monitoring_webui_auth_pass: shark
-
-          # ---- We're interested in the timezone of the ASX.
-          timezone: "Australia/Sydney"
            
   roles:
   
