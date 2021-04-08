@@ -11,6 +11,8 @@
     group: shark
     shell: /bin/false
     home: /shark
+  ignore_errors: yes
+  # We ignore because on the development system, apt can't acquire a lock cause all hosts are the same host.
 
 - name: Creating shark working directory
   file:
