@@ -15,21 +15,29 @@
   apt:
    name: rsync
    state: latest
+  ignore_errors: yes
+  # We ignore because on the development system, apt can't acquire a lock cause all hosts are the same host.
 
 - name: Install curl
   apt:
    name: curl
    state: latest
-   
+  ignore_errors: yes
+  # We ignore because on the development system, apt can't acquire a lock cause all hosts are the same host. 
+  
 - name: Install net-tools
   apt:
    name: net-tools
-   state: latest   
+   state: latest
+  ignore_errors: yes
+  # We ignore because on the development system, apt can't acquire a lock cause all hosts are the same host.
    
 - name: Install java
   apt:
    name: default-jre
    state: latest
+  ignore_errors: yes
+  # We ignore because on the development system, apt can't acquire a lock cause all hosts are the same host.
 
 - name: Setting environement vars - /etc/environment
   lineinfile:
