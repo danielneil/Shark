@@ -1,5 +1,4 @@
 ---
-
 ######################################
 - name: Shark - Preparing servers
   hosts: all
