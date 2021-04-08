@@ -1,2 +1,12 @@
 ---
 # tasks file for elasticsearch
+
+- name: Installing Elasticsearch
+  apt:
+   name: elasticsearch
+   state: latest
+   
+- name: Starting Elasticsearch
+  service:
+   name: elasticsearch
+   state: started
