@@ -42,6 +42,7 @@
   roles:
   - docker
   - gitlab
+  tags: gitlab
 
 ######################################
 - name: Shark - Installing Elasticsearch
