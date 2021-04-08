@@ -117,12 +117,14 @@
 	<div class="navsectiontitle" style="background-color: red; color: white; text-align: center">Development</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:15672" target="_blank">RabbitMQ WebUI</a></li>
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8047" target="_blank">Apache Drill WebUI</a></li>
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8080/nifi" target="_blank">Apache NiFi WebUI</a></li>
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>/shark" target="_blank">Shark Web</a></li>
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:81" target="_blank">Shark Monitoring</a></li>
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:81" target="_blank">Shark Metrics</a></li>
+			<li><a href="http://{{ hostvars['rabbitmq']['ansible_host'] }}:15672" target="_blank">RabbitMQ WebUI</a></li>
+			<li><a href="http://{{ hostvars['apache_drill']['ansible_host'] }}:8047" target="_blank">Apache Drill WebUI</a></li>
+			<li><a href="http://{{ hostvars['nifi']['ansible_host'] }}:8080/nifi" target="_blank">Apache NiFi WebUI</a></li>
+			<li><a href="http://{{ hostvars['shark']['ansible_host'] }}/shark" target="_blank">Shark Web</a></li>
+			<li><a href="http://{{ hostvars['nagios']['ansible_host'] }}:81" target="_blank">Shark Monitoring</a></li>
+			<li><a href="http://{{ hostvars['kibana']['ansible_host'] }}:5601" target="_blank">Shark Metrics</a></li>
+			
+			
 		</ul>
 	</div>
 </div>
