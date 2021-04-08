@@ -42,3 +42,5 @@
   
 - include: shark_prereqs.yml
 - include: python_prereqs.yml
+
+- include: elk_common.yml
