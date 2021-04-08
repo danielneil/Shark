@@ -18,3 +18,9 @@
 
 [shark_monitoring]
 127.0.0.1
+
+[kibana]
+127.0.0.1
+
+[elasticsearch]
+127.0.0.1
