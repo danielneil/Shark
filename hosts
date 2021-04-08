@@ -23,4 +23,4 @@ nagios ansible_host=127.0.0.1
 kibana ansible_host=127.0.0.1
 
 [elasticsearch_cluster]
-elasticsearch ansible_host=127.0.0.1
+elasticsearch1 ansible_host=127.0.0.1
