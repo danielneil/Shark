@@ -76,7 +76,7 @@
    - httpd
    - docker
    - base-from-source
-   - algorithmictradingplatform
+   - shark
   tags: shark_ui
           
   ######################################

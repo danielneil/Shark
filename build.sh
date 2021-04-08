@@ -7,7 +7,7 @@ set -e
 # Generate the documentation for the plugins
 
 CURR_DIR=`pwd`
-CHECKS_PATH=algorithmictradingplatform/files/plugins
+CHECKS_PATH=shark/files/plugins
 DOC_FILE=doc/README.PLUGINS.md
 
 generate_documentation() {
@@ -70,9 +70,9 @@ generate_documentation() {
 }
 
 # Copy in our coustom configurations
-cp -p config/tickers.csv algorithmictradingplatform/files/ASX_Listed_Companies.csv
-cp -p config/ticker-config.yml algorithmictradingplatform/files/
-cp -pr config/ticker-data algorithmictradingplatform/files/
+cp -p config/tickers.csv shark/files/ASX_Listed_Companies.csv
+cp -p config/ticker-config.yml shark/files/
+cp -pr config/ticker-data shark/files/
 
 ##################################################
 # Now run the playbook.
