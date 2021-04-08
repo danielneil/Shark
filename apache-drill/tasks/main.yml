@@ -52,6 +52,14 @@
    group: drill 
   notify: restart-drill
   
+- name: Copying dfs configuration file - drill-env.sh
+  copy:
+   src: drill-env.sh
+   dest: /shark/apache-drill-1.18.0/conf/drill-env.sh
+   owner: drill 
+   group: drill 
+  notify: restart-drill
+  
 - name: Copying test jsonFile
   copy:
    src: testFile.json
