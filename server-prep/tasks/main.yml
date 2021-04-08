@@ -8,8 +8,8 @@
 - name: Updating System
   apt: 
    update_cache: yes
-   ignore_errors: yes
-   # We ignore because on the development system, apt can't acquire a lock cause all hosts are the same host.
+  ignore_errors: yes
+  # We ignore because on the development system, apt can't acquire a lock cause all hosts are the same host.
 
 - name: Installing rsync
   apt:
