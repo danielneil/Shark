@@ -1,2 +1,11 @@
 ---
 # tasks file for metricbeat
+- name: Installing metricbeat
+  apt:
+   name: metricbeat
+   state: latest
+   
+- name: Starting metricbeat
+  service:
+   name: metricbeat
+   state: started
