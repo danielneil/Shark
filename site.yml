@@ -71,6 +71,7 @@
    - docker
    - base-from-source
    - algorithmictradingplatform
+   tags: shark_ui
           
   ######################################
 - name: Shark - Installing monitoring
@@ -84,4 +85,3 @@
   - docker
   - monitoring
   tags: monitoring
-
