@@ -5,14 +5,14 @@
   apt:
    name: elasticsearch
    state: latest
-   
-- name: Starting Elasticsearch
-  service:
-   name: elasticsearch
-   state: started
 
 - name: Adding elasticsearch config file
   template:
    src: elasticsearch.yml
    dest: /etc/elasticsearch/elasticsearch.yml
   notify: restart-elasticsearch
+   
+- name: Starting Elasticsearch
+  service:
+   name: elasticsearch
+   state: started
