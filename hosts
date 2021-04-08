@@ -1,7 +1,7 @@
 [shark_ui]
 shark ansible_host=127.0.0.1
 
-[gitlab_cm_server]
+[gitlab_cm]
 gitlab ansible_host=127.0.0.1
 
 [rabbitmq_cluster]
