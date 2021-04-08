@@ -10,3 +10,9 @@
   service:
    name: elasticsearch
    state: started
+
+- name: Adding elasticsearch config file
+  template:
+   src: elasticsearch.yml
+   dest: /etc/elasticsearch/elasticsearch.yml
+  notify: restart-elasticsearch
