@@ -11,21 +11,21 @@
 
 ######################################
 - name: Shark - Installing zookeeper
-  hosts: zookeeper
+  hosts: zookeeper_cluster
   become: true
   roles:
   - zookeeper
   
 ######################################
 - name: Shark - Installing apache-drill
-  hosts: apache_drill
+  hosts: apache_drill_cluster
   become: true
   roles:
   - apache-drill
   
 ######################################
 - name: Shark - Installing rabbitmq
-  hosts: rabbitmq
+  hosts: rabbitmq_cluster
   become: true
   vars:
             # ---- RabbitMQ Web UI credentials
@@ -36,7 +36,7 @@
 
 ######################################
 - name: Shark - Installing gitlab
-  hosts: gitlab
+  hosts: gitlab_cm
   become: true
   roles:
   - docker
@@ -44,21 +44,21 @@
 
 ######################################
 - name: Shark - Installing Elasticsearch
-  hosts: elasticsearch
+  hosts: elasticsearch_cluster
   become: true
   roles:
   - elasticsearch
 
 ######################################
 - name: Shark - Installing kibana
-  hosts: kibana
+  hosts: kibana_host
   become: true
   roles:
   - kibana
 
 ######################################
 - name: Shark - UI Installation
-  hosts: shark
+  hosts: shark_ui
   become: true
   vars:
           # ---- Shark Web UI credentials

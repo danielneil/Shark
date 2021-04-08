@@ -1,26 +1,26 @@
-[shark]
-127.0.0.1
+[shark_ui]
+shark ansible_host=127.0.0.1
 
-[gitlab]
-127.0.0.1
+[gitlab_cm_server]
+gitlab ansible_host=127.0.0.1
 
-[rabbitmq]
-127.0.0.1
+[rabbitmq_cluster]
+rabbitmq ansible_host=127.0.0.1
 
-[apache_drill]
-127.0.0.1
+[apache_drill_cluster]
+apache_drill ansible_host=127.0.0.1
 
-[zookeeper]
-127.0.0.1
+[zookeeper_cluster]
+zookeeper ansible_host=127.0.0.1
 
-[nifi]
-127.0.0.1
+[nifi_cluster]
+nifi ansible_host=127.0.0.1
 
 [shark_monitoring]
-127.0.0.1
+nagios ansible_host=127.0.0.1
 
-[kibana]
-127.0.0.1
+[kibana_host]
+kibana ansible_host=127.0.0.1
 
-[elasticsearch]
-127.0.0.1
+[elasticsearch_cluster]
+elasticsearch ansible_host=127.0.0.1
