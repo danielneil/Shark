@@ -1,0 +1,8 @@
+- name: Install Elastic apt - https://artifacts.elastic.co/GPG-KEY-elasticsearch key
+  shell: wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+- name: Installing apt-transport-https 
+  shell: sudo apt-get install apt-transport-https
+
+- name: Adding deb repo
+  shell: echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list
