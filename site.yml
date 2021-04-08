@@ -9,6 +9,7 @@
    - server-prep
    - nrpe
    - metricbeat
+  tags: common
 
 ######################################
 - name: Shark - Installing zookeeper
@@ -16,6 +17,7 @@
   become: true
   roles:
   - zookeeper
+  tags: zookeeper
   
 ######################################
 - name: Shark - Installing apache-drill
@@ -23,6 +25,7 @@
   become: true
   roles:
   - apache-drill
+  tags: apache-drill
   
 ######################################
 - name: Shark - Installing rabbitmq
@@ -34,6 +37,7 @@
           rabbitmq_webui_auth_pass: shark
   roles:
   - rabbitmq
+  tags: rabbitmq
 
 ######################################
 - name: Shark - Installing gitlab
@@ -50,6 +54,7 @@
   become: true
   roles:
   - elasticsearch
+  tags: elasticsearch
 
 ######################################
 - name: Shark - Installing kibana
@@ -57,6 +62,7 @@
   become: true
   roles:
   - kibana
+  tags: kibana
 
 ######################################
 - name: Shark - UI Installation
