@@ -1,2 +1,11 @@
 ---
 # tasks file for kibana
+- name: Installing kibana
+  apt:
+   name: kibana
+   state: latest
+   
+- name: Starting kibana
+  service:
+   name: kibana
+   state: started
