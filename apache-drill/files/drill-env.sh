@@ -47,17 +47,17 @@
 # This enables Drill's memory auto-configuration logic to kick in, and should be unset
 # if the intent is to not use the auto-configuration.
 
-export DRILLBIT_MAX_PROC_MEM=${DRILLBIT_MAX_PROC_MEM:-"4G"}
+#export DRILLBIT_MAX_PROC_MEM=${DRILLBIT_MAX_PROC_MEM:-"4G"}
 
 # Amount of heap memory for the Drillbit process. Values are those supported by
 # the Java -Xms option. The default is 4G.
 
-export DRILL_HEAP=${DRILL_HEAP:-"2G"}
+#export DRILL_HEAP=${DRILL_HEAP:-"2G"}
 
 # Maximum amount of direct memory to allocate to the Drillbit in the format
 # supported by -XX:MaxDirectMemorySize. Default is 8G.
 
-export DRILL_MAX_DIRECT_MEMORY=${DRILL_MAX_DIRECT_MEMORY:-"4G"}
+#export DRILL_MAX_DIRECT_MEMORY=${DRILL_MAX_DIRECT_MEMORY:-"4G"}
 
 # Native library path passed to Java. Note: use this form instead
 # of the old form of DRILLBIT_JAVA_OPTS="-Djava.library.path=<dir>"
