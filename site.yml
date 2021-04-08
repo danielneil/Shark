@@ -83,4 +83,5 @@
   roles:
   - docker
   - monitoring
+  tags: monitoring
 
