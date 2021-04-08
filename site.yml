@@ -8,6 +8,7 @@
   roles:
    - server-prep
    - nrpe
+   - metricbeat
 
 ######################################
 - name: Shark - Installing zookeeper
@@ -41,6 +42,20 @@
   roles:
   - docker
   - gitlab
+
+######################################
+- name: Shark - Installing Elasticsearch
+  hosts: elasticsearch
+  become: true
+  roles:
+  - elasticsearch
+
+######################################
+- name: Shark - Installing kibana
+  hosts: kibana
+  become: true
+  roles:
+  - kibana
 
 ######################################
 - name: Shark - UI Installation
