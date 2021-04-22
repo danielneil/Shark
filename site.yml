@@ -8,7 +8,7 @@
   roles:
    - server-prep
    - nrpe
-   - metricbeat
+#   - metricbeat
   tags: common
 
 ######################################
@@ -49,20 +49,20 @@
   tags: gitlab
 
 ######################################
-- name: Shark - Installing Elasticsearch
-  hosts: elasticsearch_cluster
-  become: true
-  roles:
-  - elasticsearch
-  tags: elasticsearch
+#- name: Shark - Installing Elasticsearch
+#  hosts: elasticsearch_cluster
+#  become: true
+#  roles:
+#  - elasticsearch
+#  tags: elasticsearch
 
 ######################################
-- name: Shark - Installing kibana
-  hosts: kibana_host
-  become: true
-  roles:
-  - kibana
-  tags: kibana
+#- name: Shark - Installing kibana
+#  hosts: kibana_host
+#  become: true
+#  roles:
+#  - kibana
+#  tags: kibana
 
 ######################################
 - name: Shark - UI Installation
