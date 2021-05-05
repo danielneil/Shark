@@ -1,6 +1,6 @@
 ---
 - name: Setup requirement for the below
-  shell: pip install --upgrade setuptools
+  shell: pip install --upgrade pip
 
 # tasks file for monitoring
 - name: Copying Dockerfiles to build nagios instance
