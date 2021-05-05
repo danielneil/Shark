@@ -79,11 +79,8 @@ RUN echo postfix postfix/main_mailer_type string "'Internet Site'" | debconf-set
         snmp-mibs-downloader                \
         unzip                               \
         python                              \
-        python-pandas                       \
-        python3-numpy                       \
-        python3-pip                         \
                                                 && \
-        apt-get clean && rm -Rf /var/lib/apt/lists/*
+    apt-get clean && rm -Rf /var/lib/apt/lists/*
 
 RUN ( egrep -i "^${NAGIOS_GROUP}"    /etc/group || groupadd $NAGIOS_GROUP    )                         && \
     ( egrep -i "^${NAGIOS_CMDGROUP}" /etc/group || groupadd $NAGIOS_CMDGROUP )
