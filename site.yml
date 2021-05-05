@@ -1,5 +1,18 @@
 ---
 ######################################
+- name: Shark - Installing monitoring
+  hosts: shark_monitoring
+  become: true
+  vars:
+          # ---- Monitoring Web UI credentials
+          monitoring_webui_auth_user: shark
+          monitoring_webui_auth_pass: shark
+  roles:
+  - docker
+  - monitoring
+  tags: monitoring
+
+######################################
 - name: Shark - Preparing servers
   hosts: all
   serial: 1
@@ -78,16 +91,3 @@
    - base-from-source
    - shark
   tags: shark_ui
-          
-  ######################################
-- name: Shark - Installing monitoring
-  hosts: shark_monitoring
-  become: true
-  vars:
-          # ---- Monitoring Web UI credentials
-          monitoring_webui_auth_user: shark
-          monitoring_webui_auth_pass: shark
-  roles:
-  - docker
-  - monitoring
-  tags: monitoring
