@@ -46,8 +46,6 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/algorit
 4. Open a terminal, and run:
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
-
-# The build takes about 5 minutes.
 ```
 5. Navigate to http://debian-server-ip/nagios (web credentials are shark/shark).
 
