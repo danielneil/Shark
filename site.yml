@@ -1,5 +1,17 @@
 ---
 ######################################
+- name: Shark - Preparing servers
+  hosts: all
+  serial: 1
+  gather_facts: yes
+  become: true
+  roles:
+   - server-prep
+   - nrpe
+#   - metricbeat
+  tags: common
+
+######################################
 - name: Shark - Installing monitoring
   hosts: shark_monitoring
   become: true
@@ -11,18 +23,6 @@
   - docker
   - monitoring
   tags: monitoring
-
-######################################
-- name: Shark - Preparing servers
-  hosts: all
-  serial: 1
-  gather_facts: yes
-  become: true
-  roles:
-   - server-prep
-   - nrpe
-#   - metricbeat
-  tags: common
 
 ######################################
 - name: Shark - Installing zookeeper
