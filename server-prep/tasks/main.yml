@@ -5,10 +5,6 @@
   timezone:
    name: "Australia/Sydney"
 
-- name: Updating System
-  apt: 
-   update_cache: yes
-
 - name: Installing rsync
   apt:
    name: rsync
