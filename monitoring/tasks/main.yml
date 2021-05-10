@@ -1,18 +1,7 @@
 ---
-- name: Setup requirement for the below
-  shell: pip install --upgrade pip
-
-# tasks file for monitoring
-- name: Copying Dockerfiles to build nagios instance
-  copy:
-   src: Docker-Nagios
-   dest: /tmp
-  notify: rebuild-docker-image
-
-- name: Building the Nagios container image from the 'jasonrivers/nagios' template. 
+- name: Pulling the Nagios container image from the 'jasonrivers/nagios' image. 
   docker_image:
    name: jasonrivers/nagios 
-   path: /tmp/Docker-Nagios
 
 - name: Create the docker container of the above
   docker_container:
