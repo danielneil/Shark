@@ -2,7 +2,6 @@
 ######################################
 - name: Shark - Preparing servers
   hosts: all
-  serial: 1
   gather_facts: yes
   become: true
   roles:
