@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/danielneil/Shark/blob/main/algorithmictradingplatform/files/ui_patches/logofullsize.png?raw=true">
+  <img src="https://github.com/danielneil/Shark/blob/main/shark/files/ui_patches/logofullsize.png?raw=true">
 </p>
 
 # Shark - An Algorithmic Trading Platform
