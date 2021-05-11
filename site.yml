@@ -3,6 +3,7 @@
 - name: Shark - Preparing servers
   hosts: all
   gather_facts: yes
+  strategy: free
   become: true
   roles:
    - server-prep

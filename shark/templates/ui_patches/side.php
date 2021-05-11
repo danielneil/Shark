@@ -122,9 +122,6 @@
 			<li><a href="http://{{ hostvars['nifi']['ansible_host'] }}:8080/nifi" target="_blank">Apache NiFi WebUI</a></li>
 			<li><a href="http://{{ hostvars['shark']['ansible_host'] }}/shark" target="_blank">Shark Web</a></li>
 			<li><a href="http://{{ hostvars['nagios']['ansible_host'] }}:81" target="_blank">Shark Monitoring</a></li>
-			<li><a href="http://{{ hostvars['kibana']['ansible_host'] }}:5601" target="_blank">Shark Metrics</a></li>
-			
-			
 		</ul>
 	</div>
 </div>
