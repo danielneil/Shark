@@ -19,8 +19,3 @@ nifi ansible_host=127.0.0.1
 [shark_monitoring]
 nagios ansible_host=127.0.0.1
 
-[kibana_host]
-kibana ansible_host=127.0.0.1
-
-[elasticsearch_cluster]
-elasticsearch1 ansible_host=127.0.0.1
