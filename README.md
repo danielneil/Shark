@@ -76,3 +76,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 # Contributing 
 
 Shark has lots of moving parts, so feel free to cherry pick a component that interests you, and send me a pull request.
+    
+# I am looking for a sponsor
+     
+I am looking for a sponsor in order to continue work on this project, if you are interested, please contact me.  
