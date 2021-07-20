@@ -3,7 +3,7 @@
 # DEV - all services on a single server.
 
 - name: Shark - Preparing server (DEV)
-  hosts: all
+  hosts: shark
   gather_facts: yes
   strategy: free
   become: true
