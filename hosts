@@ -1,5 +1,9 @@
+# - DEV
+
 [shark-dev]
 shark ansible_host=127.0.0.1
+
+# - PROD
 
 # [shark_ui]
 # shark ansible_host=127.0.0.1
