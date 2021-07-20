@@ -1,6 +1,8 @@
 ---
-######################################
-- name: Shark - Preparing servers
+
+# DEV - all services on a single server.
+
+- name: Shark - Preparing server (DEV)
   hosts: all
   gather_facts: yes
   strategy: free
@@ -8,7 +10,30 @@
   roles:
    - server-prep
    - nrpe
-  tags: common
+   - docker
+   - monitoring
+   - zookeeper
+   - apache-drill
+   - rabbitmq
+   - gitlab
+   - httpd
+   - docker
+   - base-from-source
+   - shark
+
+- meta: end_play
+
+# PRODUCTION - scaled out services.
+
+######################################
+- name: Shark - Preparing servers (PROD)
+  hosts: all
+  gather_facts: yes
+  strategy: free
+  become: true
+  roles:
+   - server-prep
+   - nrpe
 
 ######################################
 - name: Shark - Installing monitoring
