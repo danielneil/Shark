@@ -15,6 +15,11 @@
    name: curl
    state: latest
   
+- name: Install unzip
+  apt:
+   name: unzip
+   state: latest
+  
 - name: Install net-tools
   apt:
    name: net-tools
