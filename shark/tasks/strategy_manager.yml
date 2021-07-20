@@ -1,5 +1,4 @@
 ---
-
 - name: Install mariadb-server
   apt:
    name: mariadb-server
