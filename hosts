@@ -1,4 +1,4 @@
-[shark]
+[shark-dev]
 shark ansible_host=127.0.0.1
 
 # [shark_ui]
