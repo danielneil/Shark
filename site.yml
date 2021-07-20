@@ -21,8 +21,6 @@
    - base-from-source
    - shark
 
-- meta: end_play
-
 # PRODUCTION - scaled out services.
 
 ######################################
