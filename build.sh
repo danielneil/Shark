@@ -76,7 +76,7 @@ cp -pr config/ticker-data shark/files/
 
 ##################################################
 # Now run the playbook.
-ansible-playbook ./site.yml -i hosts
+ansible-playbook ./site-dev.yml -i hosts
 
 ##################################################
 # Generate the configuration
