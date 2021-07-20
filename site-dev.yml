@@ -9,8 +9,8 @@
   become: true
   vars:
    # ---- Monitoring Web UI credentials
-   monitoring_webui_auth_user: shark
-   monitoring_webui_auth_pass: shark
+   shark_webui_auth_user: shark
+   shark_webui_auth_pass: shark
   roles:
    - server-prep
    - nrpe
