@@ -81,7 +81,7 @@
 				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=overview" target="<?php echo $link_target;?>">Strategy</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Management</a></li>
-					<li><a href="" target="http://127.0.0.1:82">Development</a></li>
+					<li><a href="" target="http://<?php echo $_SERVER['SERVER_ADDR'];?>:82">Development</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -117,12 +117,12 @@
 	<div class="navsectiontitle" style="background-color: red; color: white; text-align: center">Development</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="http://127.0.0.1:15672" target="_blank">RabbitMQ WebUI</a></li>
-			<li><a href="http://127.0.0.1:8047" target="_blank">Apache Drill WebUI</a></li>
-			<li><a href="http://127.0.0.1:8080/nifi" target="_blank">Apache NiFi WebUI</a></li>
-			<li><a href="http://127.0.0.1/shark" target="_blank">Shark Web</a></li>
-			<li><a href="http://127.0.0.1:81" target="_blank">Shark Monitoring</a></li>
-			<li><a href="http://127.0.0.1:82" target="_blank">GitLab</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:15672" target="_blank">RabbitMQ WebUI</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:8047" target="_blank">Apache Drill WebUI</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:8080/nifi" target="_blank">Apache NiFi WebUI</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark" target="_blank">Shark Web</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:81" target="_blank">Shark Monitoring</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:82" target="_blank">GitLab</a></li>
 		</ul>
 	</div>
 </div>
