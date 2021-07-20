@@ -122,6 +122,8 @@
 
 - include: trade_manager.yml
 
+- include: strategy_manager.yml
+
 - name: Running plugin smoke tests
   shell: cd /shark/plugins/ && ./smoke_tests.py
   register: tests_results
