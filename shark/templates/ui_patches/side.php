@@ -81,7 +81,7 @@
 				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=overview" target="<?php echo $link_target;?>">Strategy</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Management</a></li>
-					<li><a href="" target="http://<?php echo $_SERVER['SERVER_ADDR'];?>:82">Development</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:82" target="<?php echo $link_target;?>">Development</a></li>
 				</ul>
 			</li>
 		</ul>
