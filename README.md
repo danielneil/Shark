@@ -26,7 +26,7 @@ See the example [strategy](https://github.com/danielneil/Shark/blob/main/shark/f
   
 | Operating System | CPU  | RAM | DISK |
 | ------------- | ------------- | ------------- | ------------- |
-| Debian GNU/Linux 10         | 4 CPU   | 12 GB | 80 GB  |
+| Debian GNU/Linux 10         | 4 CPU   | 8 GB | 80 GB  |
   
 </details>
 
