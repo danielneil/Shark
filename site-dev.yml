@@ -19,8 +19,8 @@
    - zookeeper
    - apache-drill
    - rabbitmq
-   - gitlab
    - httpd
    - docker
+   - dokuwiki
    - base-from-source
    - shark
