@@ -12,3 +12,10 @@
    owner: www-data
    group: www-data 
    recurse: yes
+
+- name: example copying file with owner and permissions
+  copy:
+    src: data
+    dest: /var/www/html/dokuwiki/
+    owner: www-data
+    group: www-data
