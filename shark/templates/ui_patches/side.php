@@ -79,7 +79,7 @@
 				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=overview" target="<?php echo $link_target;?>">Strategy</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Management</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:82" target="<?php echo $link_target;?>">Development</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Development</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -120,7 +120,7 @@
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:8080/nifi" target="_blank">Apache NiFi WebUI</a></li>
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark" target="_blank">Shark Web</a></li>
 			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:81" target="_blank">Shark Monitoring</a></li>
-			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>:82" target="_blank">GitLab</a></li>
+			<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="_blank">Dokuwiki</a></li>
 		</ul>
 	</div>
 </div>
