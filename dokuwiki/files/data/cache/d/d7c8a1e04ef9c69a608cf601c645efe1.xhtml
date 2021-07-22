@@ -1,0 +1,52 @@
+
+<h1 class="sectionedit1" id="strategymoving_averagespy">Strategy: moving_averages.py</h1>
+<div class="level1">
+<pre class="code python"><span class="co1">#!/usr/bin/python</span>
+&nbsp;
+<span class="kw1">import</span> pandas <span class="kw1">as</span> pd
+<span class="kw1">import</span> <span class="kw3">datetime</span>
+<span class="kw1">import</span> <span class="kw3">sys</span>
+<span class="kw1">import</span> <span class="kw3">subprocess</span>
+<span class="kw1">import</span> argparse
+&nbsp;
+<span class="co1"># Nagios constants. </span>
+&nbsp;
+OK           <span class="sy0">=</span> <span class="nu0">0</span>
+WARNING      <span class="sy0">=</span> <span class="nu0">1</span>
+CRITICAL     <span class="sy0">=</span> <span class="nu0">2</span>
+UNKNOWN      <span class="sy0">=</span> <span class="nu0">3</span>
+&nbsp;
+cmd_arg_help <span class="sy0">=</span> <span class="st0">&quot;Example strategy: trigger a buy when the shorter simple moving average, crosses above the longer simple moving average&quot;</span>
+&nbsp;
+strategy_name <span class="sy0">=</span> <span class="st0">&quot;Moving Averages&quot;</span>
+&nbsp;
+longer_sma_periods <span class="sy0">=</span> <span class="nu0">50</span>
+shorter_sma_periods <span class="sy0">=</span> <span class="nu0">10</span>
+&nbsp;
+<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
+&nbsp;
+    <span class="kw3">parser</span> <span class="sy0">=</span> argparse.<span class="me1">ArgumentParser</span><span class="br0">&#40;</span>description<span class="sy0">=</span>cmd_arg_help<span class="br0">&#41;</span>
+    <span class="kw3">parser</span>.<span class="me1">add_argument</span><span class="br0">&#40;</span><span class="st0">&quot;-t&quot;</span><span class="sy0">,</span> <span class="st0">&quot;--ticker&quot;</span><span class="sy0">,</span> <span class="kw2">help</span><span class="sy0">=</span><span class="st0">&quot;Ticker of the stock to run the strategy against.&quot;</span><span class="br0">&#41;</span>
+    args <span class="sy0">=</span> <span class="kw3">parser</span>.<span class="me1">parse_args</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+&nbsp;
+    <span class="kw1">if</span> <span class="kw1">not</span> args.<span class="me1">ticker</span>:
+        <span class="kw1">print</span> <span class="br0">&#40;</span><span class="st0">&quot;UNKNOWN - No ticker specified&quot;</span><span class="br0">&#41;</span>
+        <span class="kw3">sys</span>.<span class="me1">exit</span><span class="br0">&#40;</span>UNKNOWN<span class="br0">&#41;</span>
+&nbsp;
+    ticker <span class="sy0">=</span> args.<span class="me1">ticker</span> 
+&nbsp;
+    short_sma <span class="sy0">=</span> <span class="kw3">subprocess</span>.<span class="me1">check_output</span><span class="br0">&#40;</span><span class="br0">&#91;</span><span class="st0">'/shark/plugins/check_sma.py'</span><span class="sy0">,</span> <span class="st0">'--ticker'</span><span class="sy0">,</span> ticker<span class="sy0">,</span> <span class="st0">'--periods'</span><span class="sy0">,</span> <span class="kw2">str</span><span class="br0">&#40;</span>shorter_sma_periods<span class="br0">&#41;</span><span class="sy0">,</span> <span class="st0">'--raw'</span><span class="br0">&#93;</span><span class="br0">&#41;</span>
+    long_sma <span class="sy0">=</span> <span class="kw3">subprocess</span>.<span class="me1">check_output</span><span class="br0">&#40;</span><span class="br0">&#91;</span><span class="st0">'/shark/plugins/check_sma.py'</span><span class="sy0">,</span> <span class="st0">'--ticker'</span><span class="sy0">,</span> ticker<span class="sy0">,</span> <span class="st0">'--periods'</span><span class="sy0">,</span> <span class="kw2">str</span><span class="br0">&#40;</span>longer_sma_periods<span class="br0">&#41;</span><span class="sy0">,</span> <span class="st0">'--raw'</span><span class="br0">&#93;</span><span class="br0">&#41;</span>
+&nbsp;
+    <span class="kw1">if</span> short_sma <span class="sy0">&gt;</span> long_sma:
+&nbsp;
+       buy_str <span class="sy0">=</span> <span class="st0">&quot;Buy Opportunity! - &quot;</span> + <span class="kw2">str</span><span class="br0">&#40;</span>shorter_sma_periods<span class="br0">&#41;</span> + <span class="st0">&quot; day SMA($&quot;</span> + <span class="kw2">str</span><span class="br0">&#40;</span>short_sma<span class="br0">&#41;</span>.<span class="me1">rstrip</span><span class="br0">&#40;</span><span class="br0">&#41;</span> + <span class="st0">&quot;) is above &quot;</span> + <span class="kw2">str</span><span class="br0">&#40;</span>longer_sma_periods<span class="br0">&#41;</span> + <span class="st0">&quot; day SMA ($&quot;</span> + <span class="kw2">str</span><span class="br0">&#40;</span>long_sma<span class="br0">&#41;</span>.<span class="me1">rstrip</span><span class="br0">&#40;</span><span class="br0">&#41;</span> + <span class="st0">&quot;)&quot;</span>
+       <span class="kw1">print</span><span class="br0">&#40;</span>buy_str<span class="br0">&#41;</span>
+       <span class="kw3">sys</span>.<span class="me1">exit</span><span class="br0">&#40;</span>CRITICAL<span class="br0">&#41;</span>
+&nbsp;
+    <span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;No Opportunity&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+    <span class="kw3">sys</span>.<span class="me1">exit</span><span class="br0">&#40;</span>OK<span class="br0">&#41;</span>
+&nbsp;</pre>
+
+</div>

@@ -1,0 +1,26 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1626936936;s:8:"modified";i:1626937777;}s:11:"last_change";a:8:{s:4:"date";i:1626937777;s:2:"ip";s:13:"192.168.1.159";s:4:"type";s:1:"E";s:2:"id";s:8:"backtest";s:4:"user";s:0:"";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:6;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:5:"title";s:37:"Backtest: backtest_moving_averages.py";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:34:"backtestbacktest_moving_averagespy";s:5:"title";s:37:"Backtest: backtest_moving_averages.py";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:503:"Backtest: backtest_moving_averages.py
+
+----------
+
+
+#!/usr/bin/python3
+
+from __future__ import print_function
+
+from pyalgotrade import strategy
+from pyalgotrade.barfeed import yahoofeed
+
+from pyalgotrade.technical import ma
+from pyalgotrade.technical import cross
+
+from pyalgotrade.stratanalyzer import sharpe
+from pyalgotrade.stratanalyzer import drawdown
+from pyalgotrade.stratanalyzer import trades
+from pyalgotrade import plotter
+import pyalgotrade
+
+import argparse
+import sys
+import os
+
+import t…";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:2:{s:7:"created";i:1626936936;s:8:"modified";i:1626937777;}s:11:"last_change";a:8:{s:4:"date";i:1626937777;s:2:"ip";s:13:"192.168.1.159";s:4:"type";s:1:"E";s:2:"id";s:8:"backtest";s:4:"user";s:0:"";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:6;}s:4:"user";s:0:"";s:7:"creator";s:0:"";}}
