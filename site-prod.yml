@@ -54,15 +54,6 @@
   tags: rabbitmq
 
 ######################################
-- name: Shark - Installing gitlab
-  hosts: gitlab_cm
-  become: true
-  roles:
-  - docker
-  - gitlab
-  tags: gitlab
-
-######################################
 - name: Shark - UI Installation
   hosts: shark_ui
   become: true
