@@ -5,3 +5,9 @@
   unarchive:
     src: dokuwiki.tgz
     dest: /var/www/html
+
+- name: Correcting the perms. 
+  file:
+   path: /var/www/html/dokuwiki/data
+   mode: 0777
+   recurse: yes
