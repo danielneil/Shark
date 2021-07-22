@@ -8,6 +8,7 @@
 
 - name: Correcting the perms. 
   file:
-   path: /var/www/html/dokuwiki/data
-   mode: 0777
+   path: /var/www/html/dokuwiki 
+   owner: www-data
+   group: www-data 
    recurse: yes
