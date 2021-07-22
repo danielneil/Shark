@@ -13,7 +13,7 @@
    group: www-data 
    recurse: yes
 
-- name: example copying file with owner and permissions
+- name: Copying over our dokuwiki data dir (this needs to be done differently, as in not just a directory dump), perhaps a plugin can help.
   copy:
     src: data
     dest: /var/www/html/dokuwiki/
