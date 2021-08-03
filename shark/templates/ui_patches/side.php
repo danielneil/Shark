@@ -109,5 +109,14 @@
 	</div>
 </div>	
 	
+<div class="navsection">
+	<div class="navsectiontitle">Administration</div>
+	<div class="navsectionlinks">
+		<ul class="navsectionlinks">
+			<li><a href="" target="<?php echo $link_target;?>">Rebuild Configuration</a></li>
+		</ul>
+	</div>
+</div>	
+	
 </body>
 </html>
