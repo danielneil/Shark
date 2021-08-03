@@ -75,12 +75,35 @@
 				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Ticker Data</a></li>
 			</ul>
 			</li>
+		</ul>
+	</div>
+</div>	
+	
+<div class="navsection">
+	<div class="navsectiontitle">Strategy</div>
+	<div class="navsectionlinks">
+		<ul class="navsectionlinks">
 			<li>
 				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=overview" target="<?php echo $link_target;?>">Strategy</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Management</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Development</a></li>
 				</ul>
+			</li>
+		</ul>
+	</div>
+</div>		
+	
+<div class="navsection">
+	<div class="navsectiontitle">Configuration</div>
+	<div class="navsectionlinks">
+		<ul class="navsectionlinks">
+			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Summary</a>
+			<ul>
+				<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
+				<li><a href="/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
+				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Ticker Data</a></li>
+			</ul>
 			</li>
 		</ul>
 	</div>
