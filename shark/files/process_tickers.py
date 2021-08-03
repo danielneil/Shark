@@ -116,9 +116,11 @@ def process_service_config(a_dict,ticker):
                 if yml_value == "check_backtest":
 
                     # Add a web link to the details of the backtest.
-                    # The ansible script seds the LOCAL_IP out with the server IP. It's rough, but meh.
+                    
+                    hostname = socket.gethostname()
+                    local_ip = socket.gethostbyname(hostname)
 
-                    print("\tnotes_url http://LOCAL_IP/shark/backtest/html/" + ticker + ".html")
+                    print("\tnotes_url http://" + local_ip + "/shark/backtest/html/" + ticker + ".html")
                     
                 if yml_value == "check_strategy":
                     
