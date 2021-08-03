@@ -19,3 +19,10 @@
     dest: /var/www/html/dokuwiki/
     owner: www-data
     group: www-data
+
+- name: Copying dokuwiki rawplugin
+  copy:
+    src: getRaw.php
+    dest: /var/www/html/dokuwiki/
+    owner: www-data
+    group: www-data
