@@ -31,9 +31,6 @@
    group: nagios
    mode: 0755
 
-- name: Adding the server's IP into the script below.
-  shell: sed -i "s/LOCAL_IP/127.0.0.1/" /shark/process_tickers.py
-
 - name: Generating our nagios ticker configuration
   shell: /shark/process_tickers.py > /usr/local/nagios/etc/conf.d/shark.cfg
 
