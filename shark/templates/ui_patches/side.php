@@ -70,9 +70,9 @@
 		<ul class="navsectionlinks">
 			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Summary</a>
 			<ul>
-				<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
-				<li><a href="/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
-				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Ticker Data</a></li>
+				<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
+				<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
+				<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Ticker Data</a></li>
 			</ul>
 			</li>
 		</ul>
