@@ -13,9 +13,8 @@
    shark_webui_auth_pass: shark
    
    # ---- Header/Footer 
-   MARKET: "Australian Stock Exchange" 
-   SECURITIES: "S&P/ASX 20" 
-   STRATEGY: "Moving Averages - (BUY: SMA10 > SMA50)"
+   HEADER: '<span class="bold">MARKET:</span> Australian Stock Exchange,<span class="bold">SECURITIES:</span> S&P/ASX 20,<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
+   FOOTER: '<span class="bold">MARKET:</span> Australian Stock Exchange,<span class="bold">SECURITIES:</span> S&P/ASX 20,<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
    
   roles:
    - server-prep
