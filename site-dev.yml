@@ -11,6 +11,12 @@
    # ---- Monitoring Web UI credentials
    shark_webui_auth_user: shark
    shark_webui_auth_pass: shark
+   
+   # ---- Header/Footer 
+   MARKET: "Australian Stock Exchange" 
+   SECURITIES: "S&P/ASX 20" 
+   STRATEGY: "Moving Averages - (BUY: SMA10 > SMA50)"
+   
   roles:
    - server-prep
    - nrpe
