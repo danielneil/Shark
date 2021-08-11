@@ -90,7 +90,6 @@
   - rebuild-nagios
   - restart-nagios
 
-
 - meta: flush_handlers
 
 - include: website_check.yml
