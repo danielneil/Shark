@@ -11,7 +11,7 @@ import socket
 
 excluded_tickers = []
 
-with open('/shark/excluded_tickers.txt') as exclude_file:
+with open('/shark/exclusions.txt') as exclude_file:
 
     while True:
         ticker = exclude_file.readline().rstrip()
