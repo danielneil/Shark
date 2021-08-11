@@ -75,7 +75,7 @@
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Help</a></li>
 				</ul>
 			</li>
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Orders</a>
+			<li>Orders
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Summary</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Opened</a></li>
@@ -89,16 +89,15 @@
 	<div class="navsectiontitle">Strategies</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li>
-				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=overview" target="<?php echo $link_target;?>">Strategy</a>
+			<li>Strategy
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Development</a></li>
 				</ul>
 			</li>
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Backtesting</a>
+			<li>Backtesting
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Results</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Data</a></li>
 				</ul>
@@ -111,16 +110,16 @@
 	<div class="navsectiontitle">Configuration</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Tickers</a>
+			<li>Securities
 			<ul>
-				<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Configuration</a></li>
-				<li><a href="/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Data</a></li>
-				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Source</a></li>
+				<li><a href="" target="<?php echo $link_target;?>">Securities</a></li>
+				<li><a href="" target="<?php echo $link_target;?>">Trading</a></li>
+				<li><a href="" target="<?php echo $link_target;?>">Exclusions</a></li>
 			</ul>
 			</li>
 			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Brokers</a>
 				<ul>
-					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Configuration</a></li>
+					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
 			</li>
 		</ul>
