@@ -130,7 +130,7 @@
 </div>	
 	
 <div class="navsection">
-	<div class="navsectiontitle">Server Administration</div>
+	<div class="navsectiontitle">Server</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="#">Health</a>
