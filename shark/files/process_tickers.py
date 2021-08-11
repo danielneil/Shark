@@ -145,7 +145,7 @@ def process_service_config(a_dict,ticker):
 # Store services groups
 service_group_defs = []
 
-with open ("/shark/ticker-config.yml", "r") as f:
+with open ("/shark/conf/trading-config.yml", "r") as f:
 
     docs = yaml.safe_load(f)
     process_ticker_config(docs)
