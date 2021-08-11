@@ -56,7 +56,7 @@
 	<div class="navbarsearch">
 		<form method="get" action="<?php echo $cfg["cgi_base_url"];?>/status.cgi" target="<?php echo $link_target;?>">
 			<fieldset>
-				<legend>Ticker Search:</legend>
+				<legend>Security Search:</legend>
 				<input type='hidden' name='navbarsearch' value='1'>
 				<input type='text' name='host' size='15' class="NavBarSearchItem">
 			</fieldset>
@@ -68,10 +68,10 @@
 	<div class="navsectiontitle">Trading</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li>>General
+			<li>General
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Live Console</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Console</a></li>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Help</a></li>
 				</ul>
 			</li>
@@ -86,13 +86,13 @@
 	</div>
 </div>		
 <div class="navsection">
-	<div class="navsectiontitle">Strategy</div>
+	<div class="navsectiontitle">Strategies</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li>
 				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=overview" target="<?php echo $link_target;?>">Strategy</a>
 				<ul>
-					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Management</a></li>
+					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Development</a></li>
 				</ul>
 			</li>
@@ -100,7 +100,7 @@
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Ticker Data</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Data</a></li>
 				</ul>
 			</li>
 		</ul>
