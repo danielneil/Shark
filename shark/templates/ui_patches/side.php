@@ -68,14 +68,14 @@
 	<div class="navsectiontitle">Trading</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li>General
+			<li><a href="#">General</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Console</a></li>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Help</a></li>
 				</ul>
 			</li>
-			<li>Orders
+			<li><a href="#">Orders</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Summary</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Opened</a></li>
@@ -89,13 +89,13 @@
 	<div class="navsectiontitle">Strategies</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li>Strategy
+			<li><a href="#">Strategy</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Development</a></li>
 				</ul>
 			</li>
-			<li>Backtesting
+			<li><a href="#">Backtesting</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Results</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
@@ -110,17 +110,17 @@
 	<div class="navsectiontitle">Configuration</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li>Securities
+			<li><a href="#">Securities</a>
 			<ul>
 				<li><a href="" target="<?php echo $link_target;?>">Administration</a></li>
 			</ul>
-			<li>Trading
+			<li><a href="#">Trading</a>
 				<ul>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
 			</li>
 			</li>
-			<li>Brokers
+			<li><a href="#">Brokers</a
 				<ul>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
@@ -133,12 +133,12 @@
 	<div class="navsectiontitle">Server Administration</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li>Health
+			<li><a href="#">Health</a>
 				<ul>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">System Status</a></li>
 				</ul>
 			</li>
-			<li>Logging
+			<li><a href="#">Logging</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Nagios.log</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Syslog</a></li>
