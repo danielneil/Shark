@@ -112,12 +112,15 @@
 		<ul class="navsectionlinks">
 			<li>Securities
 			<ul>
-				<li><a href="" target="<?php echo $link_target;?>">Securities</a></li>
-				<li><a href="" target="<?php echo $link_target;?>">Trading</a></li>
-				<li><a href="" target="<?php echo $link_target;?>">Exclusions</a></li>
+				<li><a href="" target="<?php echo $link_target;?>">Administration</a></li>
 			</ul>
+			<li>Trading
+				<ul>
+					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
+				</ul>
 			</li>
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Brokers</a>
+			</li>
+			<li>Brokers
 				<ul>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
@@ -130,12 +133,12 @@
 	<div class="navsectiontitle">Server Administration</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Health</a>
+			<li>Health
 				<ul>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">System Status</a></li>
 				</ul>
 			</li>
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Logging</a>
+			<li>Logging
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Nagios.log</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Syslog</a></li>
