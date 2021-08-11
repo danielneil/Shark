@@ -29,13 +29,6 @@
    name: python-yaml
    state: latest
 
-- name: Copying out ticker-config.yml file
-  copy:
-   src: ticker-config.yml
-   dest: /shark
-   group: shark
-   owner: shark
-
 - name: Copying in custom UI changes - side.php
   template:
    src: ui_patches/side.php
