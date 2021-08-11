@@ -11,7 +11,7 @@ import socket
 
 excluded_tickers = []
 
-with open('/shark/exclusions.txt') as exclude_file:
+with open('/shark/conf/exclusions.txt') as exclude_file:
 
     while True:
         ticker = exclude_file.readline().rstrip()
@@ -22,7 +22,7 @@ with open('/shark/exclusions.txt') as exclude_file:
         excluded_tickers.append(ticker)
 
 
-with open ('/shark/securities.csv','r') as csvfile:
+with open ('/shark/conf/securities.csv','r') as csvfile:
     tickerreader = csv.reader(csvfile, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
 
     # skip the first row.
