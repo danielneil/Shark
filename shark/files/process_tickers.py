@@ -22,7 +22,7 @@ with open('/shark/exclusions.txt') as exclude_file:
         excluded_tickers.append(ticker)
 
 
-with open ('/shark/ASX_Listed_Companies.csv','r') as csvfile:
+with open ('/shark/securities.csv','r') as csvfile:
     tickerreader = csv.reader(csvfile, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
 
     # skip the first row.
@@ -35,7 +35,7 @@ with open ('/shark/ASX_Listed_Companies.csv','r') as csvfile:
     for row in tickerreader:
 
         ticker = row[0]
-        industry_group = row[3]
+        industry_group = row[2]
 
         # Check if the ticker is in our exclude list
         if ticker in excluded_tickers:
