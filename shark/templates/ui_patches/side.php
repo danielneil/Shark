@@ -34,7 +34,7 @@
 </div>
 
 <div class="navsection">
-	<div class="navsectiontitle">S Status</div>
+	<div class="navsectiontitle">Status</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">Stocks</a></li>
@@ -90,12 +90,17 @@
 	<div class="navsectiontitle">Configuration</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Summary</a>
+			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Tickers</a>
 			<ul>
-				<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
-				<li><a href="/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
-				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Ticker Data</a></li>
+				<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Configuration</a></li>
+				<li><a href="/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Data</a></li>
+				<li><a href="/shark/backtest/index-data.py" target="<?php echo $link_target;?>">Source</a></li>
 			</ul>
+			</li>
+			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Brokers</a>
+				<ul>
+					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Configuration</a></li>
+				</ul>
 			</li>
 		</ul>
 	</div>
