@@ -34,7 +34,7 @@
 </div>
 
 <div class="navsection">
-	<div class="navsectiontitle">Current Status</div>
+	<div class="navsectiontitle">S Status</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">Stocks</a></li>
@@ -65,21 +65,6 @@
 </div>
 	
 <div class="navsection">
-	<div class="navsectiontitle">Backtesting</div>
-	<div class="navsectionlinks">
-		<ul class="navsectionlinks">
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Summary</a>
-			<ul>
-				<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
-				<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
-				<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Ticker Data</a></li>
-			</ul>
-			</li>
-		</ul>
-	</div>
-</div>	
-	
-<div class="navsection">
 	<div class="navsectiontitle">Strategy</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
@@ -88,6 +73,13 @@
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Management</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Development</a></li>
+				</ul>
+			</li>
+			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Backtesting</a>
+				<ul>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Reports</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Ticker Data</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -110,10 +102,20 @@
 </div>	
 	
 <div class="navsection">
-	<div class="navsectiontitle">Administration</div>
+	<div class="navsectiontitle">Server Administration</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="" target="<?php echo $link_target;?>">Rebuild Configuration</a></li>
+			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Health</a>
+				<ul>
+					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">System Status</a></li>
+				</ul>
+			</li>
+			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Logging</a>
+				<ul>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Nagios.log</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Syslog</a></li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>	
