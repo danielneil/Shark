@@ -1,7 +1,7 @@
 - name: Cloning the default config git repo
   git:
     repo: 'https://github.com/danielneil/Shark-Default-Config.git'
-    dest: /tmp
+    dest: /tmp/
 
 - name: Moving default config into shar dir
   command: mv /tmp/Shark-Default-Config /shark && cd /shark && mv Shark-Default-Config conf
