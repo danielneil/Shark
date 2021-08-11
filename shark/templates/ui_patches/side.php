@@ -120,7 +120,7 @@
 				</ul>
 			</li>
 			</li>
-			<li><a href="#">Brokers</a
+			<li><a href="#">Brokers</a>
 				<ul>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
