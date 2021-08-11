@@ -68,32 +68,23 @@
 	<div class="navsectiontitle">Trading</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">General</a>
+			<li>>General
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Control</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Live Console</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">History</a></li>
 					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Help</a></li>
 				</ul>
 			</li>
 			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Orders</a>
 				<ul>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Summary</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Opened</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Closed</a></li>
-					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Help</a></li>
-				</ul>
-			</li>
-			<li><a href="/shark/backtest/index-summary.py" target="<?php echo $link_target;?>">Paper Trading</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Opened</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Closed</a></li>
-					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Help</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Executed</a></li>
 				</ul>
 			</li>
 		</ul>
 	</div>
 </div>		
-
 <div class="navsection">
 	<div class="navsectiontitle">Strategy</div>
 	<div class="navsectionlinks">
