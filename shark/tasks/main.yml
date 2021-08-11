@@ -14,17 +14,14 @@
     group: shark
     mode: 0755
 
-- name: Copy our ASX List of companies downloaded from the ASX site. 
-  copy:
-    src: ASX_Listed_Companies.csv
-    dest: /shark/
-    owner: shark
-    group: shark
 
-- name: Copying out list of excluded tickers
-  copy: 
-   src: excluded_tickers.txt
-   dest: /shark/
+- name: Cloning the default config git repo
+  git:
+    repo: 'https://github.com/danielneil/Shark-Default-Config.git'
+    dest: /tmp
+
+- name: Moving default config into shar dir
+  command: mv /tmp/Shark-Default-Config /shark && cd /shark && mv Shark-Default-Config conf
 
 - name: Copying in our nagios ticker config generation script
   copy:
