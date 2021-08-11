@@ -13,9 +13,16 @@
    group: www-data 
    recurse: yes
 
-- name: Copying over our dokuwiki data dir (this needs to be done differently, as in not just a directory dump), perhaps a plugin can help.
+- name: Copying over our dokuwiki data dir  
   copy:
     src: data
+    dest: /var/www/html/dokuwiki/
+    owner: www-data
+    group: www-data
+
+- name: Copying over our dokuwiki conf dir  
+  copy:
+    src: conf
     dest: /var/www/html/dokuwiki/
     owner: www-data
     group: www-data
