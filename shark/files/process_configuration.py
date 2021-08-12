@@ -7,21 +7,6 @@ import re
 import yaml
 import socket
 
-# Open up our excludes file so we know which tickers to skip.
-
-excluded_tickers = []
-
-with open('/shark/conf/exclusions.txt') as exclude_file:
-
-    while True:
-        ticker = exclude_file.readline().rstrip()
-
-        if not ticker:
-            break
-
-        excluded_tickers.append(ticker)
-
-
 with open ('/shark/conf/securities.csv','r') as csvfile:
     tickerreader = csv.reader(csvfile, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
 
@@ -36,10 +21,6 @@ with open ('/shark/conf/securities.csv','r') as csvfile:
 
         ticker = row[0]
         industry_group = row[2]
-
-        # Check if the ticker is in our exclude list
-        if ticker in excluded_tickers:
-            continue
 
         cleaned_industry_group_str = re.sub('\W', '', industry_group)
 
