@@ -70,8 +70,6 @@ generate_documentation() {
 }
 
 # Copy in our coustom configurations
-cp -p config/tickers.csv shark/files/ASX_Listed_Companies.csv
-cp -p config/ticker-config.yml shark/files/
 cp -pr config/ticker-data shark/files/
 
 ##################################################
