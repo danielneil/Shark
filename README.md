@@ -12,8 +12,6 @@ The example strategy is simple moving averages crossover against the Australian 
 
 Though this example focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy and backtest.  
 
-The ticker data supplied doesn't refresh (nor is it ''fresh''). If you need it to refresh, see my other project, [Mako](https://github.com/danielneil/Mako), which uses Nifi to synchronise financial data from various sources.
-
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
 See the example [strategy](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/backtesting/backtest_moving_averages.py).
