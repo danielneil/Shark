@@ -33,13 +33,13 @@ def process_service_config(a_dict,ticker):
             industry_groups.append(instrument_group)
             
             print("""
-                    define host {
-                    use stock
-                    host_name """+ticker+"""
-                    hostgroups """ +instrument_group+"""
-                    address 127.0.0.1
-                    register 1
-                    }
+                  define host {
+                  use stock
+                  host_name """+ticker+"""
+                  hostgroups """ +instrument_group+"""
+                  address 127.0.0.1
+                  register 1
+                  }
                   """)
             
             continue
