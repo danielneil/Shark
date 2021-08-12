@@ -107,16 +107,17 @@ with open ("/shark/conf/trading-config.yml", "r") as f:
 ##############################################################    
     
 # Remove duplicates from the industry groups
-industry_groups = sorted(set(industry_groups))
 
-for industry_group in industry_groups:
+industry_groups = []
 
-    cleaned_industry_group = re.sub('\W', '', industry_group)
+srted_industry_groups = sorted(set(industry_groups))
+
+for ig in srted_industry_groups:
 
     print ( """
         define hostgroup {
-            hostgroup_name """ + cleaned_industry_group + """
-            alias """ + industry_group + """
+            hostgroup_name """ + ig + """
+            alias """ + ig + """
         }
     """)
 
