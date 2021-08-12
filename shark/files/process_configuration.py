@@ -60,16 +60,6 @@ def process_ticker_config(a_dict):
         if isinstance(value, dict):
             process_service_config(value, ticker)
 
-    # Prune the duplicates from the service groups. 
-    sg_list = list ( dict.fromkeys(service_group_defs) )
-
-    for sg in sg_list:
-
-        print("define servicegroup {")
-        print("\tservicegroup_name " + sg)
-        print("\talias " + sg)
-        print("}")
-
 def process_service_config(a_dict,ticker):
 
     for key, value in a_dict.items():
@@ -130,3 +120,12 @@ with open ("/shark/conf/trading-config.yml", "r") as f:
 
     docs = yaml.safe_load(f)
     process_ticker_config(docs)
+    
+# Prune the duplicates from the service groups. 
+sg_list = list ( dict.fromkeys(service_group_defs) )
+for sg in sg_list:
+
+    print("define servicegroup {")
+    print("\tservicegroup_name " + sg)
+    print("\talias " + sg)
+    print("}")
