@@ -9,12 +9,12 @@
 - name: Renaming directory
   shell: mv /var/www/html/framework-4.1.3 /var/www/html/codeigniter
   
-- name: Install prereq - curl 
+- name: Install prereq - php-curl 
   package:
    name: php-curl
    state: latest
 
-- name: Install prereq -intl 
+- name: Install prereq php-intl 
   package:
    name: php-intl
 
@@ -22,6 +22,11 @@
   package:
    name: php-mbstring
 
-- name: Install prereq - phpxml 
+- name: Install prereq - php-xml 
   package:
    name: php-xml
+   
+- name: Restarting httpd
+  service:
+   name: apache2
+   state: restarted
