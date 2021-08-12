@@ -12,9 +12,12 @@ The example strategy is simple moving averages crossover against the Australian 
 
 Though this example focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy and backtest.  
 
-See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
+See the example [configuration](https://github.com/danielneil/Shark-Default-Config/blob/master/trading-config.yml).
 
 See the example [strategy](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/backtesting/backtest_moving_averages.py).
+
+See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
+
 
 # Instructions 
 
