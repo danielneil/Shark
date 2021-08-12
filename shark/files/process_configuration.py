@@ -29,13 +29,15 @@ def process_service_config(a_dict,ticker):
         
         if str(key) == "INSTRUMENT_GROUP":
             
-            industry_groups.append(str(value))
+            instrument_group = str(value)
+            
+            industry_groups.append(instrument_group)
             
             print("""
                     define host {
                     use stock
                     host_name """+ticker+"""
-                    hostgroups """ +cleaned_industry_group_str+"""
+                    hostgroups """ +instrument_group+"""
                     address 127.0.0.1
                     register 1
                     }
