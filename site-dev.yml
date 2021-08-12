@@ -25,6 +25,7 @@
    - apache-drill
    - rabbitmq
    - httpd
+   - codeigniter
    - docker
    - dokuwiki
    - base-from-source

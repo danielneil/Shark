@@ -1,0 +1,10 @@
+---
+# tasks file for codeigniter
+
+- name: Deploying code igniter framework to webroot
+  unarchive:
+   src: v4.1.3.zip
+   dest: /var/www/html/
+
+- name: Renaming directory
+  shell: mv /var/www/html/framework-4.1.3 /var/www/html/codeigniter

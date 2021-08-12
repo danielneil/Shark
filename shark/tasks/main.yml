@@ -18,8 +18,8 @@
 
 - name: Copying in our nagios ticker config generation script
   copy:
-   src: process_tickers.py
-   dest: /shark
+   src: process_configuration.py
+   dest: /shark/bin
    owner: shark
    group: shark
    mode: 0755
