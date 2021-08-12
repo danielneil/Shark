@@ -94,10 +94,10 @@ def process_service_config(a_dict,ticker):
         print("\tcontact_groups admins")
         print("}\n")
 
-# Store services groups
-service_group_defs = []
-
 ##############################################################    
+
+service_group_defs = []
+industry_groups = []
 
 with open ("/shark/conf/trading-config.yml", "r") as f:
 
@@ -107,8 +107,6 @@ with open ("/shark/conf/trading-config.yml", "r") as f:
 ##############################################################    
     
 # Remove duplicates from the industry groups
-
-industry_groups = []
 
 srted_industry_groups = sorted(set(industry_groups))
 
