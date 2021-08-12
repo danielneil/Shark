@@ -8,7 +8,7 @@ Shark is an open source algorithmic trading and backtesting platform.
 
 It enables the use of (simultaneous) programmable strategies to identify and execute upon trading opportunities, coupled with a backtesting framework. It also has an embedded strategy and backtest development environment. 
 
-The example strategy is simple moving averages crossover against the Australian Stock Exchange's S&P/ASX 20. It also demonstrates determing the strength of an opportunity using the RSI indicator accompanied with a historical backtest.  
+The example strategy is simple moving averages crossover against the Australian Stock Exchange's S&P/ASX 20. It also demonstrates determing the strength of an opportunity using the RSI indicator and a backtest.  
 
 Though this example focuses on the ASX, it could easily be adjusted to suit any financial market, along with an adapted strategy and backtest.  
 
