@@ -34,13 +34,13 @@
 </div>
 
 <div class="navsection">
-	<div class="navsectiontitle">Status</div>
+	<div class="navsectiontitle">Securities</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">Securities</a></li>
+			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">Instruments</a></li>
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?host=all" target="<?php echo $link_target;?>">Indicators</a></li>
 			<li>
-				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">Security Groups</a>
+				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">Instrument Groups</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=summary" target="<?php echo $link_target;?>">Summary</a></li>
 				</ul>
@@ -70,7 +70,6 @@
 		<ul class="navsectionlinks">
 			<li><a href="#">General</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Console</a></li>
 				</ul>
 			</li>
@@ -90,7 +89,6 @@
 		<ul class="navsectionlinks">
 			<li><a href="#">Strategy</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Code</a></li>
 				</ul>
 			</li>
@@ -98,7 +96,6 @@
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Summary</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Trades</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Profit Distribution</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Reports</a></li>
 				</ul>
 			</li>
@@ -111,16 +108,16 @@
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="#">Securities</a>
-			<ul>
-				<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Administration</a></li>
-			</ul>
-			<li><a href="#">Trading</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
+			<li><a href="#">Trading</a>
+				<ul>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Brokers</a></li>
+				</ul>
 			</li>
 			</li>
-			<li><a href="#">Brokers</a>
+			<li><a href="#">Strategies</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
