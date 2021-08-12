@@ -21,8 +21,8 @@
    - nrpe
    - docker
    - monitoring
-   - zookeeper
-   - apache-drill
+   #- zookeeper
+   #- apache-drill
    - rabbitmq
    - httpd
    - codeigniter
