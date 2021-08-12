@@ -7,7 +7,6 @@ import re
 import yaml
 import socket
 
-
 # Process the yaml configuration file, so we can regenerate it into something nagios understands.
 
 ##############################################################    
@@ -59,9 +58,9 @@ def process_service_config(a_dict,ticker):
             yml_value = str(v)
             
             # the descript will always be the first element.
-            if yml_item == "description":
+            if yml_item == "DESCRIPTION":
                 print("\tservice_description " + yml_value)
-            elif yml_item == "check_command":
+            elif yml_item == "COMMAND":
 
                 command_str = "check_command " + yml_value
             
