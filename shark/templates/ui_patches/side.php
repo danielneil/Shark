@@ -72,7 +72,6 @@
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Administration</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Console</a></li>
-					<li><a href="/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Help</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Orders</a>
