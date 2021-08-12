@@ -76,3 +76,5 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 # Contributing 
 
 Shark has lots of moving parts, so feel free to cherry pick a component that interests you, and go nuts.
+
+Visit the Shark community at reddit.com/r/shark
