@@ -2,19 +2,18 @@
 # tasks file for codeigniter
 
 - name: Deploying code igniter framework to webroot
-  unarchive:
-   src: v4.1.3.zip
+  copy:
+   src: framework
    dest: /var/www/html/
+   owner: www-data
+   group: www-data
 
-- name: Renaming directory
-  shell: mv /var/www/html/framework-4.1.3 /var/www/html/codeigniter
-  
 - name: Install prereq - php-curl 
   package:
    name: php-curl
    state: latest
 
-- name: Install prereq php-intl 
+- name: Install prereq - php-intl 
   package:
    name: php-intl
 
