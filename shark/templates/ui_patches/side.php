@@ -92,14 +92,15 @@
 			<li><a href="#">Strategy</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?servicegroup=all&amp;style=summary" target="<?php echo $link_target;?>">Administration</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Development</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/dokuwiki/doku.php" target="<?php echo $link_target;?>">Code</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Backtesting</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Results</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Transactions</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Data</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-reports.py" target="<?php echo $link_target;?>">Summary</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtest/index-transactions.py" target="<?php echo $link_target;?>">Trades</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Profit Distribution</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/ticker-data" target="<?php echo $link_target;?>">Reports</a></li>
 				</ul>
 			</li>
 		</ul>
