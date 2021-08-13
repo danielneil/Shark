@@ -16,9 +16,9 @@
 
 - include: default_config.yml
 
-- name: Copying in our nagios ticker config generation script
+- name: Copying bin directory containing scripts.
   copy:
-   src: process_configuration.py
+   src: bin
    dest: /shark/bin
    owner: shark
    group: shark
