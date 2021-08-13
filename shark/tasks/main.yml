@@ -19,7 +19,7 @@
 - name: Copying bin directory containing scripts.
   copy:
    src: bin
-   dest: /shark/bin
+   dest: /shark/
    owner: shark
    group: shark
    mode: 0755
