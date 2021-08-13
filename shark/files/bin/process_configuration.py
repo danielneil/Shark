@@ -32,12 +32,12 @@ def process_service_config(a_dict,ticker):
             industry_groups.append(instrument_group)
             
             print("""
-                  define host {
-                  use stock
-                  host_name """+ticker+"""
-                  hostgroups """+instrument_group+"""
-                  address 127.0.0.1
-                  register 1
+                  \ndefine host {
+                  \tuse stock
+                  \thost_name """+ticker+"""
+                  \thostgroups """+instrument_group+"""
+                  \taddress 127.0.0.1
+                  \tregister 1
                   }
                   """)
             
@@ -110,12 +110,12 @@ srted_industry_groups = sorted(set(industry_groups))
 
 for ig in srted_industry_groups:
 
-    print ( """
-        define hostgroup {
-            hostgroup_name """ + ig + """
-            alias """ + ig + """
-        }
-    """)
+    print ("""
+           \ndefine hostgroup {
+           \thostgroup_name """ + ig + """
+           \talias """ + ig + """
+           }
+           """)
 
 ##############################################################    
     
@@ -123,7 +123,7 @@ for ig in srted_industry_groups:
 sg_list = list ( dict.fromkeys(service_group_defs) )
 for sg in sg_list:
 
-    print("define servicegroup {")
+    print("\ndefine servicegroup {")
     print("\tservicegroup_name " + sg)
     print("\talias " + sg)
     print("}")
