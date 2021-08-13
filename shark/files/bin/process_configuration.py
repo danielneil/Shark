@@ -45,12 +45,12 @@ def process_sub_config(a_dict,ticker):
             instrument_group = str(value)
             industry_groups.append(instrument_group)
             
-            hosts.Add("\ndefine host {")
-            hosts.Add("\tuse stock")
-            hosts.Add("\thost_name " + ticker)
-            hosts.Add("\thostgroups " + instrument_group)
-            hosts.Add("\taddress 127.0.0.1")
-            hosts.Add("\tregister 1")
+            hosts.Add("\ndefine host {\n")
+            hosts.Add("\tuse stock\n")
+            hosts.Add("\thost_name " + ticker + "\n")
+            hosts.Add("\thostgroups " + instrument_group + "\n")
+            hosts.Add("\taddress 127.0.0.1" + "\n")
+            hosts.Add("\tregister 1" + "\n")
             hosts.Add("}")
             
             continue
