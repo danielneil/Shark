@@ -55,9 +55,9 @@ def process_sub_config(a_dict,ticker):
             
             continue
 
-        print("\ndefine service {")
-        print("\thost_name " + ticker)
-        print("\tservice_groups " + str(key))
+        services.Add("\ndefine service {")
+        services.Add("\thost_name " + ticker)
+        services.Add("\tservice_groups " + str(key))
 
         # Add the parent node, and we'll prune duplicates after.
         service_group_defs.append(str(key))
@@ -70,7 +70,7 @@ def process_sub_config(a_dict,ticker):
             
             # the descript will always be the first element.
             if yml_item == "DESCRIPTION":
-                print("\tservice_description " + yml_value)
+                services.Add("\tservice_description " + yml_value)
             elif yml_item == "PLUGIN":
 
                 command_str = "check_command " + yml_value
@@ -82,27 +82,27 @@ def process_sub_config(a_dict,ticker):
                     hostname = socket.gethostname()
                     local_ip = socket.gethostbyname(hostname)
 
-                    print("\tnotes_url http://" + local_ip + "/shark/backtest/html/" + ticker + ".html")
+                    services.Add("\tnotes_url http://" + local_ip + "/shark/backtest/html/" + ticker + ".html")
                     
                 if yml_value == "check_strategy":
                     
                     # If this is the strategy command, add the event handler to perform the BUY order.
-                    print("\tevent_handler enter_trade")
+                    services.Add("\tevent_handler enter_trade")
                     
             else:
                  # print the command arguments
                 command_str += "!" + yml_value
 
-        print("\t" + command_str)
-        print("\tmax_check_attempts 1")
-        print("\tcheck_interval 5")
-        print("\tretry_interval 3")
-        print("\tcheck_period 24x7")
-        print("\tnotification_interval 30")
-        print("\tnotification_period 24x7")
-        print("\tnotification_options w,c,r")
-        print("\tcontact_groups admins")
-        print("}\n")
+        services.Add("\t" + command_str)
+        services.Add("\tmax_check_attempts 1")
+        services.Add("\tcheck_interval 5")
+        services.Add("\tretry_interval 3")
+        services.Add("\tcheck_period 24x7")
+        services.Add("\tnotification_interval 30")
+        services.Add("\tnotification_period 24x7")
+        services.Add("\tnotification_options w,c,r")
+        services.Add("\tcontact_groups admins")
+        services.Add("}\n")
 
 ##############################################################    
 
@@ -110,6 +110,7 @@ service_group_defs = []
 industry_groups = []
 
 hosts = StringBuilder()
+services = StringBuilder()
 
 with open ("/shark/conf/trading-config.yml", "r") as f:
 
@@ -143,4 +144,9 @@ for sg in sg_list:
 ##############################################################    
 # Print Hosts
 
-print (hosts)
+print(hosts)
+
+##############################################################   
+# Print Services
+
+print(services)
