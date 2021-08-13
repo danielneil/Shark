@@ -26,17 +26,16 @@ def process_service_config(a_dict,ticker):
         
         # First arg will be the INSTRUMENT_GROUP
         
-        if str(key) == "INSTRUMENT_GROUP":
+        if str(key) == "GROUP":
             
             instrument_group = str(value)
-            
             industry_groups.append(instrument_group)
             
             print("""
                   define host {
                   use stock
                   host_name """+ticker+"""
-                  hostgroups """ +instrument_group+"""
+                  hostgroups """+instrument_group+"""
                   address 127.0.0.1
                   register 1
                   }
@@ -60,7 +59,7 @@ def process_service_config(a_dict,ticker):
             # the descript will always be the first element.
             if yml_item == "DESCRIPTION":
                 print("\tservice_description " + yml_value)
-            elif yml_item == "COMMAND":
+            elif yml_item == "PLUGIN":
 
                 command_str = "check_command " + yml_value
             
