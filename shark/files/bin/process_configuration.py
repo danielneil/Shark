@@ -51,7 +51,7 @@ def process_sub_config(a_dict,ticker):
             hosts.Add("\thostgroups " + instrument_group + "\n")
             hosts.Add("\taddress 127.0.0.1" + "\n")
             hosts.Add("\tregister 1" + "\n")
-            hosts.Add("}")
+            hosts.Add("}\n")
             
             continue
 
