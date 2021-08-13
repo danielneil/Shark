@@ -108,12 +108,10 @@ srted_industry_groups = sorted(set(industry_groups))
 
 for ig in srted_industry_groups:
 
-    print ("""
-           \ndefine hostgroup {
-           \thostgroup_name """ + ig + """
-           \talias """ + ig + """
-           }
-           """)
+    print ("\ndefine hostgroup {")
+    print ("\thostgroup_name " + ig )
+    print ("\talias " + ig )
+    print ("}")
 
 ##############################################################    
     
@@ -122,6 +120,6 @@ sg_list = list ( dict.fromkeys(service_group_defs) )
 for sg in sg_list:
 
     print("\ndefine servicegroup {")
-    print("\tservicegroup_name " + sg)
-    print("\talias " + sg)
+    print("\tservicegroup_name " + sg )
+    print("\talias " + sg )
     print("}")
