@@ -31,15 +31,13 @@ def process_service_config(a_dict,ticker):
             instrument_group = str(value)
             industry_groups.append(instrument_group)
             
-            print("""
-                  \ndefine host {
-                  \tuse stock
-                  \thost_name """+ticker+"""
-                  \thostgroups """+instrument_group+"""
-                  \taddress 127.0.0.1
-                  \tregister 1
-                  }
-                  """)
+            print("\ndefine host {")
+            print("\tuse stock")
+            print("\thost_name " + ticker)
+            print("\thostgroups " + instrument_group)
+            print("\taddress 127.0.0.1")
+            print("\tregister 1")
+            print("}")
             
             continue
 
