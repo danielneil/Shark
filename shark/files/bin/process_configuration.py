@@ -9,6 +9,22 @@ import socket
 
 ##############################################################    
 
+from io import StringIO
+
+class StringBuilder:
+    _file_str = None
+
+    def __init__(self):
+        self._file_str = StringIO()
+
+    def Add(self, str):
+        self._file_str.write(str)
+
+    def __str__(self):
+        return self._file_str.getvalue()
+
+##############################################################    
+    
 def process_instrument_config(a_dict):
     
     for key, value in a_dict.items():
@@ -29,13 +45,13 @@ def process_sub_config(a_dict,ticker):
             instrument_group = str(value)
             industry_groups.append(instrument_group)
             
-            print("\ndefine host {")
-            print("\tuse stock")
-            print("\thost_name " + ticker)
-            print("\thostgroups " + instrument_group)
-            print("\taddress 127.0.0.1")
-            print("\tregister 1")
-            print("}")
+            hosts.Add("\ndefine host {")
+            hosts.Add("\tuse stock")
+            hosts.Add("\thost_name " + ticker)
+            hosts.Add("\thostgroups " + instrument_group)
+            hosts.Add("\taddress 127.0.0.1")
+            hosts.Add("\tregister 1")
+            hosts.Add("}")
             
             continue
 
@@ -93,6 +109,8 @@ def process_sub_config(a_dict,ticker):
 service_group_defs = []
 industry_groups = []
 
+hosts = StringBuilder()
+
 with open ("/shark/conf/trading-config.yml", "r") as f:
 
     docs = yaml.safe_load(f)
@@ -121,3 +139,8 @@ for sg in sg_list:
     print("\tservicegroup_name " + sg )
     print("\talias " + sg )
     print("}")
+
+##############################################################    
+# Print Hosts
+
+print (hosts)
