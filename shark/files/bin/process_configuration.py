@@ -1,26 +1,24 @@
 #!/usr/bin/python3
 
-# Builds the nagios configuration based on the ticker data.
+# Process the yaml configuration file, so we can regenerate it into something nagios understands.
 
 import csv
 import re
 import yaml
 import socket
 
-# Process the yaml configuration file, so we can regenerate it into something nagios understands.
-
 ##############################################################    
 
-def process_ticker_config(a_dict):
+def process_instrument_config(a_dict):
     
     for key, value in a_dict.items():
         ticker = key
         if isinstance(value, dict):
-            process_service_config(value, ticker)
+            process_sub_config(value, ticker)
 
 ##############################################################                
             
-def process_service_config(a_dict,ticker):
+def process_sub_config(a_dict,ticker):
 
     for key, value in a_dict.items():
         
@@ -98,7 +96,7 @@ industry_groups = []
 with open ("/shark/conf/trading-config.yml", "r") as f:
 
     docs = yaml.safe_load(f)
-    process_ticker_config(docs)
+    process_instrument_config(docs)
     
 ##############################################################    
     
