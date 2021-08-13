@@ -55,10 +55,10 @@ def process_sub_config(a_dict,ticker):
             
             continue
 
-        services.Add("\ndefine service {")
-        services.Add("\thost_name " + ticker)
-        services.Add("\tservice_groups " + str(key))
-
+        services.Add("\ndefine service {" + "\n")
+        services.Add("\thost_name " + ticker + "\n")
+        services.Add("\tservice_groups " + str(key) + "\n")
+        
         # Add the parent node, and we'll prune duplicates after.
         service_group_defs.append(str(key))
 
@@ -70,7 +70,7 @@ def process_sub_config(a_dict,ticker):
             
             # the descript will always be the first element.
             if yml_item == "DESCRIPTION":
-                services.Add("\tservice_description " + yml_value)
+                services.Add("\tservice_description " + yml_value+ "\n")
             elif yml_item == "PLUGIN":
 
                 command_str = "check_command " + yml_value
@@ -82,7 +82,7 @@ def process_sub_config(a_dict,ticker):
                     hostname = socket.gethostname()
                     local_ip = socket.gethostbyname(hostname)
 
-                    services.Add("\tnotes_url http://" + local_ip + "/shark/backtest/html/" + ticker + ".html")
+                    services.Add("\tnotes_url http://" + local_ip + "/shark/backtest/html/" + ticker + ".html" + "\n")
                     
                 if yml_value == "check_strategy":
                     
@@ -93,16 +93,16 @@ def process_sub_config(a_dict,ticker):
                  # print the command arguments
                 command_str += "!" + yml_value
 
-        services.Add("\t" + command_str)
-        services.Add("\tmax_check_attempts 1")
-        services.Add("\tcheck_interval 5")
-        services.Add("\tretry_interval 3")
-        services.Add("\tcheck_period 24x7")
-        services.Add("\tnotification_interval 30")
-        services.Add("\tnotification_period 24x7")
-        services.Add("\tnotification_options w,c,r")
-        services.Add("\tcontact_groups admins")
-        services.Add("}\n")
+        services.Add("\t" + command_str + "\n")
+        services.Add("\tmax_check_attempts 1" + "\n")
+        services.Add("\tcheck_interval 5" + "\n")
+        services.Add("\tretry_interval 3" + "\n")
+        services.Add("\tcheck_period 24x7" + "\n")
+        services.Add("\tnotification_interval 30" + "\n")
+        services.Add("\tnotification_period 24x7" + "\n")
+        services.Add("\tnotification_options w,c,r" + "\n")
+        services.Add("\tcontact_groups admins" + "\n")
+        services.Add("}\n" + "\n")
 
 ##############################################################    
 
