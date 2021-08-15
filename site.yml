@@ -1,8 +1,5 @@
 ---
-
-# DEV - all services on a single server.
-
-- name: Shark - Preparing server (DEV)
+- name: Shark - Preparing server
   hosts: shark-server
   gather_facts: yes
   strategy: free
@@ -21,8 +18,6 @@
    - nrpe
    - docker
    - monitoring
-   #- zookeeper
-   #- apache-drill
    - rabbitmq
    - httpd
    - codeigniter
