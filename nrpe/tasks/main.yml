@@ -3,12 +3,12 @@
 
 - name: Installing nagios-nrpe-server
   package:
-   name: nagios-nrpe-server
+   name: nrpe.x86_64
    state: latest
    
 - name: Starting nagios-nrpe-server
   package:
-   name: nagios-nrpe-server 
+   name: nrpe.x86_64
    state: started
   
 - name: Rolling out NRPE Main configuration file
