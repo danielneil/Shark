@@ -27,7 +27,7 @@
    
 - name: Install java
   package:
-   name: default-jre
+   name: java-openjdk
    state: latest
 
 - name: Setting environement vars - /etc/environment
