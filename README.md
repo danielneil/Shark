@@ -35,11 +35,11 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
 <summary>System Installation</summary>
 <br>
   
-1. Prepare a vanilla Debian Server with VirtualBox ([help](https://linuxhint.com/install_debian10_virtualbox/)).
+1. Prepare a vanilla Rocky Server with VirtualBox ([help](https://kifarunix.com/install-rocky-linux-8-on-virtualbox/)).
 
-2. Install ansible ([help](https://linuxhint.com/install_ansible_debian10/)).
+2. Install ansible ([help](https://www.how2shout.com/linux/how-to-install-ansible-on-rocky-linux-8-or-almalinux/)).
 
-3. Install Git ([help](https://linuxhint.com/install_git_debian_10/)).
+3. Install Git ([help](https://tastethelinux.com/2021/08/06/how-to-install-git-on-rocky-linux-8-ec2-aws/)).
 
 4. Open a terminal, and run:
 ```
