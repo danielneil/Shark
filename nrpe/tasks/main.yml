@@ -7,7 +7,7 @@
    state: latest
    
 - name: Starting nagios-nrpe-server
-  package:
+  service:
    name: nrpe.x86_64
    state: started
   
