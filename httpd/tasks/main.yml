@@ -1,25 +1,25 @@
 ---
 # tasks file for httpd
-- name: Install apache2 
+- name: Install httpd 
   package:
-   name: apache2
+   name: httpd
    
 - name: Install apache2 development headers.
   package:
-   name: apache2-dev
+   name: httpd-dev
    
 - name: Installing php deps
   package:
    name: "{{ item }}"
   with_items: 
    - php
-   - libapache2-mod-php
+   - libhttpd-mod-php
 
 - name: Removing default landing page
   file:
     path: /var/www/html/index.html
     state: absent
-  notify: restart-apache2
+  notify: restart-httpd
 
 - name: Adding Shark webroot into config
   copy:
@@ -27,8 +27,8 @@
      dest: /etc/apache2/conf-enabled/
   notify: restart-apache2
 
-- name: Starting apache
+- name: Starting httpd
   service:
-   name: apache2 
+   name: httpd 
    state: started
 
