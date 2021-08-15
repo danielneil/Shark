@@ -1,6 +1,0 @@
----
-# handlers file for apache-drill
-- name: restart-drill
-  service: 
-   name: drill
-   state: restarted

@@ -74,7 +74,7 @@ cp -pr config/ticker-data shark/files/
 
 ##################################################
 # Now run the playbook.
-ansible-playbook ./site-dev.yml -i hosts --ssh-extra-args='-o ServerAliveInterval=3600'
+ansible-playbook ./site.yml -i hosts --ssh-extra-args='-o ServerAliveInterval=3600'
 
 ##################################################
 # Generate the configuration
