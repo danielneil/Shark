@@ -1,27 +1,27 @@
 ---
 
 - name: Install pip3
-  apt:
+  package:
    name: python3-pip
    state: latest
    
 - name: Install pip1
-  apt:
+  package:
    name: python-pip
    state: latest
 
 - name: Pyalgotrade for backtesting
-  pip:
+  package:
    name: pyalgotrade
    executable: pip3
 
 - name: Install Python Requests
-  apt:
+  package:
    name: python3-requests
    state: latest
 
 - name: Install pandas which is a prereq for the below
-  apt:
+  package:
    name: python-pandas
    state: latest
    
