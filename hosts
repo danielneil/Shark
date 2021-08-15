@@ -1,28 +1,2 @@
-# - DEV
-
-[shark-dev]
+[shark-server]
 shark ansible_host=127.0.0.1
-
-# - PROD
-
-# [shark_ui]
-# shark ansible_host=127.0.0.1
-
-# [gitlab_cm]
-# gitlab ansible_host=127.0.0.1
-
-# [rabbitmq_cluster]
-# rabbitmq ansible_host=127.0.0.1
-
-# [apache_drill_cluster]
-# apache_drill ansible_host=127.0.0.1
-
-# [zookeeper_cluster]
-# zookeeper ansible_host=127.0.0.1
-
-# [nifi_cluster]
-# nifi ansible_host=127.0.0.1
-
-# [shark_monitoring]
-# nagios ansible_host=127.0.0.1
-
