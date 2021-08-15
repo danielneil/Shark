@@ -2,17 +2,17 @@
 # tasks file for nrpe
 
 - name: Installing nagios-nrpe-server
-  apt:
+  package:
    name: nagios-nrpe-server
    state: latest
    
 - name: Starting nagios-nrpe-server
-  service:
+  package:
    name: nagios-nrpe-server 
    state: started
   
 - name: Rolling out NRPE Main configuration file
-  template:
+  package:
    src: nrpe.cfg
    dest: /etc/nagios/
    mode: 0644
