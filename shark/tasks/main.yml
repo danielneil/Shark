@@ -25,7 +25,7 @@
    mode: 0755
 
 - name: Installing pyyaml for the above
-  apt:
+  package:
    name: python-yaml
    state: latest
 
