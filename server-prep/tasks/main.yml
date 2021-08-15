@@ -25,22 +25,6 @@
    name: net-tools
    state: latest
    
-- name: Install java
-  package:
-   name: java-openjdk
-   state: latest
-
-- name: Setting environement vars - /etc/environment
-  lineinfile:
-    dest: "/etc/environment"
-    state: present
-    regexp: "^{{ item.key }}="
-    line: "{{ item.key }}={{ item.value}}"
-  with_items: "{{ os_environment }}"
-
-- name: Sourcing environmental variables
-  shell: source /etc/environment executable=bash
-  
 - include: shark_prereqs.yml
 
 - include: python_prereqs.yml
