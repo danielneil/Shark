@@ -1,6 +1,4 @@
 ---
-# tasks file for nrpe
-
 - name: Installing nagios-nrpe-server
   package:
    name: nrpe 
