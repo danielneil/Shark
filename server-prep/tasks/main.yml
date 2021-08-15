@@ -6,27 +6,27 @@
    name: "Australia/Sydney"
 
 - name: Installing rsync
-  apt:
+  package:
    name: rsync
    state: latest
 
 - name: Install curl
-  apt:
+  package:
    name: curl
    state: latest
   
 - name: Install unzip
-  apt:
+  package:
    name: unzip
    state: latest
   
 - name: Install net-tools
-  apt:
+  package:
    name: net-tools
    state: latest
    
 - name: Install java
-  apt:
+  package:
    name: default-jre
    state: latest
 
