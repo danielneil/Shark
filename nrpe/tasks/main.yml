@@ -14,13 +14,13 @@
 - name: Rolling out NRPE Main configuration file
   package:
    src: nrpe.cfg
-   dest: /etc/nagios/
+   dest: /etc/nrpe.d/
    mode: 0644
   notify: restart-nrpe
    
 - name: Rolling out Custom NRPE  configuration file
   copy:
     src: custom-nrpe.cfg
-    dest: /etc/nagios/nrpe.d/
+    dest: /etc/nrpe.d/
     mode: 0644
   notify: restart-nrpe  
