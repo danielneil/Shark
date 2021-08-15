@@ -12,7 +12,7 @@
    state: started
   
 - name: Rolling out NRPE Main configuration file
-  package:
+  template:
    src: nrpe.cfg
    dest: /etc/nrpe.d/
    mode: 0644
