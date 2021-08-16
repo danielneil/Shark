@@ -38,9 +38,9 @@
    owner: nagios
    group: nagios
 
-- name: Restart apache2
+- name: Restart httpd
   service: 
-   name: apache2
+   name: httpd
    state: restarted
 
 - name: Restart / Start nagios
