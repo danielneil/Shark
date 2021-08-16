@@ -31,9 +31,6 @@
    group: nagios
    mode: 0755
 
-- name: Generating our nagios ticker configuration
-  shell: /shark/bin/process_configuration.py > /usr/local/nagios/etc/conf.d/shark.cfg
-
 - name: Adding our custom nagios commands file
   copy:
    src: commands.cfg
