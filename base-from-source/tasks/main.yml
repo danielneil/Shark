@@ -12,8 +12,6 @@
 - name: Copying our build script 
   synchronize:
    src: build_nagios.sh
-   dest: /tmp
-   mode: 0755
 
 - name: Building nagios from source
   shell: bash /tmp/build_nagios.sh 
