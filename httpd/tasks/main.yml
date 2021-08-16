@@ -24,7 +24,7 @@
   copy:
      src: shark.conf
      dest: /etc/httpd/conf.d
-  notify: restart-apache2
+  notify: restart-httpd
 
 - name: Starting httpd
   service:
