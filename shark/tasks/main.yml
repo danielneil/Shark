@@ -1,9 +1,4 @@
 ---
-- name: Synchronsing ticker data dir
-  synchronize : 
-   src: ticker-data
-   dest: /shark/
-   
 - include: default_config.yml
 
 - name: Copying bin directory containing scripts.
