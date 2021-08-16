@@ -1,4 +1,4 @@
 ---
 # tasks file for base-from-source
 - name: Install build essentials
-  shell: dnf groupinstall 'Development Tools'
+  shell: dnf groupinstall 'Development Tools' -y
