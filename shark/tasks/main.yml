@@ -1,5 +1,5 @@
 ---
-- include: default_config.yml
+- include: config.yml
 
 - name: Copying bin directory containing scripts.
   synchronize:
