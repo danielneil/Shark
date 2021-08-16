@@ -9,27 +9,27 @@
 - name: Correcting the perms. 
   file:
    path: /var/www/html/dokuwiki 
-   owner: www-data
-   group: www-data 
+   owner: root
+   group: root
    recurse: yes
 
 - name: Copying over our dokuwiki data dir  
   copy:
     src: data
     dest: /var/www/html/dokuwiki/
-    owner: www-data
-    group: www-data
+    owner: root
+    group: root
 
 - name: Copying over our dokuwiki conf dir  
   copy:
     src: conf
     dest: /var/www/html/dokuwiki/
-    owner: www-data
-    group: www-data
+    owner: root
+    group: root
 
 - name: Copying dokuwiki rawplugin
   copy:
     src: getRaw.php
     dest: /var/www/html/dokuwiki/
-    owner: www-data
-    group: www-data
+    owner: root
+    group: root
