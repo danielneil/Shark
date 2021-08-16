@@ -23,7 +23,7 @@
 - name: Adding Shark webroot into config
   copy:
      src: shark.conf
-     dest: /etc/apache2/conf-enabled/
+     dest: /etc/httpd/conf.d
   notify: restart-apache2
 
 - name: Starting httpd
