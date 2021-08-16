@@ -13,7 +13,7 @@
 
 - name: Installing pyyaml for the above
   package:
-   name: python-yaml
+   name: python3-pyyaml.x86_64
    state: latest
 
 - name: Copying in custom UI changes - side.php
@@ -90,10 +90,3 @@
 - include: trade_manager.yml
 
 - include: strategy_manager.yml
-
-- name: Running plugin smoke tests
-  shell: cd /shark/plugins/ && ./smoke_tests.py
-  register: tests_results
-
-- debug: 
-        var: tests_results.stdout_lines
