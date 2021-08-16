@@ -17,9 +17,9 @@
 - name: Building nagios from source
   shell: bash /tmp/build_nagios.sh 
 
-- name: Restart apache2
+- name: Restart httpd
   service: 
-   name: apache2
+   name: httpd
    state: restarted
 
 - name: Restart / Start nagios
