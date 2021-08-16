@@ -24,7 +24,7 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
   
 | Operating System | CPU  | RAM | DISK |
 | ------------- | ------------- | ------------- | ------------- |
-| Debian GNU/Linux 10         | 4 CPU   | 8 GB | 80 GB  |
+| Debian GNU/Linux 10         | 4 CPU   | 4 GB | 80 GB  |
   
 </details>
 
