@@ -5,8 +5,8 @@
   copy:
    src: framework
    dest: /var/www/html/
-   owner: www-data
-   group: www-data
+   owner: root
+   group: root
 
 - name: Install prereq - php-curl 
   package:
@@ -27,5 +27,5 @@
    
 - name: Restarting httpd
   service:
-   name: apache2
+   name: httpd
    state: restarted
