@@ -1,6 +1,4 @@
 ---
 # tasks file for base-from-source
 - name: Install build essentials
-  package:
-   name: [ 'autoconf', 'gcc', 'libc6', 'make', 'wget', 'unzip', 'apache2', 'apache2-utils', 'php', 'libgd-dev' ]
-   state: latest
+  shell: dnf groupinstall 'Development Tools'
