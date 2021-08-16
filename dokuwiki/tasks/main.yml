@@ -14,21 +14,21 @@
    recurse: yes
 
 - name: Copying over our dokuwiki data dir  
-  copy:
+  synchronize :
     src: data
     dest: /var/www/html/dokuwiki/
     owner: root
     group: root
 
 - name: Copying over our dokuwiki conf dir  
-  copy:
+  synchronize :
     src: conf
     dest: /var/www/html/dokuwiki/
     owner: root
     group: root
 
 - name: Copying dokuwiki rawplugin
-  copy:
+  synchronize :
     src: getRaw.php
     dest: /var/www/html/dokuwiki/
     owner: root
