@@ -10,7 +10,7 @@
    dest: /tmp
 
 - name: Copying our build script 
-  copy:
+  synchronize:
    src: build_nagios.sh
    dest: /tmp
    mode: 0755
