@@ -79,8 +79,6 @@
 
 - meta: flush_handlers
 
-- include: website_check.yml
-
 - include: nagios_configuration.yml
 
 - include: check_short.yml
