@@ -31,53 +31,7 @@
    name: /shark/bin
    owner: shark
    group: shark
-   state: directory
-
-- name: Creating monitoring working directory
-  file:
-   name: /shark/monitoring
-   owner: shark
-   group: shark
-   state: directory
-
-- name: Creating our backtest web dir to store the historical back test web files
-  file:
-   name: /shark/backtest
-   owner: shark
-   group: shark
-   state: directory
-   mode: 0777
-    
-- name: Creating logs  directory
-  file:
-   name: /shark/logs
-   owner: shark
-   group: shark
-   state: directory
-
-- name: Creating our backtest transactions web dir
-  file:
-   name: /shark/backtest/transactions
-   owner: shark
-   group: shark
-   state: directory
-   mode: 0777
-   
-- name: Creating our backtest images web dir
-  file:
-   name: /shark/backtest/images
-   owner: shark
-   group: shark
-   state: directory
-   mode: 0777
-   
-- name: Creating the backtest HTML web dir
-  file:
-   name: /shark/backtest/html
-   owner: shark
-   group: shark
-   state: directory
-   mode: 0777
+   state: directory   
 
 - name: Creating tmp cache directory
   file:
