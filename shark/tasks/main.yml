@@ -1,28 +1,15 @@
 ---
 - name: Synchronsing ticker data dir
-  copy: 
+  synchronize : 
    src: ticker-data
    dest: /shark/
-   owner: shark
-   group: shark
-
-- name: Synchronsing data in strategies directory
-  copy:
-    src: strategies
-    dest: /shark/
-    owner: shark
-    group: shark
-    mode: 0755
-
+   
 - include: default_config.yml
 
 - name: Copying bin directory containing scripts.
-  copy:
+  synchronize:
    src: bin
    dest: /shark/
-   owner: shark
-   group: shark
-   mode: 0755
 
 - name: Installing pyyaml for the above
   package:
@@ -35,7 +22,7 @@
    dest: /tmp/nagios-4.4.6/html
 
 - name: Copying custom logo
-  copy:
+  synchronize:
    src: ui_patches/sblogo.png
    dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/sblogo.png
   notify:
@@ -43,7 +30,7 @@
   - restart-nagios
 
 - name: Copying main logo
-  copy:
+  synchronize:
    src: ui_patches/logofullsize.png
    dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/
   notify:
@@ -51,7 +38,7 @@
   - restart-nagios
 
 - name: Copying left hand header UI code
-  copy:
+  synchronize:
    src: ui_patches/cgiutils.c
    dest: /tmp/nagios-4.4.6/cgi
   notify:
@@ -59,7 +46,7 @@
   - restart-nagios
 
 - name: Copying in custom UI changes - status.c
-  copy:
+  synchronize:
    src: ui_patches/status.c
    dest: /tmp/nagios-4.4.6/cgi
   notify: 
@@ -67,7 +54,7 @@
   - restart-nagios
 
 - name: Copying in custom UI changes - statusdata.c
-  copy:
+  synchronize:
    src: ui_patches/statusdata.c
    dest: /tmp/nagios-4.4.6/common
   notify: 
@@ -75,7 +62,7 @@
   - restart-nagios
 
 - name: Copying in custom UI changes - extinfo.c
-  copy:
+  synchronize:
    src: ui_patches/extinfo.c
    dest: /tmp/nagios-4.4.6/cgi
   notify:
@@ -83,7 +70,7 @@
   - restart-nagios
 
 - name: Copying in custom UI changes - extinfo.c
-  copy:
+  synchronize:
    src: ui_patches/main.php
    dest: /tmp/nagios-4.4.6/html
   notify:
