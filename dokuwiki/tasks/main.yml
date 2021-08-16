@@ -17,19 +17,13 @@
   synchronize :
     src: data
     dest: /var/www/html/dokuwiki/
-    owner: root
-    group: root
 
 - name: Copying over our dokuwiki conf dir  
   synchronize :
     src: conf
     dest: /var/www/html/dokuwiki/
-    owner: root
-    group: root
 
 - name: Copying dokuwiki rawplugin
   synchronize :
     src: getRaw.php
     dest: /var/www/html/dokuwiki/
-    owner: root
-    group: root
