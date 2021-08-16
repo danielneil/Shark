@@ -1,6 +1,6 @@
 ---
 # tasks file for base-from-source
 - name: Install build essentials
-  apt:
+  package:
    name: [ 'autoconf', 'gcc', 'libc6', 'make', 'wget', 'unzip', 'apache2', 'apache2-utils', 'php', 'libgd-dev' ]
    state: latest
