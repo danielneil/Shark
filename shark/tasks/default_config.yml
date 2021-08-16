@@ -1,4 +1,4 @@
 - name: Cloning the default config git repo
   git:
-    repo: 'https://github.com/danielneil/Shark-Default-Config.git'
+    repo: 'https://github.com/danielneil/Shark-Config.git'
     dest: /shark/conf
