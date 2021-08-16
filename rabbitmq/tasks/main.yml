@@ -6,9 +6,7 @@
    state: present
    
 - name: Installing RabbitMQ
-  package:
-   name: rabbitmq-server
-   state: present
+  shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
    
 - name: Starting rabbitmq-server
   service:
