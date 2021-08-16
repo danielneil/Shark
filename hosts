@@ -1,2 +1,2 @@
-[shark-server]
+[shark_server]
 shark ansible_host=127.0.0.1
