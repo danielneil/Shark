@@ -2,7 +2,7 @@
 # tasks file for codeigniter
 
 - name: Deploying code igniter framework to webroot
-  copy:
+  synchronize:
    src: framework
    dest: /var/www/html/
    owner: root
