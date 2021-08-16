@@ -4,16 +4,15 @@
   package:
    name: httpd
    
-- name: Install apache2 development headers.
+- name: Install httpd development headers.
   package:
-   name: httpd-dev
+   name: httpd-devel.x86_64
    
 - name: Installing php deps
   package:
    name: "{{ item }}"
   with_items: 
    - php
-   - libhttpd-mod-php
 
 - name: Removing default landing page
   file:
