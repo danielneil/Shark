@@ -4,4 +4,4 @@
     dest: /shark/
     
 - name: Pushing default config
-  shell: /shark/conf/push.sh
+  shell: /shark/Shark-Config/push.sh
