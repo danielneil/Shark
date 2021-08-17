@@ -71,8 +71,6 @@
 
 - include: nagios_configuration.yml
 
-- include: check_short.yml
-
 - include: ui_refresh.yml
 
 - include: custom_cgi_footers.yml
