@@ -1,11 +1,6 @@
 ---
 - include: config.yml
 
-- name: Copying bin directory containing scripts.
-  synchronize:
-   src: bin
-   dest: /shark/
-
 - name: Installing pyyaml for the above
   package:
    name: python3-pyyaml.x86_64
