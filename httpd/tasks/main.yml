@@ -30,4 +30,10 @@
   service:
    name: httpd 
    state: started
+   
+- firewalld:
+    service: http
+    permanent: true
+    state: enabled
+    immediate: yes
 
