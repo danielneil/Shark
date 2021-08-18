@@ -148,19 +148,19 @@ int main(void) {
 		printf("<td align=left valign=top width=33%%>\n");
 
 		if(display_type == DISPLAY_HOST_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Stock Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "{{ instrument_name }} Information");
 		else if(display_type == DISPLAY_SERVICE_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Indicators Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Plugins Information");
 		else if(display_type == DISPLAY_COMMENTS)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "All Stock and Indicators Comments");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "All {{ instrument_name }} and Plugins Comments");
 		else if(display_type == DISPLAY_PERFORMANCE)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Performance Information");
 		else if(display_type == DISPLAY_HOSTGROUP_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Stock Group Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "{{ instrument_name_group }} Information");
 		else if(display_type == DISPLAY_SERVICEGROUP_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Servicegroup Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Plugin group Information");
 		else if(display_type == DISPLAY_DOWNTIME)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "All Host and Service Scheduled Downtime");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "All {{ instrument_name }} and Plugin Scheduled Downtime");
 		else if(display_type == DISPLAY_SCHEDULING_QUEUE)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Check Scheduling Queue");
 		else
@@ -213,18 +213,19 @@ int main(void) {
 			printf("<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 CLASS='linkBox'>\n");
 			printf("<TR><TD CLASS='linkBox'>\n");
 			if(display_type == DISPLAY_SERVICE_INFO)
-				printf("<A HREF='%s?type=%d&host=%s'>View Information For This Stock</A><br>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(host_name));
+				printf("<A HREF='%s?type=%d&host=%s'>View Information For This 
+				       </A><br>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(host_name));
 			if(display_type == DISPLAY_SERVICE_INFO || display_type == DISPLAY_HOST_INFO)
-				printf("<A HREF='%s?host=%s'>View Status Detail For This Stock</A><BR>\n", STATUS_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Status Detail For This {{ instrument_name }}</A><BR>\n", STATUS_CGI, url_encode(host_name));
 			if(display_type == DISPLAY_HOST_INFO) {
-				printf("<A HREF='%s?host=%s'>View Alert History For This Stock</A><BR>\n", HISTORY_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Alert History For This {{ instrument_name }}</A><BR>\n", HISTORY_CGI, url_encode(host_name));
 #ifdef USE_TRENDS
-				printf("<A HREF='%s?host=%s'>View Trends For This Stock</A><BR>\n", TRENDS_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Trends For This {{ instrument_name }}</A><BR>\n", TRENDS_CGI, url_encode(host_name));
 #endif
 #ifdef USE_HISTOGRAM
-				printf("<A HREF='%s?host=%s'>View Alert Histogram For This Stock</A><BR>\n", HISTOGRAM_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s'>View Alert Histogram For This {{ instrument_name }}</A><BR>\n", HISTOGRAM_CGI, url_encode(host_name));
 #endif
-				printf("<A HREF='%s?host=%s&show_log_entries'>View Availability Report For This Stock</A><BR>\n", AVAIL_CGI, url_encode(host_name));
+				printf("<A HREF='%s?host=%s&show_log_entries'>View Availability Report For This {{ instrument_name }}</A><BR>\n", AVAIL_CGI, url_encode(host_name));
 				printf("<A HREF='%s?host=%s'>View Notifications For This Host</A>\n", NOTIFICATIONS_CGI, url_encode(host_name));
 				}
 			else if(display_type == DISPLAY_SERVICE_INFO) {
@@ -267,7 +268,7 @@ int main(void) {
 		if((display_type == DISPLAY_HOST_INFO && temp_host != NULL) || (display_type == DISPLAY_SERVICE_INFO && temp_host != NULL && temp_service != NULL) || (display_type == DISPLAY_HOSTGROUP_INFO && temp_hostgroup != NULL) || (display_type == DISPLAY_SERVICEGROUP_INFO && temp_servicegroup != NULL)) {
 
 			if(display_type == DISPLAY_HOST_INFO) {
-				printf("<DIV CLASS='data'>Stock</DIV>\n");
+				printf("<DIV CLASS='data'>{{ instrument_name }}</DIV>\n");
 				printf("<DIV CLASS='dataTitle'>%s</DIV>\n", temp_host->alias);
 				printf("<DIV CLASS='dataTitle'>(%s)</DIV><BR>\n", temp_host->name);
 
@@ -295,7 +296,7 @@ int main(void) {
 				printf("<DIV CLASS='data'>%s</DIV>\n", temp_host->address);
 				}
 			if(display_type == DISPLAY_SERVICE_INFO) {
-				printf("<DIV CLASS='data'>Service</DIV><DIV CLASS='dataTitle'>%s</DIV><DIV CLASS='data'>On Stock</DIV>\n", service_desc);
+				printf("<DIV CLASS='data'>Service</DIV><DIV CLASS='dataTitle'>%s</DIV><DIV CLASS='data'>On {{ instrument_name }}</DIV>\n", service_desc);
 				printf("<DIV CLASS='dataTitle'>%s</DIV>\n", temp_host->alias);
 				printf("<DIV CLASS='dataTitle'>(<A HREF='%s?type=%d&host=%s'>%s</a>)</DIV><BR>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(temp_host->name), temp_host->name);
 				printf("<DIV CLASS='data'>Member of</DIV><DIV CLASS='dataTitle'>");
@@ -946,11 +947,11 @@ void show_host_info(void) {
 
 	/* make sure host information exists */
 	if(temp_host == NULL) {
-		printf("<P><DIV CLASS='errorMessage'>Error: Stock Not Found!</DIV></P>>");
+		printf("<P><DIV CLASS='errorMessage'>Error: {{ instrument_name }} Not Found!</DIV></P>>");
 		return;
 		}
 	if(temp_hoststatus == NULL) {
-		printf("<P><DIV CLASS='errorMessage'>Error: Stock Status Information Not Found!</DIV></P");
+		printf("<P><DIV CLASS='errorMessage'>Error: {{ instrument_name }} Status Information Not Found!</DIV></P");
 		return;
 		}
 
@@ -961,7 +962,7 @@ void show_host_info(void) {
 
 	printf("<TD ALIGN=CENTER VALIGN=TOP CLASS='stateInfoPanel'>\n");
 
-	printf("<DIV CLASS='dataTitle'>Stock State Information</DIV>\n");
+	printf("<DIV CLASS='dataTitle'>{{ instrument_name }} State Information</DIV>\n");
 
 	if(temp_hoststatus->has_been_checked == FALSE)
 		printf("<P><DIV ALIGN=CENTER>This ticker has not yet been checked, so status information is not available.</DIV></P>\n");
@@ -1010,7 +1011,7 @@ void show_host_info(void) {
 			bg_class = "hostUNREACHABLE";
 			}
 
-		printf("<TR><TD CLASS='dataVar'>Stock Status:</td><td CLASS='dataVal'><DIV CLASS='%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;%s</td></tr>\n", bg_class, state_string, state_duration, (temp_hoststatus->problem_has_been_acknowledged == TRUE) ? "&nbsp;&nbsp;(Has been acknowledged)" : "");
+		printf("<TR><TD CLASS='dataVar'>{{ instrument_name }} Status:</td><td CLASS='dataVal'><DIV CLASS='%s'>&nbsp;&nbsp;%s&nbsp;&nbsp;</DIV>&nbsp;%s</td></tr>\n", bg_class, state_string, state_duration, (temp_hoststatus->problem_has_been_acknowledged == TRUE) ? "&nbsp;&nbsp;(Has been acknowledged)" : "");
 
 		printf("<TR><TD CLASS='dataVar' VALIGN='top'>Status Information:</td><td CLASS='dataVal'>%s", (temp_hoststatus->plugin_output == NULL) ? "" : html_encode(temp_hoststatus->plugin_output, TRUE));
 		if(enable_splunk_integration == TRUE) {
@@ -1087,7 +1088,7 @@ void show_host_info(void) {
 
 	printf("<TD ALIGN=CENTER VALIGN=TOP CLASS='commandPanel'>\n");
 
-	printf("<DIV CLASS='commandTitle'>Stock Commands</DIV>\n");
+	printf("<DIV CLASS='commandTitle'>{{ instrument_name }} Commands</DIV>\n");
 
 	printf("<TABLE BORDER='1' CELLPADDING=0 CELLSPACING=0><TR><TD>\n");
 
@@ -1095,10 +1096,10 @@ void show_host_info(void) {
 
 		printf("<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 CLASS='command'>\n");
 #ifdef USE_STATUSMAP
-		printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Locate Stock On Map' TITLE='Locate Stock On Map'></td><td CLASS='command'><a href='%s?host=%s&root=%s'>Locate ticker on map</a></td></tr>\n", url_images_path, STATUSMAP_ICON, STATUSMAP_CGI, url_encode(host_name), url_encode(host_name));
+		printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Locate {{ instrument_name }} On Map' TITLE='Locate {{ instrument_name }} On Map'></td><td CLASS='command'><a href='%s?host=%s&root=%s'>Locate ticker on map</a></td></tr>\n", url_images_path, STATUSMAP_ICON, STATUSMAP_CGI, url_encode(host_name), url_encode(host_name));
 #endif
 		if(temp_hoststatus->checks_enabled == TRUE) {
-			printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Disable Active Checks Of This Stock' TITLE='Disable Active Checks Of This Stock'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Disable active checks of this host</a></td></tr>\n", url_images_path, DISABLED_ICON, COMMAND_CGI, CMD_DISABLE_HOST_CHECK, url_encode(host_name));
+			printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Disable Active Checks Of This {{ instrument_name }}' TITLE='Disable Active Checks Of This {{ instrument_name }}'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Disable active checks of this host</a></td></tr>\n", url_images_path, DISABLED_ICON, COMMAND_CGI, CMD_DISABLE_HOST_CHECK, url_encode(host_name));
 			}
 		else
 			printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Enable Active Checks Of This Host' TITLE='Enable Active Checks Of This Host'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Enable active checks of this host</a></td></tr>\n", url_images_path, ENABLED_ICON, COMMAND_CGI, CMD_ENABLE_HOST_CHECK, url_encode(host_name));
@@ -1118,7 +1119,7 @@ void show_host_info(void) {
 
 		if(temp_hoststatus->status == SD_HOST_DOWN || temp_hoststatus->status == SD_HOST_UNREACHABLE) {
 			if(temp_hoststatus->problem_has_been_acknowledged == FALSE)
-				printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Acknowledge This Stock Problem' TITLE='Acknowledge This Stock Problem'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Acknowledge this ticker problem</a></td></tr>\n", url_images_path, ACKNOWLEDGEMENT_ICON, COMMAND_CGI, CMD_ACKNOWLEDGE_HOST_PROBLEM, url_encode(host_name));
+				printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Acknowledge This {{ instrument_name }} Problem' TITLE='Acknowledge This {{ instrument_name }} Problem'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Acknowledge this ticker problem</a></td></tr>\n", url_images_path, ACKNOWLEDGEMENT_ICON, COMMAND_CGI, CMD_ACKNOWLEDGE_HOST_PROBLEM, url_encode(host_name));
 			else
 				printf("<tr CLASS='command'><td><img src='%s%s' border=0 ALT='Remove Problem Acknowledgement' TITLE='Remove Problem Acknowledgement'></td><td CLASS='command'><a href='%s?cmd_typ=%d&host=%s'>Remove problem acknowledgement</a></td></tr>\n", url_images_path, REMOVE_ACKNOWLEDGEMENT_ICON, COMMAND_CGI, CMD_REMOVE_HOST_ACKNOWLEDGEMENT, url_encode(host_name));
 			}
@@ -1721,11 +1722,11 @@ void show_all_comments(void) {
 	char expire_time[MAX_DATETIME_LENGTH];
 
 	printf("<BR />\n");
-	printf("<DIV CLASS='commentNav'>[&nbsp;<A HREF='#HOSTCOMMENTS' CLASS='commentNav'>Stock Comments</A>&nbsp;|&nbsp;<A HREF='#SERVICECOMMENTS' CLASS='commentNav'>Service Comments</A>&nbsp;]</DIV>\n");
+	printf("<DIV CLASS='commentNav'>[&nbsp;<A HREF='#HOSTCOMMENTS' CLASS='commentNav'>{{ instrument_name }} Comments</A>&nbsp;|&nbsp;<A HREF='#SERVICECOMMENTS' CLASS='commentNav'>Service Comments</A>&nbsp;]</DIV>\n");
 	printf("<BR />\n");
 
 	printf("<A NAME=HOSTCOMMENTS></A>\n");
-	printf("<DIV CLASS='commentTitle'>Stock Comments</DIV>\n");
+	printf("<DIV CLASS='commentTitle'>{{ instrument_name }} Comments</DIV>\n");
 
 	if(is_authorized_for_read_only(&current_authdata)==FALSE) {
 		printf("<div CLASS='comment'><img src='%s%s' border=0>&nbsp;", url_images_path, COMMENT_ICON);
