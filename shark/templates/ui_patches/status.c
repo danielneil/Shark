@@ -345,18 +345,18 @@ int main(void) {
 				if(group_style_type == STYLE_SUMMARY)
 					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Plugin Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_GRID)
-					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Plugin Groups</a><br>\n", STATUS_CGI);
 
 				}
 			else {
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Plugin Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Plugin Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID)
-					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Plugin Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Plugin Groups</a><br>\n", STATUS_CGI);
 				}
 
 			}
@@ -364,7 +364,7 @@ int main(void) {
 			if(show_all_hostgroups == FALSE) {
 
 				if(group_style_type == STYLE_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=detail'>View Plugin Status Detail For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_HOST_DETAIL)
 					printf("<a href='%s?hostgroup=all&style=hostdetail'>View {{ instrument_name }} Status Detail For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW)
@@ -375,9 +375,9 @@ int main(void) {
 					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=detail'>View Indicator Status Detail For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=detail'>View Plugin Status Detail For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID)
-					printf("<a href='%s?hostgroup=%s&style=hostdetail'>View Indicator Status Detail For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=hostdetail'>View Plugin Status Detail For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
 					printf("<a href='%s?hostgroup=%s&style=overview'>View Status Overview For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
@@ -387,7 +387,7 @@ int main(void) {
 				}
 			else {
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=detail'>View Plugin Status Detail For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID)
 					printf("<a href='%s?hostgroup=all&style=hostdetail'>View {{ instrument_name }} Status Detail For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
@@ -936,7 +936,7 @@ void show_service_status_totals(void) {
 	total_problems = total_unknown + total_warning + total_critical;
 
 
-	printf("<div class='serviceTotals'>Indicator Status Totals</div>\n");
+	printf("<div class='serviceTotals'>Plugin Status Totals</div>\n");
 
 	printf("<table border='0' cellspacing='0' cellpadding='0'>\n");
 	printf("<tr><td>\n");
@@ -1448,7 +1448,7 @@ void show_service_detail(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Indicator Status Details For ");
+	printf("<div align='center' class='statusTitle'>Plugin Status Details For ");
 	if(display_type == DISPLAY_HOSTS) {
 		if(show_all_hosts == TRUE)
 			printf("All Stocks");
@@ -1457,9 +1457,9 @@ void show_service_detail(void) {
 		}
 	else if(display_type == DISPLAY_SERVICEGROUPS) {
 		if(show_all_servicegroups == TRUE)
-			printf("All Indicator Groups");
+			printf("All Plugin Groups");
 		else
-			printf("Indicator Group '%s'", url_encode(servicegroup_name));
+			printf("Plugin Group '%s'", url_encode(servicegroup_name));
 		}
 	else {
 		if(show_all_hostgroups == TRUE)
@@ -1488,7 +1488,7 @@ void show_service_detail(void) {
 		}
 
 	if(service_filter != NULL)
-		printf("<div align='center' class='statusSort'>Filtered By Indicators Matching \'%s\'</div>", service_filter);
+		printf("<div align='center' class='statusSort'>Filtered By Plugins Matching \'%s\'</div>", service_filter);
 
 	printf("<br>");
 
@@ -1571,13 +1571,13 @@ void show_service_detail(void) {
 
 	printf("<th class='status'>Stock&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
 
-	printf("<th class='status'>Indicator&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (ascending)' TITLE='Sort by service name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (descending)' TITLE='Sort by service name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_SERVICENAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_SERVICENAME, url_images_path, DOWN_ARROW_ICON);
+	printf("<th class='status'>Plugin&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (ascending)' TITLE='Sort by service name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (descending)' TITLE='Sort by service name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_SERVICENAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_SERVICENAME, url_images_path, DOWN_ARROW_ICON);
 
 	printf("<th class='status'>Status&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service status (ascending)' TITLE='Sort by service status (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service status (descending)' TITLE='Sort by service status (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_SERVICESTATUS, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_SERVICESTATUS, url_images_path, DOWN_ARROW_ICON);
 
 	printf("<th class='status'>Last Check&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by last check time (ascending)' TITLE='Sort by last check time (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by last check time (descending)' TITLE='Sort by last check time (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_LASTCHECKTIME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_LASTCHECKTIME, url_images_path, DOWN_ARROW_ICON);
 
-	printf("<th class='status'>Indicator Information</th>\n");
+	printf("<th class='status'>Plugin Information</th>\n");
 	printf("</tr>\n");
 
 
@@ -2513,11 +2513,11 @@ void show_servicegroup_overviews(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Indicator Overview For ");
+	printf("<div align='center' class='statusTitle'>Plugin Overview For ");
 	if(show_all_servicegroups == TRUE)
-		printf("All Indicator Groups");
+		printf("All Plugin Groups");
 	else
-		printf("Indicator Group '%s'", servicegroup_name);
+		printf("Plugin Group '%s'", servicegroup_name);
 	printf("</div>\n");
 
 	printf("<br>");
@@ -2646,7 +2646,7 @@ void show_servicegroup_overview(servicegroup *temp_servicegroup) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Stock</th><th class='status'>Status</th><th class='status'>Indicators</th><th class='status'>Actions</th>\n");
+	printf("<th class='status'>Stock</th><th class='status'>Status</th><th class='status'>Plugins</th><th class='status'>Actions</th>\n");
 	printf("</tr>\n");
 
 	/* find all hosts that have services that are members of the servicegroup */
@@ -2741,7 +2741,7 @@ void show_servicegroup_summaries(void) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Service Group</th><th class='status'>Stock Status Summary</th><th class='status'>Indicator Status Summary</th>\n");
+	printf("<th class='status'>Service Group</th><th class='status'>Stock Status Summary</th><th class='status'>Plugin Status Summary</th>\n");
 	printf("</tr>\n");
 
 	/* display status summary for all servicegroups */
@@ -3587,11 +3587,11 @@ void show_hostgroup_overviews(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Indicator Overview For ");
+	printf("<div align='center' class='statusTitle'>Plugin Overview For ");
 	if(show_all_hostgroups == TRUE)
-		printf("All Indicator Groups");
+		printf("All Plugin Groups");
 	else
-		printf("Indicator Group '%s'", hostgroup_name);
+		printf("Plugin Group '%s'", hostgroup_name);
 	printf("</div>\n");
 
 	printf("<br>");
@@ -3994,7 +3994,7 @@ void show_hostgroup_summaries(void) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Industry Group</th><th class='status'>Stock Status Summary</th><th class='status'>Indicator Status Summary</th>\n");
+	printf("<th class='status'>Industry Group</th><th class='status'>Stock Status Summary</th><th class='status'>Plugin Status Summary</th>\n");
 	printf("</tr>\n");
 
 	/* display status summary for all hostgroups */
@@ -5573,7 +5573,7 @@ void create_pagenumbers(int total_entries,char *temp_url,int type_service) {
 		printf("<a href='%s&start=%i&limit=%i' class='pagenumber' title='Last Page'><img src='%s%s' height='15' width='15' alt='>>' /></a>\n",temp_url,((pages)*result_limit),result_limit,url_images_path,LAST_PAGE_ICON);
 		printf("</div> <!-- end inner_page_numbers div -->\n");
 		if(type_service == TRUE)
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Indicators</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Plugins</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 		else
 			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Stocks</div>\n\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 
@@ -5581,14 +5581,14 @@ void create_pagenumbers(int total_entries,char *temp_url,int type_service) {
 		}
 	else {
 		if(type_service == TRUE)
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Indicators</div>\n</div>\n",1,total_entries,total_entries);
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Plugins</div>\n</div>\n",1,total_entries,total_entries);
 		else
 			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Stocks</div>\n\n",1,total_entries,total_entries);
 
 		}
 
 	/* show total results displayed */
-	//printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Indicators</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
+	//printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Plugins</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 
 	}
 

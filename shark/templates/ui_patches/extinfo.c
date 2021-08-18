@@ -229,17 +229,17 @@ int main(void) {
 				}
 			else if(display_type == DISPLAY_SERVICE_INFO) {
 				printf("<A HREF='%s?host=%s&", HISTORY_CGI, url_encode(host_name));
-				printf("service=%s'>View Alert History For This Indicator</A><BR>\n", url_encode(service_desc));
+				printf("service=%s'>View Alert History For This Plugin</A><BR>\n", url_encode(service_desc));
 #ifdef USE_TRENDS
 				printf("<A HREF='%s?host=%s&", TRENDS_CGI, url_encode(host_name));
-				printf("service=%s'>View Trends For This Indicator</A><BR>\n", url_encode(service_desc));
+				printf("service=%s'>View Trends For This Plugin</A><BR>\n", url_encode(service_desc));
 #endif
 #ifdef USE_HISTOGRAM
 				printf("<A HREF='%s?host=%s&", HISTOGRAM_CGI, url_encode(host_name));
-				printf("service=%s'>View Alert Histogram For This Indicator</A><BR>\n", url_encode(service_desc));
+				printf("service=%s'>View Alert Histogram For This Plugin</A><BR>\n", url_encode(service_desc));
 #endif
 				printf("<A HREF='%s?host=%s&", AVAIL_CGI, url_encode(host_name));
-				printf("service=%s&show_log_entries'>View Availability Report For This Indicator</A><BR>\n", url_encode(service_desc));
+				printf("service=%s&show_log_entries'>View Availability Report For This Plugin</A><BR>\n", url_encode(service_desc));
 				printf("<A HREF='%s?host=%s&", NOTIFICATIONS_CGI, url_encode(host_name));
 				printf("service=%s'>View Notifications For This Service</A>\n", url_encode(service_desc));
 				}
@@ -250,10 +250,10 @@ int main(void) {
 				printf("<A HREF='%s?hostgroup=%s'>View Availability For This Industry Group</A><BR>\n", AVAIL_CGI, url_encode(hostgroup_name));
 				}
 			else if(display_type == DISPLAY_SERVICEGROUP_INFO) {
-				printf("<A HREF='%s?servicegroup=%s&style=detail'>View Status Detail For This Indicator Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
-				printf("<A HREF='%s?servicegroup=%s&style=overview'>View Status Overview For This Indicator Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
-				printf("<A HREF='%s?servicegroup=%s&style=grid'>View Status Grid For This Indicator Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
-				printf("<A HREF='%s?servicegroup=%s'>View Availability For This Indicatorroup</A><BR>\n", AVAIL_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s&style=detail'>View Status Detail For This Plugin Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s&style=overview'>View Status Overview For This Plugin Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s&style=grid'>View Status Grid For This Plugin Group</A><BR>\n", STATUS_CGI, url_encode(servicegroup_name));
+				printf("<A HREF='%s?servicegroup=%s'>View Availability For This Plugin Group</A><BR>\n", AVAIL_CGI, url_encode(servicegroup_name));
 				}
 			printf("</TD></TR>\n");
 			printf("</TABLE>\n");

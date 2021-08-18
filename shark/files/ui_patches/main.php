@@ -173,7 +173,7 @@ $this_year = '2020';
 			</ul>
 		</div>
 		<div id="splashbox1" class="splashbox">
-			<h2>Indicators</h2>
+			<h2>Plugins</h2>
 			<ul>
 				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
 				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
