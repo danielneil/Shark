@@ -24,7 +24,28 @@ $this_year = '2020';
 		var vBoxId = "main";
 		var vboxText = "<a href=https://www.nagios.com/tours target=_blank> " +
 						"Click here to watch the entire Nagios Core 4 Tour!</a>";
+
 	<?php } ?>
+	$(document).ready(function() {
+		var user = "<?php echo htmlspecialchars($_SERVER['REMOTE_USER']); ?>";
+
+		loadRemoteFeed( // Our top banner splash.
+			'#splashbox0-contents', 'corebanner', 1,
+			'', processBannerItem, ''
+		);
+
+		loadRemoteFeed( // "Latest News"
+			'#splashbox4-contents', 'frontpage', 3,
+			'<ul>', processNewsItem, '<li><a href="https://www.nagios.org/news" target="_blank">More news...</a></li></ul>'
+		);
+
+		loadRemoteFeed( // "Don't Miss..."
+			'#splashbox5-contents', 'corepromo', 3,
+			'<ul>', processPromoItem, '</ul>'
+		);
+
+		getCoreStatus();
+	});
 
 	// Fetch an RSS feed and format HTML for the first n items.
 	function loadRemoteFeed(id, name, n, prefix, formatter, suffix) {
@@ -68,6 +89,15 @@ $this_year = '2020';
 			? '<li>' + description + '</li>'
 			: '';
 	}
+
+	// Set our playlist HTML when we know we have Internet access.
+	var playlistInitialized = false;
+	function initializePlaylist() {
+			$('#splashbox3')
+				.addClass('splashbox3-full')
+				.removeClass('splashbox3-empty')
+				.html('<iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=OPm_EDTrz7Y" frameborder="0" allowfullscreen></iframe>');
+		}
 
 
 	// Get the daemon status JSON.
@@ -174,15 +204,6 @@ $this_year = '2020';
 		</div>
 
 		<div id="splashbox3" class="splashbox3-empty">
-			<h2>Quick Links</h2>
-			<ul>
-				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
-				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
-				<li><a href="https://exchange.nagios.org" target="_blank">Nagios Exchange</a> (plugins and addons)</li>
-				<li><a href="https://support.nagios.com" target="_blank">Nagios Support</a> (tech support)</li>
-				<li><a href="https://www.nagios.com" target="_blank">Nagios.com</a> (company)</li>
-				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
-			</ul>
 		</div>
 
 	</div><!-- end splashrow1 -->
