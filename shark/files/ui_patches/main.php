@@ -209,6 +209,7 @@ $this_year = '2020';
 	<div CLASS="disclaimer">
 		Shark is licensed under the GNU General Public License and is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.  
 		<br />
+		<br />
 		Trading Futures, Forex, CFDs, Cryptocurrencies and Stocks involves a risk of loss. Please consider carefully if such trading is appropriate for you. Past performance is not indicative of future results. Information and content in and derived from this application are for entertainment purposes only and do not constitute investment recommendations or advice.
 	</div>
 	<div class="logos">
