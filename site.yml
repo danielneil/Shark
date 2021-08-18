@@ -4,18 +4,6 @@
   gather_facts: yes
   strategy: free
   become: true
-  vars:
-   # ---- Monitoring Web UI credentials
-   shark_webui_auth_user: shark
-   shark_webui_auth_pass: shark
-   
-   instrument_name: "Coins"
-   instrument_group_names: "Coin Groups"
-   
-   # ---- Header/Footer 
-   HEADER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
-   FOOTER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
-   
   roles:
    - server-prep
    - nrpe
