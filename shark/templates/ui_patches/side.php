@@ -35,10 +35,10 @@
 	<div class="navsectiontitle">Securities</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">{{ instrument_name }}</a></li>
+			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">{{ instrument_name_plural }}</a></li>
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?host=all" target="<?php echo $link_target;?>">Plugins</a></li>
 			<li>
-				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">{{ instrument_group_names }}</a>
+				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">{{ instrument_group_name_plural }}</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=summary" target="<?php echo $link_target;?>">Summary</a></li>
 				</ul>
@@ -68,14 +68,14 @@
 		<ul class="navsectionlinks">
 			<li><a href="#">General</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Console</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Console</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Orders</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Summary</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Opened</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Executed</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Summary</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Opened</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Executed</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -87,14 +87,14 @@
 		<ul class="navsectionlinks">
 			<li><a href="#">Strategy</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Code</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Code</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Backtesting</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Summary</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Trades</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Reports</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Summary</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Trades</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Reports</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -107,36 +107,17 @@
 		<ul class="navsectionlinks">
 			<li><a href="#">Securities</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Administration</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
 			<li><a href="#">Trading</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Brokers</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Brokers</a></li>
 				</ul>
 			</li>
 			</li>
 			<li><a href="#">Strategies</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Administration</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</div>	
-	
-<div class="navsection">
-	<div class="navsectiontitle">Server</div>
-	<div class="navsectionlinks">
-		<ul class="navsectionlinks">
-			<li><a href="#">Health</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">System Status</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Logging</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Nagios.log</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public" target="<?php echo $link_target;?>">Syslog</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/soon.php" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
 			</li>
 		</ul>
