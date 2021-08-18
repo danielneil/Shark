@@ -6,6 +6,9 @@
    src: framework
    dest: /var/www/html/
 
+- name: Changing ownership
+  shell: chown -R apache /var/www/html/framework/writable
+
 - name: Install prereq - php-curl 
   package:
    name: php-curl
