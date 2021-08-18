@@ -36,7 +36,7 @@
   - restart-nagios
 
 - name: Copying in custom UI changes - status.c
-  synchronize:
+  template:
    src: ui_patches/status.c
    dest: /tmp/nagios-4.4.6/cgi
   notify: 
