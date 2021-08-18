@@ -213,8 +213,7 @@ int main(void) {
 			printf("<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 CLASS='linkBox'>\n");
 			printf("<TR><TD CLASS='linkBox'>\n");
 			if(display_type == DISPLAY_SERVICE_INFO)
-				printf("<A HREF='%s?type=%d&host=%s'>View Information For This 
-				       </A><br>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(host_name));
+				printf("<A HREF='%s?type=%d&host=%s'>View Information For This {{ instrument_name }}</A><br>\n", EXTINFO_CGI, DISPLAY_HOST_INFO, url_encode(host_name));
 			if(display_type == DISPLAY_SERVICE_INFO || display_type == DISPLAY_HOST_INFO)
 				printf("<A HREF='%s?host=%s'>View Status Detail For This {{ instrument_name }}</A><BR>\n", STATUS_CGI, url_encode(host_name));
 			if(display_type == DISPLAY_HOST_INFO) {
