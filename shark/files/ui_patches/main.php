@@ -149,19 +149,31 @@ $this_year = '2020';
 	<div id='splashrow1'>
 
 		<div id="splashbox1" class="splashbox splashbox-clear">
-			<h2>Get Started</h2>
+			<h2>Summary</h2>
 			<ul>
-				<li><a href="https://go.nagios.com/nagioscore/startmonitoring" target="_blank">Start monitoring your infrastructure</a></li>
-				<li><a href="https://go.nagios.com/nagioscore/changelook" target="_blank">Change the look and feel of Nagios</a></li>
-				<li><a href="https://go.nagios.com/nagioscore/extend" target="_blank">Extend Nagios with hundreds of addons</a></li>
-				<!--<li><a href="https://go.nagios.com/nagioscore/docs" target="_blank">Read the Nagios documentation</a></li>-->
-				<li><a href="https://go.nagios.com/nagioscore/support" target="_blank">Get support</a></li>
-				<li><a href="https://go.nagios.com/nagioscore/training" target="_blank">Get training</a></li>
-				<li><a href="https://go.nagios.com/nagioscore/certification" target="_blank">Get certified</a></li>
+				<li><a href="" target="_blank">Start monitoring your infrastructure</a></li>
+				<li><a href="" target="_blank">Change the look and feel of Nagios</a></li>
+				<li><a href="" target="_blank">Extend Nagios with hundreds of addons</a></li>
+				<!--<li><a href="" target="_blank">Read the Nagios documentation</a></li>-->
+				<li><a href="" target="_blank">Get support</a></li>
+				<li><a href="" target="_blank">Get training</a></li>
+				<li><a href="" target="_blank">Get certified</a></li>
 			</ul>
 		</div>
 
 		<div id="splashbox2" class="splashbox">
+			<h2>Quick Links</h2>
+			<ul>
+				<li><a href="https://library.nagios.com" target="_blank">Tutorials</li>
+				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
+				<li><a href="https://exchange.nagios.org" target="_blank">Nagios Exchange</a> (plugins and addons)</li>
+				<li><a href="https://support.nagios.com" target="_blank">Nagios Support</a> (tech support)</li>
+				<li><a href="https://www.nagios.com" target="_blank">Nagios.com</a> (company)</li>
+				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
+			</ul>
+		</div>
+
+		<div id="splashbox3" class="splashbox3-empty">
 			<h2>Quick Links</h2>
 			<ul>
 				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
@@ -173,23 +185,32 @@ $this_year = '2020';
 			</ul>
 		</div>
 
-		<div id="splashbox3" class="splashbox3-empty"><!-- youtube playlist -->
-		</div>
-
 	</div><!-- end splashrow1 -->
 
 	<div id="splashrow2">
 
 		<div id="splashbox4" class="splashbox splashbox-clear"><!-- latest news feed -->
 			<h2>Latest News</h2>
-			<div id="splashbox4-contents">
-			</div>
+			<ul>
+				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
+				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
+				<li><a href="https://exchange.nagios.org" target="_blank">Nagios Exchange</a> (plugins and addons)</li>
+				<li><a href="https://support.nagios.com" target="_blank">Nagios Support</a> (tech support)</li>
+				<li><a href="https://www.nagios.com" target="_blank">Nagios.com</a> (company)</li>
+				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
+			</ul>
 		</div>
 
 		<div id="splashbox5" class="splashbox"><!-- core promo feed -->
-			<h2>Don't Miss...</h2>
-			<div id="splashbox5-contents">
-			</div>
+			<h2>Quick Links</h2>
+			<ul>
+				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
+				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
+				<li><a href="https://exchange.nagios.org" target="_blank">Nagios Exchange</a> (plugins and addons)</li>
+				<li><a href="https://support.nagios.com" target="_blank">Nagios Support</a> (tech support)</li>
+				<li><a href="https://www.nagios.com" target="_blank">Nagios.com</a> (company)</li>
+				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
+			</ul>
 		</div>
 
 	</div><!-- end splashrow2 -->
