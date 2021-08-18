@@ -319,31 +319,31 @@ int main(void) {
 		printf("<tr><td class='linkBox'>\n");
 
 		if(display_type == DISPLAY_HOSTS) {
-			printf("<a href='%s?host=%s'>View History For %s</a><br>\n", HISTORY_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "all tickers" : "This Stock");
-			printf("<a href='%s?host=%s'>View Notifications For %s</a>\n", NOTIFICATIONS_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "All Stocks" : "This Stock");
+			printf("<a href='%s?host=%s'>View History For %s</a><br>\n", HISTORY_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "all tickers" : "This {{ instrument_name_ }}");
+			printf("<a href='%s?host=%s'>View Notifications For %s</a>\n", NOTIFICATIONS_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "All {{ instrument_name_plural }}" : "This Stock");
 			if(show_all_hosts == FALSE)
-				printf("<br /><a href='%s?host=all'>View Service Status Detail For All Stocks</a>\n", STATUS_CGI);
+				printf("<br /><a href='%s?host=all'>View Service Status Detail For All {{ instrument_name_plural }}</a>\n", STATUS_CGI);
 			else
-				printf("<br /><a href='%s?hostgroup=all&style=hostdetail'>View Stock Status Detail For All Stocks</a>\n", STATUS_CGI);
+				printf("<br /><a href='%s?hostgroup=all&style=hostdetail'>View {{ instrument_name }} Status Detail For All {{ instrument_name_plural }}</a>\n", STATUS_CGI);
 			}
 		else if(display_type == DISPLAY_SERVICEGROUPS) {
 			if(show_all_servicegroups == FALSE) {
 
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=%s&style=detail'>View Indicator Status Detail For This Service Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=detail'>View Plugin Status Detail For This Service Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=%s&style=overview'>View Status Overview For This Indicator Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=overview'>View Status Overview For This Plugin Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_GRID)
-					printf("<a href='%s?servicegroup=%s&style=summary'>View Status Summary For This Indicator Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=summary'>View Status Summary For This Plugin Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=%s&style=grid'>View Service Status Grid For This Indicator Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
+					printf("<a href='%s?servicegroup=%s&style=grid'>View Service Status Grid For This Plugin Group</a><br>\n", STATUS_CGI, url_encode(servicegroup_name));
 
 				if(group_style_type == STYLE_DETAIL)
-					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=detail'>View Service Status Detail For All Plugin Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW)
-					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=overview'>View Status Overview For All Plugin Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Indicator Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?servicegroup=all&style=summary'>View Status Summary For All Plugin Groups</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_GRID)
 					printf("<a href='%s?servicegroup=all&style=grid'>View Service Status Grid For All Indicator Groups</a><br>\n", STATUS_CGI);
 
@@ -364,38 +364,38 @@ int main(void) {
 			if(show_all_hostgroups == FALSE) {
 
 				if(group_style_type == STYLE_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=hostdetail'>View Stock Status Detail For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=hostdetail'>View {{ instrument_name }} Status Detail For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW)
-					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_SUMMARY)
-					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_GRID)
-					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=detail'>View Indicator Status Detail For This Stock Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=detail'>View Indicator Status Detail For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID)
-					printf("<a href='%s?hostgroup=%s&style=hostdetail'>View Indicator Status Detail For This Stock Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=hostdetail'>View Indicator Status Detail For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=overview'>View Status Overview For This Stock Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=overview'>View Status Overview For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=summary'>View Status Summary For This Stock Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=summary'>View Status Summary For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=%s&style=grid'>View Status Grid For This Stock Group</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
+					printf("<a href='%s?hostgroup=%s&style=grid'>View Status Grid For This {{ instrument_group_name }}</a><br>\n", STATUS_CGI, url_encode(hostgroup_name));
 				}
 			else {
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=detail'>View Indicator Status Detail For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID)
-					printf("<a href='%s?hostgroup=all&style=hostdetail'>View Stock Status Detail For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=hostdetail'>View {{ instrument_name }} Status Detail For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=overview'>View Status Overview For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_GRID || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=summary'>View Status Summary For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				if(group_style_type == STYLE_OVERVIEW || group_style_type == STYLE_DETAIL || group_style_type == STYLE_SUMMARY || group_style_type == STYLE_HOST_DETAIL)
-					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All Stock Groups</a><br>\n", STATUS_CGI);
+					printf("<a href='%s?hostgroup=all&style=grid'>View Status Grid For All  {{ instrument_group_name_plural }}</a><br>\n", STATUS_CGI);
 				}
 			}
 
