@@ -8,9 +8,7 @@ Shark is an open source algorithmic trading and back/forward testing platform th
 
 It enables the use of (simultaneous) programmable strategies to identify and execute upon trading opportunities, coupled with a back/forward testing framework. It also has an embedded development environment. 
 
-The example strategy is simple moving averages crossover against several dozen cryptocurrencies. It also demonstrates determing the strength of opportunities using the RSI indicator and a backtest.  
-
-Though this example focuses on cryptocurrencies, it could easily be adjusted to suit any financial market, along with an adapted strategy and backtest.  
+The example strategy is simple moving averages crossover against the Crypto TOP 20, and though the demo focuses on cryptocurrencies, it could easily be adjusted to suit any financial market, along with an adapted strategy and backtest.  
 
 See the example [strategy](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/moving_averages.py), along with the correlating [backtest](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/backtesting/backtest_moving_averages.py), and an example [configuration](https://github.com/danielneil/Shark-Config) to get started.
 
