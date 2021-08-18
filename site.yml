@@ -13,8 +13,8 @@
    instrument_group_names: "Coin Groups"
    
    # ---- Header/Footer 
-   HEADER: '<span class="bold">MARKET:</span> Australian Stock Exchange,<span class="bold">SECURITIES:</span> S&P/ASX 20,<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
-   FOOTER: '<span class="bold">MARKET:</span> Australian Stock Exchange,<span class="bold">SECURITIES:</span> S&P/ASX 20,<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
+   HEADER: '<span class="bold">MARKET:</span> Cryptocurrenciese,<span class="bold">SECURITIES:</span> TOP 20 (by Market Cap),<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
+   FOOTER: '<span class="bold">MARKET:</span> Cryptocurrenciese,<span class="bold">SECURITIES:</span> TOP 20 (by Market Cap),<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
    
   roles:
    - server-prep
