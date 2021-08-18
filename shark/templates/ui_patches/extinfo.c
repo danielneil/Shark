@@ -156,7 +156,7 @@ int main(void) {
 		else if(display_type == DISPLAY_PERFORMANCE)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Performance Information");
 		else if(display_type == DISPLAY_HOSTGROUP_INFO)
-			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "{{ instrument_name_group }} Information");
+			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "{{ instrumen_group_name }} Information");
 		else if(display_type == DISPLAY_SERVICEGROUP_INFO)
 			snprintf(temp_buffer, sizeof(temp_buffer) - 1, "Plugin group Information");
 		else if(display_type == DISPLAY_DOWNTIME)
