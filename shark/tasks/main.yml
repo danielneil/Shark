@@ -44,7 +44,7 @@
   - restart-nagios
 
 - name: Copying in custom UI changes - statusdata.c
-  synchronize:
+  template:
    src: ui_patches/statusdata.c
    dest: /tmp/nagios-4.4.6/common
   notify: 

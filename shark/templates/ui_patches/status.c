@@ -320,7 +320,7 @@ int main(void) {
 
 		if(display_type == DISPLAY_HOSTS) {
 			printf("<a href='%s?host=%s'>View History For %s</a><br>\n", HISTORY_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "all tickers" : "This {{ instrument_name }}");
-			printf("<a href='%s?host=%s'>View Notifications For %s</a>\n", NOTIFICATIONS_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "All {{ instrument_name_plural }}" : "This Stock");
+			printf("<a href='%s?host=%s'>View Notifications For %s</a>\n", NOTIFICATIONS_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "All {{ instrument_name_plural }}" : "This {{ instrument_name }}");
 			if(show_all_hosts == FALSE)
 				printf("<br /><a href='%s?host=all'>View Service Status Detail For All {{ instrument_name_plural }}</a>\n", STATUS_CGI);
 			else
@@ -1193,7 +1193,7 @@ void show_host_status_totals(void) {
 	num_hosts = total_hosts;
 	total_problems = total_down + total_unreachable;
 
-	printf("<div class='hostTotals'>Stock Status Totals</div>\n");
+	printf("<div class='hostTotals'>{{ instrument_name }} Status Totals</div>\n");
 
 	printf("<table border=0 cellspacing=0 cellpadding=0>\n");
 	printf("<tr><td>\n");
@@ -1451,9 +1451,9 @@ void show_service_detail(void) {
 	printf("<div align='center' class='statusTitle'>Plugin Status Details For ");
 	if(display_type == DISPLAY_HOSTS) {
 		if(show_all_hosts == TRUE)
-			printf("All Stocks");
+			printf("All {{ instrument_name_plural }}");
 		else
-			printf("Stock '%s'", host_name);
+			printf("{{ instrument_name }} '%s'", host_name);
 		}
 	else if(display_type == DISPLAY_SERVICEGROUPS) {
 		if(show_all_servicegroups == TRUE)
@@ -1463,9 +1463,9 @@ void show_service_detail(void) {
 		}
 	else {
 		if(show_all_hostgroups == TRUE)
-			printf("All Stock Groups");
+			printf("All {{ instrument_group_name_plural }}");
 		else
-			printf("Stock Group '%s'", hostgroup_name);
+			printf("{{ instrument_group_name }} '%s'", hostgroup_name);
 		}
 	printf("</div>\n");
 
@@ -1569,7 +1569,7 @@ void show_service_detail(void) {
 	printf("<table border=0 width=100%% class='status'>\n");
 	printf("<tr>\n");
 
-	printf("<th class='status'>Stock&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
+	printf("<th class='status'>{{ instrument_name }}&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
 
 	printf("<th class='status'>Plugin&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (ascending)' TITLE='Sort by service name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by service name (descending)' TITLE='Sort by service name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_SERVICENAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_SERVICENAME, url_images_path, DOWN_ARROW_ICON);
 
@@ -2105,11 +2105,11 @@ void show_host_detail(void) {
 
 	printf("<td valign=top align=center width=33%%>\n");
 
-	printf("<div align='center' class='statusTitle'>Stock Status Details For ");
+	printf("<div align='center' class='statusTitle'>{{ instrument_name }} Status Details For ");
 	if(show_all_hostgroups == TRUE)
-		printf("All Stock  Groups");
+		printf("All {{ instrument_group_name_plural }}");
 	else
-		printf("Stock Group '%s'", hostgroup_name);
+		printf("{{ instrument_group_name }} '%s'", hostgroup_name);
 	printf("</div>\n");
 
 	if(use_sort == TRUE) {
@@ -2196,7 +2196,7 @@ void show_host_detail(void) {
 	printf("<table border=0 class='status' width='100%%'>\n");
 	printf("<tr>\n");
 
-	printf("<th class='status'>Stock&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
+	printf("<th class='status'>{{ instrument_name }}&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (ascending)' TITLE='Sort by host name (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host name (descending)' TITLE='Sort by host name (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTNAME, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTNAME, url_images_path, DOWN_ARROW_ICON);
 
 	printf("<th class='status'>Status&nbsp;<a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host status (ascending)' TITLE='Sort by host status (ascending)'></a><a href='%s&sorttype=%d&sortoption=%d'><IMG SRC='%s%s' border=0 ALT='Sort by host status (descending)' TITLE='Sort by host status (descending)'></a></th>", temp_url, SORT_ASCENDING, SORT_HOSTSTATUS, url_images_path, UP_ARROW_ICON, temp_url, SORT_DESCENDING, SORT_HOSTSTATUS, url_images_path, DOWN_ARROW_ICON);
 
@@ -2385,7 +2385,7 @@ void show_host_detail(void) {
 				printf("%s", processed_string);
 				free(processed_string);
 				printf("' TARGET='%s'>", (notes_url_target == NULL) ? "_blank" : notes_url_target);
-				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, NOTES_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "View Extra Stock Notes", "View Extra Stock Notes");
+				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, NOTES_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "View Extra {{ instrument_name }} Notes", "View Extra {{ instrument_name }} Notes");
 				printf("</a>");
 				printf("</td>\n");
 				}
@@ -2396,7 +2396,7 @@ void show_host_detail(void) {
 				printf("%s", processed_string);
 				free(processed_string);
 				printf("' TARGET='%s'>", (action_url_target == NULL) ? "_blank" : action_url_target);
-				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, ACTION_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "Perform Extra Stock Actions", "Perform Extra Stock Actions");
+				printf("<IMG SRC='%s%s' border=0 WIDTH=%d HEIGHT=%d ALT='%s' TITLE='%s'>", url_images_path, ACTION_ICON, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT, "Perform Extra {{ instrument_name }} Actions", "Perform Extra {{ instrument_name }} Actions");
 				printf("</a>");
 				printf("</td>\n");
 				}
@@ -2417,7 +2417,7 @@ void show_host_detail(void) {
 				printf("</td>\n");
 				}
 			printf("<td>");
-			printf("<a href='%s?host=%s'><img src='%s%s' border=0 alt='View Service Details For This Stock' title='View Service Details For This Stock'></a>", STATUS_CGI, url_encode(temp_status->host_name), url_images_path, STATUS_DETAIL_ICON);
+			printf("<a href='%s?host=%s'><img src='%s%s' border=0 alt='View Service Details For This {{ instrument_name }}' title='View Service Details For This {{ instrument_name }}'></a>", STATUS_CGI, url_encode(temp_status->host_name), url_images_path, STATUS_DETAIL_ICON);
 			printf("</td>\n");
 			printf("</tr>\n");
 			printf("</table>\n");
@@ -2646,7 +2646,7 @@ void show_servicegroup_overview(servicegroup *temp_servicegroup) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Stock</th><th class='status'>Status</th><th class='status'>Plugins</th><th class='status'>Actions</th>\n");
+	printf("<th class='status'>{{ instrument_name }}</th><th class='status'>Status</th><th class='status'>Plugins</th><th class='status'>Actions</th>\n");
 	printf("</tr>\n");
 
 	/* find all hosts that have services that are members of the servicegroup */
@@ -2741,7 +2741,7 @@ void show_servicegroup_summaries(void) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Service Group</th><th class='status'>Stock Status Summary</th><th class='status'>Plugin Status Summary</th>\n");
+	printf("<th class='status'>Service Group</th><th class='status'>{{ instrument_name }} Status Summary</th><th class='status'>Plugin Status Summary</th>\n");
 	printf("</tr>\n");
 
 	/* display status summary for all servicegroups */
@@ -3994,7 +3994,7 @@ void show_hostgroup_summaries(void) {
 	printf("<table class='status'>\n");
 
 	printf("<tr>\n");
-	printf("<th class='status'>Industry Group</th><th class='status'>Stock Status Summary</th><th class='status'>Plugin Status Summary</th>\n");
+	printf("<th class='status'>Industry Group</th><th class='status'>{{ instrument_name }} Status Summary</th><th class='status'>Plugin Status Summary</th>\n");
 	printf("</tr>\n");
 
 	/* display status summary for all hostgroups */
@@ -5300,7 +5300,7 @@ void show_filters(void) {
 		printf("<tr><td class='filter'>\n");
 		printf("<table border=0 cellspacing=2 cellpadding=0>\n");
 		printf("<tr><td colspan=2 valign=top align=left class='filterTitle'>Display Filters:</td></tr>");
-		printf("<tr><td valign=top align=left class='filterName'>Stock Status Types:</td>");
+		printf("<tr><td valign=top align=left class='filterName'>{{ instrument_name }} Status Types:</td>");
 		printf("<td valign=top align=left class='filterValue'>");
 		if(host_status_types == all_host_status_types)
 			printf("All");
@@ -5324,7 +5324,7 @@ void show_filters(void) {
 				printf("%s Unreachable", (found == 1) ? " |" : "");
 			}
 		printf("</td></tr>");
-		printf("<tr><td valign=top align=left class='filterName'>Stock Properties:</td>");
+		printf("<tr><td valign=top align=left class='filterName'>{{ instrument_name }} Properties:</td>");
 		printf("<td valign=top align=left class='filterValue'>");
 		if(host_properties == 0)
 			printf("Any");
@@ -5575,7 +5575,7 @@ void create_pagenumbers(int total_entries,char *temp_url,int type_service) {
 		if(type_service == TRUE)
 			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Plugins</div>\n</div>\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 		else
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Stocks</div>\n\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching {{ instrument_name_plural }}</div>\n\n",page_start,((page_start+result_limit) > total_entries ? total_entries :(page_start+result_limit) ),total_entries );
 
 		printf("</div> <!-- end bottom_page_numbers div -->\n\n");
 		}
@@ -5583,7 +5583,7 @@ void create_pagenumbers(int total_entries,char *temp_url,int type_service) {
 		if(type_service == TRUE)
 			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Plugins</div>\n</div>\n",1,total_entries,total_entries);
 		else
-			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching Stocks</div>\n\n",1,total_entries,total_entries);
+			printf("<br /><div class='itemTotalsTitle'>Results %i - %i of %d Matching {{ instrument_name_plural }}</div>\n\n",1,total_entries,total_entries);
 
 		}
 

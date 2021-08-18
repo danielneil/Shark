@@ -284,17 +284,17 @@ int add_host_status(hoststatus *new_hoststatus) {
 			my_free(new_hoststatus->plugin_output);
 			if(new_hoststatus->should_be_scheduled == TRUE) {
 				get_time_string(&new_hoststatus->next_check, date_string, sizeof(date_string), LONG_DATE_TIME);
-				asprintf(&new_hoststatus->plugin_output, "Stock check scheduled for %s", date_string);
+				asprintf(&new_hoststatus->plugin_output, "{{ instrument_name }} check scheduled for %s", date_string);
 				}
 			else {
 				/* passive-only hosts that have just been scheduled for a forced check */
 				if(new_hoststatus->checks_enabled == FALSE && new_hoststatus->next_check != (time_t)0L && (new_hoststatus->check_options & CHECK_OPTION_FORCE_EXECUTION)) {
 					get_time_string(&new_hoststatus->next_check, date_string, sizeof(date_string), LONG_DATE_TIME);
-					asprintf(&new_hoststatus->plugin_output, "Forced host check scheduled for %s", date_string);
+					asprintf(&new_hoststatus->plugin_output, "Forced {{ instrument_name }} check scheduled for %s", date_string);
 					}
 				/* passive-only hosts not scheduled to be checked */
 				else
-					new_hoststatus->plugin_output = (char *)strdup("Stock is not scheduled to be checked...");
+					new_hoststatus->plugin_output = (char *)strdup("{{ instrument_name }} is not scheduled to be checked...");
 				}
 			}
 		}
