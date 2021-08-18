@@ -9,6 +9,9 @@
    shark_webui_auth_user: shark
    shark_webui_auth_pass: shark
    
+   instrument_name: "Coins"
+   instrument_group_names: "Coin Groups"
+   
    # ---- Header/Footer 
    HEADER: '<span class="bold">MARKET:</span> Australian Stock Exchange,<span class="bold">SECURITIES:</span> S&P/ASX 20,<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
    FOOTER: '<span class="bold">MARKET:</span> Australian Stock Exchange,<span class="bold">SECURITIES:</span> S&P/ASX 20,<span class="bold">STRATEGY:</span> Moving Averages - (BUY: SMA10 > SMA50)'
