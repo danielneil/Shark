@@ -8,11 +8,31 @@
   package:
    name: httpd-devel.x86_64
    
+- name: Installing epel-release
+  package:
+   name: epel-release
+   state: latest
+   
+- name: Installation of REMI
+  shell: dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
+- name: Config of REMI
+  shell: dnf module reset php -y && sudo dnf module enable php:remi-8.0 -y
+   
 - name: Installing php deps
   package:
-   name: "{{ item }}"
-  with_items: 
-   - php
+   name: php
+   state: latest
+   
+- name: Installing php-cli deps
+  package:
+   name: php-cli
+   state: latest
+
+- name: Installing php-common deps
+  package:
+   name: php-common
+   state: latest
 
 - name: Removing default landing page
   file:
