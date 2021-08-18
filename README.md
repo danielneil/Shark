@@ -10,7 +10,7 @@ It enables the use of (simultaneous) programmable strategies to identify and exe
 
 The example backtest is simple moving averages crossover against the Crypto TOP 20, and though the demo focuses on cryptocurrencies, it could easily be adjusted to suit any financial market, along with an adapted strategy and backtest.  
 
-See the example [backtest](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/backtesting/backtest_moving_averages.py), and an example [configuration](https://github.com/danielneil/Shark-Config) to get started.
+See the example [backtest](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/backtesting/backtest_moving_averages.py), and [configuration](https://github.com/danielneil/Shark-Config) to get started.
 
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
@@ -53,12 +53,12 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 <table>
  <tr>
-   <td style="font-weight: bold">Ticker List</td>
+   <td style="font-weight: bold">Instrument List</td>
   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true">
-  <td style='font-weight: bold'>Sorting by Industry Groups
+  <td style='font-weight: bold'>Sorting by Instrument Groups
   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true" />
   <tr>
-   <td style='font-weight: bold'>Sorting by Indicator Groups
+   <td style='font-weight: bold'>Sorting by Plugin Groups
    <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true" />
    <td style='font-weight: bold'>Opportunity Detection
    <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true"/>
