@@ -52,7 +52,7 @@
   - restart-nagios
 
 - name: Copying in custom UI changes - extinfo.c
-  synchronize:
+  template:
    src: ui_patches/extinfo.c
    dest: /tmp/nagios-4.4.6/cgi
   notify:
