@@ -319,7 +319,7 @@ int main(void) {
 		printf("<tr><td class='linkBox'>\n");
 
 		if(display_type == DISPLAY_HOSTS) {
-			printf("<a href='%s?host=%s'>View History For %s</a><br>\n", HISTORY_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "all tickers" : "This {{ instrument_name_ }}");
+			printf("<a href='%s?host=%s'>View History For %s</a><br>\n", HISTORY_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "all tickers" : "This {{ instrument_name }}");
 			printf("<a href='%s?host=%s'>View Notifications For %s</a>\n", NOTIFICATIONS_CGI, (show_all_hosts == TRUE) ? "all" : url_encode(host_name), (show_all_hosts == TRUE) ? "All {{ instrument_name_plural }}" : "This Stock");
 			if(show_all_hosts == FALSE)
 				printf("<br /><a href='%s?host=all'>View Service Status Detail For All {{ instrument_name_plural }}</a>\n", STATUS_CGI);
