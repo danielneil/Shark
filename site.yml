@@ -20,6 +20,9 @@
    HEADER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
    FOOTER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
 
+
+   # ---- DISCLAIMER
+   DICLAIMER: "Trading Futures, Forex, CFDs, Cryptocurrencies and Stocks involves a risk of loss. Please consider carefully if such trading is appropriate for you. Past performance is not indicative of future results. Information and content in and derived from this application are for entertainment purposes only and do not constitute investment recommendations or advice."
   roles:
    - server-prep
    - nrpe
