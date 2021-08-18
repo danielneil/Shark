@@ -1,8 +1,6 @@
 <?php
 	include_once(dirname(__FILE__).'/includes/utils.inc.php');
-
 	$this_version = '4.4.6';
-
 	$link_target = 'main';
 ?>
 
@@ -32,15 +30,15 @@
 		</ul>
 	</div>
 </div>
-
+	
 <div class="navsection">
 	<div class="navsectiontitle">Securities</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">Instruments</a></li>
+			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">{{ instrument_name }}</a></li>
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?host=all" target="<?php echo $link_target;?>">Indicators</a></li>
 			<li>
-				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">Instrument Groups</a>
+				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">{{ instrument_group_names }}</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=summary" target="<?php echo $link_target;?>">Summary</a></li>
 				</ul>
