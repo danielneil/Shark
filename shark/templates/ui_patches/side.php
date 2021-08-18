@@ -35,10 +35,10 @@
 	<div class="navsectiontitle">Securities</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">{{ instrument_name }}</a></li>
+			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">{{ instrument_name_plural }}</a></li>
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?host=all" target="<?php echo $link_target;?>">Plugins</a></li>
 			<li>
-				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">{{ instrument_group_names }}</a>
+				<a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=overview" target="<?php echo $link_target;?>">{{ instrument_group_name_plural }}</a>
 				<ul>
 					<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=summary" target="<?php echo $link_target;?>">Summary</a></li>
 				</ul>
