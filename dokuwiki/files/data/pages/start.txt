@@ -1,9 +1,0 @@
-====== Development ======
-
-=== Strategy Code ===
-
-[[Strategy|moving_averages.py]]
-
-=== Backtest Code ===
-
-[[Backtest|backtest_moving_averages.py]]
