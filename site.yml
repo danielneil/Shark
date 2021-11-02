@@ -24,6 +24,7 @@
    - server-prep
    - nrpe
    - httpd
+   - git-server
    - codeigniter
    - base-from-source
    - shark
