@@ -20,12 +20,10 @@
    HEADER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
    FOOTER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
 
-
   roles:
    - server-prep
    - nrpe
    - httpd
    - codeigniter
-   - dokuwiki
    - base-from-source
    - shark
