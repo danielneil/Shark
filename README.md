@@ -10,7 +10,7 @@ It enables the use of (simultaneous) programmable algorithms to identify and exe
 
 The example configuration demostrates a simple moving averages crossover against the Crypto TOP 20, and though the demo focuses on cryptocurrencies, it could easily be adjusted to suit any financial market.  
 
-See the example [backtest](https://github.com/danielneil/Shark/blob/main/shark/files/strategies/backtesting/backtest_moving_averages.py), and [configuration](https://github.com/danielneil/Shark-Config) to get started.
+See the example [configuration](https://github.com/danielneil/Shark-Config) to get started.
 
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
