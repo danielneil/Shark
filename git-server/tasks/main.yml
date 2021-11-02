@@ -5,3 +5,14 @@
   package:
    name: gitweb.noarch
    state: latest
+
+- name: Copying config file
+  copy:
+   src: gitweb.conf
+   dest: /etc/
+  
+- name: Copying gitweb-httpd.conf file
+  copy:
+   src: gitweb-httpd.conf
+   dest: /etc/httpd/conf.d/
+  notify: restart-httpd
