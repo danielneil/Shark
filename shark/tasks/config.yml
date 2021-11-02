@@ -2,6 +2,3 @@
   git:
     repo: 'https://github.com/danielneil/Shark-Config.git'
     dest: /shark/Shark-Config
-    
-- name: Pushing default config
-  shell: /shark/Shark-Config/push.sh
