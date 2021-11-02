@@ -17,8 +17,8 @@
    instrument_group_name_plural: "Coin Groups"
 
    # ---- Header/Footer 
-   HEADER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
-   FOOTER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20 (by Market Cap), <span class="bold">BACKTEST:</span> Moving Averages - (BUY: SMA10 > SMA50)'
+   HEADER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20, <span class="bold">BACKTEST:</span> Moving Averages Crossover'
+   FOOTER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20, <span class="bold">BACKTEST:</span> Moving Averages Crossover'
 
   roles:
    - server-prep
