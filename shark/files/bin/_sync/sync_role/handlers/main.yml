@@ -1,0 +1,6 @@
+---
+# handlers file for sync_role
+- name: restart-nagios
+  service:
+   name: nagios
+   state: restarted
