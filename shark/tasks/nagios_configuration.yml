@@ -23,14 +23,11 @@
    owner: nagios
    group: nagios
 
-- name: Copying the platform plugins 
-  copy:
-   src: plugins
-   dest: /shark/
-   owner: nagios
-   group: nagios
-   mode: 0755
-
+- name: Checking out the shark plugins from the github repo
+  git:
+    repo: https://github.com/danielneil/Shark-Plugins.git
+    dest: /shark/
+   
 - name: Adding our custom nagios commands file
   copy:
    src: commands.cfg
