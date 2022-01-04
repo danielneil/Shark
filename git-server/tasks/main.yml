@@ -17,5 +17,5 @@
    dest: /etc/httpd/conf.d/
   notify: restart-httpd
 
-- name: Running semanage fcontext/var/www/git
-  shell: sudo semanage fcontext -m -t httpd_sys_rw_content_t "/var/www/git(/.*)?"
+- name: Running semanage fcontext and restorecon on /var/www/git 
+  shell: sudo semanage fcontext -m -t httpd_sys_rw_content_t "/var/www/git(/.*)?" && restorecon -Rv /var/www/git
