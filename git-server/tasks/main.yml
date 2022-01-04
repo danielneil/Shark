@@ -9,7 +9,7 @@
 - name: Creating the template host file containing Shark's ip address.
   copy: 
    content: "shark {{ ansible_default_ipv4.address }}"
-   dest: "/var/www/git/bin"
+   dest: "/var/www/git/bin/hosts"
    mode: 0644
   
 - name: Reloading config
