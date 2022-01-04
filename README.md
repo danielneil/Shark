@@ -49,7 +49,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 </details>
 
 
-## Screenshots (S&P/ASX 20)
+## Screenshots (Crypto TOP 20)
 
 <table>
  <tr>
