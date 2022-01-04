@@ -1,6 +1,4 @@
 ---
-- include: config.yml
-
 - name: Installing pyyaml for the above
   package:
    name: python3-pyyaml.x86_64
