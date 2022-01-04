@@ -14,7 +14,7 @@ See the example [configuration](https://github.com/danielneil/Shark-Config) to g
 
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
-# Instructions 
+## Instructions 
 
 <details>
 <summary>System Requirements</summary>
@@ -49,7 +49,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 </details>
 
 
-# Screenshots (S&P/ASX 20)
+## Screenshots (S&P/ASX 20)
 
 <table>
  <tr>
@@ -69,6 +69,6 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
     <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy-performance.JPG?raw=true"/>
 </table>
 
-# Contributing 
+## Contributing 
 
 Visit us on [Reddit](https://www.reddit.com/r/shark)!
