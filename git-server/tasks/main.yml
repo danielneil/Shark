@@ -9,9 +9,14 @@
 - name: Creating the template host file containing Shark's ip address.
   copy: 
    content: "[shark_server]\n{{ ansible_default_ipv4.address }}"
-   dest: "/var/www/git/bin/hosts"
+   dest: "/var/www/shark-git/Shark-Config/bin/hosts"
    mode: 0644
-  
+
+- name: Cloning the default Shark plugins repo
+  git:
+   repo: 'https://github.com/danielneil/Shark-Plugins.git'
+   dest: /var/www/shark-git/Shark-Plugins
+
 - name: Converting yml into nagios configuration.
   shell: /var/www/git/bin/config/files/convert_configuration.py > /usr/local/nagios/etc/conf.d/shark.cfg
   
