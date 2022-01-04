@@ -1,6 +1,11 @@
 ---
 # tasks file for git-server
 
+- name: Cloning the default config git repo
+  git:
+    repo: 'https://github.com/danielneil/Shark-Config.git'
+    dest: /var/www/git
+
 - name: Installing gitweb.noarch
   package:
    name: gitweb.noarch
