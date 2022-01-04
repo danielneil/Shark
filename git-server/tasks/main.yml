@@ -3,9 +3,18 @@
 
 - name: Cloning the default config git repo
   git:
-    repo: 'https://github.com/danielneil/Shark-Config.git'
-    dest: /var/www/git
-
+   repo: 'https://github.com/danielneil/Shark-Config.git'
+   dest: /var/www/git
+    
+- name: Creating the template host file containing Shark's ip address.
+  copy: 
+   content: "{{ hostvars[shark_server]['ansible_default_ipv4']['address'] }}"
+   dest: "/var/www/git/bin"
+   mode: 0644
+  
+- name: Reloading config
+  shell: cd /var/www/git/bin && ./reload-config.sh
+  
 - name: Installing gitweb.noarch
   package:
    name: gitweb.noarch
