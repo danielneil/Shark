@@ -8,7 +8,7 @@
     
 - name: Creating the template host file containing Shark's ip address.
   copy: 
-   content: "{{ hostvars[shark_server]['ansible_default_ipv4']['address'] }}"
+   content: "{{ hostvars['shark_server']['ansible_default_ipv4']['address'] }}"
    dest: "/var/www/git/bin"
    mode: 0644
   
