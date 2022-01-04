@@ -21,8 +21,3 @@
   service: 
    name: httpd
    state: restarted
-
-- name: Restart / Start nagios
-  service:
-   name: nagios
-   state: restarted
