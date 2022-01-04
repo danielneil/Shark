@@ -1,7 +1,0 @@
----
-
-- name: Copying our template short data file
-  copy:
-    src: ticker-data/shortsell.txt
-    dest: /shark/ticker-data
-    mode: 0755
