@@ -1,1 +1,61 @@
 
+- name: Copying in custom UI changes - side.php
+  template:
+   src: ui_patches/side.php
+   dest: /tmp/nagios-4.4.6/html
+
+- name: Copying custom logo
+  synchronize:
+   src: ui_patches/sblogo.png
+   dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/sblogo.png
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
+- name: Copying main logo
+  synchronize:
+   src: ui_patches/logofullsize.png
+   dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
+- name: Copying left hand header UI code
+  synchronize:
+   src: ui_patches/cgiutils.c
+   dest: /tmp/nagios-4.4.6/cgi
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
+- name: Copying in custom UI changes - status.c
+  template:
+   src: ui_patches/status.c
+   dest: /tmp/nagios-4.4.6/cgi
+  notify: 
+  - rebuild-nagios
+  - restart-nagios
+
+- name: Copying in custom UI changes - statusdata.c
+  template:
+   src: ui_patches/statusdata.c
+   dest: /tmp/nagios-4.4.6/common
+  notify: 
+  - rebuild-nagios
+  - restart-nagios
+
+- name: Copying in custom UI changes - extinfo.c
+  template:
+   src: ui_patches/extinfo.c
+   dest: /tmp/nagios-4.4.6/cgi
+  notify:
+  - rebuild-nagios
+  - restart-nagios
+
+- name: Copying in custom UI changes - extinfo.c
+  synchronize:
+   src: ui_patches/main.php
+   dest: /tmp/nagios-4.4.6/html
+  notify:
+  - rebuild-nagios
+  - restart-nagios
