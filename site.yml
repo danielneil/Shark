@@ -26,5 +26,5 @@
    - httpd
    - codeigniter
    - base-from-source
-   - git-server
    - shark
+   - git-server
