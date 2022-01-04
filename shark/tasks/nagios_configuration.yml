@@ -23,6 +23,13 @@
    owner: nagios
    group: nagios
 
+- name: Copying our custom nagios configuration
+  template: 
+   src: shark_definitions.cfg
+   dest: /usr/local/nagios/etc/conf.d
+   owner: nagios
+   group: nagios
+
 - name: Checking out the Shark plugins from the github repo
   git:
     repo: https://github.com/danielneil/Shark-Plugins.git
