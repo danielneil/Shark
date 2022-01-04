@@ -49,25 +49,9 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 </details>
 
 
-## Screenshots (Crypto TOP 20)
+## Screenshot
 
-<table>
- <tr>
-   <td style="font-weight: bold">Instrument List</td>
-  <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/screenshot.JPG?raw=true">
-  <td style='font-weight: bold'>Sorting by Instrument Groups
-  <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/industry-groups-view.JPG?raw=true" />
-  <tr>
-   <td style='font-weight: bold'>Sorting by Plugin Groups
-   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/indicator-groups.JPG?raw=true" />
-   <td style='font-weight: bold'>Opportunity Detection
-   <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy.JPG?raw=true"/>
-   <tr>
-    <td>Integrated Backtesting
-    <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/backtest.JPG?raw=true" />
-    <td>Historic Strategy Performance (Backtest) 
-    <td> <img width="300" src="https://github.com/danielneil/Shark/blob/main/screenshots/strategy-performance.JPG?raw=true"/>
-</table>
+
 
 ## Contributing 
 
