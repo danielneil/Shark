@@ -1,8 +1,0 @@
----
-- name: Deploying shark configuration
-  hosts: shark_server
-  become: true
-  vars:
-   
-  roles:
-   - sync_role
