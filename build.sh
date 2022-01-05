@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -x
 
 if ! `which figlet 2> /dev/null` ; then
   dnf install figlet -y > /dev/null
