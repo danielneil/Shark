@@ -15,4 +15,4 @@ ansible-playbook /var/www/shark-git/Shark-Plugins/site.yml -i hosts
 /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
 
 # Startin httpd and nagios.
-systemctl start httpd && systemctl start nagios
+systemctl restart httpd && systemctl restart nagios
