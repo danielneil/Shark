@@ -1,5 +1,10 @@
 #/usr/bin/bash
 
+if ! $(which figlet) ; then
+  dnf install figlet -y > /dev/null
+fi
+/usr/bin/figlet Shark
+
 # Installing Shark.
 ansible-playbook ./site.yml -i hosts --ssh-extra-args='-o ServerAliveInterval=3600'
 
