@@ -32,7 +32,7 @@
 </div>
 	
 <div class="navsection">
-	<div class="navsectiontitle">Securities</div>
+	<div class="navsectiontitle">Instruments</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="<?php echo $cfg["cgi_base_url"];?>/status.cgi?hostgroup=all&amp;style=hostdetail" target="<?php echo $link_target;?>">{{ instrument_name_plural }}</a></li>
@@ -54,7 +54,7 @@
 	<div class="navbarsearch">
 		<form method="get" action="<?php echo $cfg["cgi_base_url"];?>/status.cgi" target="<?php echo $link_target;?>">
 			<fieldset>
-				<legend>Instrument Search:</legend>
+				<legend>Ticker Search:</legend>
 				<input type='hidden' name='navbarsearch' value='1'>
 				<input type='text' name='host' size='15' class="NavBarSearchItem">
 			</fieldset>
@@ -80,38 +80,6 @@
 			</li>
 		</ul>
 	</div>
-</div>		
-<div class="navsection">
-	<div class="navsectiontitle">Strategies</div>
-	<div class="navsectionlinks">
-		<ul class="navsectionlinks">
-			<li><a href="#">Strategy</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Code</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Backtesting</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Summary</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Correlation Matrix</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</div>		
-	
-<div class="navsection">
-	<div class="navsectiontitle">Configuration</div>
-	<div class="navsectionlinks">
-		<ul class="navsectionlinks">
-			<li><a href="#">Trading</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Brokers</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</div>	
-	
+</div>			
 </body>
 </html>
