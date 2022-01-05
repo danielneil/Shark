@@ -35,3 +35,15 @@
    src: gitweb-httpd.conf
    dest: /etc/httpd/conf.d/
   notify: restart-httpd
+  
+- name: Starting HTTPD
+  service:
+   name: httpd
+   state: started
+   enabled: true
+   
+- name: Starting nagios
+  service:
+   name: nagios
+   state: started
+   enabled: true
