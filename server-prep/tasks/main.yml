@@ -4,6 +4,9 @@
 - name: Setting system timezone.
   timezone:
    name: "Australia/Sydney"
+   
+- name: Switching off selinx (until the 8 bug is sorted)
+  shell: setenforce 0
 
 - name: Installing rsync
   package:
