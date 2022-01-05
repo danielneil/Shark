@@ -2,15 +2,10 @@
 - name: Setting credentials for web UI
   shell: htpasswd -b -c /usr/local/nagios/etc/htpasswd.users {{ shark_webui_auth_user }} {{ shark_webui_auth_pass }}
 
-- name: Remove file (delete /usr/local/nagios/cgi.cfg)
-  file:
-   path:  /usr/local/nagios/cgi.cfg
-   state: absent
-
 - name: Copying our custom cgi.cfg file which enables the above user with access
   template:
     src: cgi.cfg
-    dest: /usr/local/nagios/etc/
+    dest: /usr/local/nagios/etc/cgi.cfg.bak
     owner: nagios
     group: nagios
 
