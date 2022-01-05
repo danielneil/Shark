@@ -7,7 +7,7 @@
    dest: /var/www/git
 
 - name: Converting yml into nagios configuration.
-  shell: /var/www/shark-git/Shark-Config/bin/config/files/convert_configuration.py > /usr/local/nagios/etc/conf.d/shark.cfg
+  shell: /var/www/git/bin/config/files/convert_configuration.py > /usr/local/nagios/etc/conf.d/shark.cfg
 
 - name: Creating the template host file containing Shark's ip address.
   copy: 
