@@ -51,7 +51,9 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ## Screenshot
 
-
+<p align="center">
+  <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
+</p>
 
 ## Contributing 
 
