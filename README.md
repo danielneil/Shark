@@ -12,8 +12,6 @@ The example configuration demostrates a simple moving averages crossover against
 
 See the example [configuration](https://github.com/danielneil/Shark-Config) to get started.
 
-See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
-
 ## Instructions 
 
 <details>
