@@ -53,6 +53,10 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
 </p>
 
+## Install video
+
+[![asciicast](https://asciinema.org/a/460006.svg)](https://asciinema.org/a/460006)
+
 ## Contributing 
 
 Visit us on [Reddit](https://www.reddit.com/r/shark)!
