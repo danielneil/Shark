@@ -44,12 +44,10 @@ See the example [configuration](https://github.com/danielneil/Shark-Config) to g
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 ```
 6. Navigate to http://shark-server/nagios (web credentials are shark/shark).
-
-  
 </details>
 
 
-## Screenshot
+## Screenshot - Crypto TOP 20
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
