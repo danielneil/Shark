@@ -1,8 +1,8 @@
 ---
 # tasks file for base-from-source
 
-- name: Including build essentials
-  include: build_essentials.yml
+- name: Install build essentials
+  shell: dnf groupinstall 'Development Tools' -y
 
 - name: Unpacking zip file into temp
   unarchive:
