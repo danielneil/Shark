@@ -1,6 +1,6 @@
 #/usr/bin/bash
 
-if !`which figlet` ; then
+if !`which figlet > /dev/null` ; then
   dnf install figlet -y > /dev/null
 fi
 /usr/bin/figlet Shark
