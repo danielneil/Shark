@@ -8,7 +8,6 @@ if ! `which jp2a 2> /dev/null` ; then
  dnf -y install https://tchung.org/jp2a/files/jp2a-1.0.8-1.el8.x86_64.rpm >> /dev/null
 fi
 
-
 /usr/bin/figlet Shark
 printf "The Algorithmic Trading Platform..."
 printf "\nAuthor: danielneil"
@@ -24,3 +23,6 @@ printf "\n\nStarting httpd and nagios..."
 systemctl restart httpd && systemctl restart nagios
 
 printf "\n\nVerifying Shark config..."
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+/usr/bin/figlet Finished.
