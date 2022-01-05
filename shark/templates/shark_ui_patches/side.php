@@ -93,8 +93,7 @@
 			<li><a href="#">Backtesting</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Summary</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Trades</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Reports</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Correlation Matrix</a></li>
 				</ul>
 			</li>
 		</ul>
