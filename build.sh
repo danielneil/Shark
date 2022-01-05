@@ -4,7 +4,7 @@ if ! `which figlet > /dev/null` ; then
   dnf install figlet -y > /dev/null
 fi
 /usr/bin/figlet Shark
-echo "Automated Trading Platform"
+echo " Automated Trading Platform"
 
 # Installing Shark.
 ansible-playbook ./site.yml -i hosts --ssh-extra-args='-o ServerAliveInterval=3600'
