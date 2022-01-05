@@ -10,7 +10,6 @@
    dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/sblogo.png
   notify:
   - rebuild-nagios
-  - restart-nagios
 
 - name: Copying main logo
   synchronize:
@@ -18,7 +17,6 @@
    dest: /tmp/nagios-4.4.6/contrib/exfoliation/images/
   notify:
   - rebuild-nagios
-  - restart-nagios
 
 - name: Copying left hand header UI code
   synchronize:
@@ -26,7 +24,6 @@
    dest: /tmp/nagios-4.4.6/cgi
   notify:
   - rebuild-nagios
-  - restart-nagios
 
 - name: Copying in custom UI changes - status.c
   template:
@@ -34,7 +31,6 @@
    dest: /tmp/nagios-4.4.6/cgi
   notify: 
   - rebuild-nagios
-  - restart-nagios
 
 - name: Copying in custom UI changes - statusdata.c
   template:
@@ -42,7 +38,6 @@
    dest: /tmp/nagios-4.4.6/common
   notify: 
   - rebuild-nagios
-  - restart-nagios
 
 - name: Copying in custom UI changes - extinfo.c
   template:
@@ -50,7 +45,6 @@
    dest: /tmp/nagios-4.4.6/cgi
   notify:
   - rebuild-nagios
-  - restart-nagios
 
 - name: Copying in custom UI changes - extinfo.c
   synchronize:
@@ -58,4 +52,3 @@
    dest: /tmp/nagios-4.4.6/html
   notify:
   - rebuild-nagios
-  - restart-nagios
