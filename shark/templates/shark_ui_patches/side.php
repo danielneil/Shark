@@ -54,7 +54,7 @@
 	<div class="navbarsearch">
 		<form method="get" action="<?php echo $cfg["cgi_base_url"];?>/status.cgi" target="<?php echo $link_target;?>">
 			<fieldset>
-				<legend>Security Search:</legend>
+				<legend>Instrument Search:</legend>
 				<input type='hidden' name='navbarsearch' value='1'>
 				<input type='text' name='host' size='15' class="NavBarSearchItem">
 			</fieldset>
@@ -105,19 +105,9 @@
 	<div class="navsectiontitle">Configuration</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="#">Securities</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Administration</a></li>
-				</ul>
 			<li><a href="#">Trading</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Brokers</a></li>
-				</ul>
-			</li>
-			</li>
-			<li><a href="#">Strategies</a>
-				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Administration</a></li>
 				</ul>
 			</li>
 		</ul>
