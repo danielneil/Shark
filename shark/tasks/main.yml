@@ -7,3 +7,5 @@
 - include: nagios_configuration.yml
 
 - include: custom_cgi_footers.yml
+
+- include: historical_data_store.yml
