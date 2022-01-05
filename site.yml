@@ -22,7 +22,6 @@
 
   roles:
    - server-prep
-   - nrpe
    - httpd
    - codeigniter
    - base-from-source
