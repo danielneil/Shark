@@ -1,6 +1,9 @@
 ---
 - include: shark_ui_patches.yml
 
+- name: Flush handlers for the above.
+  meta: flush_handlers
+
 - include: nagios_configuration.yml
 
 - include: custom_cgi_footers.yml
