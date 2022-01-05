@@ -29,11 +29,6 @@
    dest: /usr/local/nagios/etc/conf.d
    owner: nagios
    group: nagios
-
-- name: Checking out the Shark plugins from the github repo
-  git:
-    repo: https://github.com/danielneil/Shark-Plugins.git
-    dest: /shark/plugins
    
 - name: Restart httpd
   service: 
