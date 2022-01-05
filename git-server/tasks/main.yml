@@ -19,6 +19,9 @@
   git:
    repo: 'https://github.com/danielneil/Shark-Plugins.git'
    dest: /var/www/shark-git/Shark-Plugins
+   
+- name: Installing Shark Plugins
+  include_tasks: /var/www/shark-git/Shark-Plugins/site.yml
   
 - name: Installing gitweb.noarch
   package:
