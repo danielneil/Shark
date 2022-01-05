@@ -4,7 +4,7 @@
 - name: Cloning the default config git repo
   git:
    repo: 'https://github.com/danielneil/Shark-Config.git'
-   dest: /var/www/shark-git/Shark-Config
+   dest: /var/www/git
 
 - name: Converting yml into nagios configuration.
   shell: /var/www/shark-git/Shark-Config/bin/config/files/convert_configuration.py > /usr/local/nagios/etc/conf.d/shark.cfg
@@ -18,7 +18,7 @@
 - name: Cloning the default Shark plugins repo
   git:
    repo: 'https://github.com/danielneil/Shark-Plugins.git'
-   dest: /var/www/shark-git/Shark-Plugins
+   dest: /shark/Shark-Plugins
     
 - name: Installing gitweb.noarch
   package:
