@@ -4,6 +4,8 @@ if ! `which figlet 2> /dev/null` ; then
   dnf install figlet -y > /dev/null
 fi
 
+echo "SDF"
+
 if ! `which jp2a 2> /dev/null` ; then
  dnf install -y https://tchung.org/jp2a/files/jp2a-1.0.8-1.el8.x86_64.rpm > /dev/null
 fi
