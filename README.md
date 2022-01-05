@@ -20,7 +20,7 @@ See the example [configuration](https://github.com/danielneil/Shark-Config) to g
   
 | Operating System | CPU  | RAM | DISK |
 | ------------- | ------------- | ------------- | ------------- |
-| Rocky Linux 8+         | 4 CPU   | 4 GB | 80 GB  |
+| Rocky Linux 8+         | 4 CPU   | 8 GB |80 GB  |
   
 </details>
 
