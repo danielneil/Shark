@@ -1,12 +1,5 @@
 ---
-- name: Installing pyyaml for the above
-  package:
-   name: python3-pyyaml.x86_64
-   state: latest
-
 - include: shark_ui_patches.yml
-
-- meta: flush_handlers
 
 - include: nagios_configuration.yml
 
