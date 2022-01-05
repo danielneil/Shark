@@ -12,7 +12,7 @@
 - name: Creating the template host file containing Shark's ip address.
   copy: 
    content: "[shark_server]\n{{ ansible_default_ipv4.address }}"
-   dest: "/var/www/shark-git/Shark-Config/bin/hosts"
+   dest: "/var/www/git/bin"
    mode: 0644
 
 - name: Cloning the default Shark plugins repo
