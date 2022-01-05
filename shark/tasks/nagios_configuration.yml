@@ -5,7 +5,7 @@
 - name: Copying our custom cgi.cfg file which enables the above user with access
   template:
     src: cgi.cfg
-    dest: /usr/local/nagios/etc/
+    dest: /usr/local/nagios/etc/cgi.cfg
     owner: nagios
     group: nagios
 
