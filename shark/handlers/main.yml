@@ -1,10 +1,4 @@
 ---
 # handlers file for algorithmictradingplatform
-
-- name: restart-nagios
-  service:
-   name: nagios
-   state: restarted
-
 - name: rebuild-nagios
   shell: /tmp/build_nagios.sh
