@@ -43,7 +43,7 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 ```
-5. Navigate to http://debian-server-ip/nagios (web credentials are shark/shark).
+5. Navigate to http://shark-server/nagios (web credentials are shark/shark).
 
   
 </details>
