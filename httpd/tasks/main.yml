@@ -8,11 +8,6 @@
   package:
    name: httpd-devel.x86_64
    
-- name: Installing epel-release
-  package:
-   name: epel-release
-   state: latest
-   
 - name: Installation of REMI
   shell: dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 
@@ -46,11 +41,6 @@
      dest: /etc/httpd/conf.d
   notify: restart-httpd
 
-- name: Starting httpd
-  service:
-   name: httpd 
-   state: started
-   
 - firewalld:
     service: http
     permanent: true
