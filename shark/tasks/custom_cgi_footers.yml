@@ -1,9 +1,9 @@
 - name: 
   template:
-   src: ui_patches/common-footer.ssi
+   src: shark_ui_patches/common-footer.ssi
    dest: /usr/local/nagios/share/ssi
   
 - name: 
   template:
-   src: ui_patches/common-header.ssi
+   src: shark_ui_patches/common-header.ssi
    dest: /usr/local/nagios/share/ssi
