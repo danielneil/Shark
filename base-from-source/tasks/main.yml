@@ -21,3 +21,9 @@
   package:
     name: nagios-plugins.x86_64
     state: latest
+    
+- name: Have nagios always start on boot (but do not start it yet)
+  service:
+   name: nagios
+   enabled: true
+   state: stopped
