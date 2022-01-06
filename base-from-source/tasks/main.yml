@@ -27,3 +27,9 @@
    name: nagios
    enabled: true
    state: stopped
+
+- name: Adding existing user nagios to shark sudo
+  user:
+    name: nagios
+    groups: shark
+    append: yes
