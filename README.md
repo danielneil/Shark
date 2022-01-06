@@ -59,4 +59,4 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ## Contributing 
 
-Visit us on [Reddit](https://www.reddit.com/r/shark)!
+Need help? Visit us on [Reddit](https://www.reddit.com/r/shark)!
