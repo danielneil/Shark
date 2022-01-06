@@ -47,3 +47,8 @@
     state: enabled
     immediate: yes
 
+- name: Start httpd on boot, but dont start just yet
+  service:
+   name: httpd
+   state: stopped
+   enabled: true
