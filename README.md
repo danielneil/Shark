@@ -33,11 +33,20 @@ See the example [configuration](https://github.com/danielneil/Shark-Config) to g
   
 1. Prepare a vanilla Rocky Linux (server instance) with VirtualBox ([help](https://kifarunix.com/install-rocky-linux-8-on-virtualbox/)).
 
-2. Install epel ([help](https://www.how2shout.com/linux/how-to-enable-epel-repository-on-rocky-linux-8)).
+2. Install epel - open a terminal, and run:
+  ```
+yum install epel-release -y
+```
   
-3. Install ansible ([help](https://www.how2shout.com/linux/how-to-install-ansible-on-rocky-linux-8-or-almalinux/)).
+3. Install ansible - open a terminal, and run:
+  ```
+yum install ansible -y
+```
 
-4. Install Git ([help](https://tastethelinux.com/2021/08/06/how-to-install-git-on-rocky-linux-8-ec2-aws/)).
+4. Install git - open a terminal, and run:
+  ```
+yum install git -y
+```
 
 5. Open a terminal, and run:
 ```
