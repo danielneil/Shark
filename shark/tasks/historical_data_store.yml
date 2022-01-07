@@ -10,6 +10,6 @@
   file:
     path: /shark/historical/yahoo_finance
     state: directory
-    mode: '0775'
+    mode: '777'
     owner: shark
     group: shark
