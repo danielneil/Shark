@@ -18,6 +18,7 @@
     owner: shark
     group: shark
     state: directory
+    mode: '0775'
 
 - name: Creating strategies working directory
   file:
@@ -25,13 +26,15 @@
     owner: shark
     group: shark
     state: directory
+    mode: '0775'
     
 - name: Creating bin working directory
   file:
    name: /shark/bin
    owner: shark
    group: shark
-   state: directory   
+   state: directory
+   mode: '0775'
 
 - name: Creating tmp cache directory
   file:
@@ -39,3 +42,4 @@
    group: shark
    owner: shark
    state: directory
+   mode: '0775'
