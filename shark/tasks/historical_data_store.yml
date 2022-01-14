@@ -8,7 +8,7 @@
 
 - name: Configuration yahoo finance directory structure
   file:
-    path: /shark/historical/yahoo_finance
+    path: /shark/historical/yahoo_finance_data
     state: directory
     mode: '0775'
     owner: shark
