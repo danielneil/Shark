@@ -28,6 +28,14 @@
     state: directory
     mode: '0775'
     
+- name: Creating backtests directory
+  file:
+    name: /shark/backtests
+    owner: shark
+    group: shark
+    state: directory
+    mode: '0775'    
+    
 - name: Creating bin working directory
   file:
    name: /shark/bin
