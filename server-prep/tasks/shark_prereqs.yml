@@ -38,7 +38,7 @@
 
 - name: Creating tmp cache directory
   file:
-   name: /tmp/.shark
+   name: /shark/.tmp
    group: shark
    owner: shark
    state: directory
