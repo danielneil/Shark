@@ -5,7 +5,25 @@
    name: python3-pip
    state: latest
    
-- name: Pyalgotrade for backtesting
-  package:
-   name: pyalgotrade
+- name: Installing python39
+  package: 
+   name: python39
+   state: latest
+   
+- name: Installing pillow
+  pip: 
+   name: pillow
    executable: pip3
+
+- name: Installing matplotlib
+  pip: 
+   name: matplotlib
+   executable: pip3
+
+- name: Installing pandas
+  pip: 
+   name: pandas
+   executable: pip3
+   
+- name: Installing PyAlgoTrade
+  shell: cd /shark/lib/PyAlgoTrade && python3 setup.py install
