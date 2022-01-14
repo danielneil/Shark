@@ -15,6 +15,9 @@
    dest: "/var/www/git/bin/hosts"
    mode: 0644
 
+- name: Copying back test code - this will need to be dynamic.
+  shell: cp -p /var/www/git/backtests/backtest_moving_averages.py /shark/backtests && chmod 777 /shark/backtests/backtest_moving_averages.py
+
 - name: Cloning the default Shark plugins repo
   git:
    repo: 'https://github.com/danielneil/Shark-Plugins.git'
