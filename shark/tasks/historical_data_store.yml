@@ -13,3 +13,12 @@
     mode: '0775'
     owner: shark
     group: shark
+
+
+- name: Configuration directory for report storage of backtests
+  file:
+    path: /shark/reports
+    state: directory
+    mode: '0775'
+    owner: shark
+    group: shark
