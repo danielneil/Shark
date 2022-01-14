@@ -27,7 +27,13 @@
     group: shark
     state: directory
     mode: '0775'
-    
+
+- name: Creating lib directory
+  file:
+    name: /shark/lib
+    owner: shark
+    group: shark
+
 - name: Creating backtests directory
   file:
     name: /shark/backtests
