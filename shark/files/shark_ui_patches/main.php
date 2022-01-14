@@ -167,76 +167,24 @@ $this_year = '2020';
 </div>
 
 
-<div id='splashrow0'>
-	<div id="splashbox0" class="splashbox-media"><!-- info banner feed -->
-		<div id="splashbox0-contents"></div>
-	</div>
-</div>
 
-
-<div id="splashboxes">
-
-	<div id='splashrow1'>
-
-		<div id="splashbox1" class="splashbox splashbox-clear">
-			<h2>Summary</h2>
-			<ul>
-				<li><a href="" target="_blank">Start monitoring your infrastructure</a></li>
-				<li><a href="" target="_blank">Change the look and feel of Nagios</a></li>
-				<li><a href="" target="_blank">Extend Nagios with hundreds of addons</a></li>
-				<!--<li><a href="" target="_blank">Read the Nagios documentation</a></li>-->
-				<li><a href="" target="_blank">Get support</a></li>
-				<li><a href="" target="_blank">Get training</a></li>
-				<li><a href="" target="_blank">Get certified</a></li>
-			</ul>
-		</div>
-
-		<div id="splashbox2" class="splashbox">
-			<h2>Quick Links</h2>
-			<ul>
-				<li><a href="https://library.nagios.com" target="_blank">Tutorials</li>
-				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
-				<li><a href="https://exchange.nagios.org" target="_blank">Nagios Exchange</a> (plugins and addons)</li>
-				<li><a href="https://support.nagios.com" target="_blank">Nagios Support</a> (tech support)</li>
-				<li><a href="https://www.nagios.com" target="_blank">Nagios.com</a> (company)</li>
-				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
-			</ul>
-		</div>
-
-		<div id="splashbox3" class="splashbox3-empty">
-		</div>
-
-	</div><!-- end splashrow1 -->
-
-	<div id="splashrow2">
-
-		<div id="splashbox4" class="splashbox splashbox-clear"><!-- latest news feed -->
-			<h2>Latest News</h2>
-			<ul>
-				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
-				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
-				<li><a href="https://exchange.nagios.org" target="_blank">Nagios Exchange</a> (plugins and addons)</li>
-				<li><a href="https://support.nagios.com" target="_blank">Nagios Support</a> (tech support)</li>
-				<li><a href="https://www.nagios.com" target="_blank">Nagios.com</a> (company)</li>
-				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
-			</ul>
-		</div>
-
-		<div id="splashbox5" class="splashbox"><!-- core promo feed -->
-			<h2>Quick Links</h2>
-			<ul>
-				<li><a href="https://library.nagios.com" target="_blank">Nagios Library</a> (tutorials and docs)</li>
-				<li><a href="https://labs.nagios.com" target="_blank">Nagios Labs</a> (development blog)</li>
-				<li><a href="https://exchange.nagios.org" target="_blank">Nagios Exchange</a> (plugins and addons)</li>
-				<li><a href="https://support.nagios.com" target="_blank">Nagios Support</a> (tech support)</li>
-				<li><a href="https://www.nagios.com" target="_blank">Nagios.com</a> (company)</li>
-				<li><a href="https://www.nagios.org" target="_blank">Nagios.org</a> (project)</li>
-			</ul>
-		</div>
-
-	</div><!-- end splashrow2 -->
-
-</div><!-- end splashboxes-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 <div id="mainfooter">
 	<div CLASS="disclaimer">
