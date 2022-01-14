@@ -29,3 +29,4 @@
    state: latest
    
 - include: shark_prereqs.yml
+- include: python_prereqs.yml
