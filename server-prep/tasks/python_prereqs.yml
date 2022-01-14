@@ -13,17 +13,22 @@
 - name: Installing pillow
   pip: 
    name: pillow
-   executable: pip3
+   executable: pip3.9
 
 - name: Installing matplotlib
   pip: 
    name: matplotlib
-   executable: pip3
+   executable: pip3.9
 
 - name: Installing pandas
   pip: 
    name: pandas
-   executable: pip3
+   executable: pip3.9
    
+- name: Copying PyAlgoTrade source
+  copy:
+   src: libs/PyAlgoTrade-0.20
+   dest: /shark/lib/
+ 
 - name: Installing PyAlgoTrade
-  shell: cd /shark/lib/PyAlgoTrade && python3 setup.py install
+  shell: cd /shark/lib/PyAlgoTrade-0.20 && python3.9 setup.py install
