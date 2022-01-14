@@ -33,6 +33,8 @@
     name: /shark/lib
     owner: shark
     group: shark
+    state: directory
+    mode: '0775'   
 
 - name: Creating backtests directory
   file:
