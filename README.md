@@ -64,6 +64,12 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
 </p>
 
+## Screenshot - Coin Details
+
+<p align="center">
+  <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-plugin-details.jpg?raw=true">
+</p>
+
 ## Video - Installing Shark on Rocky Linux 8
 
 [![asciicast](https://asciinema.org/a/460006.svg)](https://asciinema.org/a/460006)
