@@ -19,6 +19,9 @@ ansible-playbook ./site.yml -i hosts --ssh-extra-args='-o ServerAliveInterval=36
 printf "\n\nInstalling the Shark Plugins..."
 ansible-playbook /shark/Shark-Plugins/site.yml -i hosts
 
+printf "\n\nInstalling Shark Brokers..."
+ansible-playbook /shark/Shark-Brokers/site.yml -i hosts
+
 printf "\n\nStarting httpd and nagios..."
 systemctl restart httpd && systemctl restart nagios
 
