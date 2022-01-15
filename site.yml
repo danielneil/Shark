@@ -21,8 +21,8 @@
    FOOTER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20, <span class="bold">BACKTEST:</span> Moving Averages Crossover'
 
    # ---- Configuration repos - to customise shark, clone the below git repos and supply their new locations.
-   shark_config_repo: "https://github.com/danielneil/Shark-Config"
-   shark_plugins_repo: "https://github.com/danielneil/Shark-Plugins"
+   shark_config_repo: "https://github.com/danielneil/Shark-Config.git"
+   shark_plugins_repo: "https://github.com/danielneil/Shark-Plugins.git"
 
   roles:
    - server-prep
