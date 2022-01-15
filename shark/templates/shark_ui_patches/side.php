@@ -26,7 +26,7 @@
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="main.php" target="<?php echo $link_target;?>">Home</a></li>
-			<li><a href="https://github.com/danielneil/Shark/tree/main/doc" target="_blank">Documentation</a></li>
+			<li><a href="https://github.com/danielneil/Shark/blob/main/README.md" target="_blank">Documentation</a></li>
 		</ul>
 	</div>
 </div>
