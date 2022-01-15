@@ -10,7 +10,7 @@ It enables the use of (simultaneous) programmable algorithms to identify and exe
 
 The example configuration demostrates a simple moving averages crossover against the Crypto TOP 20, and though the demo focuses on cryptocurrencies, it could easily be adjusted to suit any financial market.  
 
-See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of capabilities, and broker configuration can be found [here](https://github.com/danielneil/Shark-Brokers).
+See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of capabilities, and broker configurations can be found [here](https://github.com/danielneil/Shark-Brokers).
 
 See the example [configuration](https://github.com/danielneil/Shark-Config) to get started.
 
