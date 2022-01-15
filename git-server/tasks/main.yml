@@ -23,6 +23,11 @@
    repo: "{{ shark_plugins_repo }}"
    dest: /shark/Shark-Plugins
     
+- name: Cloning the default Shark plugins repo
+  git:
+   repo: "{{ shark_brokers_repo }}"
+   dest: /shark/Shark-Brokers
+    
 - name: Installing gitweb.noarch
   package:
    name: gitweb.noarch
