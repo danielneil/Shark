@@ -27,8 +27,14 @@
    
 - name: Copying PyAlgoTrade source
   copy:
-   src: libs/PyAlgoTrade-0.20
+   src: libs/PyAlgoTrade-0.20.tar.gz
    dest: /shark/lib/
+
+- name: Unarchving the above
+  unarchive:
+   src: /shark/lib/PyAlgoTrade-0.20.tar.gz
+   dest: /shark/lib/
+   remote_src: yes
  
 - name: Installing PyAlgoTrade
   shell: cd /shark/lib/PyAlgoTrade-0.20 && python3.9 setup.py install
