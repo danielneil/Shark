@@ -102,11 +102,6 @@
                                         <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/reports/" target="<?php echo $link_target;?>">Backtests</a></li>
                                 </ul>
                         </li>
-                        <li><a href="#">Logging</a>
-                                <ul>
-                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/app/Views/config_verification.php" target="<?php echo $link_target;?>">Config Verification</a></li>
-                                </ul>
-                        </li>
                 </ul>
         </div>
 </div>
