@@ -6,7 +6,7 @@
 
 Shark is an open source algorithmic trading platform under active development.
 
-It enables the use of (simultaneous) programmable algorithms to identify and execute upon trading opportunities, perform back/foward testing, comes with a multitude of plugins, and can operate with REST or streaming APIs.
+It enables the use of (simultaneous) programmable algorithms to identify and execute upon trading opportunities, perform back/foward testing, comes with a multitude of plugins, and can operate with REST and streaming APIs.
 
 The example configuration demostrates a simple moving averages crossover against the Crypto TOP 20, and though the demo focuses on cryptocurrencies, it could easily be adjusted to suit any financial market.  
 
