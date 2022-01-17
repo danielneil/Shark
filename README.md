@@ -8,7 +8,7 @@ Shark is an open source algorithmic trading platform under active development.
 
 It enables the use of (simultaneous) programmable algorithms to identify and execute upon trading opportunities, perform back/foward testing, comes with a multitude of plugins, and can operate with REST and streaming APIs.
 
-The example configuration demostrates a simple moving averages crossover against the Crypto TOP 20, and though the demo focuses on cryptocurrencies, it could easily be adjusted to suit any financial market.  
+The example configuration demostrates a simple moving averages crossover against the TOP 20 Crypto, and though the demo focuses on cryptocurrencies, it could easily be adjusted to suit any financial market.  
 
 See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of capabilities, and broker configurations can be found [here](https://github.com/danielneil/Shark-Brokers).
 
@@ -58,13 +58,13 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 </details>
 
 
-## Screenshot - Crypto TOP 20
+## Screenshot - Monitoring the TOP 20 Crypto
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
 </p>
 
-## Screenshot - Coin Plugins
+## Screenshot - Plugins
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-plugin-details.jpg?raw=true">
