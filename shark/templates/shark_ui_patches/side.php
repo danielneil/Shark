@@ -88,7 +88,7 @@
                 <ul class="navsectionlinks">
                         <li><a href="#">Historical Data</a>
                                 <ul>
-                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/historical/" target="<?php echo $link_target;?>">Cached Data</a></li>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/historical/" target="<?php echo $link_target;?>">Cache</a></li>
                                 </ul>
                         </li>
                         <li><a href="#">Code</a>
