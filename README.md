@@ -58,7 +58,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 </details>
 
 
-## Screenshot - Monitoring the TOP 20 Crypto
+## Screenshot - Trading the TOP 20 Crypto
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
