@@ -81,5 +81,31 @@
 		</ul>
 	</div>
 </div>			
+
+<div class="navsection">
+        <div class="navsectiontitle">Workbench</div>
+        <div class="navsectionlinks">
+                <ul class="navsectionlinks">
+                        <li><a href="#">Historical Data</a>
+                                <ul>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/historical/" target="<?php echo $link_target;?>">Cached Data</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#">Code</a>
+                                <ul>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/backtests/" target="<?php echo $link_target;?>">Backtests</a></li>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/strategies/" target="<?php echo $link_target;?>">Strategies</a></li>
+                                </ul>
+			</li>
+			<li><a href="#">Reports</a>
+                                <ul>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark/reports/" target="<?php echo $link_target;?>">Backtests</a></li>
+                                </ul>
+                        </li>
+
+                </ul>
+        </div>
+</div>
+
 </body>
 </html>
