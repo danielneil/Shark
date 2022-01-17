@@ -1,5 +1,5 @@
 ---
-# handlers file for git-server
+# handlers file for git-setup
 
 - name: restart-httpd
   service:

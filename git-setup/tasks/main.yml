@@ -1,0 +1,17 @@
+---
+# tasks file for git-setup
+
+- name: Cloning the Shark Config git repo
+  git:
+   repo: "{{ shark_config_repo }}"
+   dest: /shark/Shark-Config
+
+- name: Cloning the Shark Plugins git repo
+  git:
+   repo: "{{ shark_plugins_repo }}"
+   dest: /shark/Shark-Plugins
+    
+- name: Cloning the Shark Brokers repo
+  git:
+   repo: "{{ shark_brokers_repo }}"
+   dest: /shark/Shark-Brokers
