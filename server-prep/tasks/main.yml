@@ -13,6 +13,11 @@
    name: rsync
    state: latest
 
+- name: Installing dos2unix
+  package:
+   name: dos2unix
+   state: latest
+
 - name: Install curl
   package:
    name: curl
