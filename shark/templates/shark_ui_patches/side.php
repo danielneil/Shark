@@ -10,7 +10,7 @@
 
 <head>
 	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-	<title>Algorithmic Trading Platform</title>
+	<title>Become a fucking Shark.</title>
 	<link href="stylesheets/common.css?<?php echo $this_version; ?>" type="text/css" rel="stylesheet">
 </head>
 
@@ -81,7 +81,20 @@
 			</li>
 		</ul>
 	</div>
-</div>			
+</div>	
+	
+<div class="navsection">
+	<div class="navsectiontitle">Portfolio</div>
+	<div class="navsectionlinks">
+		<ul class="navsectionlinks">
+			<li><a href="#">Tools</a>
+				<ul>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Correlation Matrix</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>	
 
 <div class="navsection">
         <div class="navsectiontitle">Workbench</div>
