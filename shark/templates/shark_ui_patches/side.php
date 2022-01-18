@@ -90,6 +90,7 @@
 			<li><a href="#">Tools</a>
 				<ul>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Correlation Matrix</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Covariance Matrix</a></li>
 				</ul>
 			</li>
 		</ul>
