@@ -16,3 +16,12 @@
    name: mariadb.service
    state: started
    enabled: true
+
+- name: mysql_root_password
+  mysql_user:
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+    user: root
+    check_implicit_admin: true
+    password: "{{ mysql_root_password }}"
+    host: localhost
