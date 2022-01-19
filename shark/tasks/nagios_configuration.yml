@@ -29,3 +29,8 @@
    dest: /usr/local/nagios/etc/conf.d
    owner: nagios
    group: nagios
+
+- name: Copying our custom nagios httpd conf file
+  copy:
+   src: nagios.conf
+   dest: /etc/httpd/conf.d/
