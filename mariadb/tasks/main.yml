@@ -31,7 +31,7 @@
     host: localhost
 
 - name: Create new database Shark
-  community.mysql.mysql_db:
+  mysql.mysql_db:
     name:
       - shark
     state: present
