@@ -54,7 +54,7 @@ yum install git -y
 ```
 git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 ```
-6. Navigate to http://shark-server/nagios (web credentials are shark/shark) - it will take about 5 mins to populate.
+6. Navigate to http://shark-server/shark (web credentials are shark/shark) - it will take a few minutes to populate with data.
 </details>
 
 
