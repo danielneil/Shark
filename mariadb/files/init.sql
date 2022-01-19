@@ -1,3 +1,3 @@
-CREATE TABLE portfolio (
+CREATE TABLE IF NOT EXISTS portfolio (
     total DECIMAL SIGNED ZEROFILL
 );
