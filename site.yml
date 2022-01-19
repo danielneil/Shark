@@ -29,6 +29,7 @@
    - server-prep
    - httpd
    - codeigniter
+   - mariadb
    - base-from-source
    - shark
    - git-setup
