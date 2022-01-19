@@ -30,6 +30,11 @@
     password: "{{ mysql_root_password }}"
     host: localhost
 
+- name: Delete database with name 'shark'
+  mysql_db:
+    name: shark
+    state: absent
+
 - name: Create a new database with name 'shark'
   mysql_db:
     name: shark
