@@ -8,7 +8,6 @@
   package:
    name: httpd-devel.x86_64
    
-   
 - name: Installation of REMI
   yum: 
    name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
@@ -16,6 +15,7 @@
    
 - name: Config of REMI
   shell: dnf module reset php -y && sudo dnf module enable php:remi-8.0 -y
+  warn: false
    
 - name: Installing php deps
   package:
