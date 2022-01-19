@@ -15,7 +15,7 @@
    
 - name: Config of REMI
   shell: dnf module reset php -y && sudo dnf module enable php:remi-8.0 -y
-  warn: false
+   warn: false
    
 - name: Installing php deps
   package:
