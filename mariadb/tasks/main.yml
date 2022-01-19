@@ -29,3 +29,8 @@
     check_implicit_admin: true
     password: "{{ mysql_root_password }}"
     host: localhost
+
+- name: Create a new database with name 'shark'
+  mysql_db:
+    name: shark
+    state: present
