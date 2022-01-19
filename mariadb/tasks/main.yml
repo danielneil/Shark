@@ -11,6 +11,10 @@
   package:
    name: mariadb-server-utils.x86_64
 
+- name: Install python3-mysql.x86_64 
+  package:
+   name: python3-mysql.x86_64
+
 - name: Start and enable mariadb.service
   service:
    name: mariadb.service
