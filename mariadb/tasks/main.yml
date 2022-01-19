@@ -34,3 +34,9 @@
   mysql_db:
     name: shark
     state: present
+
+- name: Copying init.sql file
+  copy:
+   src: init.sql
+   dest: /tmp
+   
