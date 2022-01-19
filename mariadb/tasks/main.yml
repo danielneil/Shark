@@ -1,5 +1,18 @@
 ---
-mariadb.x86_64 : A very fast and robust SQL database server
-mariadb-server.x86_64 : The MariaDB server and related files
-mariadb-server-utils.x86_64 : Non-essential server utilities for MariaDB/MySQL applications
+- name: Install mariadb.x86_64 
+  package:
+   name: mariadb.x86_64
 
+- name: Install mariadb-server.x86_64 
+  package:
+   name: mariadb-server.x86_64
+
+- name: Install mariadb-server-utils.x86_64 
+  package:
+   name: mariadb-server-utils.x86_64
+
+- name: Start and enable mariadb.service
+  service:
+   name: mariadb.service
+   state: started
+   enabled: true
