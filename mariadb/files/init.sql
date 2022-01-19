@@ -1,3 +1,4 @@
 CREATE TABLE IF NOT EXISTS portfolio (
-    total DECIMAL SIGNED ZEROFILL
+    total_capital DECIMAL SIGNED ZEROFILL,
+    shares BIGINT UNSIGNED
 );
