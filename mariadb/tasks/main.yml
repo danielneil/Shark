@@ -34,6 +34,7 @@
   mysql_db:
     name: shark
     state: present
+    login_password: "{{ mysql_root_password }}" 
 
 - name: Copying init.sql file
   copy:
