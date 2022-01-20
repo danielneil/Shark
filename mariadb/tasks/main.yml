@@ -50,6 +50,6 @@
 - name: Import sql script.
   mysql_db:
    state: import
-   name: portfolio
+   name: shark
    login_password: "{{ mysql_root_password }}" 
    target: /tmp/init.sql
