@@ -46,4 +46,10 @@
   copy:
    src: init.sql
    dest: /tmp
-   
+
+- name: Import sql script.
+  mysql_db:
+   state: import
+   name: portfolio
+   login_password: "{{ mysql_root_password }}" 
+   target: /tmp/init.sql
