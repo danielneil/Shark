@@ -33,5 +33,10 @@
    name: net-tools
    state: latest
    
+- name: Installing tar.x86_64
+  package:
+   name: tar.x86_64
+   state: latest
+   
 - include: shark_prereqs.yml
 - include: python_prereqs.yml
