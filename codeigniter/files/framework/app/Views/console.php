@@ -199,7 +199,7 @@
 
 	<div class="heroe">
 
-		<h1>Shark Trading Console</h1>
+		<h1>Console</h1>
 
 	</div>
 
@@ -209,7 +209,7 @@
 
 <section>
 
-	<p>Current Trade Activity</p>
+	<h4>Shark Trading Activity</h4>
 
 	<pre><code>
 	BUY ABC - TEST
