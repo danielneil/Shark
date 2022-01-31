@@ -68,7 +68,7 @@
 		<ul class="navsectionlinks">
 			<li><a href="#">General</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Console</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/index.php/console" target="<?php echo $link_target;?>">Console</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Orders</a>
