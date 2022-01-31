@@ -59,3 +59,11 @@
    owner: shark
    state: directory
    mode: '0775'
+   
+- name: Creating portfolio working directory
+  file:
+   name: /shark/portfolio
+   owner: shark
+   group: shark
+   state: directory
+   mode: '0775'
