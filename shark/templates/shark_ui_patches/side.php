@@ -89,7 +89,7 @@
 		<ul class="navsectionlinks">
 			<li><a href="#">Tools</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/portfolio/correlation_matrix.png" target="<?php echo $link_target;?>">Correlation</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/index.php/portfolio" target="<?php echo $link_target;?>">Correlation</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/portfolio/covariance_matrix.png" target="<?php echo $link_target;?>">Covariance</a></li>
 				</ul>
 			</li>
