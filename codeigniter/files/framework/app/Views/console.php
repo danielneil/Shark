@@ -199,7 +199,7 @@
 
 	<div class="heroe">
 
-		<h1>Live Trading Console</h1>
+		<h1>Shark Trading Console</h1>
 
 	</div>
 
@@ -209,17 +209,42 @@
 
 <section>
 
-	<h1>About this page</h1>
+	<p>Current Trade Activity</p>
 
-	<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-	<p>If you would like to edit this page you will find it located at:</p>
-
-	<pre><code>app/Views/welcome_message.php</code></pre>
-
-	<p>The corresponding controller for this page can be found at:</p>
-
-	<pre><code>app/Controllers/Home.php</code></pre>
+	<pre><code>
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	BUY ABC - TEST
+	SELL ABC - TEST
+	</code></pre>
 
 </section>
 
