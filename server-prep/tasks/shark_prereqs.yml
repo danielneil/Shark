@@ -67,3 +67,11 @@
    group: shark
    state: directory
    mode: '0775'
+
+- name: Creating log working directory
+  file:
+   name: /shark/log
+   owner: shark
+   group: shark
+   state: directory
+   mode: '0775'
