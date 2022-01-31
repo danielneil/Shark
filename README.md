@@ -81,6 +81,6 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 [![asciicast](https://asciinema.org/a/460006.svg)](https://asciinema.org/a/460006)
 
-## Contributing 
+## Need Help? 
 
-Need help? Visit us on [Reddit](https://www.reddit.com/r/shark)!
+Come hang out on [Reddit](https://www.reddit.com/r/shark)!
