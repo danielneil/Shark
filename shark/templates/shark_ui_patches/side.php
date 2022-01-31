@@ -93,6 +93,11 @@
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/portfolio/covariance_matrix.png" target="<?php echo $link_target;?>">Covariance</a></li>
 				</ul>
 			</li>
+			<li><a href="#">Backtests</a>
+                                <ul>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/reports/" target="<?php echo $link_target;?>">Reports</a></li>
+                                </ul>
+                        </li>
 		</ul>
 	</div>
 </div>	
@@ -106,17 +111,11 @@
                                         <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/historical/" target="<?php echo $link_target;?>">Cache</a></li>
                                 </ul>
                         </li>
-                        <li><a href="#">Code</a>
+                        <li><a href="#">Configuration</a>
                                 <ul>
-                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/backtests/" target="<?php echo $link_target;?>">Backtests</a></li>
-                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/strategies/" target="<?php echo $link_target;?>">Strategies</a></li>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/backtests/" target="<?php echo $link_target;?>">Logfile</a></li>
                                 </ul>
 			</li>
-			<li><a href="#">Reports</a>
-                                <ul>
-                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/reports/" target="<?php echo $link_target;?>">Backtests</a></li>
-                                </ul>
-                        </li>
                 </ul>
         </div>
 </div>
