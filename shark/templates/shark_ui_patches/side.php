@@ -95,7 +95,7 @@
 			</li>
 			<li><a href="#">Backtests</a>
                                 <ul>
-                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/shark-web/reports/" target="<?php echo $link_target;?>">Reports</a></li>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/index.php/backtestreports" target="<?php echo $link_target;?>">Reports</a></li>
                                 </ul>
                         </li>
 		</ul>

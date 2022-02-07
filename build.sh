@@ -25,6 +25,9 @@ ansible-playbook /shark/Shark-Brokers/site.yml -i hosts
 printf "\n\nInstalling Shark config..."
 ansible-playbook /shark/Shark-Config/site.yml -i hosts
 
+printf "\n\nInstalling Shark Web..."
+ansible-playbook /shark/Shark-Web/site.yml -i hosts
+
 printf "\n\nStarting httpd and nagios..."
 systemctl restart httpd && systemctl restart nagios
 
