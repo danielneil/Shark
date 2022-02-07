@@ -15,3 +15,8 @@
   git:
    repo: "{{ shark_brokers_repo }}"
    dest: /shark/Shark-Brokers
+
+- name: Cloning the Shark Web repo
+  git:
+   repo: "{{ shark_web_repo }}"
+   dest: /shark/Shark-Web
