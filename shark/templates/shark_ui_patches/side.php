@@ -113,7 +113,7 @@
                         </li>
                         <li><a href="#">Configuration</a>
                                 <ul>
-                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/index.php/ConfigLogfile" target="<?php echo $link_target;?>">Logfile</a></li>
+                                        <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/index.php/ConfigLogfile" target="<?php echo $link_target;?>">Running Config</a></li>
                                 </ul>
 			</li>
                 </ul>
