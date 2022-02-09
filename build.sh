@@ -8,6 +8,8 @@ if ! `which jp2a &> /dev/null` ; then
  dnf install -y https://tchung.org/jp2a/files/jp2a-1.0.8-1.el8.x86_64.rpm &> /dev/null
 fi
 
+git pull &> /dev/null
+
 /usr/bin/figlet Shark
 printf "The Algorithmic Trading Platform..."
 printf "\nAuthor: danielneil"
