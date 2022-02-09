@@ -25,9 +25,6 @@
    shark_plugins_repo: "https://github.com/danielneil/Shark-Plugins.git"
    shark_brokers_repo: "https://github.com/danielneil/Shark-Brokers.git"
    shark_web_repo: "https://github.com/danielneil/Shark-Web.git"
-   
-   # ---- Mariadb credentials
-   mysql_root_password: "shark"
 
   roles:
    - server-prep
