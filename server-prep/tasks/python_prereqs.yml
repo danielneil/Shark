@@ -38,3 +38,23 @@
  
 - name: Installing PyAlgoTrade
   shell: cd /shark/lib/PyAlgoTrade-0.20 && python3.9 setup.py install
+  
+- name: Install python3-pillow.x86_64
+  package:
+   name: python3-pillow.x86_64
+   state: latest
+     
+- name: Install python3-devel
+  package:
+   name: python3-devel
+   state: latest
+  
+ - name: Install libjpeg-devel
+  package:
+   name: libjpeg-devel
+   state: latest
+   
+- name: Install zlib-devel
+  package:
+   name: zlib-devel
+   state: latest
