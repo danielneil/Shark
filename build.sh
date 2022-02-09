@@ -16,13 +16,13 @@ jp2a shark/files/screenshots/shark.jpg --background=light
 printf "\n\nInstalling Shark..."
 ansible-playbook ./site.yml -i hosts --ssh-extra-args='-o ServerAliveInterval=3600'
 
-printf "\n\nInstalling the Shark Plugins..."
+printf "\n\nInstalling Shark Plugins..."
 ansible-playbook /shark/Shark-Plugins/site.yml -i hosts
 
 printf "\n\nInstalling Shark Brokers..."
 ansible-playbook /shark/Shark-Brokers/site.yml -i hosts
 
-printf "\n\nInstalling Shark config..."
+printf "\n\nInstalling Shark Config..."
 ansible-playbook /shark/Shark-Config/site.yml -i hosts
 
 printf "\n\nInstalling Shark Web..."
