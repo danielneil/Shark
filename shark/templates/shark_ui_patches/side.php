@@ -87,7 +87,7 @@
 	<div class="navsectiontitle">Portfolio</div>
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
-			<li><a href="#">Backtesting>
+			<li><a href="#">Backtesting</a>
                                 <ul>
                                         <li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/index.php/BacktestReports" target="<?php echo $link_target;?>">Reports</a></li>
 					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/index.php/portfolio" target="<?php echo $link_target;?>">Correlation</a></li>
