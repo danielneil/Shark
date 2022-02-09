@@ -32,7 +32,6 @@
   roles:
    - server-prep
    - httpd
-   - mariadb
    - base-from-source
    - shark
    - git-setup
