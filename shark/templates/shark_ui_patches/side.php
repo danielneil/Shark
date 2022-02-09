@@ -10,7 +10,7 @@
 
 <head>
 	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-	<title>Become a fucking Shark.</title>
+	<title>Be a Shark.</title>
 	<link href="stylesheets/common.css?<?php echo $this_version; ?>" type="text/css" rel="stylesheet">
 </head>
 
