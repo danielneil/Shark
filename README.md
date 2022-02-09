@@ -64,7 +64,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
 </p>
 
-## Screenshot - Plugins
+## Screenshot - Plugins (sma, yahoo_finance, backtest)
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-plugin-details.jpg?raw=true">
