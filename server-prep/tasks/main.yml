@@ -33,6 +33,11 @@
    name: net-tools
    state: latest
    
+- name: Install yamllint.noarch
+  package:
+   name: yamllint.noarch
+   state: latest
+   
 - name: Installing tar.x86_64
   package:
    name: tar.x86_64
