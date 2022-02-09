@@ -49,7 +49,7 @@
    name: python3-devel
    state: latest
   
- - name: Install libjpeg-devel
+- name: Install libjpeg-devel
   package:
    name: libjpeg-devel
    state: latest
