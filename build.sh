@@ -19,16 +19,16 @@ printf "\n\nInstalling Shark..."
 ansible-playbook ./site.yml -i hosts --ssh-extra-args='-o ServerAliveInterval=3600'
 
 printf "\n\nInstalling Shark Plugins..."
-ansible-playbook /shark/Shark-Plugins/site.yml -i hosts
+ansible-playbook /shark/Shark-Plugins/site.yml
 
 printf "\n\nInstalling Shark Brokers..."
-ansible-playbook /shark/Shark-Brokers/site.yml -i hosts
+ansible-playbook /shark/Shark-Brokers/site.yml
 
 printf "\n\nInstalling Shark Config..."
-ansible-playbook /shark/Shark-Config/site.yml -i hosts
+ansible-playbook /shark/Shark-Config/site.yml
 
 printf "\n\nInstalling Shark Web..."
-ansible-playbook /shark/Shark-Web/site.yml -i hosts
+ansible-playbook /shark/Shark-Web/site.yml
 
 printf "\n\nStarting httpd and nagios..."
 systemctl restart httpd && systemctl restart nagios
@@ -37,3 +37,5 @@ printf "\n\nVerifying Shark config..."
 /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
 
 /usr/bin/figlet Finished.
+
+printf "\n\nOpen a web browser and navigate to http://$(hostname --ip-address)/shark - (with shark/shark as username/password )"
