@@ -11,11 +11,11 @@
    shark_webui_auth_user: shark
    shark_webui_auth_pass: shark
 
-   instrument_name: "Coin"
-   instrument_group_name: "Coin Group"
+   instrument_name: "Instrument"
+   instrument_group_name: "Instrument Group"
    
-   instrument_name_plural: "Coins"
-   instrument_group_name_plural: "Coin Groups"
+   instrument_name_plural: "Instruments"
+   instrument_group_name_plural: "Instruments Groups"
 
    # ---- Header/Footer 
    HEADER: '<span class="bold">MARKET:</span> Cryptocurrency, <span class="bold">SECURITIES:</span> CRYPTO TOP 20, <span class="bold">BACKTEST:</span> Moving Average Crossover'
