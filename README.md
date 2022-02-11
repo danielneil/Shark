@@ -85,7 +85,7 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ## Video - Installing Shark on Rocky Linux 8
 
-[![asciicast](https://asciinema.org/a/460006.svg)](https://asciinema.org/a/460006)
+[![asciicast](https://asciinema.org/a/AUE987sXxie1cJbla69rutryQ.svg)](https://asciinema.org/a/AUE987sXxie1cJbla69rutryQ)
 
 ## Need Help? 
 
