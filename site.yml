@@ -1,6 +1,7 @@
 ---
 - name: Shark - Preparing server
-  hosts: shark_server
+  hosts: localhost
+  connection: local 
   gather_facts: yes
   strategy: free
   become: true
