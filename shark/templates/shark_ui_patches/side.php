@@ -73,10 +73,10 @@
 			</li>
 			<li><a href="#">Orders</a>
 				<ul>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Summary</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Opened</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Executed</a></li>
-					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/framework/public/" target="<?php echo $link_target;?>">Cancelled</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/public/index.php/Orders" target="<?php echo $link_target;?>">Summary</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/public/index.php/Orders" target="<?php echo $link_target;?>">Opened</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/public/index.php/Orders" target="<?php echo $link_target;?>">Executed</a></li>
+					<li><a href="http://<?php echo $_SERVER['SERVER_ADDR'];?>/public/index.php/Orders" target="<?php echo $link_target;?>">Cancelled</a></li>
 				</ul>
 			</li>
 		</ul>
