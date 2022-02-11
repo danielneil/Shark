@@ -38,4 +38,4 @@ printf "\n\nVerifying Shark config..."
 
 /usr/bin/figlet Finished.
 
-printf "\n\nOpen a web browser and navigate to http://$(hostname --ip-address)/shark - (with shark/shark as username/password )"
+printf "\nOpen a web browser and navigate to http://$(hostname --ip-address)/shark - (with shark/shark as username/password )\n"
