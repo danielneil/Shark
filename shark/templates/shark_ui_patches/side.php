@@ -10,7 +10,7 @@
 
 <head>
 	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-	<title>Be a Shark.</title>
+	<title>Be a Shark</title>
 	<link href="stylesheets/common.css?<?php echo $this_version; ?>" type="text/css" rel="stylesheet">
 </head>
 
@@ -26,7 +26,7 @@
 	<div class="navsectionlinks">
 		<ul class="navsectionlinks">
 			<li><a href="main.php" target="<?php echo $link_target;?>">Home</a></li>
-			<li><a href="https://github.com/danielneil/Shark/blob/main/README.md" target="_blank">Documentation</a></li>
+			<li><a href="https://github.com/danielneil/Shark-Doc/blob/main/README.md" target="_blank">Documentation</a></li>
 		</ul>
 	</div>
 </div>
