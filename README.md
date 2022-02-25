@@ -27,7 +27,7 @@ See the example [configuration](https://github.com/danielneil/Shark-Config) to g
 </details>
 
 
-## Setup
+## Quick Setup
 
 <details>
 <summary>System Installation</summary>
