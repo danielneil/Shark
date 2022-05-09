@@ -33,6 +33,17 @@
    name: net-tools
    state: latest
    
+- name: Installig fail2ban
+  package:
+   name: fail2ban-all.noarch
+   state: latest
+   
+- name: Starting the above
+  service:
+   name: fail2ban
+   state: started
+   enabled: true
+   
 - name: Install yamllint.noarch
   package:
    name: yamllint.noarch
