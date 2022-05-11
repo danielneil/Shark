@@ -83,7 +83,3 @@ See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of cap
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/backtest-report.png?raw=true">
 </p>
-
-## Need Help? 
-
-Come hang out on [Reddit](https://www.reddit.com/r/shark)!
