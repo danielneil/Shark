@@ -72,7 +72,7 @@ See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of cap
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-plugin-details.jpg?raw=true">
 </p>
 
-## Screenshot - Backtest - against all instruments
+## Screenshot - Backtesting
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-backtest-plugin.png?raw=true">
