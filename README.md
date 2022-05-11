@@ -66,11 +66,13 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 
 ## Screenshot - Shark Plugins (sma, yahoo_finance, backtest)
 
+See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of capabilities.
+
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-plugin-details.jpg?raw=true">
 </p>
 
-## Screenshot - Shark Plugin (backtest - against all instruments)
+## Screenshot - Backtest - against all instruments
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-backtest-plugin.png?raw=true">
