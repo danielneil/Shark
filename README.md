@@ -37,17 +37,17 @@ See the example [configuration](https://github.com/danielneil/Shark-Config), or 
 
 2. Install epel - open a terminal, and run:
   ```
-yum install epel-release -y
+dnf install epel-release -y
 ```
   
 3. Install ansible - open a terminal, and run:
   ```
-yum install ansible -y
+dnf install ansible -y
 ```
 
 4. Install git - open a terminal, and run:
   ```
-yum install git -y
+dnf install git -y
 ```
 
 5. Open a terminal, and run:
