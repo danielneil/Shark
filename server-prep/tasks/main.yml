@@ -8,6 +8,11 @@
 - name: Switching off selinx (until the 8 bug is sorted)
   shell: setenforce 0
 
+- name: Updating operating system
+  package:
+   name: "*"
+   state: latest
+
 - name: Installing rsync
   package:
    name: rsync
@@ -37,17 +42,6 @@
   package:
    name: net-tools
    state: latest
-   
-- name: Installig fail2ban
-  package:
-   name: fail2ban-all.noarch
-   state: latest
-   
-- name: Starting the above
-  service:
-   name: fail2ban
-   state: started
-   enabled: true
    
 - name: Install yamllint.noarch
   package:
