@@ -10,7 +10,7 @@
    name: python39
    state: latest
    
-- name: Installing pillow
+- name: Installing Pillow
   pip: 
    name: pillow
 
