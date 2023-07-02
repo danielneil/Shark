@@ -9,10 +9,6 @@
   package: 
    name: python39
    state: latest
-   
-- name: Installing Pillow
-  pip: 
-   name: pillow
 
 - name: Installing matplotlib
   pip: 
