@@ -24,7 +24,7 @@ Please reach out to me on [Linked In!](https://www.linkedin.com/in/daniel-hodder
   
 | Operating System | CPU  | RAM | DISK |
 | ------------- | ------------- | ------------- | ------------- |
-| Rocky Linux 8+         | 4 CPU   | 8 GB |80 GB  |
+| Rocky Linux 9.2         | 4 CPU   | 8 GB |80 GB  |
   
 </details>
 
@@ -35,7 +35,7 @@ Please reach out to me on [Linked In!](https://www.linkedin.com/in/daniel-hodder
 <summary>System Installation</summary>
 <br>
   
-1. Prepare a vanilla Rocky Linux (server instance) with VirtualBox ([help](https://kifarunix.com/install-rocky-linux-8-on-virtualbox/)).
+1. Prepare a vanilla Rocky Linux 9.2 (server instance) with VirtualBox ([help](https://kifarunix.com/install-rocky-linux-8-on-virtualbox/)).
 
 2. Install epel - open a terminal, and run:
   ```
