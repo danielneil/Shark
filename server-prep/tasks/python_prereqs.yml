@@ -13,17 +13,14 @@
 - name: Installing pillow
   pip: 
    name: pillow
-   executable: pip3.9
 
 - name: Installing matplotlib
   pip: 
    name: matplotlib
-   executable: pip3.9
 
 - name: Installing pandas
   pip: 
    name: pandas
-   executable: pip3.9
    
 - name: Copying PyAlgoTrade source
   copy:
