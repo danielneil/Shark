@@ -14,7 +14,7 @@ See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of cap
 
 See the example [configuration](https://github.com/danielneil/Shark-Config), or the [RSI2 tutorial](https://github.com/danielneil/Shark-Doc/blob/main/tutorials/RSI2.md) to get started.
 
-Please reach out to me on [Linked In!](https://www.linkedin.com/in/daniel-hodder-2630161b8/) 
+Please reach out to me on [Linked In!](https://www.linkedin.com/in/danielneilcanb) 
 
 ## Instructions 
 
