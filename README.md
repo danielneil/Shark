@@ -35,7 +35,7 @@ Please reach out to me on [Linked In!](https://www.linkedin.com/in/daniel-hodder
 <summary>System Installation</summary>
 <br>
   
-1. Prepare a vanilla Rocky Linux 9.2 (server instance) with VirtualBox ([help](https://kifarunix.com/install-rocky-linux-8-on-virtualbox/)).
+1. Prepare a vanilla Rocky Linux 9.2 (server instance) with VirtualBox ([help](https://kifarunix.com/install-rocky-linux-9-on-virtualbox/)).
 
 2. Install epel - open a terminal, and run:
   ```
