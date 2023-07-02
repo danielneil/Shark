@@ -60,13 +60,13 @@ git clone https://github.com/danielneil/Shark.git && cd Shark && ./build.sh
 </details>
 
 
-## Screenshot - Trading the TOP 20 Crypto
+## Trading the TOP 20 Crypto
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-crypto.png?raw=true">
 </p>
 
-## Screenshot - Shark Plugins (sma, yahoo_finance, backtest)
+## Shark Plugins (sma, yahoo_finance, backtest)
 
 See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of capabilities.
 
@@ -74,13 +74,13 @@ See the [plugins](https://github.com/danielneil/Shark-Plugins) for a list of cap
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-plugin-details.jpg?raw=true">
 </p>
 
-## Screenshot - Backtesting
+## Backtesting
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/shark-backtest-plugin.png?raw=true">
 </p>
 
-## Screenshot - Backtest Report (custom strategy against BTC-USD)
+## Backtest Report (custom strategy against BTC-USD)
 
 <p align="center">
   <img src="https://github.com/danielneil/Shark/blob/main/shark/files/screenshots/backtest-report.png?raw=true">
